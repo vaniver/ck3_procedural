@@ -1,0 +1,22 @@
+#empire angle
+europe	2
+islam	4
+india	0
+#empire	kingdom	religion	geo_type
+europe	France	catholic	continent
+europe	Aquitaine	catholic	continent
+europe	England	catholic	island
+europe	Spain	catholic	continent
+europe	Scandinavia	norse_pagan	island
+islam	Iraq	sunni	continent
+islam	Egypt	sunni	continent
+islam	Persia	sunni	continent
+islam	Morocco	sunni	continent
+india	Orissa	hindu	continent
+india	Rajputana	jain	continent
+india	Bengal	buddhist	continent
+india	Punjab	hindu	continent
+#empire	base_terrain	waste_terrain
+europe	forest	mountain
+islam	desert	desert
+india	jungle	mountain
