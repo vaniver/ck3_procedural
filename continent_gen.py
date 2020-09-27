@@ -10,26 +10,61 @@ from doodle import Doodler
 from tile import Tile
 from cube import Cube
 
-def make_capital_duchy(d_size=6, coastal=True, shuffle=True):
-    '''Makes a duchy where all provinces neighbor the central province. If coastal=True and d_size<7, one water hex bordering the capital will be included.
-    To make a fidget spinner, use d_size=4 and shuffle=False.'''
-    a = Tile()
-    cube_list = [Cube(0,-1,1), Cube(-1,1,0), Cube(1,0,-1), Cube(-1,0,1), Cube(1,-1,0), Cube(0,1,-1)]
-    if shuffle:
-        random.shuffle(cube_list)
-    if coastal and d_size<7:
-        a.water_list.append(cube_list[d_size-1])
-    cube_list = cube_list[:d_size-1]
+CENTER_SIZE_LIST = [7,5,5,5,5]
+KINGDOM_SIZE_LIST = [[5,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]]
+BORDER_SIZE_LIST = [4,4,4]
+
+
+def make_capital_county(c_size=5, coastal=True, rgb=(255,255,255)):
+    '''Makes a county where all provinces neighbor the central province.'''
+    a = Tile(rgb=rgb)
+    cube_list = list(Cube(0,0,0).neighbors())
+    if coastal and c_size<7:
+        a.water_list.append(cube_list[c_size-1])
+    cube_list = cube_list[:c_size-1]
     for el in cube_list:
         a.add_hex(el)
     return a
 
-def make_kingdom(origin=Cube(0,0,0), size_list = [6, 4, 4, 3]):
-    
-    kingdom = Tile(origin=origin, tile_list=[make_capital_duchy(d_size=size_list[0])], hex_list=[])
-    for el in size_list[1:]:
-        kingdom.add_new_tile(el)
+
+def make_capital_duchy(origin=Cube(0,0,0), size_list=[5,4,4,4,4], rgb_tuple=((255,255,255),[]), coastal=True):
+    '''Makes a duchy whose capital county is clumped.
+    If coastal=True and size_list[0]<7, one water hex bordering the capital will be included.'''
+    capital_county = make_capital_county(c_size=size_list[0], coastal=coastal, rgb=rgb_tuple[1][0])
+    duchy = Tile(origin=origin, tile_list=[capital_county],
+                 hex_list=[], rgb=rgb_tuple[0])
+    for idx, el in enumerate(size_list[1:]):
+        duchy.add_new_tile(el, rgb = rgb_tuple[1][idx + 1])
+    if coastal:
+        drhl = duchy.real_hex_list()
+        if check_water_access(drhl, duchy.real_water_list(), max([el.mag() for el in drhl])):
+            return duchy
+        else:
+            return make_capital_duchy(origin, size_list, rgb_tuple[1], coastal)
+    else:
+        return duchy
+
+
+def make_kingdom(origin=Cube(0,0,0), size_list = [[5,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]], rgb_tuple=((255,255,255), []), coastal=True,):
+    """rgb_tuple is complicated. For each level, the left element is the rgb of the title for that tile,
+    and the right element is a list of rgb_tuples for the tiles the next element below 
+    (or a list of rgb tuples for baronies)."""
+    kingdom = Tile(origin=origin, tile_list=[make_capital_duchy(size_list=size_list[0], coastal=coastal, rgb_tuple=rgb_tuple[1][0])], hex_list=[], rgb=rgb_tuple[0])
+    d_idx = 1
+    while d_idx < len(size_list):
+        duchy_size_list = size_list[d_idx]
+        krhl = kingdom.relative_hex_list()
+        krwl = kingdom.relative_water_list()
+        new_county = Tile.new_tile(duchy_size_list[0], rgb=rgb_tuple[1][d_idx][1][0])
+        if new_county.move_into_place([kingdom.relative_neighbors()], krhl, krwl):
+            new_duchy = Tile(origin=Cube(0,0,0), tile_list = [new_county], hex_list=[], rgb=rgb_tuple[1][d_idx][0])
+            for c_idx, county_size_list in enumerate(duchy_size_list[1:]):
+                new_duchy.add_new_tile(county_size_list, cant=krhl + krwl, rgb=rgb_tuple[1][d_idx][1][c_idx])
+            if check_water_access(krhl + new_duchy.relative_hex_list(), krwl, max([el.mag() for el in krhl])):
+                kingdom.add_tile(new_duchy)
+                d_idx += 1
     return kingdom
+
 
 def make_island_kingdom(water_height, origin=None, size_list = [6, 4, 4, 3], banned = [], weighted=True, min_mag=6, min_capital_coast=3, min_coast=2, max_tries = 1000, strait_prob = 0.5, center_bias = 0.5, coast_bias = 0.125):
     '''Given a dictionary from cubes to distance from shore, return a tile with duchies whose size are from duchy_size_list,
@@ -211,6 +246,7 @@ def move_kingdom_into_place(stationary, mobile, targets, max_tries = 100, coasta
     else:
         return False
 
+
 def calculate_distances(targets, assigned, max_dist):
     '''For each Tile in targets (or a single target Tile), calculate all the hexes that are within max_dist of them, 
     without going into any hexes in assigned.'''
@@ -232,10 +268,11 @@ def calculate_distances(targets, assigned, max_dist):
         dists.append(dist)
     return dists
 
-def create_continent(num_kingdoms=3, size_list = [5, 4, 4, 3], doodle = False):
+
+def create_continent(num_kingdoms=3, doodle = False):
     '''Create a continent of kingdoms, which have duchies as determined by size_list.'''
     assert num_kingdoms in [3, 4, 5]
-    center = Tile.new_tile(5)
+    center = make_capital_duchy(size_list=CENTER_SIZE_LIST)
     color_list = [(192, 192, 192), (255, 0, 0), (0, 255, 0), (0, 0, 255),
                   (192, 192, 0), (128, 128, 0),
                   (192, 0, 192), (128, 0, 128),

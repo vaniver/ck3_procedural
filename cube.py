@@ -94,9 +94,15 @@ class Cube:
         return hash(tuple((self.x, self.y, self.z)))
         
     def neighbors(self):
-        return {Cube(self.x+1,self.y-1,self.z), Cube(self.x-1,self.y+1,self.z),
-                Cube(self.x,self.y+1,self.z-1), Cube(self.x,self.y-1,self.z+1),
-                Cube(self.x+1,self.y,self.z-1), Cube(self.x-1,self.y,self.z+1)}
+        return {Cube(self.x+1,self.y,self.z-1), Cube(self.x,self.y+1,self.z-1),
+                Cube(self.x-1,self.y+1,self.z), Cube(self.x-1,self.y,self.z+1),
+                Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)}
+        
+    def ordered_neighbors(self):
+        """In counterclockwise order, starting with ENE."""
+        return [Cube(self.x+1,self.y,self.z-1), Cube(self.x,self.y+1,self.z-1),
+                Cube(self.x-1,self.y+1,self.z), Cube(self.x-1,self.y,self.z+1),
+                Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)]
     
     def strait_neighbors(self):
         return {Cube(self.x+1,self.y-2,self.z+1), Cube(self.x-1,self.y+2,self.z-1),

@@ -7,7 +7,7 @@ import numpy as np
 
 from cube import Cube
 from doodle import Doodler
-from typing import List
+from typing import List, Tuple
 from dataclasses import dataclass, field
 
 @dataclass
@@ -17,6 +17,7 @@ class Tile:
     hex_list: List[Cube] = field(default_factory=lambda: [Cube()])
     tile_list: List["Tile"] = field(default_factory=list)
     water_list: List[Cube] = field(default_factory=list)
+    rgb: Tuple[int, int, int] = field(default_factory=lambda: (255, 255, 255))
 
     @property
     def size(self):
@@ -302,15 +303,17 @@ class Tile:
             tile.add_hex(random.choice(tile.relative_neighbors()))
         return tile
 
-    def add_new_tile(self, size, weighted=True):
+    def add_new_tile(self, size, rgb=(255,255,255), weighted=True, cant=[]):
+        """Adds new hexes until it's at size, giving up in 100 tries if impossible.
+        Operates in relative space, so cant probably won't do the right thing unless origin is 0,0,0."""
         self_relative = self.relative_hex_list() + self.relative_water_list()
         self_neighbors = self.relative_neighbors(weighted)
         for _ in range(100): #Give up if you can't do it in 100 tries.
             new_origin = random.choice(self_neighbors)
-            new_tile = Tile(hex_list=[new_origin])
+            new_tile = Tile(hex_list=[new_origin], rgb=rgb)
             while len(new_tile.hex_list) < size:
                 new_neighbors = new_tile.relative_neighbors(weighted)
-                new_neighbors = [x for x in new_neighbors if x not in self_relative]
+                new_neighbors = [x for x in new_neighbors if x not in self_relative and x not in cant]
                 if len(new_neighbors) > 0:
                     new_tile.add_hex(random.choice(new_neighbors))
                 else:
@@ -318,7 +321,7 @@ class Tile:
             if len(new_tile.hex_list) == size:
                 self.tile_list.append(new_tile)
                 return
-        raise ValueError("Failed to add new tile to {}".format(self))        
+        raise ValueError("Failed to add new tile to {}".format(self))
 
     def move_into_place(self, must, cant_land, cant_water, weighted=True, max_tries=100, valid_dir=None, debug=False):
         '''Modify origin and rotation such that each set of potential locations in must is occupied, while none of the locations in cant are occupied. (Water hexes can overlap with those in cant_water.)
