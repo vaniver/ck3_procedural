@@ -13,13 +13,14 @@ from tile import Tile
 
 
 class BorderDoodler:
-    def __init__(self, tile, size=(100,100), radius=10, width=2):
+    def __init__(self, tile, size=(100,100), radius=10, width=2, depth=None):
         ''' cubes is a map from (x,y,z) -> [color] '''
         self.im = Image.new('RGB', size, (0, 0, 0))
         self.draw = ImageDraw.Draw(self.im)
         self.size = size
         self.radius = radius
         self.width = width
+        self.depth = depth
         # First draw all the baronies.
         full_rhl = tile.real_hex_list()
         for cube in full_rhl:
@@ -61,7 +62,8 @@ class BorderDoodler:
 
     def draw_tile_boundary(self, tile, scale):
         for sub_tile in tile.tile_list:
-            self.draw_tile_boundary(sub_tile, scale + self.width)
+            if (self.depth is None) or (scale < self.width * self.depth):
+                self.draw_tile_boundary(sub_tile, scale + self.width)
         this_rhl = tile.real_hex_list()
         for cube in this_rhl:
             self.draw_boundary(cube, this_rhl, tile.rgb, scale)

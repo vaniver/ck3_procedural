@@ -263,7 +263,7 @@ class Tile:
             return other in inclusive_boundary
 
     def boundary(self):
-        '''Each hex is present only if it's on the edge of the tile.'''
+        '''Each hex is present only if it's on the edge of the tile. Uses real_hex_list.'''
         boundary = []
         self_real = self.real_hex_list()
         self_water_real = self.real_water_list()
@@ -292,8 +292,10 @@ class Tile:
     def weighted_boundary(self):
         '''Each hex is present only if it's on the edge of the tile, and is weighted based on how many outside neighbors it has.'''
         boundary = []
-        for el in self.hex_list:
-            boundary.extend([el]*sum([(h not in self.hex_list and h not in self.water_list) for h in el.neighbors()]))
+        srhl = self.relative_hex_list()
+        srwl = self.relative_water_list()
+        for el in srhl:
+            boundary.extend([el]*sum([(h not in srhl and h not in srwl) for h in el.neighbors()]))
         return boundary
 
     @classmethod
@@ -341,7 +343,11 @@ class Tile:
         while (not merge_found) and tries < max_tries:
             tries += 1
             self.rotation = random.randint(0,5)
-            s_edge = random.choice(s_n)
+            try:
+                s_edge = random.choice(s_n)
+            except:
+                import pdb;
+                pdb.set_trace()
             try:
                 must_guaranteed = random.choice(random.choice(must))
             except:
