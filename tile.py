@@ -305,13 +305,36 @@ class Tile:
             tile.add_hex(random.choice(tile.relative_neighbors()))
         return tile
 
-    def add_new_tile(self, size, rgb=(255,255,255), weighted=True, cant=[]):
+    def add_new_tile(self, size, capital=None, rgb=(255,255,255), weighted=True, cant=[]):
         """Adds new hexes until it's at size, giving up in 100 tries if impossible.
         Operates in relative space, so cant probably won't do the right thing unless origin is 0,0,0."""
         self_relative = self.relative_hex_list() + self.relative_water_list()
         self_neighbors = self.relative_neighbors(weighted)
         for _ in range(100): #Give up if you can't do it in 100 tries.
-            new_origin = random.choice(self_neighbors)
+            new_origin = capital or random.choice(self_neighbors)
+            new_tile = Tile(hex_list=[new_origin], rgb=rgb)
+            while len(new_tile.hex_list) < size:
+                new_neighbors = new_tile.relative_neighbors(weighted)
+                new_neighbors = [x for x in new_neighbors if x not in self_relative and x not in cant]
+                if len(new_neighbors) > 0:
+                    new_tile.add_hex(random.choice(new_neighbors))
+                else:
+                    break
+            if len(new_tile.hex_list) == size:
+                self.tile_list.append(new_tile)
+                return
+        raise ValueError("Failed to add new tile to {}".format(self))
+
+    def add_bordering_tile(self, size, rgb=(255,255,255), weighted=True, nbr=0, cant=[]):
+        """Adds a tile to the tile_list that borders at least one hex from self.tile_list[nbr]
+        Adds new hexes until it's at size, giving up in 100 tries if impossible.
+        Operates in relative space, so cant probably won't do the right thing unless origin is 0,0,0."""
+        self_relative = self.relative_hex_list() + self.relative_water_list()
+        self_neighbors = self.relative_neighbors(weighted)
+        nbr_neighbors = list(self.tile_list[nbr].neighbors() - set(self_relative))
+        nbr_hexes = self.tile_list[nbr].real_hex_list() #Remember that real only adjusts for that level and below.
+        for _ in range(100): #Give up if you can't do it in 100 tries.
+            new_origin = random.choice(nbr_neighbors)
             new_tile = Tile(hex_list=[new_origin], rgb=rgb)
             while len(new_tile.hex_list) < size:
                 new_neighbors = new_tile.relative_neighbors(weighted)

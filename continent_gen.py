@@ -10,7 +10,7 @@ from doodle import Doodler
 from tile import Tile
 from cube import Cube
 
-CENTER_SIZE_LIST = [7,5,5,5,5]
+CENTER_SIZE_LIST = [7,5,5,5]
 KINGDOM_SIZE_LIST = [[5,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]]
 BORDER_SIZE_LIST = [4,4,4]
 
@@ -36,10 +36,10 @@ def random_rgb_tuple(size_list):
                 [random_rgb_tuple(sublist) for sublist in size_list])
 
 
-def make_capital_county(c_size=5, coastal=True, rgb=None):
+def make_capital_county(c_size=5, origin=Cube(), coastal=True, rgb=None):
     '''Makes a county where all provinces neighbor the central province.'''
     rgb = rgb or c_col()
-    a = Tile(rgb=rgb)
+    a = Tile(origin=origin, rgb=rgb)
     cube_list = list(Cube(0,0,0).neighbors())
     if coastal and c_size<7:
         a.water_list.append(cube_list[c_size-1])
@@ -49,7 +49,7 @@ def make_capital_county(c_size=5, coastal=True, rgb=None):
     return a
 
 
-def make_capital_duchy(origin=Cube(0,0,0), size_list=[5,4,4,4,4], rgb_tuple=None, coastal=True):
+def make_capital_duchy(origin=Cube(0,0,0), size_list=KINGDOM_SIZE_LIST[0], rgb_tuple=None, coastal=True):
     '''Makes a duchy whose capital county is clumped.
     If coastal=True and size_list[0]<7, one water hex bordering the capital will be included.
     rgb_tuple should be ((r,g,b),[(r,g,b)*])'''
@@ -73,7 +73,17 @@ def make_capital_duchy(origin=Cube(0,0,0), size_list=[5,4,4,4,4], rgb_tuple=None
         return duchy
 
 
-def make_kingdom(origin=Cube(0,0,0), size_list = [[5,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]], rgb_tuple=None, coastal=True,):
+def make_original_center_duchy(origin=Cube(0,0,0), size_list=CENTER_SIZE_LIST, rgb_tuple=None):
+    rgb_tuple = rgb_tuple or random_rgb_tuple(size_list)
+    capital_county = make_capital_county(c_size=size_list[0], coastal=False, rgb=rgb_tuple[1][0])
+    duchy = Tile(origin=origin, tile_list=[capital_county],
+                 hex_list=[], rgb=rgb_tuple[0])
+    for idx, c_size in enumerate(size_list[1:]):
+        duchy.add_new_tile(c_size, rgb=rgb_tuple[1][idx + 1], capital=Cube(0,-2,2).rotate_right(idx*2))
+    return duchy
+        
+
+def make_kingdom(origin=Cube(0,0,0), size_list = KINGDOM_SIZE_LIST, rgb_tuple=None, coastal=True,):
     """rgb_tuple is complicated. For each level, the left element is the rgb of the title for that tile,
     and the right element is a list of rgb_tuples for the tiles the next element below 
     (or a list of rgb tuples for baronies)."""
@@ -97,7 +107,7 @@ def make_kingdom(origin=Cube(0,0,0), size_list = [[5,4,4,4,4], [4,4,3,3], [4,4,3
 
 def new_continent_gen(num_kingdoms=3):
     assert num_kingdoms in [3, 4, 5]
-    center = make_capital_duchy(size_list=CENTER_SIZE_LIST)
+    center = make_original_center_duchy(size_list=CENTER_SIZE_LIST)
     kingdoms = [make_kingdom(size_list = KINGDOM_SIZE_LIST) for _ in range(num_kingdoms)]
     cen_nbrs = center.neighbors()
     k_r_bnds = [kingdom.relative_boundary() for kingdom in kingdoms]
@@ -148,16 +158,17 @@ def inner_continent_gen(center, kingdoms, cen_nbrs, k_r_bnds, port_locs):
     if len(kingdoms) > 3:
         if not inner_add_triangle(continent, kingdoms, 3):
             return True, 'add fourth kingdom'
-    print('Added 4 kingdoms!')
+        print('Added 4 kingdoms!')
     if len(kingdoms) > 4:
         if not inner_add_triangle(continent, kingdoms, 4):
             return True, 'add fifth kingdom'
+        print('Added 5 kingdoms!')
     return False, (continent, kingdoms)
 
 
 def add_center_duchy(size_list, allowable_chunks, a_dist, b_dist, ranking):
     '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
-    attempt to create num_duchies duchies with size hexes each, where each is adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
+    attempt to create a center duchy, where counties are adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
     Ranking is a dictionary of all (base) elements in allowable_chunks.
     Returns False if it doesn't find a solution in time.'''
     size = sum(size_list)
@@ -185,7 +196,7 @@ def add_center_duchy(size_list, allowable_chunks, a_dist, b_dist, ranking):
 def inner_add_triangle(continent, kingdoms, c_idx):
     assigned = continent.real_total_list()
     k_dists = calculate_distances(kingdoms[:c_idx], assigned, sum(CENTER_SIZE_LIST) - 4)
-    border_tile = Tile(tile_list=[tel for tel in continent.tile_list if tel.size <= sum([sum(sublist) for sublist in KINGDOM_SIZE_LIST])])
+    border_tile = Tile(tile_list=[tel for tel in continent.tile_list if tel.size < sum([sum(sublist) for sublist in KINGDOM_SIZE_LIST])])
     border_dists = calculate_distances(border_tile, assigned, sum(CENTER_SIZE_LIST) - 4)[0]
     for a_idx, b_idx in combinations(range(c_idx), r=2):
         print(f'Trying {a_idx}, {b_idx}')
