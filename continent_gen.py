@@ -11,7 +11,7 @@ from tile import Tile
 from cube import Cube
 
 CENTER_SIZE_LIST = [7,5,5,5]
-KINGDOM_SIZE_LIST = [[5,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]]
+KINGDOM_SIZE_LIST = [[6,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]]
 BORDER_SIZE_LIST = [4,4,4]
 
 
@@ -166,6 +166,10 @@ def inner_continent_gen(center, kingdoms, cen_nbrs, k_r_bnds, port_locs):
     return False, (continent, kingdoms)
 
 
+def sort_hexlist(list_to_sort, ranking):
+    return [pair[1] for pair in sorted([(ranking[el], el) for el in list_to_sort])]
+
+
 def add_center_duchy(size_list, allowable_chunks, a_dist, b_dist, ranking):
     '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
     attempt to create a center duchy, where counties are adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
@@ -175,23 +179,49 @@ def add_center_duchy(size_list, allowable_chunks, a_dist, b_dist, ranking):
     while len(allowable_chunks) > 0:
         chunk = allowable_chunks.pop(0)
         if len(chunk) >= size:
-            a_adj = [el for el in chunk if a_dist[el] == 1]
-            b_adj = [el for el in chunk if b_dist[el] == 1]
-            candidate = set()
-            sorted_chunk = [pair[1] for pair in sorted([(ranking[el], el) for el in chunk])]
-            candidate.add([el for el in sorted_chunk if el in a_adj][0])
-            candidate.add([el for el in sorted_chunk if el in b_adj][0])
-            others = [el for el in sorted_chunk if el not in candidate]
-            while (len(candidate) < size) and len(others) > 0:
-                other = others.pop(0)
-                if any([other.sub(el).mag() == 1 for el in candidate]):
-                    candidate.add(other)
-            if len(candidate) == size:
-                candidate = list(candidate)
-                if len(get_chunks(candidate)) == 1:
-                    return Tile(hex_list = candidate, rgb=d_col())
+            poss_centers = sort_hexlist([el for el in chunk if all([nel in chunk for nel in el.neighbors()])], ranking)
+            a_adj = sort_hexlist([el for el in chunk if a_dist[el] == 1], ranking)
+            b_adj = sort_hexlist([el for el in chunk if b_dist[el] == 1], ranking)
+            for center in poss_centers:
+                duchy = Tile(hex_list=[], tile_list=[make_capital_county(size_list[0], origin=center,coastal=False)], rgb=d_col())
+                c_nbrs = [el for el in duchy.tile_list[0].neighbors() if el in chunk]
+                a_county = add_center_county(size_list[1], c_nbrs, a_adj, chunk)
+                if a_county:
+                    duchy.add_tile(a_county)
+                else:
+                    continue
+                drhl = duchy.real_hex_list()
+                c_nbrs = [el for el in duchy.tile_list[0].neighbors() if el in chunk and el not in drhl]
+                b_county = add_center_county(size_list[2], duchy.tile_list[0].neighbors(), b_adj, chunk)
+                if b_county:
+                    duchy.add_tile(b_county)
+                else:
+                    continue
+                for _ in range(20):
+                    try:
+                        duchy.add_bordering_tile(size_list[3], rgb=c_col(), only=chunk, ranking=ranking)
+                        break
+                    except:
+                        continue
+                return duchy
     return False
 
+
+def add_center_county(size, c_nbrs, adj, chunk):
+    for outer_try_count in range(30):
+        candidate = set()
+        candidate.add(random.sample(c_nbrs, k=1)[0])
+        candidate.add(random.sample(adj, k=1)[0])
+        inner_try_count = 0
+        while len(candidate) < size and inner_try_count < 30:
+            pick = random.sample(candidate, k=1)[0]
+            opts = [el for el in pick.neighbors() if el in chunk]
+            if len(opts) >= 1:
+                candidate.add(random.choice(opts))
+        candidate = list(candidate)
+        if len(get_chunks(candidate)) == 1:
+            return Tile(hex_list=candidate, rgb=c_col())
+    return False
 
 def inner_add_triangle(continent, kingdoms, c_idx):
     assigned = continent.real_total_list()
@@ -199,7 +229,6 @@ def inner_add_triangle(continent, kingdoms, c_idx):
     border_tile = Tile(tile_list=[tel for tel in continent.tile_list if tel.size < sum([sum(sublist) for sublist in KINGDOM_SIZE_LIST])])
     border_dists = calculate_distances(border_tile, assigned, sum(CENTER_SIZE_LIST) - 4)[0]
     for a_idx, b_idx in combinations(range(c_idx), r=2):
-        print(f'Trying {a_idx}, {b_idx}')
         allowable = [el for el in k_dists[a_idx] if el in k_dists[b_idx]]
         # We shouldn't bother to try to place the center in a spot that doesn't have ocean access.
         center_chunks = []
@@ -222,15 +251,10 @@ def inner_add_triangle(continent, kingdoms, c_idx):
         need_center = True
         num_center_tries = 0
         while num_center_tries < 20 and need_center:
-            print('num center tries', num_center_tries)
             num_center_tries += 1
             new_center = add_center_duchy(CENTER_SIZE_LIST, center_chunks, k_dists[a_idx], k_dists[b_idx], ranking)
-            # new_center = make_capital_duchy(size_list=CENTER_SIZE_LIST)
-            # need_center = not(new_center.move_into_place([a_adj, b_adj], assigned, []))
             if new_center:
                 need_center = not check_water_access(assigned + new_center.real_hex_list(), continent.real_water_list())
-        # if need_center:
-        #     continue
             if not need_center:
                 #Add the new center
                 continent.add_tile(new_center)
@@ -238,7 +262,6 @@ def inner_add_triangle(continent, kingdoms, c_idx):
                 cont_real = continent.real_hex_list()
                 cen_nbrs = [el for el in continent.tile_list[-1].neighbors() if el not in cont_real]
                 for kingdom_tries in range(15):
-                    print('kingdom tries', kingdom_tries)
                     if move_kingdom_into_place(continent, kingdoms[c_idx], cen_nbrs):
                         temp_assigned = continent.real_total_list()
                         temp_k_dists = calculate_distances(kingdoms[:c_idx + 1], temp_assigned, sum(BORDER_SIZE_LIST))

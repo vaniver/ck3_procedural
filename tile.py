@@ -185,7 +185,7 @@ class Tile:
         return [el for el in self.weighted_neighbors() if el.valid(other)]
 
     def relative_neighbors(self, weighted=True):
-        '''All possible land neighbors, present ever time it's a neighbor, in the local reference frame.'''
+        '''All possible land neighbors, present every time it's a neighbor, in the local reference frame.'''
         neighbors = []
         self_relative = self.relative_hex_list()
         self_water_relative = self.relative_water_list()
@@ -325,7 +325,7 @@ class Tile:
                 return
         raise ValueError("Failed to add new tile to {}".format(self))
 
-    def add_bordering_tile(self, size, rgb=(255,255,255), weighted=True, nbr=0, cant=[]):
+    def add_bordering_tile(self, size, rgb=(255,255,255), weighted=True, nbr=0, cant=[], only=None, ranking=None):
         """Adds a tile to the tile_list that borders at least one hex from self.tile_list[nbr]
         Adds new hexes until it's at size, giving up in 100 tries if impossible.
         Operates in relative space, so cant probably won't do the right thing unless origin is 0,0,0."""
@@ -333,11 +333,21 @@ class Tile:
         self_neighbors = self.relative_neighbors(weighted)
         nbr_neighbors = list(self.tile_list[nbr].neighbors() - set(self_relative))
         nbr_hexes = self.tile_list[nbr].real_hex_list() #Remember that real only adjusts for that level and below.
+        if only:
+            self_neighbors = [el for el in self_neighbors if el in only]
+            nbr_neighbors = [el for el in nbr_neighbors if el in only]
+            nbr_hexes = [el for el in nbr_hexes if el in only]
+        if ranking:
+            nbr_neighbors = []
+            for el in self_neighbors:
+                nbr_neighbors.extend([el] * ranking[el]) 
         for _ in range(100): #Give up if you can't do it in 100 tries.
             new_origin = random.choice(nbr_neighbors)
             new_tile = Tile(hex_list=[new_origin], rgb=rgb)
             while len(new_tile.hex_list) < size:
                 new_neighbors = new_tile.relative_neighbors(weighted)
+                if only:
+                    new_neighbors = [x for x in new_neighbors if x in only]    
                 new_neighbors = [x for x in new_neighbors if x not in self_relative and x not in cant]
                 if len(new_neighbors) > 0:
                     new_tile.add_hex(random.choice(new_neighbors))
