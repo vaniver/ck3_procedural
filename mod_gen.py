@@ -11,20 +11,25 @@ import shutil
 
 TERRAIN_LIST = ['desert','jungle','mountain','forest','steppe']
 TERRAIN_NUMBER = {'plains': 0, 'farmland': 1, 'desert': 3, 'steppe': 5, 'hills': 8, 'mountain': 9, 'jungle': 12, 'forest': 16}
-NUM_KINGDOM_HEXES = 17
-NUM_CENTER_HEXES = 5
-NUM_BORDER_HEXES = 3
+NUM_KINGDOM_HEXES = sum([sum(x) for x in continent_gen.KINGDOM_SIZE_LIST])
+NUM_CENTER_HEXES = sum(continent_gen.CENTER_SIZE_LIST)
+NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
 
-def make_mod(file_dir, mod_name, mod_disp_name):
-    '''Build the basic mod details.'''
-    f = open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w')
-    f.write("name = \"{}\"\npath = \"mod/{}\"\nuser_dir = \"{}\"\n".format(mod_disp_name, mod_name, mod_name))
-    f.write("tags = {\n\t\"Total Conversion\"\n}")
+def make_dot_mod(file_dir, mod_name, mod_disp_name):
+    '''Build the basic mod details file.'''
+    outer = "name = \"{}\"\npath = \"mod/{}\"\n".format(mod_disp_name, mod_name)
+    inner = "name = \"{}\"\n".format(mod_disp_name)
+    shared = "user_dir = \"{}\"\n".format(mod_name)
+    shared += "tags = {\n\t\"Total Conversion\"\n}\n"
     replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
                         #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
                         #"history/technology", "history/titles", "history/wars"]
-    f.write("replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\"")
-    f.close()
+    shared += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
+    os.makedirs(os.path.join(file_dir, mod_name), exist_ok=True)
+    with open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w') as f:
+        f.write(outer + shared)
+    with open(os.path.join(file_dir, mod_name, "descriptor.mod".format(mod_name)),'w') as f:
+        f.write(inner + shared)
 
 
 def read_config_file(config_filepath):

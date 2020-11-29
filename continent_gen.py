@@ -414,13 +414,53 @@ def get_chunks(hex_list):
     return chunks
 
 
-def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist, ranking):
-    '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
-    attempt to create num_duchies duchies with size hexes each, where each is adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
-    Ranking is a dictionary of all (base) elements in allowable_chunks.
-    Returns False if it doesn't find a solution in time.'''
-    assert num_duchies > 0
-    size = sum(size_list)
+def check_contig(split, nbr_dict):
+    """Checks that each of the lists of hexs in split is contiguous."""
+    for group in split:
+        never_visited = set(group)
+        to_visit = set()
+        if len(to_visit) == 0:
+            continue
+        to_visit.add(never_visited.pop())
+        while len(to_visit) > 0:
+            this_one = to_visit.pop()
+            for el in nbr_dict[this_one]:
+                if el in never_visited:
+                    never_visited.remove(el)
+                    to_visit.add(el)
+        if len(never_visited) > 0:
+            return False
+    return True
+
+def divide_into_counties(tile, size_list):
+    '''Given a tile (assumed to just have hexes in its hex_list) and a size_list, return a tile
+    with contiguous counties with sizes described by size_list.'''
+    hex_list = [el for el in tile.hex_list]
+    assert len(hex_list) == sum(size_list)
+    counties = [[] for _ in size_list]
+    num_left = [el for el in size_list]
+    nbr_dict = {}
+    for el in hex_list:
+        nbr_dict[el] = [nel for nel in el.neighbors() if nel in hex_list]
+    nn1 = [el for el in hex_list if len(nbr_dict[el]) == 1]
+    idx = 0
+    while len(nn1) > 0:
+        single = nn1.pop()
+        hex_list.remove(single)
+        counties[idx].append(single)
+        num_left[idx] -= 2
+        nbr = nbr_dict[single][0]
+        counties[idx].append(nbr)
+        hex_list.remove(nbr)
+        while len(nbr_dict[nbr]) == 2 and num_left[idx] > 0:
+            nbr = [el for el in nbr_dict[nbr] if el not in counties[idx]][0]
+            counties[idx].append(nbr)
+            hex_list.remove(nbr)
+            num_left[idx] -= 1
+        if len(nbr_dict[nbr]) == 2 and num_left[idx] == 0:
+            nn1.append([el for el in nbr_dict[nbr] if el not in counties[idx]][0])
+        idx += 1
+
     possible_tiles = []
     while len(allowable_chunks) > 0:
         chunk = allowable_chunks.pop(0)
@@ -444,6 +484,50 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
                         possible_tiles.append(Tile(hex_list = candidate, rgb=d_col()))
                     if len(possible_tiles) == num_duchies:
                         return possible_tiles
+                    if len(others) >= size:
+                        remaining = [el for el in sorted_chunk if el not in candidate]
+                        other_chunks = get_chunks(remaining)
+                        for oc in other_chunks:
+                            if len(oc) >= size:
+                                allowable_chunks.insert(0, oc)
+    #pdb.set_trace()
+    return False
+
+
+def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist, ranking):
+    '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
+    attempt to create num_duchies duchies with size hexes each, where each is adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
+    Ranking is a dictionary of all (base) elements in allowable_chunks.
+    Returns False if it doesn't find a solution in time.'''
+    assert num_duchies > 0
+    size = sum(size_list)
+    possible_tiles = []
+    while len(allowable_chunks) > 0:
+        chunk = allowable_chunks.pop(0)
+        if len(chunk) >= size:
+            a_adj = [el for el in chunk if a_dist[el] == 1]
+            b_adj = [el for el in chunk if b_dist[el] == 1]
+            if len(a_adj) >= 1 and len(b_adj) >= 1:
+                #It might be possible.
+                candidate = set()
+                counties = [[] for _ in size_list]
+                sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
+                counties[1].append([el for el in sorted_chunk if el in a_adj][0])
+                candidate.add(counties[1][0])
+                counties[2].append([el for el in sorted_chunk if el in b_adj][0])
+                candidate.add(counties[2][0])
+                others = [el for el in sorted_chunk if el not in candidate]
+                while (len(candidate) < size) and len(others) > 0:
+                    other = others.pop(0)
+                    adj = [other.sub(el).mag() == 1 for el in candidate]
+                    if any(adj):
+                        candidate.add(other)
+                if len(candidate) == size:
+                    candidate = list(candidate)
+                    if len(get_chunks(candidate)) == 1:
+                        possible_tiles.append(Tile(hex_list = candidate, rgb=d_col()))
+                    if len(possible_tiles) == num_duchies:
+                        return [divide_into_counties(pt, size_list) for pt in possible_tiles]
                     if len(others) >= size:
                         remaining = [el for el in sorted_chunk if el not in candidate]
                         other_chunks = get_chunks(remaining)
