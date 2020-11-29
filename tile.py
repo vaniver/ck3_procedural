@@ -309,7 +309,7 @@ class Tile:
         """Adds new hexes until it's at size, giving up in 100 tries if impossible.
         Operates in relative space, so cant probably won't do the right thing unless origin is 0,0,0."""
         self_relative = self.relative_hex_list() + self.relative_water_list()
-        self_neighbors = self.relative_neighbors(weighted)
+        self_neighbors = [el for el in self.relative_neighbors(weighted) if el not in cant]
         for _ in range(100): #Give up if you can't do it in 100 tries.
             new_origin = capital or random.choice(self_neighbors)
             new_tile = Tile(hex_list=[new_origin], rgb=rgb)

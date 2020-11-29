@@ -19,9 +19,10 @@ def make_mod(file_dir, mod_name, mod_disp_name):
     '''Build the basic mod details.'''
     f = open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w')
     f.write("name = \"{}\"\npath = \"mod/{}\"\nuser_dir = \"{}\"\n".format(mod_disp_name, mod_name, mod_name))
-    replace_paths = ["common/bookmarks", "common/cultures", "common/dynasties", "common/landed_titles",
-                        "common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
-                        "history/technology", "history/titles", "history/wars"]
+    f.write("tags = {\n\t\"Total Conversion\"\n}")
+    replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
+                        #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
+                        #"history/technology", "history/titles", "history/wars"]
     f.write("replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\"")
     f.close()
 

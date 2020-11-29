@@ -88,7 +88,8 @@ def make_kingdom(origin=Cube(0,0,0), size_list = KINGDOM_SIZE_LIST, rgb_tuple=No
     and the right element is a list of rgb_tuples for the tiles the next element below 
     (or a list of rgb tuples for baronies)."""
     rgb_tuple = rgb_tuple or random_rgb_tuple(size_list)
-    kingdom = Tile(origin=origin, tile_list=[make_capital_duchy(size_list=size_list[0], coastal=coastal, rgb_tuple=rgb_tuple[1][0])], hex_list=[], rgb=rgb_tuple[0])
+    kingdom = Tile(origin=origin, tile_list=[make_capital_duchy(size_list=size_list[0], coastal=coastal,
+                   rgb_tuple=rgb_tuple[1][0])], hex_list=[], rgb=rgb_tuple[0])
     d_idx = 1
     while d_idx < len(size_list):
         duchy_size_list = size_list[d_idx]
@@ -185,7 +186,8 @@ def add_center_duchy(size_list, allowable_chunks, a_dist, b_dist, ranking):
             for center in poss_centers:
                 duchy = Tile(hex_list=[], tile_list=[make_capital_county(size_list[0], origin=center,coastal=False)], rgb=d_col())
                 c_nbrs = [el for el in duchy.tile_list[0].neighbors() if el in chunk]
-                a_county = add_center_county(size_list[1], c_nbrs, a_adj, chunk)
+                drhl = duchy.real_hex_list()
+                a_county = add_center_county(size_list[1], c_nbrs, a_adj, [el for el in chunk if el not in drhl])
                 if a_county:
                     duchy.add_tile(a_county)
                 else:
