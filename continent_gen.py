@@ -141,12 +141,7 @@ def inner_continent_gen(center, kingdoms, cen_nbrs, k_r_bnds, port_locs):
     k_dists = calculate_distances(kingdoms[:3], assigned, sum(BORDER_SIZE_LIST))
     for a_idx, b_idx in combinations(range(3), r=2):
         allowable = [el for el in k_dists[a_idx] if el in k_dists[b_idx]]
-        ranking = {}
-        for el in allowable:
-            if el in c_dist:
-                ranking[el] = (c_dist[el] + el.mag() * 1.1) / 2.0
-            else:
-                ranking[el] = el.mag()
+        ranking = {el: c_dist[el] if el in c_dist else el.mag() for el in allowable}
         new_duchies = divide_into_duchies(BORDER_SIZE_LIST, 2, get_chunks(allowable), k_dists[a_idx], k_dists[b_idx], ranking)
         if new_duchies:
             for duchy in new_duchies:
@@ -247,9 +242,7 @@ def inner_add_triangle(continent, kingdoms, c_idx):
                 b_adj.extend(this_b_adj)
         if len(a_adj) == 0:
             continue
-        ranking = {}
-        for el in allowable:
-            ranking[el] = border_dists.get(el, el.mag())
+        ranking = {el: border_dists.get(el, el.mag()) for el in allowable}
         need_center = True
         num_center_tries = 0
         while num_center_tries < 20 and need_center:
@@ -494,7 +487,152 @@ def divide_into_counties(tile, size_list):
     return False
 
 
+def duchy_from_snake(snake, size_list):
+    duchy = Tile(rgb=d_col(), hex_list=[])
+    ind = 0
+    for c_size in size_list:
+        duchy.add_tile(Tile(rgb=c_col(), hex_list=snake[ind:ind+c_size]))
+        ind += c_size
+    #The capital is assumed to come first, but it should be in the middle.
+    if len(size_list) > 2:
+        duchy.tile_list.insert(0,duchy.tile_list.pop(1))
+    return duchy
+
+
+def salvage_remainder(possible_tiles, new_tile, chunk, allowable_chunks, size):
+    possible_tiles.append(new_tile)
+    assigned = []
+    for tile in possible_tiles:
+        assigned.extend(tile.real_hex_list())
+    remaining = [el for el in chunk if el not in assigned]
+    if len(remaining) > size:
+        other_chunks = get_chunks(remaining)
+        for oc in other_chunks:
+            if len(oc) >= size:
+                allowable_chunks.insert(0, oc)
+    return possible_tiles, allowable_chunks
+
+
 def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist, ranking):
+    '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
+    attempt to create num_duchies duchies with size hexes each, where each is adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
+    Ranking is a dictionary of all (base) elements in allowable_chunks.
+    Returns False if it doesn't find a solution in time.'''
+    assert num_duchies > 0
+    size = sum(size_list)
+    possible_tiles = []
+    while len(allowable_chunks) > 0:
+        tile_split = [[]] * len(size_list)
+        chunk = allowable_chunks.pop(0)
+        if len(chunk) < size:
+            continue  # We can't make one, so don't bother trying.
+        sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
+        a_adj = [el for el in sorted_chunk if a_dist[el] == 1]
+        b_adj = [el for el in sorted_chunk if b_dist[el] == 1]
+        if len(a_adj) == 0 or len(b_adj) == 0:
+            continue  # We're not going to get adjacency to both.
+        # There are two main cases to handle: when they're close enough that the counties might 
+        # overlap or cut each other off, and when they're far enough that the main challenge is
+        # finding a path that can reach.
+        closest_a = a_adj[0]
+        # Pathing version:
+        if b_dist[closest_a] > 4:
+            snake = [closest_a]
+            disconnected = True
+            while disconnected:
+                closer_nbrs = [el for el in snake[-1].neighbors() if el in chunk and b_dist.get(el,999) < b_dist[snake[-1]]]
+                if len(closer_nbrs) == 0:
+                    break
+                sorted_nbrs = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in closer_nbrs])]
+                snake.append(sorted_nbrs[0])
+                if b_dist[snake[-1]] == 1:
+                    disconnected = False
+            if not disconnected and len(snake) >= size:  # I'm not sure why I thought this case was possible.
+                overage = len(snake) - size
+                if a_dist[snake[overage]] == 1:
+                    snake = snake[overage:]
+                    possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(snake, size_list), chunk, allowable_chunks, size)
+            elif not disconnected:  # We have a valid snake, but too few.
+                underage = size - len(snake)
+                extendable = True
+                while underage > 0 and extendable:
+                    start_nbrs = [el for el in snake[0].neighbors() if el in chunk and ranking.get(el,999) <= ranking.get(snake[0]) and el not in snake]
+                    if len(start_nbrs) > 0:
+                        snake.insert(0,random.choice(start_nbrs))
+                        underage -= 1
+                    if underage > 0:
+                        end_nbrs = [el for el in snake[-1].neighbors() if el in chunk and ranking.get(el,999) <= ranking.get(snake[-1]) and el not in snake]
+                        if len(end_nbrs) > 0:
+                            snake.append(random.choice(end_nbrs))
+                            underage -= 1
+                    if len(start_nbrs) == 0 and len(end_nbrs) == 0:
+                        # Now we have to grow in the middle. 
+                        extendable = False
+                if underage == 0:
+                    possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(snake, size_list), chunk, allowable_chunks, size)
+                else:
+                    duchy = Tile(rgb=d_col(), hex_list=[])
+                    for c_size in size_list:
+                        duchy.add_tile(Tile(rgb=c_col(), hex_list=[]))
+                    assigned = []
+                    ind = 0
+                    while len(snake) > 0 and underage > 0 and ind < len(size_list):
+                        el_nbrs = [el for el in snake[0].neighbors() if el in chunk and el not in snake and el not in assigned]
+                        assigned.append(snake.pop(0))
+                        duchy.tile_list[ind].hex_list.append(assigned[-1])
+                        if len(duchy.tile_list[ind].hex_list) == size_list[ind]:
+                            ind += 1
+                            if ind == len(size_list):
+                                break
+                        if len(el_nbrs) > 0:
+                            num_to_take = min(underage, size_list[ind] - len(duchy.tile_list[ind].hex_list))
+                            added_now = random.sample(el_nbrs, min(num_to_take,len(el_nbrs)))
+                            assigned.extend(added_now)
+                            duchy.tile_list[ind].hex_list.extend(added_now)
+                            if len(duchy.tile_list[ind].hex_list) == size_list[ind]:
+                                ind += 1
+                            # Note that we could keep going here, and check the neighbors of these neighbors, but I'm going to skip this for now.
+                    if underage == 0:
+                        if len(size_list) > 2:
+                            duchy.tile_list.insert(0,duchy.tile_list.pop(1))
+                        possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy, chunk, allowable_chunks, size)
+        # Clumpy version
+        else:
+            # TODO: Fix this!
+            possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(sorted_chunk[:size], size_list), chunk, allowable_chunks, size)
+            # shared = [el for el in a_adj if el in b_adj]
+            # if len(shared) > 0:
+            #     # At least one of them touches both, and so should be the capital.
+            #     duchy = Tile(rgb=d_col(), hex_list=[])
+            #     capital_county_hexes = [shared[0]]
+            #     poss_nbrs = set()
+            #     # Attempt to grab shared first.
+            #     while len(capital_county_hexes) < size_list[0]:
+            #         poss_nbrs.union([el for el in capital_county_hexes[-1].neighbors() if el in shared and el not in capital_county_hexes])
+            #         if len(poss_nbrs) == 0:
+            #             break
+            #         capital_county_hexes.append(shared_nbrs.pop())
+            #     # Now grab anything to make it big enough.
+            #     poss_nbrs = {nel for nel in el.neighbors() for el in capital_county_hexes if nel in sorted_chunk and nel not in capital_county_hexes}
+            #     while len(capital_county_hexes) < size_list[0]:
+            #         capital_county_hexes.append(poss_nbrs.pop())
+            #         poss_nbrs.union([el for el in capital_county_hexes[-1].neighbors() if el in sorted_chunk and el not in capital_county_hexes])
+            #         if len(poss_nbrs) == 0:
+            #             break
+            #     if len(capital_county_hexes) == size_list[0]:
+            #         duchy.tile_list.append(Tile(rgb=c_col(), hex_list=capital_county_hexes))
+            #     else:
+            #         break
+            #     # Time to do the other counties
+
+            # else:
+            #     duchy = Tile(rgb=d_col(), hex_list=[])
+        if len(possible_tiles) == num_duchies:
+            return possible_tiles
+    return False
+
+
+def divide_into_duchies_old(size_list, num_duchies, allowable_chunks, a_dist, b_dist, ranking):
     '''Given a list of necessary sizes (size_list), and a list of list of hexes (allowable_chunks), 
     attempt to create num_duchies duchies with size hexes each, where each is adjacent to both a and b (has a hex with 1 a_dist and 1 b_dist).
     Ranking is a dictionary of all (base) elements in allowable_chunks.
@@ -514,20 +652,35 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
                 sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
                 counties[1].append([el for el in sorted_chunk if el in a_adj][0])
                 candidate.add(counties[1][0])
-                counties[2].append([el for el in sorted_chunk if el in b_adj][0])
+                counties[2].append([el for el in sorted_chunk if el in b_adj and el != counties[1][0]][0])
                 candidate.add(counties[2][0])
                 others = [el for el in sorted_chunk if el not in candidate]
                 while (len(candidate) < size) and len(others) > 0:
                     other = others.pop(0)
-                    adj = [other.sub(el).mag() == 1 for el in candidate]
+                    adj = [any([other.sub(el).mag() == 1 for el in county]) for county in counties]
                     if any(adj):
                         candidate.add(other)
+                        choice = 2
+                        if adj[1] and adj[2]:
+                            choice = np.argmin([999, size_list[1] - len(counties[1]), size_list[2] - len(counties[2])])
+                        elif adj[1]:
+                            choice = 1
+                        elif adj[2]:
+                            choice = 2
+                        else:
+                            choice = 0
+                        if (choice == 1 and len(counties[1]) == size_list[1]) or (choice == 2 and len(counties[2]) == size_list[2]):
+                            choice = 0
+                        counties[choice].append(other)
+                        others = [el for el in sorted_chunk if el not in candidate]
                 if len(candidate) == size:
                     candidate = list(candidate)
                     if len(get_chunks(candidate)) == 1:
-                        possible_tiles.append(Tile(hex_list = candidate, rgb=d_col()))
+                        if all([len(get_chunks(county)) == 1 for county in counties]):
+                            possible_tiles.append(Tile(hex_list = [], rgb=d_col(),
+                                                       tile_list=[Tile(hex_list=county, rgb=c_col()) for county in counties]))
                     if len(possible_tiles) == num_duchies:
-                        return [divide_into_counties(pt, size_list) for pt in possible_tiles]
+                        return possible_tiles
                     if len(others) >= size:
                         remaining = [el for el in sorted_chunk if el not in candidate]
                         other_chunks = get_chunks(remaining)
