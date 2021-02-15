@@ -1,30 +1,34 @@
+from enum import Enum
+import os
+import random
+import pickle
+import math
+import shutil
+
+import numpy as np
+
 from cube import Cube
 from tile import Tile
 from ck2map import CK2Map
 import continent_gen
-import os
-import random
-import pickle
-import numpy as np
-import math
-import shutil
 
-TERRAIN_LIST = ['desert','jungle','mountain','forest','steppe']
-TERRAIN_NUMBER = {'plains': 0, 'farmland': 1, 'desert': 3, 'steppe': 5, 'hills': 8, 'mountain': 9, 'jungle': 12, 'forest': 16}
+
+Terrain = Enum('Terrain','plains farmlands hills mountains desert desert_mountains oasis jungle forest taiga wetlands steppe floodplains drylands')
 NUM_KINGDOM_HEXES = sum([sum(x) for x in continent_gen.KINGDOM_SIZE_LIST])
 NUM_CENTER_HEXES = sum(continent_gen.CENTER_SIZE_LIST)
 NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
 
 def make_dot_mod(file_dir, mod_name, mod_disp_name):
     '''Build the basic mod details file.'''
-    outer = "name = \"{}\"\npath = \"mod/{}\"\n".format(mod_disp_name, mod_name)
+    outer = "name = \"{}\"\npath = \"mod/{}\"\nsupported_version = 1.2.2\n".format(mod_disp_name, mod_name)
     inner = "name = \"{}\"\n".format(mod_disp_name)
     shared = "user_dir = \"{}\"\n".format(mod_name)
+    shared = "version = 0.0.1\n"
     shared += "tags = {\n\t\"Total Conversion\"\n}\n"
-    replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
-                        #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
-                        #"history/technology", "history/titles", "history/wars"]
-    shared += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
+    # replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
+    #                     #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
+    #                     #"history/technology", "history/titles", "history/wars"]
+    # outer += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
     os.makedirs(os.path.join(file_dir, mod_name), exist_ok=True)
     with open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w') as f:
         f.write(outer + shared)
@@ -234,7 +238,7 @@ def split_group(divide):
     return (a,b)
 
 
-def group_seas(ocean):
+def group_seas(ocean, min_sea_size=3, max_sea_size=12):
     '''Given a dictionary of distance from shore, create a list of list of hexes that are shallow water,
     and a list of list of hexes that are deeper (but still traversable) water.'''
     water_groups = []
@@ -251,21 +255,22 @@ def group_seas(ocean):
                 if curr not in water_groups[-1]:
                     water_groups[-1].append(curr)
                 to_search.extend([h for h in curr.neighbors() if h in eshore and h not in water_groups[-1]])
-    while max([len(el) for el in water_groups]) > 5:
-        to_split = [wg for wg in water_groups if len(wg) > 5]
+    to_split = [wg for wg in water_groups if len(wg) > max_sea_size]
+    while len(to_split) > 0:
         divide = to_split[0]
         a, b = split_group(divide)
         water_groups.remove(divide)
         water_groups.append(a)
         water_groups.append(b)
+        to_split = [wg for wg in water_groups if len(wg) > max_sea_size]
     water_groups = [wg for wg in water_groups if len(wg) > 1]
     for wg in water_groups:
-        if len(wg) == 2:
+        if len(wg) <= min_sea_size:
             neighbors = []
             for el in wg:
                 neighbors.extend([nel for nel in el.neighbors() if nel in shore and not any([nel in wag for wag in water_groups])])
             neighbors = list(set(neighbors))
-            if len(wg) + len(neighbors) < 6:
+            if len(wg) + len(neighbors) <= max_sea_size:
                 wg.extend(neighbors)
     ends = [el for el in shore if not any([el in wag for wag in water_groups]) and 
         sum([nel in shore and not any([nel in wag for wag in water_groups]) for nel in el.neighbors()]) == 1]
@@ -289,7 +294,7 @@ def group_seas(ocean):
                                     bn_ind = index
                             water_groups[bn_ind].append(src)
                             water_groups.pop()
-                    elif len(water_groups[-1]) + len(neighbors) < 5:
+                    elif len(water_groups[-1]) + len(neighbors) < max_sea_size:
                         water_groups[-1].extend(neighbors)
                     else:
                         valid = False
@@ -388,53 +393,66 @@ def allocate_pids(world, wastelands, shore_groups, sea_groups):
         last_pid += 1
     return pid_from_hex, rgb_from_hex, rgb_from_pid
 
-def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire):
+
+def make_terrain(world, wastelands, ocean, base_terrain_from_empire, waste_terrain_from_empire):
     '''Create the dictionary that maps cubes to terrain.
     The main terrain used is:
-    0 - plains; the default, present everywhere.
-    1 - farmland; rare, present everywhere, biased towards capitals.
-    9 - mountains; rare, present everywhere, biased towards wasteland boundaries.
-    8 - hills; uncommon, present everywhere.
-    Now you have four variants:
-    16 - forest
-    12 - jungle
-    5 - steppe
-    3 - desert
-    The config file will assign each empire a base_terrain type, used to determine which of those four 
-    should be used for regular terrain, and a waste_terrain type, used to determine the terrain of wastelands.'''
+        plains: the default, present everywhere
+        farmland: rare, present everywhere, biased towards capitals.
+        mountains: rare, present everywhere
+        hills: uncommon, present everywhere
+
+    There are four regional variants for wasteland terrain:
+        forest (western Europe)
+        steppe (eastern Europe)
+        jungle (india)
+        desert (islam)
+    '''
     terrain_from_hex = {}
+    flattened_kingdom_hexes = [item for sublist in KINGDOM_SIZE_LIST for item in sublist]
     for emp_idx, empire in enumerate(empires.keys()):
-        base_terrain = TERRAIN_NUMBER[base_terrain_from_empire[empire]]
-        waste_terrain = TERRAIN_NUMBER[waste_terrain_from_empire[empire]]
+        base_terrain = Terrain[base_terrain_from_empire[empire]]
+        waste_terrain = Terrain[waste_terrain_from_empire[empire]]
         for tile in world.tile_list[emp_idx].tile_list:
             tile_hexes = tile.real_hex_list()
-            if len(tile_hexes) == NUM_KINGDOM_HEXES: #main kingdom
-                terrain_list = [0] * 4 + [9] * 3 + [8] * 3 + [base_terrain] * 4
+            if len(tile_hexes) == NUM_KINGDOM_HEXES:
+                # There are 16 counties: 1 capital farmland, 8 plains, 4 hills, and 3 mountains.
+                terrain_list = [Terrain.plains] * 6 + [Terrain.hills] * 4 + [Terrain.mountains] * 3 + [base_terrain] * 2
                 random.shuffle(terrain_list)
-                for idx in [0, 6, 10]:
-                    terrain_list.insert(idx, 1)
-            elif len(tile_hexes) == NUM_CENTER_HEXES: #center duchy
-                terrain_list = [0, 0, 8, base_terrain]
+                terrain_list.insert(0, Terrain.farmlands)
+                terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, flattened_kingdom_hexes)]
+            elif len(tile_hexes) == NUM_CENTER_HEXES:
+                # There are 4 counties: farmland capital, 2 plains, and 1 hills.
+                terrain_list = [Terrain.plains] * 2 + [Terrain.hills] * 1
                 random.shuffle(terrain_list)
-                terrain_list.insert(0, 1)
+                terrain_list.insert(0, Terrain.farmlands)
+                terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, continent_gen.CENTER_SIZE_LIST)]
             elif len(tile_hexes) == NUM_BORDER_HEXES:
-                terrain_list = [0] * 2 + [8] * 2 + [9] + [base_terrain] * 2
+                # There are 3 counties: 1 plains, 1 hills, and 1 mountains.
+                terrain_list = [Terrain.plains] * 1 + [Terrain.hills] * 1 + [Terrain.mountains] * 1
                 random.shuffle(terrain_list)
+                terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, continent_gen.BORDER_SIZE_LIST)]
             else:
                 raise ValueError('Don\'t know how to handle terrain for this tile: {}'.format(tile))
+            # This was a list of lists, where each barony in a county just shares the same terrain, and we want it to be a flattened list to match the real_hex_list.
+            terrain_list = [item for sublist in terrain_list for item in sublist]
             for el in tile_hexes:
-                terrain_from_hex[el] = terrain_list.pop(0)#[el_idx]
-        bounding_hex = continent_gen.BoundingHex(world.tile_list[emp_idx])
-        for wasteland in wastelands:
-            if wasteland[0] in bounding_hex:
-                for el in wasteland:
-                    terrain_from_hex[el] = waste_terrain
-        print(len(set(terrain_from_hex.keys())))
-    for el in ocean:
-        if el not in terrain_from_hex:
-            terrain_from_hex[el] = 15
-    print(len(terrain_from_hex))
+                terrain_from_hex[el] = terrain_list.pop(0)
+            bounding_hex = continent_gen.BoundingHex(world.tile_list[emp_idx])
+            for wasteland in wastelands:
+                if wasteland[0] in bounding_hex:
+                    for el in wasteland:
+                        terrain_from_hex[el] = waste_terrain
     return terrain_from_hex
+
+
+def make_province_terrain_txt(terrain_from_hex, pid_from_hex):
+    '''Create the common/00_province_terrain.txt file.'''
+    with open(os.path.join(file_dir,"common", "00_province_terrain.txt"),'w') as f:
+        f.write('default=plains\n')
+        for cube_loc, terrain_type in terrain_from_hex.items():
+            f.write(f'{}={}'.format(pid_from_hex[cube_loc], terrain_type.name))
+            
 
 def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_name='SinglePlayerTest',
          config_filepath = 'C:\\ck3_procedural\\config.txt',

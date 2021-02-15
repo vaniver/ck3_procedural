@@ -526,17 +526,16 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
         chunk = allowable_chunks.pop(0)
         if len(chunk) < size:
             continue  # We can't make one, so don't bother trying.
-        sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
-        a_adj = [el for el in sorted_chunk if a_dist[el] == 1]
-        b_adj = [el for el in sorted_chunk if b_dist[el] == 1]
-        if len(a_adj) == 0 or len(b_adj) == 0:
-            continue  # We're not going to get adjacency to both.
-        # There are two main cases to handle: when they're close enough that the counties might 
-        # overlap or cut each other off, and when they're far enough that the main challenge is
-        # finding a path that can reach.
-        closest_a = a_adj[0]
-        # Pathing version:
-        if b_dist[closest_a] > 4:
+        sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, el.mag()) + a_dist[el] + b_dist[el], el) for el in chunk])]
+        if len(get_chunks(sorted_chunk[:size])) == 1:
+            possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(sorted_chunk[:size], size_list), chunk, allowable_chunks, size)
+        else:
+            sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
+            a_adj = [el for el in sorted_chunk if a_dist[el] == 1]
+            b_adj = [el for el in sorted_chunk if b_dist[el] == 1]
+            if len(a_adj) == 0 or len(b_adj) == 0:
+                continue  # We're not going to get adjacency to both.
+            closest_a = a_adj[0]
             snake = [closest_a]
             disconnected = True
             while disconnected:
@@ -596,37 +595,6 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
                         if len(size_list) > 2:
                             duchy.tile_list.insert(0,duchy.tile_list.pop(1))
                         possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy, chunk, allowable_chunks, size)
-        # Clumpy version
-        else:
-            # TODO: Fix this!
-            possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(sorted_chunk[:size], size_list), chunk, allowable_chunks, size)
-            # shared = [el for el in a_adj if el in b_adj]
-            # if len(shared) > 0:
-            #     # At least one of them touches both, and so should be the capital.
-            #     duchy = Tile(rgb=d_col(), hex_list=[])
-            #     capital_county_hexes = [shared[0]]
-            #     poss_nbrs = set()
-            #     # Attempt to grab shared first.
-            #     while len(capital_county_hexes) < size_list[0]:
-            #         poss_nbrs.union([el for el in capital_county_hexes[-1].neighbors() if el in shared and el not in capital_county_hexes])
-            #         if len(poss_nbrs) == 0:
-            #             break
-            #         capital_county_hexes.append(shared_nbrs.pop())
-            #     # Now grab anything to make it big enough.
-            #     poss_nbrs = {nel for nel in el.neighbors() for el in capital_county_hexes if nel in sorted_chunk and nel not in capital_county_hexes}
-            #     while len(capital_county_hexes) < size_list[0]:
-            #         capital_county_hexes.append(poss_nbrs.pop())
-            #         poss_nbrs.union([el for el in capital_county_hexes[-1].neighbors() if el in sorted_chunk and el not in capital_county_hexes])
-            #         if len(poss_nbrs) == 0:
-            #             break
-            #     if len(capital_county_hexes) == size_list[0]:
-            #         duchy.tile_list.append(Tile(rgb=c_col(), hex_list=capital_county_hexes))
-            #     else:
-            #         break
-            #     # Time to do the other counties
-
-            # else:
-            #     duchy = Tile(rgb=d_col(), hex_list=[])
         if len(possible_tiles) == num_duchies:
             return possible_tiles
     return False
