@@ -20,11 +20,11 @@ def make_chunk(size, seed=0):
     return cubes
 
 
-def split_chunk_iter(chunk, sizes, neighbors, rng=0):
+def split_chunk_iter(chunk, sizes, neighbors, rng=None):
     """ Single step of split_chunk() """
     assert len(chunk) > len(sizes), f"{len(chunk)} !> {len(sizes)}"
     if not isinstance(rng, random.Random):
-        rng = random.Random(rng)
+        rng = random
     # start by drawing three random items
     splits = [[c] for c in rng.sample(list(chunk), len(sizes))]
     unused = set(chunk) - set(sum(splits, []))
@@ -50,7 +50,7 @@ def split_chunk_iter(chunk, sizes, neighbors, rng=0):
     return splits
 
 
-def split_chunk(chunk, sizes, max_iter=1000, seed=0):
+def split_chunk(chunk, sizes, max_iter=1000, rng=None):
     """
     Split a chunk (list of cubes) into contiguous subsets of given sizes.
 
@@ -60,7 +60,8 @@ def split_chunk(chunk, sizes, max_iter=1000, seed=0):
     Returns a list of chunks (set of cubes) that correspond to the sizes.
     """
     assert len(chunk) == sum(sizes), f"{len(chunk)} != {sum(sizes)}"
-    rng = random.Random(seed)
+    if not isinstance(rng, random.Random):
+        rng = random
     # Precompute neighbors for each cube in the chunk
     neighbors = dict()
     for c in chunk:
@@ -87,7 +88,7 @@ if __name__ == "__main__":
     for seed in range(10):
         chunk = make_chunk(12, seed=seed)
         try:
-            splits = split_chunk(chunk, [4, 4, 4], seed=seed)
+            splits = split_chunk(chunk, [4, 4, 4], rng=random.Random(seed))
             show_splits(chunk, splits)
         except SplitChunkMaxIterationExceeded:
             Doodler({c: (255, 255, 255) for c in chunk}, size=(200,200)).show()
