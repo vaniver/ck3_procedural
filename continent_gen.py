@@ -128,6 +128,7 @@ def new_continent_gen(num_kingdoms=3):
     print(errors)
     return continent
 
+
 def inner_continent_gen(center, kingdoms, cen_nbrs, k_r_bnds, port_locs):
     continent = Tile(hex_list=[])
     continent.add_tile(center)
@@ -219,6 +220,7 @@ def add_center_county(size, c_nbrs, adj, chunk):
         if len(get_chunks(candidate)) == 1:
             return Tile(hex_list=candidate, rgb=c_col())
     return False
+
 
 def inner_add_triangle(continent, kingdoms, c_idx):
     assigned = continent.real_total_list()
