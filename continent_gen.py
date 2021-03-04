@@ -159,7 +159,7 @@ def inner_continent_gen(center, kingdoms, cen_nbrs, k_r_bnds, port_locs):
         if not inner_add_triangle(continent, kingdoms, 4):
             return True, 'add fifth kingdom'
         print('Added 5 kingdoms!')
-    return False, (continent, kingdoms)
+    return False, continent  #(continent, kingdoms)
 
 
 def sort_hexlist(list_to_sort, ranking):
@@ -799,7 +799,7 @@ def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles 
     world = Tile(hex_list=[])
     #Continents
     for cont_idx, cont_size in enumerate(cont_size_list):
-        cont = create_continent(num_kingdoms = cont_size)
+        cont = new_continent_gen(num_kingdoms = cont_size)
         bounding_hex = BoundingHex(cont)
         cont.origin, cont.rotation = bounding_hex.best_corner(angles[cont_idx])
         world.add_tile(cont)

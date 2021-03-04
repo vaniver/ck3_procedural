@@ -11,12 +11,12 @@ europe	Spain	catholic	continent
 islam	Iraq	sunni	continent
 islam	Egypt	sunni	continent
 islam	Persia	sunni	continent
-islam	Morocco	sunni	continent
+#islam	Morocco	sunni	continent
 india	Orissa	hindu	continent
 india	Rajputana	jain	continent
 india	Bengal	buddhist	continent
-india	Punjab	hindu	continent
+#india	Punjab	hindu	continent
 #empire	base_terrain	waste_terrain
-europe	forest	mountain
+europe	forest	mountains
 islam	desert	desert
-india	jungle	mountain
+india	jungle	mountains

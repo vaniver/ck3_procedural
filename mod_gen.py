@@ -20,20 +20,21 @@ NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
 
 def make_dot_mod(file_dir, mod_name, mod_disp_name):
     '''Build the basic mod details file.'''
-    outer = "name = \"{}\"\npath = \"mod/{}\"\nsupported_version = 1.2.2\n".format(mod_disp_name, mod_name)
-    inner = "name = \"{}\"\n".format(mod_disp_name)
-    shared = "user_dir = \"{}\"\n".format(mod_name)
     shared = "version = 0.0.1\n"
     shared += "tags = {\n\t\"Total Conversion\"\n}\n"
+    shared += "name = \"{}\"\n".format(mod_disp_name)
+    shared += "supported_version = 1.2.2\n"
+    outer = "path = \"mod/{}\"\n".format(mod_name)
+    
     # replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
     #                     #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
     #                     #"history/technology", "history/titles", "history/wars"]
     # outer += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
     os.makedirs(os.path.join(file_dir, mod_name), exist_ok=True)
     with open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w') as f:
-        f.write(outer + shared)
+        f.write(shared + outer)
     with open(os.path.join(file_dir, mod_name, "descriptor.mod".format(mod_name)),'w') as f:
-        f.write(inner + shared)
+        f.write(shared)
 
 
 def read_config_file(config_filepath):
@@ -57,10 +58,8 @@ def read_config_file(config_filepath):
             angle_from_empire[empire] = int(angle)
         elif len(split_line) == 3: #terrain info
             empire, base_terrain, waste_terrain = split_line
-            assert base_terrain in TERRAIN_LIST
-            assert waste_terrain in TERRAIN_LIST
-            base_terrain_from_empire[empire] = base_terrain
-            waste_terrain_from_empire[empire] = waste_terrain
+            base_terrain_from_empire[empire] = Terrain[base_terrain]
+            waste_terrain_from_empire[empire] = Terrain[waste_terrain]
         elif len(split_line) == 4: #kingdom info
             empire, kingdom, religion, geo_type = split_line
             assert geo_type == 'island' or geo_type == 'continent'
@@ -127,17 +126,17 @@ def check_contiguous(group):
     '''Check to make sure that every cube in a list is reachable by walking through that list.'''
     if len(group) == 0:
         return True
-    to_search = [group[0]]
-    found = []
+    to_search = {group[0]}
+    found = {}
     nfound = 0
     while len(to_search) > 0:
         curr = to_search.pop()
         nfound += 1
-        found.append(curr)
+        found.add(curr)
         try:
-            to_search.extend([el for el in curr.neighbors() if el in group and el not in to_search and el not in found])
+            to_search.union([el for el in curr.neighbors() if el in group and el not in to_search and el not in found])
         except:
-            print(curr)
+            continue
     return len(group) == nfound
 
 
@@ -359,7 +358,7 @@ def group_seas(ocean, min_sea_size=3, max_sea_size=12):
 def new_rgb(dictionary):
     '''Returns a randomly chosen RGB value that isn't already in the values of dictionary.'''
     guess = tuple(np.random.randint(0,256,3))
-    if guess in dictionary.values() or guess == (255,255,255):
+    if guess in dictionary.values() or guess == (255,255,255) or guess == (0,0,0):
         return new_rgb(dictionary)
     else:
         return guess
@@ -383,7 +382,6 @@ def allocate_pids(world, wastelands, shore_groups, sea_groups):
             rgb_from_hex[el] = rgb
             pid_from_hex[el] = last_pid
         last_pid += 1
-    last_pid += 1000
     for group in shore_groups + sea_groups:
         rgb = new_rgb(rgb_from_pid)
         rgb_from_pid[last_pid] = rgb
@@ -394,7 +392,7 @@ def allocate_pids(world, wastelands, shore_groups, sea_groups):
     return pid_from_hex, rgb_from_hex, rgb_from_pid
 
 
-def make_terrain(world, wastelands, ocean, base_terrain_from_empire, waste_terrain_from_empire):
+def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire):
     '''Create the dictionary that maps cubes to terrain.
     The main terrain used is:
         plains: the default, present everywhere
@@ -409,10 +407,10 @@ def make_terrain(world, wastelands, ocean, base_terrain_from_empire, waste_terra
         desert (islam)
     '''
     terrain_from_hex = {}
-    flattened_kingdom_hexes = [item for sublist in KINGDOM_SIZE_LIST for item in sublist]
+    flattened_kingdom_hexes = [item for sublist in continent_gen.KINGDOM_SIZE_LIST for item in sublist]
     for emp_idx, empire in enumerate(empires.keys()):
-        base_terrain = Terrain[base_terrain_from_empire[empire]]
-        waste_terrain = Terrain[waste_terrain_from_empire[empire]]
+        base_terrain = base_terrain_from_empire[empire]
+        waste_terrain = waste_terrain_from_empire[empire]
         for tile in world.tile_list[emp_idx].tile_list:
             tile_hexes = tile.real_hex_list()
             if len(tile_hexes) == NUM_KINGDOM_HEXES:
@@ -446,24 +444,27 @@ def make_terrain(world, wastelands, ocean, base_terrain_from_empire, waste_terra
     return terrain_from_hex
 
 
-def make_province_terrain_txt(terrain_from_hex, pid_from_hex):
+def make_province_terrain_txt(terrain_from_hex, pid_from_hex, file_dir):
     '''Create the common/00_province_terrain.txt file.'''
-    with open(os.path.join(file_dir,"common", "00_province_terrain.txt"),'w') as f:
+    os.makedirs(os.path.join(file_dir,"common", "province_terrain"), exist_ok=True)
+    with open(os.path.join(file_dir,"common", "province_terrain", "00_province_terrain.txt"),'w') as f:
         f.write('default=plains\n')
         for cube_loc, terrain_type in terrain_from_hex.items():
-            f.write(f'{}={}'.format(pid_from_hex[cube_loc], terrain_type.name))
-            
+            f.write(f'{pid_from_hex[cube_loc]}={terrain_type.name}')
+
 
 def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_name='SinglePlayerTest',
          config_filepath = 'C:\\ck3_procedural\\config.txt',
-         max_x=1280, max_y=1280, num_rivers = 25, crisp = False, seed = None):
+         max_x=1280, max_y=1280, num_rivers = 25, crisp = True, seed = None):
     '''Attempts to make the folder with mod.'''
     #Basic Setup.
-    make_mod(file_dir, mod_name, mod_disp_name)
     mod_dir = os.path.join(file_dir,mod_name)
-    if not os.path.exists(mod_dir):
-        os.makedirs(mod_dir)
-        os.makedirs(os.path.join(mod_dir,'map'))
+    if os.path.exists(mod_dir):
+        shutil.rmtree(mod_dir)
+    os.makedirs(mod_dir, exist_ok=True)
+    os.makedirs(os.path.join(mod_dir,'map'), exist_ok=True)
+    os.makedirs(os.path.join(mod_dir,'common'), exist_ok=True)
+    make_dot_mod(file_dir, mod_name, mod_disp_name)
     if seed:
         random.seed(seed)
     #Read in the configuration files.
@@ -474,9 +475,9 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     angles = [angle_from_empire[k] for k in empires.keys()]
     #Generate the tile hierarchy.
     world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)
-    world.doodle_by_tile([(255,0,0),(0,255,0),(0,0,255)])
+    world.doodle_by_tile([(255,0,0),(0,255,0),(0,0,255)],size=(1500,1500))
     world.rectify()
-    world.doodle_by_tile([(255,0,0),(0,255,0),(0,0,255)])
+    world.doodle_by_tile([(255,0,0),(0,255,0),(0,0,255)],size=(1500,1500))
     max_mag = max([el.mag() for el in world.real_hex_list()])
     #Fill in wastelands and group together the seas.
     ocean, wastelands = find_ocean_and_wastelands(world)
@@ -488,13 +489,24 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     cmap.provinces(filedir=os.path.join(mod_dir,'map'))
     land_height = calc_land_height(world, ocean)
     cmap.d_cube2terr = make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire)
+    make_province_terrain_txt(cmap.d_cube2terr, pid_from_hex, mod_dir)
     waste_list = [*wastelands]
-    cmap.topology(land_height, ocean, waste_list, filedir=os.path.join(mod_dir,"map"))
-    cmap.terrain(filedir=os.path.join(mod_dir,'map'))
-    #rivers = make_rivers()
-    #cmap.trees(self.land_height, self.water_height, waste_list, filedir=os.path.join(self.filedir,"map"))
-    #cmap.rivers(self.land_height, filedir=os.path.join(self.filedir,"map"))
+    name_from_pid = {k: str(k) for k in rgb_from_pid.keys()}
+    make_definition(mod_dir, rgb_from_pid, name_from_pid)
+    # cmap.topology(land_height, ocean, waste_list, filedir=os.path.join(mod_dir,"map"))
+    # cmap.terrain(filedir=os.path.join(mod_dir,'map'))
+    # rivers = make_rivers()
+    # cmap.trees(self.land_height, self.water_height, waste_list, filedir=os.path.join(self.filedir,"map"))
+    # cmap.rivers(self.land_height, filedir=os.path.join(self.filedir,"map"))
     return world, cmap, ocean, land_height, waste_list
+
+
+def make_definition(file_dir, rgb_from_pid, name_from_pid):
+    with open(os.path.join(file_dir,"map", "definition.csv"),'w') as f:
+        f.write('0;0;0;0;x;x;\n')
+        for pid, rgb in rgb_from_pid.items():
+            f.write(';'.join([str(pid)] + [str(c) for c in rgb] + [name_from_pid[pid], 'x', '\n']))
+
 
 if __name__ == '__main__':
     #Eventually we're going to use a config file to run most of this.

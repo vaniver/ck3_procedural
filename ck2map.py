@@ -26,15 +26,15 @@ class CK2Map:
         self.img_provinces = PIL.Image.new('RGB', (max_x,max_y),  "white")
         self.img_topology = PIL.Image.new('L', (max_x,max_y),  "white")
         self.img_world_normal_height = PIL.Image.new('RGB', (max_x,max_y),  "white")
-        #self.img_rivers = PIL.Image.new('P', (max_x,max_y),  "black")
-        #with open('rivers_palette.pickle', 'rb') as f:
-        #    self.img_rivers.putpalette(pickle.load(f))
-        self.img_terrain = PIL.Image.new('P', (max_x,max_y),  "white")
-        with open('terrain_palette.pickle', 'rb') as f:
-            self.img_terrain.putpalette(pickle.load(f))
-        #self.img_trees = PIL.Image.new('P', (int(max_x/8),int(max_y/8)),  "white")
-        #with open('trees_palette.pickle', 'rb') as f:
-        #    self.img_trees.putpalette(pickle.load(f))
+        # self.img_rivers = PIL.Image.new('P', (max_x,max_y),  "black")
+        # with open('rivers_palette.pickle', 'rb') as f:
+        #     self.img_rivers.putpalette(pickle.load(f))
+        # self.img_terrain = PIL.Image.new('P', (max_x,max_y),  "white")
+        # with open('terrain_palette.pickle', 'rb') as f:
+        #     self.img_terrain.putpalette(pickle.load(f))
+        # self.img_trees = PIL.Image.new('P', (int(max_x/8),int(max_y/8)),  "white")
+        # with open('trees_palette.pickle', 'rb') as f:
+        #     self.img_trees.putpalette(pickle.load(f))
         self.d_cube2rgb = {}
         self.d_cube2terr = {}
         self.d_cube2pid = {}
@@ -362,7 +362,7 @@ class CK2Map:
                 else:
                     pixels[x,y] = (255, 255, 255)
         if filedir:
-            self.img_provinces.save(os.path.join(filedir, 'provinces.bmp'))
+            self.img_provinces.save(os.path.join(filedir, 'provinces.png'))
             
     def topology(self, land_height, water_height, waste_list, filedir=''):
         '''Create topology.bmp. 95 is the boundary. Also creates world_normal_height.'''
