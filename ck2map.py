@@ -189,14 +189,14 @@ class CK2Map:
             share[0] = share[2]
             share[2] = temp
         if center in land_height:
-            h = 96 + land_height[center] * 3 * share[0]
+            h = 18 + land_height[center] * 3 * share[0]
             for el in [n0, n1, n2]:
                 if el in self.d_cube2terr:
                     t.append(self.d_cube2terr[el])
                 else:
                     t.append(-1)
             if t[0] == 15:
-                return 94 #Lakes have to have water topology.
+                return 16 #Lakes have to have water topology.
             if n1 in land_height:
                 h += land_height[n1] * 3 * share[1]
             if n2 in land_height:
@@ -363,8 +363,36 @@ class CK2Map:
                     pixels[x,y] = (255, 255, 255)
         if filedir:
             self.img_provinces.save(os.path.join(filedir, 'provinces.png'))
+
+    def heightmap(self, land_height, water_height, waste_list, terrain_height, filedir=''):
+        '''Create heightmap.png. 16 is the boundary?'''
+        self.topo = np.zeros((self.max_x,self.max_y))
+        last_cube = None
+        for x in range(self.max_x):
+            for y in range(self.max_y):
+                if self.valid_pixel(x,y):
+                    c = self.pixel_to_cube(x,y)
+                    if c != last_cube:
+                        if c in land_height:
+                            dist_height = land_height[c] * 30
+                        elif c in water_height:
+                            dist_height = water_height[c] * 30
+                        else:
+                            dist_height = 0
+                        # last_cube = c
+                        # if c in self.d_cube2terr:
+                        #     dist_height += terrain_height[self.d_cube2terr[c]]
+                        # else:
+                        #     dist_height += 16
+                        last_height = dist_height  # max(0, dist_height)
+                    self.topo[y,x] = last_height
+                else:
+                    self.topo[y,x] = 0
+        self.img_topology.putdata(self.topo.flatten())
+        if filedir:
+            self.img_topology.save(os.path.join(filedir, 'heightmap.png'))
             
-    def topology(self, land_height, water_height, waste_list, filedir=''):
+    def old_topology(self, land_height, water_height, waste_list, filedir=''):
         '''Create topology.bmp. 95 is the boundary. Also creates world_normal_height.'''
         self.topo = np.zeros((self.max_x,self.max_y))
         for x in range(self.max_x):

@@ -14,6 +14,11 @@ import continent_gen
 
 
 Terrain = Enum('Terrain','plains farmlands hills mountains desert desert_mountains oasis jungle forest taiga wetlands steppe floodplains drylands')
+terrain_height = {Terrain.plains: 18, Terrain.farmlands: 16, Terrain.oasis: 17, Terrain.floodplains: 19,
+                  Terrain.desert: 20, Terrain.taiga: 20, Terrain.wetlands: 20, Terrain.steppe: 20, Terrain.drylands: 20,
+                  Terrain.jungle: 25, Terrain.forest: 25,
+                  Terrain.hills: 30, 
+                  Terrain.mountains: 80,  Terrain.desert_mountains: 80, }
 NUM_KINGDOM_HEXES = sum([sum(x) for x in continent_gen.KINGDOM_SIZE_LIST])
 NUM_CENTER_HEXES = sum(continent_gen.CENTER_SIZE_LIST)
 NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
@@ -462,7 +467,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     if os.path.exists(mod_dir):
         shutil.rmtree(mod_dir)
     os.makedirs(mod_dir, exist_ok=True)
-    os.makedirs(os.path.join(mod_dir,'map'), exist_ok=True)
+    os.makedirs(os.path.join(mod_dir,"map_data"), exist_ok=True)
     os.makedirs(os.path.join(mod_dir,'common'), exist_ok=True)
     make_dot_mod(file_dir, mod_name, mod_disp_name)
     if seed:
@@ -486,23 +491,23 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     pid_from_hex, rgb_from_hex, rgb_from_pid = allocate_pids(world, wastelands, shore_groups, sea_groups)
     cmap = CK2Map(max_x, max_y, hex_size = 12, map_size = max_mag + 2, crisp=crisp, default = (255,255,255))
     cmap.d_cube2rgb = rgb_from_hex
-    cmap.provinces(filedir=os.path.join(mod_dir,'map'))
+    cmap.provinces(filedir=os.path.join(mod_dir,"map_data"))
     land_height = calc_land_height(world, ocean)
     cmap.d_cube2terr = make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire)
     make_province_terrain_txt(cmap.d_cube2terr, pid_from_hex, mod_dir)
     waste_list = [*wastelands]
     name_from_pid = {k: str(k) for k in rgb_from_pid.keys()}
     make_definition(mod_dir, rgb_from_pid, name_from_pid)
-    # cmap.topology(land_height, ocean, waste_list, filedir=os.path.join(mod_dir,"map"))
-    # cmap.terrain(filedir=os.path.join(mod_dir,'map'))
+    cmap.heightmap(land_height, ocean, waste_list, terrain_height, filedir=os.path.join(mod_dir,"map_data"))
+    # cmap.terrain(filedir=os.path.join(mod_dir,"map_data"))
     # rivers = make_rivers()
-    # cmap.trees(self.land_height, self.water_height, waste_list, filedir=os.path.join(self.filedir,"map"))
-    # cmap.rivers(self.land_height, filedir=os.path.join(self.filedir,"map"))
+    # cmap.trees(self.land_height, self.water_height, waste_list, filedir=os.path.join(self.filedir,"map_data"))
+    # cmap.rivers(self.land_height, filedir=os.path.join(self.filedir,"map_data"))
     return world, cmap, ocean, land_height, waste_list
 
 
 def make_definition(file_dir, rgb_from_pid, name_from_pid):
-    with open(os.path.join(file_dir,"map", "definition.csv"),'w') as f:
+    with open(os.path.join(file_dir,"map_data", "definition.csv"),'w') as f:
         f.write('0;0;0;0;x;x;\n')
         for pid, rgb in rgb_from_pid.items():
             f.write(';'.join([str(pid)] + [str(c) for c in rgb] + [name_from_pid[pid], 'x', '\n']))
