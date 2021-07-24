@@ -1,9 +1,11 @@
+from dataclasses import dataclass
 from enum import Enum
-import os
-import random
-import pickle
 import math
+import os
+import pickle
+import random
 import shutil
+from typing import List
 
 import numpy as np
 
@@ -42,53 +44,68 @@ def make_dot_mod(file_dir, mod_name, mod_disp_name):
         f.write(shared)
 
 
+@dataclass
+class Kingdom:
+    name: str = ""
+    island: bool = False
+    religion: str = ""
+
+
+@dataclass
+class Empire:
+    name: str = ""
+    angle: int = 0
+    kingdoms: List["Kingdom"] = []
+    base_terrain: Terrain = Terrain.plains
+    waste_terrain: Terrain = Terrain.plains
+    continentals: int = 0
+    islands: int = 0
+
+    def add_kingdom(self, kingdom):
+        self.kingdoms.append(kingdom)
+        if kingdom.island:
+            self.islands += 1
+        else:
+            self.continentals += 1
+
+    def continental_names(self):
+        return [k for k in self.kingdoms if not k.island]
+
+    def island_names(self):
+        return [k for k in self.kingdoms if k.island]
+
 def read_config_file(config_filepath):
     '''Read the config file for the map.
     This ignores everything after a #, and expects rows to look like:
     empire_name kingdom_name    religion    continent/island
     separated by tabs.'''
     config_file = open(config_filepath)
-    angle_from_empire = {}
+    empires = {}
     base_terrain_from_empire = {}
     waste_terrain_from_empire = {}
-    kingdoms_from_empire = {}
-    continentals_from_empire = {}
-    islands_from_empire = {}
-    religions = set()
-    religion_from_kingdom = {}
+    kingdoms_from_religion = {}
     for line in config_file:
         split_line = [el.lower() for el in line.rstrip().split('#')[0].split('\t')]
         if len(split_line) == 2: #angle info
             empire, angle = split_line
-            angle_from_empire[empire] = int(angle)
+            empires[empire] = Empire(name=empire, angle=angle)
         elif len(split_line) == 3: #terrain info
             empire, base_terrain, waste_terrain = split_line
             base_terrain_from_empire[empire] = Terrain[base_terrain]
             waste_terrain_from_empire[empire] = Terrain[waste_terrain]
+            empires[empire].base_terrain = Terrain[base_terrain]
+            empires[empire].waste_terrain = Terrain[waste_terrain]
         elif len(split_line) == 4: #kingdom info
-            empire, kingdom, religion, geo_type = split_line
+            empire, kname, religion, geo_type = split_line
             assert geo_type == 'island' or geo_type == 'continent'
-            if empire in kingdoms_from_empire:
-                kingdoms_from_empire[empire].append(kingdom)
-                if geo_type == 'island':
-                    islands_from_empire[empire] += 1
-                else:
-                    continentals_from_empire[empire] += 1
+            kingdom = Kingdom(kname, geo_type == 'island', religion)
+            empires[empire].add_kingdom(kingdom)
+            if religion in kingdoms_from_religion:
+                kingdoms_from_religion[religion].append(kingdom.name)
             else:
-                kingdoms_from_empire[empire] = [kingdom]
-                if geo_type == 'island':
-                    islands_from_empire[empire] = 1
-                    continentals_from_empire[empire] = 0
-                else:
-                    islands_from_empire[empire] = 0
-                    continentals_from_empire[empire] = 1
-            religions.add(religion)
-            religion_from_kingdom[kingdom] = religion
-    empires = {}
-    for empire, kingdoms in kingdoms_from_empire.items():
-        empires[empire] = (kingdoms, (continentals_from_empire[empire], islands_from_empire[empire]))
+                kingdoms_from_religion[religion] = [kingdom.name]
     #TODO: Add some asserts that all the empires have the same keys?
-    return (empires, religions, religion_from_kingdom, angle_from_empire, base_terrain_from_empire, waste_terrain_from_empire)
+    return (empires, kingdoms_from_religion, base_terrain_from_empire, waste_terrain_from_empire)
 
 
 def find_ocean_and_wastelands(world):
@@ -132,7 +149,7 @@ def check_contiguous(group):
     if len(group) == 0:
         return True
     to_search = {group[0]}
-    found = {}
+    found = set()
     nfound = 0
     while len(to_search) > 0:
         curr = to_search.pop()
@@ -458,6 +475,78 @@ def make_province_terrain_txt(terrain_from_hex, pid_from_hex, file_dir):
             f.write(f'{pid_from_hex[cube_loc]}={terrain_type.name}')
 
 
+def small_from_empire(src_dir, ename, num, centers=False, used=[]):
+    '''Reads in the list of possible duchies to use as centers and borders for an empire,
+    and randomly selects the appropriate number.
+    Won't select anything which has a substring in used.'''
+    dtype = 'centers' if centers else 'borders'
+    with open(os.path.join(src_dir, "common", "landed_titles",f"{ename}-{dtype}.txt")) as inf:
+        poss_names = [line.strip() for line in inf.readlines()]
+    for name in poss_names:
+        if any(u in name for u in used):
+            poss_names.remove(name)
+    return poss_names
+
+
+def title_order(empire, src_dir):
+    '''Returns the names of files to write in the landed_titles, in order, from a list.'''
+    num_kingdoms = empire.continentals
+    num_centers = num_kingdoms - 2
+    num_borders = 4 * num_kingdoms - 6
+    centers = small_from_empire(src_dir, empire.name, num_centers, centers=True, used=empire.continental_names)
+    borders = small_from_empire(src_dir, empire.name, num_borders, centers=False, used=empire.continental_names)
+    kingdoms = [k for k in empire.continental_names]
+    random.shuffle(centers)
+    random.shuffle(borders)
+    random.shuffle(kingdoms)
+    titles = []
+    titles.append(centers[0])
+    titles.extend(kingdoms[:3])
+    titles.extend(borders[:6])
+    if num_kingdoms == 3:
+        return titles
+    titles.append(centers[1])
+    titles.append(kingdoms[3])
+    titles.extend(borders[6:10])
+    if num_kingdoms == 4:
+        return titles
+    titles.append(centers[2])
+    titles.append(kingdoms[4])
+    titles.extend(borders[10:])
+    return titles
+
+
+
+def make_landed_titles(empires, src_dir, file_dir):
+    '''Create the common/landed_titles/00_landed_titles.txt. Also generates the bname_from_pid dict.'''
+    os.makedirs(os.path.join(file_dir,"common", "province_terrain"), exist_ok=True)
+    bname_from_pid = {}
+    pid=1
+    with open(os.path.join(file_dir,"common", "province_terrain", "00_province_terrain.txt"),'w') as outf:
+        # Initial constants.
+        with open(os.path.join(src_dir, "common", "landed_titles","default.txt")) as inf:
+            outf.write(inf.readlines())
+        outf.write('\n')
+        # Go through each empire, and then each kingdom in each empire.
+        for ename, empire in empires.items():
+            with open(os.path.join(src_dir, "common", "landed_titles", f"{ename}.txt")) as inf:
+                outf.write(inf.readlines())
+            titles = title_order(empire, src_dir)
+            for title in titles:
+                with open(os.path.join(src_dir, "common", "landed_titles", f"{title}.txt")) as inf:
+                    for line in inf.readlines():
+                        if write_pid:
+                            line += str(pid)
+                            pid += 1
+                        if '\t\t\tb_' in line[:6]:
+                            bname = line.split('b_')[1].split('=')[0].strip()
+                            assert bname not in bname_from_pid
+                            bname_from_pid[bname] = pid
+                            write_pid = True
+                        outf.write(line)
+                outf.write('\t}\n')
+            outf.write('}\n')
+
 def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_name='SinglePlayerTest',
          config_filepath = 'C:\\ck3_procedural\\config.txt',
          max_x=1280, max_y=1280, num_rivers = 25, crisp = True, seed = None):
@@ -473,11 +562,11 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     if seed:
         random.seed(seed)
     #Read in the configuration files.
-    empires, religions, religion_from_kingdom, angle_from_empire, base_terrain_from_empire, waste_terrain_from_empire = read_config_file(config_filepath)
+    empires, kingdoms_from_religion, base_terrain_from_empire, waste_terrain_from_empire = read_config_file(config_filepath)
     assert len(empires) == 3
-    cont_size_list = [v[1][0] for k,v in empires.items()]
-    island_size_list = [v[1][1] for k,v in empires.items()]
-    angles = [angle_from_empire[k] for k in empires.keys()]
+    cont_size_list = [v.continentals for v in empires.values()]
+    island_size_list = [v.islands for v in empires.values()]
+    angles = [v.angle for v in empires.values()]
     #Generate the tile hierarchy.
     world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)
     world.doodle_by_tile([(255,0,0),(0,255,0),(0,0,255)],size=(1500,1500))
