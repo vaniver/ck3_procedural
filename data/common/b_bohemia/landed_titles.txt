@@ -1,0 +1,190 @@
+		d_bohemia = {
+			color = { 195 110 11 }
+			color2 = { 255 255 255 }
+			
+			capital = c_praha # Praha
+			
+			c_praha = {
+				color = { 199 114 15 }
+				color2 = { 255 255 255 }
+			
+				b_praha = {
+					province = P0
+
+					color = { 199 114 15 }
+					color2 = { 255 255 255 }
+				}
+				b_vysehrad = {
+					province = P1
+
+					color = { 199 114 15 }
+					color2 = { 255 255 255 }
+				}
+				b_beroun = {
+					province = P2
+
+					color = { 199 114 15 }
+					color2 = { 255 255 255 }
+				}
+				b_melnik = {
+					province = P3
+
+					color = { 199 114 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_plzen = {
+				color = { 200 105 5 }
+				color2 = { 255 255 255 }
+			
+				b_plzen = {
+					province = P4
+
+					color = { 200 105 5 }
+					color2 = { 255 255 255 }
+				}
+				b_stribro = {
+					province = P5
+
+					color = { 200 105 5 }
+					color2 = { 255 255 255 }
+				}
+				b_primda = {
+					province = P6
+
+					color = { 200 105 5 }
+					color2 = { 255 255 255 }
+				}
+				b_domazlice = {
+					province = P7
+
+					color = { 200 105 5 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_zatec = {
+				color = { 197 145 13 }
+				color2 = { 255 255 255 }
+			
+				b_zatec = {
+					province = P8
+
+					color = { 197 145 13 }
+					color2 = { 255 255 255 }
+				}
+				b_kadan = {
+					province = P9
+
+					color = { 197 145 13 }
+					color2 = { 255 255 255 }
+				}
+				b_sedlec = {
+					province = P10
+
+					color = { 197 145 13 }
+					color2 = { 255 255 255 }
+				}
+				b_loket = {
+					province = P11
+
+					color = { 197 145 13 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+
+		d_moravia = {
+			color = { 177 111 25 }
+			color2 = { 255 255 255 }
+			
+			capital = c_olomouc # Olomouc
+			
+			c_olomouc = {
+				color = { 163 107 41 }
+				color2 = { 255 255 255 }
+				
+				b_olomouc = {
+					province = P12
+					
+					color = { 163 107 41 }
+					color2 = { 255 255 255 }
+				}
+				b_unicov = {
+					province = P13
+					
+					color = { 163 107 41 }
+					color2 = { 255 255 255 }
+				}
+				b_kromeriz = {
+					province = P14
+					
+					color = { 163 107 41 }
+					color2 = { 255 255 255 }
+				}
+				b_opava = {
+					province = P15
+					
+					color = { 190 90 38 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_prerov = {
+				color = { 155 91 27 }
+				color2 = { 255 255 255 }
+				
+				b_prerov = {
+					province = P16
+					
+					color = { 165 101 37 }
+					color2 = { 255 255 255 }
+				}
+				b_spytihnev = {
+					province = P17
+					
+					color = { 165 101 37 }
+					color2 = { 255 255 255 }
+				}
+				b_hodonin = {
+					province = P18
+					
+					color = { 165 101 37 }
+					color2 = { 255 255 255 }
+				}
+				b_veseli = {
+					province = P19
+					
+					color = { 165 101 37 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_znojmo = {
+				color = { 160 118 40 }
+				color2 = { 255 255 255 }
+				
+				b_znojmo = {
+					province = P20
+					
+					color = { 160 118 40 }
+					color2 = { 255 255 255 }
+				}
+				b_bitov = {
+					province = P21
+					
+					color = { 160 118 40 }
+					color2 = { 255 255 255 }
+				}
+				b_breclav = {
+					province = P22
+					
+					color = { 160 118 40 }
+					color2 = { 255 255 255 }
+				}
+				b_mikulov = {
+					province = P23
+					
+					color = { 160 118 40 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

@@ -1,0 +1,604 @@
+	k_hungary = {
+		color = { 250 120 90 }
+		color2 = { 255 255 255 }
+		
+		capital	= c_visegrad
+		
+		d_visegrad = {
+			color = { 245 125 95 }
+			color2 = { 255 255 255 }
+			
+			capital = c_visegrad
+			
+			c_visegrad = {
+				color = { 245 125 95 }
+				color2 = { 255 255 255 }
+				
+				b_visegrad_hun = {
+					province = P0
+					
+					color = { 245 125 95 }
+					color2 = { 255 255 255 }
+				}
+				b_pest = {
+					province = P1
+					
+					color = { 245 125 95 }
+					color2 = { 255 255 255 }
+				}
+				b_cegled = {
+					province = P2
+					
+					color = { 245 125 95 }
+					color2 = { 255 255 255 }
+				}
+				b_kecskemet = {
+					province = P3
+					
+					color = { 245 125 95 }
+					color2 = { 255 255 255 }
+				}
+				b_esztergom = {
+					province = P4
+					
+					color = { 255 92 91 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_ostrihom
+						slovien = cn_ostrihom
+						polish = cn_ostrihom
+						pommeranian = cn_ostrihom
+						polabian = cn_ostrihom
+						croatian = cn_ostrihom
+						bosnian = cn_ostrihom
+						serbian = cn_ostrihom
+					}
+				}
+				b_beny = {
+					province = P5
+					
+					color = { 255 92 91 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hewes = {
+				color = { 255 140 100 }
+				color2 = { 255 255 255 }
+				
+				b_hewes = {
+					province = P6
+					
+					color = { 255 140 100 }
+					color2 = { 255 255 255 }
+				}
+				b_tur = {
+					province = P7
+					
+					color = { 255 140 100 }
+					color2 = { 255 255 255 }
+				}
+				b_szolnok = {
+					province = P8
+					
+					color = { 255 140 100 }
+					color2 = { 255 255 255 }
+				}
+				b_gyongospata = {
+					province = P9
+					
+					color = { 255 140 100 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_szekesfehervar = {
+				color = { 240 122 75 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					czech = cn_stolicny_belehrad
+					slovien = cn_stolicny_belehrad
+					polish = cn_bialogrod_stoleczny
+					pommeranian = cn_bialogrod_stoleczny
+					polabian = cn_bialogrod_stoleczny
+					croatian = cn_stolni_biograd
+					bosnian = cn_stolni_biograd
+					serbian = cn_stolni_biograd
+				}
+				
+				b_szekesfehervar = {
+					province = P10
+					
+					color = { 240 122 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_stolicny_belehrad
+						slovien = cn_stolicny_belehrad
+						polish = cn_bialogrod_stoleczny
+						pommeranian = cn_bialogrod_stoleczny
+						polabian = cn_bialogrod_stoleczny
+						croatian = cn_stolni_biograd
+						bosnian = cn_stolni_biograd
+						serbian = cn_stolni_biograd
+					}
+				}
+				b_csakvar = {
+					province = P11
+					
+					color = { 240 122 75 }
+					color2 = { 255 255 255 }
+				}
+				b_kalocsa = {
+					province = P12
+					
+					color = { 240 122 75 }
+					color2 = { 255 255 255 }
+				}
+				b_eger = {
+					province = P13
+					
+					color = { 255 140 100 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_gyor = {
+				color = { 208 109 107 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					czech = cn_rab
+					slovien = cn_rab
+					polish = cn_rab
+					pommeranian = cn_rab
+					polabian = cn_rab
+					croatian = cn_rab
+					bosnian = cn_rab
+					serbian = cn_rab
+				}
+				
+				b_gyor = {
+					province = P14
+					
+					color = { 208 109 107 }
+					color2 = { 255 255 255 }
+					
+						cultural_names = {
+						czech = cn_rab
+						slovien = cn_rab
+						polish = cn_rab
+						pommeranian = cn_rab
+						polabian = cn_rab
+						croatian = cn_rab
+						bosnian = cn_rab
+						serbian = cn_rab
+					}
+				}
+				b_moson = {
+					province = P15
+					
+					color = { 208 109 107 }
+					color2 = { 255 255 255 }
+				}
+				b_veszprem = {
+					province = P16
+					
+					color = { 240 150 130 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_vesprim
+						slovien = cn_vesprim
+						polish = cn_vesprim
+						pommeranian = cn_vesprim
+						polabian = cn_vesprim
+						croatian = cn_vesprim
+						bosnian = cn_vesprim
+						serbian = cn_vesprim
+					}
+				}
+				b_zirc = {
+					province = P17
+					
+					color = { 240 150 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_sopron = {
+				color = { 255 150 150 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					czech = cn_etgar
+					slovien = cn_etgar
+					polish = cn_etgar
+					pommeranian = cn_etgar
+					polabian = cn_etgar
+					croatian = cn_etgar
+					bosnian = cn_etgar
+					serbian = cn_etgar
+				}
+				
+				b_sopron = {
+					province = P18
+					
+					color = { 255 150 150 }
+					color2 = { 255 255 255 }
+				}
+				b_kapuvar = {
+					province = P19
+					
+					color = { 255 150 150 }
+					color2 = { 255 255 255 }
+				}
+				b_koszeg = {
+					province = P20
+					
+					color = { 255 150 150 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_kysak
+						slovien = cn_kysak
+						polish = cn_kysak
+						pommeranian = cn_kysak
+						polabian = cn_kysak
+						croatian = cn_kiseg
+						bosnian = cn_kiseg
+						serbian = cn_kiseg
+					}
+				}
+				b_vasvar = {
+					province = P21
+					
+					color = { 230 125 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_transylvania = {
+			color = { 212 112 63 }
+			color2 = { 255 255 255 }
+			
+			capital = c_feher # Fehervar
+			
+			c_feher = {
+				color = { 212 112 63 }
+				color2 = { 255 255 255 }
+				
+				b_feher = {
+					province = P22
+					
+					color = { 212 112 63 }
+					color2 = { 255 255 255 }
+				}
+				b_kukullovar = {
+					province = P23
+					
+					color = { 212 112 63 }
+					color2 = { 255 255 255 }
+				}
+				b_abrudbanya = {
+					province = P24
+					
+					color = { 212 112 63 }
+					color2 = { 255 255 255 }
+				}
+				b_nagyszeben = {
+					province = P25
+					
+					color = { 212 112 63 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_torda = {
+				color = { 200 100 51 }
+				color2 = { 255 255 255 }
+				
+				b_torda = {
+					province = P26
+					
+					color = { 200 100 51 }
+					color2 = { 255 255 255 }
+				}
+				b_banffyhunyad = {
+					province = P27
+					
+					color = { 200 100 51 }
+					color2 = { 255 255 255 }
+				}
+				b_koloszvar = {
+					province = P28
+					
+					color = { 200 100 51 }
+					color2 = { 255 255 255 }
+				}
+				b_szaszregen = {
+					province = P29
+					
+					color = { 200 100 51 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_szekelyfold = {
+				color = { 200 130 50 }
+				color2 = { 255 255 255 }
+				
+				b_szekelyudvarhely = {
+					province = P30
+					
+					color = { 200 130 50 }
+					color2 = { 255 255 255 }
+				}
+				b_marosvasarhely = {
+					province = P31
+					
+					color = { 200 130 50 }
+					color2 = { 255 255 255 }
+				}
+				b_csikszereda = {
+					province = P32
+					
+					color = { 200 130 50 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_beszterce = {
+				color = { 213 85 50 }
+				color2 = { 255 255 255 }
+				
+				b_beszterce = {
+					province = P33
+					
+					color = { 213 85 50 }
+					color2 = { 255 255 255 }
+				}
+				b_szek = {
+					province = P34
+					
+					color = { 213 85 50 }
+					color2 = { 255 255 255 }
+				}
+				b_des = {
+					province = P35
+					
+					color = { 213 85 50 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_bihar = {
+			color = { 241 58 58 }
+			color2 = { 255 255 255 }
+			
+			capital = c_bihar # Bihar / Nagyvarad / Oradea
+			
+			c_bihar = {
+				color = { 241 58 58 }
+				color2 = { 255 255 255 }
+				
+				b_nagyvarad = {
+					province = P36
+					
+					color = { 241 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_gyozeg = {
+					province = P37
+					
+					color = { 241 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_debrecen = {
+					province = P38
+					
+					color = { 241 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_belenyes = {
+					province = P39
+					
+					color = { 241 58 58 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_szabolcs = {
+				color = { 215 58 58 }
+				color2 = { 255 255 255 }
+				
+				b_szabolcs = {
+					province = P40
+					
+					color = { 215 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_nyir = {
+					province = P41
+					
+					color = { 215 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_nagyboszormeny = {
+					province = P42
+					
+					color = { 215 58 58 }
+					color2 = { 255 255 255 }
+				}
+				b_szobszlo = {
+					province = P43
+					
+					color = { 215 58 58 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_zarand = {
+				color = { 240 85 90 }
+				color2 = { 255 255 255 }
+				
+				b_zarand = {
+					province = P44
+					
+					color = { 240 85 90 }
+					color2 = { 255 255 255 }
+				}
+				b_nagyhalmagy = {
+					province = P45
+					
+					color = { 240 85 90 }
+					color2 = { 255 255 255 }
+				}
+				b_pankota = {
+					province = P46
+					
+					color = { 240 85 90 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_bekes = {
+				color = { 225 100 85 }
+				color2 = { 255 255 255 }
+				
+				b_bekes = {
+					province = P47
+					
+					color = { 225 100 85 }
+					color2 = { 255 255 255 }
+				}
+				b_svarvas = {
+					province = P48
+					
+					color = { 225 100 85 }
+					color2 = { 255 255 255 }
+				}
+				b_oroshaza = {
+					province = P49
+					
+					color = { 225 100 85 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_ungvar = {
+			color = { 156 15 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_ungvar
+			
+			cultural_names = {
+				slovien = cn_uzhorod
+				czech = cn_uzhorod
+			}
+			
+			c_ungvar = {
+				color = { 156 15 15 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					slovien = cn_uzhorod
+					czech = cn_uzhorod
+				}
+				
+				b_ungvar = {
+					province = P50
+					
+					color = { 156 15 15 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						slovien = cn_uzhorod
+						czech = cn_uzhorod
+					}
+				}
+				b_nagyberezna = {
+					province = P51
+					
+					color = { 156 15 15 }
+					color2 = { 255 255 255 }
+				}
+				b_zynna = {
+					province = P52
+					
+					color = { 155 30 30 }
+					color2 = { 255 255 255 }
+				}
+				b_toporo = {
+					province = P53
+					
+					color = { 155 30 30 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_zemplen = {
+				color = { 155 30 30 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					slovien = cn_zemplin
+					czech = cn_zemplin
+				}
+				
+				b_zemplen = {
+					province = P54
+					
+					color = { 155 30 30 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						slovien = cn_zemplin
+						czech = cn_zemplin
+					}
+				}
+				b_szerencs = {
+					province = P55
+					
+					color = { 155 30 30 }
+					color2 = { 255 255 255 }
+				}
+				b_varanno = {
+					province = P56
+					
+					color = { 155 30 30 }
+					color2 = { 255 255 255 }
+				}
+				b_abauj = {
+					province = P57
+					
+					color = { 190 10 10 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_abov
+						slovien = cn_abov
+					}
+				}
+			}
+			c_borsod = {
+				color = { 135 50 50 }
+				color2 = { 255 255 255 }
+				
+				b_borsod = {
+					province = P58
+					
+					color = { 135 50 50 }
+					color2 = { 255 255 255 }
+				}
+				b_miskolc = {
+					province = P59
+					
+					color = { 135 50 50 }
+					color2 = { 255 255 255 }
+				}
+				b_szendro = {
+					province = P60
+					
+					color = { 230 37 69 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						slovien = cn_sendrov
+						czech = cn_sendrov
+					}
+				}
+			}
+		}
+	}

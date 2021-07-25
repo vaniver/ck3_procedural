@@ -1,0 +1,190 @@
+		d_capua = {
+			color = { 240 209 100 }
+			color2 = { 255 255 255 }
+			
+			capital = c_capua # Capua
+			
+			c_capua = {
+				color = { 240 209 100 }
+				color2 = { 255 255 255 }
+				
+				b_capua = {
+					province = P0
+					
+					color = { 240 209 100 }
+					color2 = { 255 255 255 }
+				}
+				b_gaeta = {
+					province = P1
+					
+					color = { 240 209 100 }
+					color2 = { 255 255 255 }
+				}
+				b_cassino = {
+					province = P2
+					
+					color = { 240 209 100 }
+					color2 = { 255 255 255 }
+				}
+				b_camarda = {
+					province = P3
+					
+					color = { 250 215 205 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_napoli = {
+				color = { 230 225 90 }
+				color2 = { 255 255 255 }
+				
+				b_napoli = {
+					province = P4
+					
+					color = { 230 225 90 }
+					color2 = { 255 255 255 }
+				}
+				b_amalfi = {
+					province = P5
+					
+					color = { 230 225 90 }
+					color2 = { 255 255 255 }
+				}
+				b_aversa = {
+					province = P6
+					
+					color = { 230 225 90 }
+					color2 = { 255 255 255 }
+				}
+				b_stigliano = {
+					province = P7
+					
+					color = { 250 215 205 }
+					color2 = { 255 255 255 }
+				}
+			}
+			
+			c_salerno = {
+				color = { 245 194 199 }
+				color2 = { 255 255 255 }
+				
+				b_salerno = {
+					province = P8
+					
+					color = { 245 194 199 }
+					color2 = { 255 255 255 }
+				}
+				b_maratea = {
+					province = P9
+					
+					color = { 245 194 199 }
+					color2 = { 255 255 255 }
+				}
+				b_potenza = {
+					province = P10
+					
+					color = { 245 194 199 }
+					color2 = { 255 255 255 }
+				}
+				b_policastro = {
+					province = P11
+					
+					color = { 245 194 199 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_apulia = {
+			color = { 167 172 63 }
+			color2 = { 255 255 255 }
+			
+			capital = c_apulia # Trani
+			
+			c_apulia = {
+				color = { 152 157 48 }
+				color2 = { 255 255 255 }
+				
+				b_trani = {
+					province = P12
+					
+					color = { 152 157 48 }
+					color2 = { 255 255 255 }
+				}
+				b_siponto = {
+					province = P13
+					
+					color = { 152 157 48 }
+					color2 = { 255 255 255 }
+				}
+				b_venosa = {
+					province = P14
+					
+					color = { 152 157 48 }
+					color2 = { 255 255 255 }
+				}
+				b_acerenza = {
+					province = P15
+					
+					color = { 152 157 48 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_bari = {
+				color = { 167 182 83 }
+				color2 = { 255 255 255 }
+				
+				b_bari = {
+					province = P16
+					
+					color = { 167 182 83 }
+					color2 = { 255 255 255 }
+				}
+				b_matera = {
+					province = P17
+					
+					color = { 167 182 83 }
+					color2 = { 255 255 255 }
+				}
+				b_taranto = {
+					province = P18
+					
+					color = { 167 182 83 }
+					color2 = { 255 255 255 }
+				}
+				b_lecce = {
+					province = P19
+					
+					color = { 187 172 83 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_benevento = {
+				color = { 189 150 55 }
+				color2 = { 255 255 255 }
+				
+				b_benevento = {
+					province = P20
+					
+					color = { 189 150 55 }
+					color2 = { 255 255 255 }
+				}
+				b_alife = {
+					province = P21
+					
+					color = { 189 150 55 }
+					color2 = { 255 255 255 }
+				}
+				b_isernia = {
+					province = P22
+					
+					color = { 189 150 55 }
+					color2 = { 255 255 255 }
+				}
+				b_melfi = {
+					province = P23
+					
+					color = { 189 150 55 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

@@ -1,0 +1,188 @@
+		d_toscana = {
+			color = { 222 186 25 }
+			color2 = { 255 255 255 }
+			
+			capital = c_firenze # Firenze
+			
+			c_firenze = {
+				color = { 232 190 25 }
+				color2 = { 255 255 255 }
+				
+				b_firenze = {
+					province = P0
+
+					color = { 232 190 25 }
+					color2 = { 255 255 255 }
+				}
+				b_impruneta = {
+					province = P1
+
+					color = { 232 190 25 }
+					color2 = { 255 255 255 }
+				}
+				b_empoli = {
+					province = P2
+
+					color = { 232 190 25 }
+					color2 = { 255 255 255 }
+				}
+				b_volterra = {
+					province = P3
+
+					color = { 232 190 25 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_siena = {
+				color = { 205 175 25 }
+				color2 = { 255 255 255 }
+				
+				b_siena = {
+					province = P4
+
+					color = { 205 175 25 }
+					color2 = { 255 255 255 }
+				}
+				b_montalcino = {
+					province = P5
+
+					color = { 205 175 25 }
+					color2 = { 255 255 255 }
+				}
+				b_chiusi = {
+					province = P6
+
+					color = { 205 175 25 }
+					color2 = { 255 255 255 }
+				}
+				b_asciano = {
+					province = P7
+
+					color = { 205 175 25 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_arezzo = {
+				color = { 230 155 15 }
+				color2 = { 255 255 255 }
+				
+				b_arezzo = {
+					province = P8
+
+					color = { 230 155 15 }
+					color2 = { 255 255 255 }
+				}
+				b_vallombrosa = {
+					province = P9
+
+					color = { 230 155 15 }
+					color2 = { 255 255 255 }
+				}
+				b_cortona = {
+					province = P10
+
+					color = { 230 155 15 }
+					color2 = { 255 255 255 }
+				}
+				b_orbetello = {
+					province = P11
+
+					color = { 250 210 5 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_romagna = {
+			color = { 244 180 130 }
+			color2 = { 255 255 255 }
+			
+			capital = c_ravenna # Ravenna
+			
+			c_ravenna = {
+				color = { 229 165 115 }
+				color2 = { 255 255 255 }
+				
+				b_ravenna = {
+					province = P12
+
+					color = { 229 165 115 }
+					color2 = { 255 255 255 }
+				}
+				b_imola = {
+					province = P13
+
+					color = { 229 165 115 }
+					color2 = { 255 255 255 }
+				}
+				b_forli = {
+					province = P14
+
+					color = { 229 165 115 }
+					color2 = { 255 255 255 }
+				}
+				b_rimini = {
+					province = P15
+
+					color = { 229 165 115 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_bologna = {
+				color = { 209 145 95 }
+				color2 = { 255 255 255 }
+				
+				b_bologna = {
+					province = P16
+
+					color = { 209 145 95 }
+					color2 = { 255 255 255 }
+				}
+				b_cona = {
+					province = P17
+
+					color = { 209 145 95 }
+					color2 = { 255 255 255 }
+				}
+				b_monte_sole = {
+					province = P18
+
+					color = { 209 145 95 }
+					color2 = { 255 255 255 }
+				}
+				b_casentino = {
+					province = P19
+
+					color = { 209 125 105 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_ferrara = {
+				color = { 219 125 85 }
+				color2 = { 255 255 255 }
+				
+				b_ferrara = {
+					province = P20
+
+					color = { 219 125 85 }
+					color2 = { 255 255 255 }
+				}
+				b_pomposa = {
+					province = P21
+
+					color = { 219 125 85 }
+					color2 = { 255 255 255 }
+				}
+				b_comacchio = {
+					province = P22
+
+					color = { 219 125 85 }
+					color2 = { 255 255 255 }
+				}
+				b_montefeltro = {
+					province = P23
+
+					color = { 209 125 105 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

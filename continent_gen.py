@@ -524,7 +524,6 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
     size = sum(size_list)
     possible_tiles = []
     while len(allowable_chunks) > 0:
-        tile_split = [[]] * len(size_list)
         chunk = allowable_chunks.pop(0)
         if len(chunk) < size:
             continue  # We can't make one, so don't bother trying.

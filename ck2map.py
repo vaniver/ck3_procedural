@@ -360,7 +360,7 @@ class CK2Map:
                         last_i, last_j, last_k = i, j, k
                     pixels[x,y] = (last_r, last_g, last_b)
                 else:
-                    pixels[x,y] = (255, 255, 255)
+                    pixels[x,y] = (0, 0, 0)
         if filedir:
             self.img_provinces.save(os.path.join(filedir, 'provinces.png'))
 

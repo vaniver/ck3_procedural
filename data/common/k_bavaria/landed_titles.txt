@@ -1,0 +1,480 @@
+	k_bavaria = {
+		color = { 70 80 80 }
+		color2 = { 220 220 20 }
+		
+		capital = c_regensburg
+		
+		d_bavaria = {
+			color = { 80 90 90 }
+			color2 = { 255 255 255 }
+			
+			capital = c_regensburg
+			
+			c_regensburg = {
+				color = { 80 90 90 }
+				color2 = { 255 255 255 }
+			
+				b_regensburg = {
+					province = P0
+
+					color = { 80 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_tegernheim = {
+					province = P1
+
+					color = { 80 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_abensberg = {
+					province = P2
+
+					color = { 80 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_leonsberg = {
+					province = P3
+
+					color = { 80 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_ingolstadt = {
+					province = P4
+
+					color = { 80 80 95 }
+					color2 = { 255 255 255 }
+				}
+				b_munchsmunster = {
+					province = P5
+
+					color = { 80 80 95 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_frontenhausen = {
+				color = { 90 90 90 }
+				color2 = { 255 255 255 }
+			
+				b_frontenhausen = {
+					province = P6
+
+					color = { 90 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_dornberg = {
+					province = P7
+
+					color = { 90 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_ortenburg = {
+					province = P8
+
+					color = { 90 90 90 }
+					color2 = { 255 255 255 }
+				}
+				b_burghausen = {
+					province = P9
+
+					color = { 90 90 90 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_passau = {
+				color = { 80 80 80 }
+				color2 = { 255 255 255 }	
+
+				b_passau = {
+					province = P10
+
+					color = { 80 80 80 }
+					color2 = { 255 255 255 }
+				}
+				b_waldkirchen = {
+					province = P11
+
+					color = { 80 80 80 }
+					color2 = { 255 255 255 }
+				}
+				b_scharding = {
+					province = P12
+
+					color = { 80 80 80 }
+					color2 = { 255 255 255 }
+				}
+				b_deggendorf = {
+					province = P13
+
+					color = { 80 80 80 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_munchen = {
+				color = { 75 75 75 }
+				color2 = { 255 255 255 }
+			
+				b_munchen = {
+					province = P14
+
+					color = { 75 75 75 }
+					color2 = { 255 255 255 }
+				}
+				b_aheim = {
+					province = P15
+
+					color = { 75 75 75 }
+					color2 = { 255 255 255 }
+				}
+				b_wolfratshausen = {
+					province = P16
+
+					color = { 75 75 75 }
+					color2 = { 255 255 255 }
+				}
+				b_eschenlohe = {
+					province = P17
+
+					color = { 60 70 70 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_rothenburg = {
+				color = { 80 90 100 }
+				color2 = { 255 255 255 }
+			
+				b_rothenburg = {
+					province = P18
+
+					color = { 80 90 100 }
+					color2 = { 255 255 255 }
+				}
+				b_freising = {
+					province = P19
+
+					color = { 80 90 100 }
+					color2 = { 255 255 255 }
+				}
+				b_ilmunster = {
+					province = P20
+
+					color = { 80 90 100 }
+					color2 = { 255 255 255 }
+				}
+				b_niederschonenfeld = {
+					province = P21
+
+					color = { 80 80 95 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_osterreich = {
+			color = { 191 182 182 }
+			color2 = { 255 255 255 }
+			
+			capital = c_vienna #Vienna
+		
+			c_vienna = {
+				color = { 211 202 202 }
+				color2 = { 255 255 255 }
+			
+				b_vienna = {
+					province = P22
+
+					color = { 211 202 202 }
+					color2 = { 255 255 255 }
+				}
+				b_ernstbrunn = {
+					province = P23
+
+					color = { 211 202 202 }
+					color2 = { 255 255 255 }
+				}
+				b_floridsdorf = {
+					province = P24
+
+					color = { 211 202 202 }
+					color2 = { 255 255 255 }
+				}
+				b_bruck = {
+					province = P25
+
+					color = { 211 202 202 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_krems = {
+				color = { 190 180 165 }
+				color2 = { 255 255 255 }
+			
+				b_krems = {
+					province = P26
+
+					color = { 190 180 165 }
+					color2 = { 255 255 255 }
+				}
+				b_wild = {
+					province = P27
+
+					color = { 190 180 165 }
+					color2 = { 255 255 255 }
+				}
+				b_horn = {
+					province = P28
+
+					color = { 190 180 165 }
+					color2 = { 255 255 255 }
+				}
+				b_haugsdorf = {
+					province = P29
+
+					color = { 190 180 165 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hohenau = {
+				color = { 191 182 182 }
+				color2 = { 255 255 255 }
+				
+				b_hohenau = {
+					province = P30
+
+					color = { 191 182 182 }
+					color2 = { 255 255 255 }
+				}
+				b_laa = {
+					province = P31
+
+					color = { 191 182 182 }
+					color2 = { 255 255 255 }
+				}
+				b_mistelbach = {
+					province = P32
+
+					color = { 191 182 182 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_sankt_polten = {
+				color = { 200 180 180 }
+				color2 = { 255 255 255 }	
+
+				b_sankt_polten = {
+					province = P33
+
+					color = { 200 180 180 }
+					color2 = { 255 255 255 }
+				}
+				b_mariazell = {
+					province = P34
+
+					color = { 200 180 180 }
+					color2 = { 255 255 255 }
+				}
+				b_wieselburg = {
+					province = P35
+
+					color = { 200 180 180 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_salzburg = {
+			color = { 110 110 110 }
+			color2 = { 255 255 255 }
+
+			capital = c_salzburg
+			
+			c_salzburg = {
+				color = { 110 110 110 }
+				color2 = { 255 255 255 }
+			
+				b_salzburg = {
+					province = P36
+
+					color = { 110 110 110 }
+					color2 = { 255 255 255 }
+				}
+				b_braunau = {
+					province = P37
+
+					color = { 110 110 110 }
+					color2 = { 255 255 255 }
+				}
+				b_hallein = {
+					province = P38
+
+					color = { 110 110 110 }
+					color2 = { 255 255 255 }
+				}
+				b_laufen = {
+					province = P39
+
+					color = { 110 110 110 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_berchtesgaden = {
+				color = { 115 105 115 }
+				color2 = { 255 255 255 }
+			
+				b_berchtesgaden = {
+					province = P40
+
+					color = { 115 105 115 }
+					color2 = { 255 255 255 }
+				}
+				b_laukental = {
+					province = P41
+
+					color = { 115 105 115 }
+					color2 = { 255 255 255 }
+				}
+				b_kitzbuhel = {
+					province = P42
+
+					color = { 115 105 115 }
+					color2 = { 255 255 255 }
+				}
+				b_traunstein = {
+					province = P43
+
+					color = { 110 110 110 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hallstatt = {
+				color = { 105 105 115 }
+				color2 = { 255 255 255 }
+			
+				b_hallstatt = {
+					province = P44
+
+					color = { 105 105 115 }
+					color2 = { 255 255 255 }
+				}
+				b_liezen = {
+					province = P45
+
+					color = { 105 105 115 }
+					color2 = { 255 255 255 }
+				}
+				b_wels = {
+					province = P46
+
+					color = { 105 105 115 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_schaumberg = {
+				color = { 120 120 120 }
+				color2 = { 255 255 255 }	
+
+				b_schaumberg = {
+					province = P47
+
+					color = { 120 120 120 }
+					color2 = { 255 255 255 }
+				}
+				b_strasswalchen = {
+					province = P48
+
+					color = { 120 120 120 }
+					color2 = { 255 255 255 }
+				}
+				b_ried = {
+					province = P49
+
+					color = { 120 120 120 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_augsburg = {
+			color = { 50 50 50 }
+			color2 = { 255 255 255 }
+		
+			capital = c_augsburg
+
+			c_augsburg = {
+				color = { 50 50 50 }
+				color2 = { 255 255 255 }
+			
+				b_augsburg = {
+					province = P50
+
+					color = { 50 50 50 }
+					color2 = { 255 255 255 }
+				}
+				b_friedberg = {
+					province = P51
+
+					color = { 50 50 50 }
+					color2 = { 255 255 255 }
+				}
+				b_lechrain = {
+					province = P52
+
+					color = { 50 50 50 }
+					color2 = { 255 255 255 }
+				}
+				b_kaufbeuren = {
+					province = P53
+
+					color = { 50 50 50 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_kempten = {
+				color = { 25 25 25 }
+				color2 = { 255 255 255 }
+			
+				b_kempten = {
+					province = P54
+
+					color = { 25 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_marsetten = {
+					province = P55
+
+					color = { 25 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_memmingen = {
+					province = P56
+
+					color = { 25 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_ravensburg = {
+					province = P57
+
+					color = { 65 60 65 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_alpsee = {
+				color = { 45 40 45 }
+				color2 = { 255 255 255 }
+			
+				b_schongau = {
+					province = P58
+
+					color = { 45 40 45 }
+					color2 = { 255 255 255 }
+				}
+				b_peiting = {
+					province = P59
+
+					color = { 45 40 45 }
+					color2 = { 255 255 255 }
+				}
+				b_hohenschwangau = {
+					province = P60
+
+					color = { 45 40 45 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

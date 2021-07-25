@@ -1,0 +1,188 @@
+		d_alsace = {
+			color = { 205 205 230 }
+			color2 = { 255 255 255 }
+
+			capital = c_strassburg #Strassburg
+
+			c_strassburg = {
+				color = { 205 205 230 }
+				color2 = { 255 255 255 }
+			
+				b_strassburg = {
+					province = P0
+
+					color = { 205 205 230 }
+					color2 = { 255 255 255 }
+				}
+				b_haguenau = {
+					province = P1
+
+					color = { 205 205 230 }
+					color2 = { 255 255 255 }
+				}
+				b_lichtberg = {
+					province = P2
+
+					color = { 205 205 230 }
+					color2 = { 255 255 255 }
+				}
+				b_colmar = {
+					province = P3
+
+					color = { 210 200 220 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_breisgau = {
+				color = { 185 185 200 }
+				color2 = { 255 255 255 }
+				
+				b_freiburg = {
+					province = P4
+
+					color = { 185 185 200 }
+					color2 = { 255 255 255 }
+				}
+				b_sankt_blasien = {
+					province = P5
+
+					color = { 185 185 200 }
+					color2 = { 255 255 255 }
+				}
+				b_offenburg = {
+					province = P6
+
+					color = { 185 185 200 }
+					color2 = { 255 255 255 }
+				}
+				b_geroldseck = {
+					province = P7
+
+					color = { 185 185 200 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_sundgau = {
+				color = { 215 200 215 }
+				color2 = { 255 255 255 }
+			
+				b_montbelliard = {
+					province = P8
+
+					color = { 215 200 215 }
+					color2 = { 255 255 255 }
+				}
+				b_mulhouse = {
+					province = P9
+
+					color = { 215 200 215 }
+					color2 = { 255 255 255 }
+				}
+				b_ferrette = {
+					province = P10
+
+					color = { 215 200 215 }
+					color2 = { 255 255 255 }
+				}
+				b_porrentruy = {
+					province = P11
+
+					color = { 215 200 215 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_transjurania = {
+			color = { 159 40 10 }
+			color2 = { 255 255 255 }
+			
+			capital = c_bern
+			
+			c_bern = {
+				color = { 139 30 10 }
+				color2 = { 255 255 255 }
+				
+				b_bern = {
+					province = P12
+					
+					color = { 139 30 10 }
+					color2 = { 255 255 255 }
+				}
+				b_lausanne = {
+					province = P13
+					
+					color = { 139 30 10 }
+					color2 = { 255 255 255 }
+				}
+				b_thun = {
+					province = P14
+					
+					color = { 139 30 10 }
+					color2 = { 255 255 255 }
+				}
+				b_lucerne = {
+					province = P15
+					
+					color = { 150 70 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_grisons = {
+				color = { 255 220 220 }
+				color2 = { 255 255 255 }
+				
+				b_chur = {
+					province = P16
+
+					color = { 255 220 220 }
+					color2 = { 255 255 255 }
+				}
+				b_farduzes = {
+					province = P17
+
+					color = { 255 220 220 }
+					color2 = { 255 255 255 }
+				}
+				b_vares = {
+					province = P18
+
+					color = { 255 220 220 }
+					color2 = { 255 255 255 }
+				}
+				b_werdenburg = {
+					province = P19
+
+					color = { 255 220 220 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_zurich = {
+				color = { 255 215 205 }
+				color2 = { 255 255 255 }
+				
+				b_zurich = {
+					province = P20
+
+					color = { 255 215 205 }
+					color2 = { 255 255 255 }
+				}
+				b_schwyz = {
+					province = P21
+
+					color = { 255 215 205 }
+					color2 = { 255 255 255 }
+				}
+				b_engelberg = {
+					province = P22
+
+					color = { 255 215 205 }
+					color2 = { 255 255 255 }
+				}
+				b_basel = {
+					province = P23
+
+					color = { 255 215 205 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

@@ -1,0 +1,363 @@
+		d_prussia = {
+			color = { 200 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = c_malbork # Truso
+			
+			c_malbork = {		#c_pomesania
+				color = { 205 105 105 }
+				color2 = { 255 255 255 }
+				
+				b_elblag = {	#b_truso
+					province = P0
+
+					color = { 205 105 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_elbing
+						saxon = cn_elbing
+						swabian = cn_elbing
+						bavarian = cn_elbing
+						polish = cn_elblag
+						pommeranian = cn_elblag
+						polabian = cn_elblag
+						lithuanian = cn_elbingas
+					}
+				}
+				b_marienburg = {	#b_malbork
+					province = P1
+
+					color = { 205 105 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_marienburg
+						saxon = cn_marienburg
+						swabian = cn_marienburg
+						bavarian = cn_marienburg
+					}
+				}				
+				b_graudenz = {	#b_kwedis
+					province = P2
+
+					color = { 205 105 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_marienwerder
+						saxon = cn_marienwerder
+						swabian = cn_marienwerder
+						bavarian = cn_marienwerder
+						polish = cn_kwidzyn
+						pommeranian = cn_kwidzyn
+						polabian = cn_kwidzyn
+						lithuanian = cn_kvidzynas
+					}
+				}
+				b_wislana = {	#b_weiksla
+					province = P3
+
+					color = { 205 105 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_stuttof
+						saxon = cn_stuttof
+						swabian = cn_stuttof
+						bavarian = cn_stuttof
+						polish = cn_sztutowo
+						pommeranian = cn_sztutowo
+						polabian = cn_sztutowo
+					}
+				}
+				b_wormditt = {	#b_wormedeten
+					province = P4
+
+					color = { 255 110 155 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_wormditt
+						saxon = cn_wormditt
+						swabian = cn_wormditt
+						bavarian = cn_wormditt
+						polish = cn_orneta
+						pommeranian = cn_orneta
+						polabian = cn_orneta
+					}
+				}
+				b_mohrungen = {	#b_maurin
+					province = P5
+
+					color = { 255 110 155 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_mohrungen
+						saxon = cn_mohrungen
+						swabian = cn_mohrungen
+						bavarian = cn_mohrungen
+						polish = cn_morag
+						pommeranian = cn_morag
+						polabian = cn_morag
+						lithuanian = cn_morongas
+					}
+				}
+				b_braunsberg = {	#b_brus
+					province = P6
+
+					color = { 255 110 155 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_braunberg
+						saxon = cn_braunberg
+						swabian = cn_braunberg
+						bavarian = cn_braunberg
+						polish = cn_braniewo
+						pommeranian = cn_braniewo
+						polabian = cn_braniewo
+						lithuanian = cn_prusa
+					}
+				}
+			}
+			c_konigsberg = {	#c_sambia
+				color = { 200 105 130 }
+				color2 = { 255 255 255 }
+				
+				b_konigsberg = {	#b_twangste
+					province = P7
+
+					color = { 200 105 130 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_konigsberg
+						saxon = cn_konigsberg
+						swabian = cn_konigsberg
+						bavarian = cn_konigsberg
+						polish = cn_krolewiec
+						pommeranian = cn_krolewiec
+						polabian = cn_krolewiec
+						lithuanian = cn_karaliaucius
+					}
+				}
+				b_labiau = {	#b_kaup
+					province = P8
+					
+					color = { 200 105 130 }
+					color2 = { 255 255 255 }
+				}
+				b_laukitten = {	#b_pokarwis
+					province = P9
+
+					color = { 225 125 125 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_brandenburg_PRUS
+						saxon = cn_brandenburg_PRUS
+						swabian = cn_brandenburg_PRUS
+						bavarian = cn_brandenburg_PRUS
+						polish = cn_pokarmin
+						pommeranian = cn_pokarmin
+						polabian = cn_pokarmin
+						lithuanian = cn_pokariviai
+					}
+				}
+				b_paterswalde = {	#b_tapiau
+					province = P10
+
+					color = { 225 125 125 }
+					color2 = { 255 255 255 }
+					
+				}
+				b_ostlandsberg = {	#b_velowe
+					province = P11
+
+					color = { 225 125 125 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_wehlau
+						saxon = cn_wehlau
+						swabian = cn_wehlau
+						bavarian = cn_wehlau
+						polish = cn_welawa
+						pommeranian = cn_welawa
+						polabian = cn_welawa
+						lithuanian = cn_veluva
+					}
+				}
+			}
+			c_bartenstein = {	#c_bartia
+				color = { 230 165 165 }
+				color2 = { 255 255 255 }
+				
+				b_lautenburg = {	#b_lecbarg
+					province = P12
+
+					color = { 230 165 165 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_heilsberg
+						saxon = cn_heilsberg
+						swabian = cn_heilsberg
+						bavarian = cn_heilsberg
+						polish = cn_lidzbark
+						pommeranian = cn_lidzbark
+						polabian = cn_lidzbark
+						lithuanian = cn_lidzbarkas
+					}
+				}
+				b_bartenstein = {	#b_lyna
+					province = P13
+
+					color = { 230 165 165 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_bartenstein
+						saxon = cn_bartenstein
+						swabian = cn_bartenstein
+						bavarian = cn_bartenstein
+						polish = cn_bartoszyce
+						pommeranian = cn_bartoszyce
+						polabian = cn_bartoszyce
+						lithuanian = cn_barstynas
+					}
+				}
+				b_insterburg = {	#b_isrutis
+					province = P14
+
+					color = { 230 165 165 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_insterburg
+						saxon = cn_insterburg
+						swabian = cn_insterburg
+						bavarian = cn_insterburg
+						polish = cn_wystruc
+						pommeranian = cn_wystruc
+						polabian = cn_wystruc
+					}
+				}
+				b_rastenburg = {	#b_aestia
+					province = P15
+
+					color = { 230 165 165 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_rastenburg
+						saxon = cn_rastenburg
+						swabian = cn_rastenburg
+						bavarian = cn_rastenburg
+						polish = cn_rastembork
+						pommeranian = cn_rastembork
+						polabian = cn_rastembork
+						lithuanian = cn_kentsynas
+					}
+				}
+				b_allenstein = {	#b_alnasteini
+					province = P16
+
+					color = { 155 100 130 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_holstin
+						pommeranian = cn_holstin
+						polabian = cn_holstin
+						lithuanian = cn_olstynas
+						franconian = cn_allenstein
+						saxon = cn_allenstein
+						swabian = cn_allenstein
+						bavarian = cn_allenstein
+					}
+				}
+			}
+			c_torun = {		#c_chelmno
+				color = { 150 85 95 }
+				color2 = { 255 255 255 }
+				
+				b_kulm = {	#b_chelmno
+					province = P17
+	
+					color = { 150 85 95 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						lithuanian = cn_kulmas
+						franconian = cn_kulm
+						saxon = cn_kulm
+						swabian = cn_kulm
+						bavarian = cn_kulm
+					}
+				}
+				b_torun = {
+					province = P18
+	
+					color = { 150 85 95 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						lithuanian = cn_torune
+						franconian = cn_thorn
+						saxon = cn_thorn
+						swabian = cn_thorn
+						bavarian = cn_thorn
+					}
+				}				
+				b_briesen = {	#b_wabrzezno
+					province = P19
+	
+					color = { 150 85 95 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_briesen_PRUS
+						saxon = cn_briesen_PRUS
+						swabian = cn_briesen_PRUS
+						bavarian = cn_briesen_PRUS
+					}
+				}
+				b_eylau = {		#b_ylavia
+					province = P20
+
+					color = { 165 85 85 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_ilawa
+						pommeranian = cn_ilawa
+						polabian = cn_ilawa
+						lithuanian = cn_ylava
+						franconian = cn_eylau
+						saxon = cn_eylau
+						swabian = cn_eylau
+						bavarian = cn_eylau
+					}
+				}
+				b_brodnica = {	#b_lubavia
+					province = P21
+					
+					color = { 165 85 85 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_brodnica
+						pommeranian = cn_brodnica
+						polabian = cn_brodnica
+						lithuanian = cn_brodnica
+						franconian = cn_brodnica_strasburg
+						saxon = cn_brodnica_strasburg
+						swabian = cn_brodnica_strasburg
+						bavarian = cn_brodnica_strasburg
+					}
+				}
+			}	
+		}

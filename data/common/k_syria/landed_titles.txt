@@ -1,0 +1,481 @@
+	k_syria = {
+		color = { 145 130 88 }
+		color2 = { 255 255 255 }
+		
+		capital = c_damascus
+		
+		d_aleppo = {
+			color = { 85 232 20 }
+			color2 = { 255 255 255 }
+			
+			capital = c_aleppo
+			
+			c_aleppo = {
+				color = { 91 238 26 }
+				color2 = { 255 255 255 }
+				
+				b_halab = {
+					province = P0
+					
+					color = { 91 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_tall_afrin = {
+					province = P1
+					
+					color = { 91 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_azaz = {
+					province = P2
+					
+					color = { 91 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_manbij = {
+					province = P3
+					
+					color = { 91 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_buzaa = {
+					province = P4
+					
+					color = { 91 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_qurus = {
+					province = P5
+					
+					color = { 112 197 50 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_suriya = {
+				color = { 87 234 22 }
+				color2 = { 255 255 255 }
+				
+				b_suriya = {
+					province = P6
+					
+					color = { 87 234 22 }
+					color2 = { 255 255 255 }
+				}
+				b_khunasira = {
+					province = P7
+					
+					color = { 87 234 22 }
+					color2 = { 255 255 255 }
+				}
+				b_ar-rusafa = {
+					province = P8
+					
+					color = { 84 238 26 }
+					color2 = { 255 255 255 }
+				}
+				b_siffin = {
+					province = P9
+					
+					color = { 84 238 26 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_qinnasrin = {
+				color = { 84 220 20 }
+				color2 = { 255 255 255 }
+				
+				b_qinnasrin = {
+					province = P10
+					
+					color = { 84 220 20 }
+					color2 = { 255 255 255 }
+				}
+				b_artah = {
+					province = P11
+					
+					color = { 84 220 20 }
+					color2 = { 255 255 255 }
+				}
+				b_ar-rikha = {
+					province = P12
+					
+					color = { 84 220 20 }
+					color2 = { 255 255 255 }
+				}
+				b_baghras = {
+					province = P13
+					
+					color = { 112 197 50 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_palmyra = {
+				color = { 89 236 24 }
+				color2 = { 255 255 255 }
+				
+				b_tadmur = { #AKA Palmyra
+					province = P14
+					
+					color = { 89 236 24 }
+					color2 = { 255 255 255 }
+				}
+				b_arak = {
+					province = P15
+					
+					color = { 89 236 24 }
+					color2 = { 255 255 255 }
+				}
+				b_al-qaryatan = {
+					province = P16
+					
+					color = { 39 236 24 }
+					color2 = { 255 255 255 }
+				}
+				b_judr = {
+					province = P17
+					
+					color = { 39 236 24 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_sukhna = {
+				color = { 37 234 22 }
+				color2 = { 255 255 255 }
+				
+				b_as-sukhna = {
+					province = P18
+					
+					color = { 37 234 22 }
+					color2 = { 255 255 255 }
+				}
+				b_dair_ar-ruman = {
+					province = P19
+					
+					color = { 37 234 22 }
+					color2 = { 255 255 255 }
+				}
+				b_urd = {
+					province = P20
+					
+					color = { 37 234 22 }
+					color2 = { 255 255 255 }
+				}
+				b_shayzar = {
+					province = P21
+					
+					color = { 93 252 34 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_damascus = {
+			color = { 122 255 3 }
+			color2 = { 255 255 255 }
+			
+			capital = c_damascus
+			
+			c_damascus = {
+				color = { 125 255 6 }
+				color2 = { 255 255 255 }
+					
+				b_damascus = {
+					province = P22
+					
+					color = { 125 255 6 }
+					color2 = { 255 255 255 }
+				}
+				b_nawa = {
+					province = P23
+					
+					color = { 125 255 6 }
+					color2 = { 255 255 255 }
+				}
+				b_darayya = {
+					province = P24
+					
+					color = { 125 255 6 }
+					color2 = { 255 255 255 }
+				}
+				b_zurra = {
+					province = P25
+					
+					color = { 125 255 6 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_juwair = {
+				color = { 128 255 9 }
+				color2 = { 255 255 255 }
+				
+				b_juwair = {
+					province = P26
+					
+					color = { 128 255 9 }
+					color2 = { 255 255 255 }
+				}
+				b_al-qastal = {
+					province = P27
+					
+					color = { 128 255 9 }
+					color2 = { 255 255 255 }
+				}
+				b_marj-rahit = {
+					province = P28
+					
+					color = { 128 255 9 }
+					color2 = { 255 255 255 }
+				}
+				b_masyaf = {
+					province = P29
+					
+					color = { 93 252 34 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_baalbek = {
+				color = { 134 255 15 }
+				color2 = { 255 255 255 }
+				
+				b_baalbak = {
+					province = P30
+					
+					color = { 134 255 15 }
+					color2 = { 255 255 255 }
+				}
+				b_az-zabadani = {
+					province = P31
+					
+					color = { 134 255 15 }
+					color2 = { 255 255 255 }
+				}
+				b_anjar = {
+					province = P32
+					
+					color = { 134 255 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hauran = {
+				color = { 103 214 143 }
+				color2 = { 255 255 255 }
+				
+				b_busra = {
+					province = P33
+					
+					color = { 103 214 143 }
+					color2 = { 255 255 255 }
+				}
+				b_sarkhad = {
+					province = P34
+					
+					color = { 103 214 143 }
+					color2 = { 255 255 255 }
+				}
+				b_as-suwaida-hauran = {
+					province = P35
+					
+					color = { 103 214 143 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_lebanon = {
+			color = { 71 150 32 }
+			color2 = { 255 255 255 }
+			
+			capital = c_beirut
+			
+			c_beirut = {
+				color = { 77 156 38 }
+				color2 = { 255 255 255 }
+				
+				b_beirut = {
+					province = P36
+					
+					color = { 77 156 38 }
+					color2 = { 255 255 255 }
+				}
+				b_saida = { #Sidon
+					province = P37
+					
+					color = { 77 156 38 }
+					color2 = { 255 255 255 }
+				}
+				b_syrtripolis = {
+					province = P38
+					
+					color = { 75 154 36 }
+					color2 = { 255 255 255 }
+				}
+				b_antartus = {
+					province = P39
+					
+					color = { 75 154 36 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_antiocheia = {
+				color = { 152 69 135 }
+				color2 = { 255 255 255 }
+				
+				b_antiocheia = {
+					province = P40
+					
+					color = { 152 69 135 }
+					color2 = { 255 255 255 }
+				}
+				b_as-suwaydiya = {
+					province = P41
+					
+					color = { 152 69 135 }
+					color2 = { 255 255 255 }
+				}
+				b_latakia = {
+					province = P42
+					
+					color = { 152 69 135 }
+					color2 = { 255 255 255 }
+				}
+				b_jabala = {
+					province = P43
+					
+					color = { 152 69 135 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hama = {
+				color = { 95 242 30 }
+				color2 = { 255 255 255 }
+				
+				b_hama = {
+					province = P44
+					
+					color = { 95 242 30 }
+					color2 = { 255 255 255 }
+				}
+				b_salamiya = {
+					province = P45
+					
+					color = { 95 242 30 }
+					color2 = { 255 255 255 }
+				}
+				b_kafartab = {
+					province = P46
+					
+					color = { 95 242 30 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_homs = {
+				color = { 93 240 28 }
+				color2 = { 255 255 255 }
+				
+				b_hims = {
+					province = P47
+					
+					color = { 93 240 28 }
+					color2 = { 255 255 255 }
+				}
+				b_rafaniya-krak = {
+					province = P48
+					
+					color = { 93 240 28 }
+					color2 = { 255 255 255 }
+				}
+				b_jusiya = {
+					province = P49
+					
+					color = { 93 240 28 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_edessa = {
+			color = { 182 110 45 }
+			color2 = { 255 255 255 }
+			
+			capital = c_edessa # Edessa
+			
+			c_edessa = {
+				color = { 105 165 45 }
+				color2 = { 255 255 255 }
+				
+				b_edessa = {
+					province = P50
+					
+					color = { 105 165 45 }
+					color2 = { 255 255 255 }
+				}
+				b_al-bira = {
+					province = P51
+					
+					color = { 105 165 45 }
+					color2 = { 255 255 255 }
+				}
+				b_samosata = {
+					province = P52
+					
+					color = { 175 105 45 }
+					color2 = { 255 255 255 }
+				}
+				b_bahasna = {
+					province = P53
+					
+					color = { 175 105 45 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_aintab = {
+				color = { 195 125 55 }
+				color2 = { 255 255 255 }
+				
+				b_aintab = {
+					province = P54
+					
+					color = { 195 125 55 }
+					color2 = { 255 255 255 }
+				}
+				b_tall_bashir = { #AKA Turbessel
+					province = P55
+					
+					color = { 195 125 55 }
+					color2 = { 255 255 255 }
+				}
+				b_jarabulus = {
+					province = P56
+					
+					color = { 195 125 55 }
+					color2 = { 255 255 255 }
+				}
+				b_duluk-teluch = {
+					province = P57
+					
+					color = { 195 125 55 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_marash = {
+				color = { 175 125 35 }
+				color2 = { 255 255 255 }
+				
+				b_marash = {
+					province = P58
+					
+					color = { 175 125 35 }
+					color2 = { 255 255 255 }
+				}
+				b_qalat_ar-rum = {
+					province = P59
+					
+					color = { 175 125 35 }
+					color2 = { 255 255 255 }
+				}
+				b_kaisum = {
+					province = P60
+					
+					color = { 175 125 35 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

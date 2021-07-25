@@ -1,0 +1,160 @@
+		d_latium = {
+			color = { 254 245 160 }
+			color2 = { 255 255 255 }
+			
+			capital = c_roma # Rome
+			
+			c_roma = {
+				color = { 242 233 156 }
+				color2 = { 220 220 1 }
+				
+				b_roma = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_ostia = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_vaticano = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_palo = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_paterno = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_farfa = {
+					province = P
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_viterbo = {
+					province = P
+
+					color = { 212 203 116 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_tivoli = {
+				color = { 242 253 136 }
+				color2 = { 255 255 255 }
+				
+				b_tivoli = {
+					province = P
+
+					color = { 242 253 136 }
+					color2 = { 255 255 255 }
+				}
+				b_velletri = {
+					province = P
+
+					color = { 242 253 136 }
+					color2 = { 255 255 255 }
+				}
+				b_segni = {
+					province = P
+
+					color = { 242 253 136 }
+					color2 = { 255 255 255 }
+				}
+				b_terracina = {
+					province = P
+
+					color = { 242 253 136 }
+					color2 = { 255 255 255 }
+				}
+				b_sutri = {
+					province = P
+
+					color = { 212 203 116 }
+					color2 = { 255 255 255 }
+				}
+			}
+			
+			c_spoleto = {
+				color = { 197 162 133 }
+				color2 = { 255 255 255 }
+				
+				b_spoleto = {
+					province = P
+
+					color = { 197 162 133 }
+					color2 = { 255 255 255 }
+				}
+				b_assissi = { #Assisi
+					province = P
+
+					color = { 197 162 133 }
+					color2 = { 255 255 255 }
+				}
+				b_terni = {
+					province = P
+
+					color = { 197 162 133 }
+					color2 = { 255 255 255 }
+				}
+				b_orvieto = {
+					province = P
+
+					color = { 197 172 163 }
+					color2 = { 255 255 255 }
+				}
+				b_perugia = {
+					province = P
+
+					color = { 197 172 163 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_lanciano = {
+				color = { 167 102 103 }
+				color2 = { 255 255 255 }
+				
+				b_lanciano = {
+					province = P
+
+					color = { 167 102 103 }
+					color2 = { 255 255 255 }
+				}
+				b_cluieli = { #Chieti
+					province = P
+
+					color = { 167 102 103 }
+					color2 = { 255 255 255 }
+				}
+				b_agnone = {
+					province = P
+
+					color = { 167 102 103 }
+					color2 = { 255 255 255 }
+				}
+				b_teramo = {
+					province = P
+
+					color = { 227 152 133 }
+					color2 = { 255 255 255 }
+				}
+				b_atri = {
+					province = P
+
+					color = { 227 152 133 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

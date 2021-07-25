@@ -1,0 +1,484 @@
+	k_aquitaine = {
+		color = { 101 50 253 }
+		color2 = { 255 255 20 }
+		
+		capital = c_bordeaux # Bordeaux
+
+		d_gascogne = {
+			color = { 81 30 243 }
+			color2 = { 255 255 255 }
+			
+			capital = c_bordeaux # Bordeaux
+			
+			c_bordeaux = {
+				color = { 81 30 243 }
+				color2 = { 255 255 255 }
+				
+				b_bordeaux = {
+					province = P0
+
+					color = { 81 30 243 }
+					color2 = { 255 255 255 }
+				}
+				b_medoc = {
+					province = P1
+
+					color = { 81 30 243 }
+					color2 = { 255 255 255 }
+				}
+				b_blaye = {
+					province = P2
+
+					color = { 81 30 243 }
+					color2 = { 255 255 255 }
+				}
+				b_fronsac = {
+					province = P3
+
+					color = { 81 30 243 }
+					color2 = { 255 255 255 }
+				}
+				b_agen = {
+					province = P4
+
+					color = { 65 15 200 }
+					color2 = { 255 255 255 }
+				}
+				b_agenais = {
+					province = P5
+
+					color = { 65 15 200 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_labourd = {
+				color = { 105 45 245 }
+				color2 = { 255 255 255 }
+				
+				b_bayonne = {
+					province = P6
+
+					color = { 105 45 245 }
+					color2 = { 255 255 255 }
+				}
+				b_dax = {
+					province = P7
+
+					color = { 105 45 245 }
+					color2 = { 255 255 255 }
+				}
+				b_mimizan = {
+					province = P8
+
+					color = { 105 45 245 }
+					color2 = { 255 255 255 }
+				}
+				b_pau = {
+					province = P9
+
+					color = { 155 50 150 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_albret = {
+				color = { 80 50 190 }
+				color2 = { 255 255 255 }
+				
+				b_albret = {
+					province = P10
+
+					color = { 80 50 190 }
+					color2 = { 255 255 255 }
+				}
+				b_tartas = {
+					province = P11
+
+					color = { 80 50 190 }
+					color2 = { 255 255 255 }
+				}
+				b_la_teste_de_buch = {
+					province = P12
+
+					color = { 80 50 190 }
+					color2 = { 255 255 255 }
+				}
+				b_langon = {
+					province = P13
+
+					color = { 80 50 190 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_comminges = {
+				color = { 175 55 165 }
+				color2 = { 255 255 255 }
+			
+				b_bertrand_de_comminges = {
+					province = P14
+
+					color = { 175 55 165 }
+					color2 = { 255 255 255 }
+				}
+				b_saint_lizier = {
+					province = P15
+
+					color = { 175 55 165 }
+					color2 = { 255 255 255 }
+				}
+				b_astarac = {
+					province = P16
+
+					color = { 175 55 165 }
+					color2 = { 255 255 255 }
+				}
+				b_muret = {
+					province = P17
+
+					color = { 175 55 165 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_armagnac = {
+				color = { 145 30 175 }
+				color2 = { 255 255 255 }
+				
+				b_armagnac = {
+					province = P18
+
+					color = { 145 30 175 }
+					color2 = { 255 255 255 }
+				}
+				b_lectoure = {
+					province = P19
+
+					color = { 145 30 175 }
+					color2 = { 255 255 255 }
+				}
+				b_lomagne = {
+					province = P20
+
+					color = { 145 30 175 }
+					color2 = { 255 255 255 }
+				}
+				b_fesensac = {
+					province = P21
+
+					color = { 145 30 175 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_toulouse = {
+			color = { 95 24 226 }
+			color2 = { 255 255 255 }
+			
+			capital = c_toulouse # Toulouse
+
+			c_toulouse = {
+				color = { 95 24 226 }
+				color2 = { 255 255 255 }
+				
+				b_toulouse = {
+					province = P22
+
+					color = { 95 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_pamiers = {
+					province = P23
+
+					color = { 95 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_castelsarrasin = {
+					province = P24
+
+					color = { 95 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_beaumont_sur_leze = {
+					province = P25
+
+					color = { 95 24 226 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_rouergue = {
+				color = { 115 5 210 }
+				color2 = { 255 255 255 }
+				
+				b_rodez = {
+					province = P26
+
+					color = { 115 5 210 }
+					color2 = { 255 255 255 }
+				}
+				b_la_salle = {
+					province = P27
+
+					color = { 115 5 210 }
+					color2 = { 255 255 255 }
+				}
+				b_marvejols = {
+					province = P28
+
+					color = { 115 5 210 }
+					color2 = { 255 255 255 }
+				}
+				b_la_peyrade = {
+					province = P29
+
+					color = { 115 5 210 }
+					color2 = { 255 255 255 }
+				}
+				
+			}
+
+			c_quercy = {
+				color = { 110 40 225 }
+				color2 = { 255 255 255 }
+
+				b_quercy = {
+					province = P30
+
+					color = { 110 40 225 }
+					color2 = { 255 255 255 }
+				}
+				b_montauban = {
+					province = P31
+
+					color = { 110 40 225 }
+					color2 = { 255 255 255 }
+				}
+				b_cahors = {
+					province = P32
+
+					color = { 110 40 225 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_gevaudan = {
+				color = { 130 55 205 }
+				color2 = { 255 255 255 }
+				
+				b_gevaudan = {
+					province = P33
+
+					color = { 130 55 205 }
+					color2 = { 255 255 255 }
+				}
+				b_mende = {
+					province = P34
+
+					color = { 130 55 205 }
+					color2 = { 255 255 255 }
+				}
+				b_saint_flour = {
+					province = P35
+
+					color = { 130 55 205 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_aquitaine = {
+			color = { 43 24 226 }
+			color2 = { 255 255 255 }
+			
+			capital = c_angouleme # Angouleme
+			
+			c_angouleme = {
+				color = { 43 24 226 }
+				color2 = { 255 255 255 }
+				
+				b_angouleme = {
+					province = P36
+
+					color = { 43 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_saint_junien = {
+					province = P37
+
+					color = { 43 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_cognac = {
+					province = P38
+
+					color = { 43 24 226 }
+					color2 = { 255 255 255 }
+				}
+				b_saintes = {
+					province = P39
+
+					color = { 60 40 250 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_perigord = {
+				color = { 35 10 215 }
+				color2 = { 255 255 255 }
+				
+				b_perigueux = {
+					province = P40
+
+					color = { 35 10 215 }
+					color2 = { 255 255 255 }
+				}
+				b_nontron = {
+					province = P41
+
+					color = { 35 10 215 }
+					color2 = { 255 255 255 }
+				}
+				b_montignac = {
+					province = P42
+
+					color = { 35 10 215 }
+					color2 = { 255 255 255 }
+				}
+				b_bergerac = {
+					province = P43
+
+					color = { 35 10 215 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_limousin = {
+				color = { 35 10 255 }
+				color2 = { 255 255 255 }
+				
+				b_limoges = {
+					province = P44
+
+					color = { 35 10 255 }
+					color2 = { 255 255 255 }
+				}
+				b_chalus = {
+					province = P45
+
+					color = { 35 10 255 }
+					color2 = { 255 255 255 }
+				}
+				b_ventadour = {
+					province = P46
+
+					color = { 35 10 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_saintonge = {
+				color = { 60 40 250 }
+				color2 = { 255 255 255 }
+				
+				b_saintonge = {
+					province = P47
+
+					color = { 60 40 250 }
+					color2 = { 255 255 255 }
+				}
+				b_jonzac = {
+					province = P48
+
+					color = { 60 40 250 }
+					color2 = { 255 255 255 }
+				}
+				b_royan = {
+					province = P49
+
+					color = { 60 40 250 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_languedoc = {
+			color = { 90 80 190 }
+			color2 = { 255 255 255 }
+			
+			capital = c_albi # Albi
+			
+			c_albi = {
+				color = { 90 80 190 }
+				color2 = { 255 255 255 }
+				
+				b_albi = {
+					province = P50
+					
+					color = { 90 80 190 }
+					color2 = { 255 255 255 }
+				}
+				b_castelnaudary = {
+					province = P51
+					
+					color = { 90 80 190 }
+					color2 = { 255 255 255 }
+				}
+				b_beziers = {
+					province = P52
+					
+					color = { 115 100 220 }
+					color2 = { 255 255 255 }
+				}
+				b_foix = {
+					province = P53
+					
+					color = { 70 60 170 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_montpellier = {
+				color = { 85 80 160 }
+				color2 = { 255 255 255 }
+				
+				b_montpellier = {
+					province = P54
+					
+					color = { 85 80 160 }
+					color2 = { 255 255 255 }
+				}
+				b_nimes = {
+					province = P55
+					
+					color = { 85 80 160 }
+					color2 = { 255 255 255 }
+				}
+				b_cevennes = {
+					province = P56
+					
+					color = { 85 80 160 }
+					color2 = { 255 255 255 }
+				}
+				b_uses = {
+					province = P57
+					
+					color = { 130 120 230 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_carcassonne = {
+				color = { 110 100 155 }
+				color2 = { 255 255 255 }
+				
+				b_carcassonne = {
+					province = P58
+					
+					color = { 110 100 155 }
+					color2 = { 255 255 255 }
+				}
+				b_limoux = {
+					province = P59
+					
+					color = { 110 100 155 }
+					color2 = { 255 255 255 }
+				}
+				b_narbonne = {
+					province = P60
+					
+					color = { 110 100 155 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

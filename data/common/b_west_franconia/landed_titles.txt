@@ -1,0 +1,188 @@
+		d_frankfurt = {
+			color = { 170 170 170 }
+			color2 = { 255 255 255 }
+			
+			capital = c_frankfurt
+			
+			c_frankfurt = {
+				color = { 190 190 190 }
+				color2 = { 255 255 255 }
+				
+				b_frankfurt = {
+					province = P0
+
+					color = { 190 190 190 }
+					color2 = { 255 255 255 }
+				}
+				b_limburg = {
+					province = P1
+
+					color = { 190 190 190 }
+					color2 = { 255 255 255 }
+				}
+				b_russelsheim = {
+					province = P2
+
+					color = { 190 190 190 }
+					color2 = { 255 255 255 }
+				}
+				b_kronberg = {
+					province = P3
+
+					color = { 190 190 190 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_mainz = {
+				color = { 165 165 180 }
+				color2 = { 255 255 255 }
+			
+				b_mainz = {
+					province = P4
+
+					color = { 165 165 180 }
+					color2 = { 255 255 255 }
+				}
+				b_wiesbaden = {
+					province = P5
+
+					color = { 165 165 180 }
+					color2 = { 255 255 255 }
+				}
+				b_katzenelnbogen = {
+					province = P6
+
+					color = { 165 165 180 }
+					color2 = { 255 255 255 }
+				}
+				b_boppard = {
+					province = P7
+
+					color = { 165 165 180 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_klingenberg = {
+				color = { 175 160 160 }
+				color2 = { 255 255 255 }
+			
+				b_klingenberg = {
+					province = P8
+
+					color = { 175 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_gelnhausen = {
+					province = P9
+
+					color = { 175 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_rieneck = {
+					province = P10
+
+					color = { 175 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_hanau = {
+					province = P11
+
+					color = { 190 190 190 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_erbach = {
+			color = { 150 150 150 }
+			color2 = { 255 255 255 }
+			
+			capital = c_erbach
+			
+			c_erbach = {
+				color = { 170 170 170 }
+				color2 = { 255 255 255 }
+				
+				b_erbach = {
+					province = P12
+					
+					color = { 170 170 170 }
+					color2 = { 255 255 255 }
+				}
+				b_seligenstadt = {
+					province = P13
+					
+					color = { 170 170 170 }
+					color2 = { 255 255 255 }
+				}
+				b_weinheim = {
+					province = P14
+					
+					color = { 170 170 170 }
+					color2 = { 255 255 255 }
+				}
+				b_darmundestat = {
+					province = P15
+					
+					color = { 170 170 170 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_speyer = {
+				color = { 145 145 160 }
+				color2 = { 255 255 255 }
+				
+				b_speyer = {
+					province = P16
+					
+					color = { 145 145 160 }
+					color2 = { 255 255 255 }
+				}
+				b_hockenheim = {
+					province = P17
+					
+					color = { 145 145 160 }
+					color2 = { 255 255 255 }
+				}
+				b_heidelberg = {
+					province = P18
+					
+					color = { 145 145 160 }
+					color2 = { 255 255 255 }
+				}
+				b_pirmasens = {
+					province = P19
+					
+					color = { 145 145 160 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_durne = {
+				color = { 145 155 145 }
+				color2 = { 255 255 255 }
+				
+				b_durne = {
+					province = P20
+
+					color = { 145 155 145 }
+					color2 = { 255 255 255 }
+				}
+				b_mosbach = {
+					province = P21
+
+					color = { 145 155 145 }
+					color2 = { 255 255 255 }
+				}
+				b_wertheim = {
+					province = P22
+
+					color = { 145 155 145 }
+					color2 = { 255 255 255 }
+				}
+				b_weissenburg = {
+					province = P23
+					
+					color = { 145 145 160 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

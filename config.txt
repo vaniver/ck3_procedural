@@ -1,22 +1,35 @@
 #empire angle
-europe	2
-islam	4
-india	0
+weurope	2
+eeurope	4
+islam	0
 #empire	kingdom	religion	geo_type
-europe	France	catholic	continent
-europe	Aquitaine	catholic	continent
-#europe	England	catholic	island
-europe	Spain	catholic	continent
-#europe	Scandinavia	norse_pagan	island
-islam	Iraq	sunni	continent
-islam	Egypt	sunni	continent
-islam	Persia	sunni	continent
-#islam	Morocco	sunni	continent
-india	Orissa	hindu	continent
-india	Rajputana	jain	continent
-india	Bengal	buddhist	continent
-#india	Punjab	hindu	continent
+weurope	k_france	catholic	continent
+weurope	k_aquitaine	catholic	continent
+weurope	k_burgundy	catholic	continent
+eeurope	k_bavaria	catholic	continent
+eeurope	k_pomerania	catholic	continent
+eeurope	k_hungary	catholic	continent
+islam	k_syria	sunni	continent
+islam	k_egypt	sunni	continent
+islam	k_yemen	sunni	continent
 #empire	base_terrain	waste_terrain
-europe	forest	mountains
+weurope	forest	mountains
+eeurope	forest	mountains
 islam	desert	desert
-india	jungle	mountains
+
+#Now the centers and borders
+#empire	kingdom	religion	geo_type
+weurope	c_latium	catholic	continent
+#weurope	c_lombardia	catholic	continent
+weurope	b_capua	catholic	continent
+weurope	b_genoa	catholic	continent
+weurope	b_toscana	catholic	continent
+eeurope	c_prussia	catholic	continent
+eeurope	b_alsace	catholic	continent
+eeurope	b_bohemia	catholic	continent
+eeurope	b_east_franconia	catholic	continent
+eeurope	b_west_franconia	catholic	continent
+islam	c_mecca	sunni	continent
+islam	b_bahrain	sunni	continent
+islam	b_najd	sunni	continent
+islam	b_shammar	sunni	continent
