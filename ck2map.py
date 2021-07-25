@@ -11,7 +11,7 @@ def dist2line(x, y, srcx, srcy, destx, desty):
 
 class CK2Map:
     
-    def __init__(self, max_x=2048, max_y=2048, hex_size=20, map_size=40, crisp=True, default=None):
+    def __init__(self, max_x=8192, max_y=4096, hex_size=20, map_size=40, crisp=True, default=None):
         '''Creates a map of size max_x x max_y, with hexes that have radius hex_size pixels, and at most map_size hexes on an edge. If crisp=True (default), the hexes will all be regular and the same size; if crisp=False, the sizes will vary to make them visually distinct, and will extend to the edge of the image boundary.'''
         self.max_x = max_x
         self.max_y = max_y
@@ -26,15 +26,9 @@ class CK2Map:
         self.img_provinces = PIL.Image.new('RGB', (max_x,max_y),  "white")
         self.img_topology = PIL.Image.new('L', (max_x,max_y),  "white")
         self.img_world_normal_height = PIL.Image.new('RGB', (max_x,max_y),  "white")
-        # self.img_rivers = PIL.Image.new('P', (max_x,max_y),  "black")
-        # with open('rivers_palette.pickle', 'rb') as f:
-        #     self.img_rivers.putpalette(pickle.load(f))
-        # self.img_terrain = PIL.Image.new('P', (max_x,max_y),  "white")
-        # with open('terrain_palette.pickle', 'rb') as f:
-        #     self.img_terrain.putpalette(pickle.load(f))
-        # self.img_trees = PIL.Image.new('P', (int(max_x/8),int(max_y/8)),  "white")
-        # with open('trees_palette.pickle', 'rb') as f:
-        #     self.img_trees.putpalette(pickle.load(f))
+        self.img_rivers = PIL.Image.new('P', (max_x,max_y),  255)  # 255=white
+        with open(os.path.join("data", "rivers_palette.txt"), "r") as f:
+            self.img_rivers.putpalette([int(s) for s in f.read().split(',')])
         self.d_cube2rgb = {}
         self.d_cube2terr = {}
         self.d_cube2pid = {}
@@ -240,14 +234,21 @@ class CK2Map:
             return max(17,min(int(sum([h[ind]*share[ind] for ind in range(3)])),94))
                 
     def cubes2trio(self, trio):
+        """Given a trio of cubes, return a trio of indices in valid_cubes."""
+        for a, b in combinations(trio, 2):
+            assert a.dist(b) == 1, f"Three cubes are not neighbors: {trio}."
         return tuple(sorted([self.valid_cubes().index(el) for el in trio]))
         
     def find_boundary(self, trio):
+        """Finds the integer x,y pair that is the vertex between the three hexes."""
         t = self.cubes2trio(trio)
         if t in self.trio2vertex:
             return self.trio2vertex[t]
         x = sum([self.c2cx[el] for el in trio])/3
         y = sum([self.c2cy[el] for el in trio])/3
+        if self.crisp:
+            self.trio2vertex[t] = (int(x), int(y))
+            return self.trio2vertex[t]
         dists = [((x - self.c2cx[el])**2 + (y - self.c2cy[el])**2)/self.c2sigma[el] for el in trio]
         delta = max(dists) - min(dists)
         ldelta = 999999
@@ -269,9 +270,38 @@ class CK2Map:
             dists = [((x - self.c2cx[el])**2 + (y - self.c2cy[el])**2)/self.c2sigma[el] for el in trio]
             delta = max(dists) - min(dists)
         self.trio2vertex[t] = (int(lx), int(ly))
-        return (int(lx), int(ly))    
+        return (int(lx), int(ly))
+
+    def edge_middle(self, hex_a, hex_b):
+        """Find the x,y pair that are on the edge between hex_a and hex_b, equidistant to both centers (probably closest?)."""
+        assert hex_a.dist(hex_b) == 1, "Cannot have edge between hexes that are not adjacent."
+        vc_ids = tuple(sorted([self.valid_cubes().index(el) for el in hex_a, hex_b]))
+        x = sum([self.c2cx[el] for el in vc_ids])/2
+        y = sum([self.c2cy[el] for el in vc_ids])/2
+        if self.crisp:
+            return (int(x), int(y))
+        dists = [((x - self.c2cx[el])**2 + (y - self.c2cy[el])**2)/self.c2sigma[el] for el in vc_ids]
+        delta = max(dists) - min(dists)
+        ldelta = 999999
+        while delta < ldelta:
+            lx = x
+            ly = y
+            ldelta = delta
+            move_towards = np.argmax(dists)
+            if abs(x - self.c2cx[vc_ids[move_towards]]) > abs (y > self.c2cy[vc_ids[move_towards]]):
+                if x > self.c2cx[vc_ids[move_towards]]:
+                    x -= 1
+                elif x < self.c2cx[vc_ids[move_towards]]:
+                    x += 1
+            else:
+                if y > self.c2cy[vc_ids[move_towards]]:
+                    y -= 1
+                elif y < self.c2cy[vc_ids[move_towards]]:
+                    y += 1
+            dists = [((x - self.c2cx[el])**2 + (y - self.c2cy[el])**2)/self.c2sigma[el] for el in vc_ids]
+            delta = max(dists) - min(dists)
     
-    def make_river(self, source, land_height, water_list, rot=None):
+    def old_make_river(self, source, land_height, water_list, rot=None):
         '''Source is a cube. Find the highest vertex, or the one defined by -1,0,1 rotated right by rot, and then flow to the sea.'''
         height = 0
         if rot:
@@ -390,6 +420,13 @@ class CK2Map:
                     self.topo[y,x] = 0
         self.img_topology.putdata(self.topo.flatten())
         if filedir:
+            with open(os.path.join(filedir, 'heightmap.heightmap'), 'w') as f:
+                f.write("heightmap_file=\"map_data/packed_heightmap.png\"\n")
+                f.write("indirection_file=\"map_data/indirection_heightmap.png\"\n")
+                f.write("original_heightmap_size={ 8192 4096 }\n")
+                f.write("tile_size=33\n")
+                f.write("should_wrap_x=no\n")
+                f.write("level_offsets={ { 0 0 }{ 0 0 }{ 0 0 }{ 0 0 }{ 0 7 }}\n")
             self.img_topology.save(os.path.join(filedir, 'heightmap.png'))
             
     def old_topology(self, land_height, water_height, waste_list, filedir=''):
@@ -449,23 +486,6 @@ class CK2Map:
                         pixels[x,y] = 15
         if filedir:
             self.img_terrain.save(os.path.join(filedir, 'terrain.bmp'))
-            
-    def trees(self, land_height, water_height, waste_list, filedir=''):
-        '''Create trees.bmp. Currently only makes deciduous trees.'''   
-        pixels = self.img_trees.load()
-        tree_list = [5,6,7]
-        for x in range(int(self.max_x/8)):
-            for y in range(int(self.max_y/8)):
-                c = self.pixel_to_cube(x*8,y*8)
-                if c in self.d_cube2terr:
-                    if self.d_cube2terr[c] == 16:
-                        pixels[x,y] = random.sample(tree_list, 1)[0]
-                    else:
-                        pixels[x,y] = 0
-                else:
-                    pixels[x,y] = 0
-        if filedir:
-            self.img_trees.save(os.path.join(filedir, 'trees.bmp'))
             
     def rivers(self, land_height, filedir='', logfile=''):
         '''Create rivers.bmp.'''
@@ -576,6 +596,6 @@ class CK2Map:
                 else:
                     print("I guessed which river pixel to merge, at around {}. Please fix.".format((x,y)))
         if filedir:
-            self.img_rivers.save(os.path.join(filedir, 'rivers.bmp'))
+            self.img_rivers.save(os.path.join(filedir, 'rivers.png'))
         if logfile:
             logf.close()

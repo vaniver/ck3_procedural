@@ -517,7 +517,7 @@ def make_province_terrain_txt(terrain_from_hex, pid_from_hex, file_dir):
         f.write("\n".join(sorted(buffer)))
 
 
-def title_order(empire, src_dir):
+def title_order(empire):
     '''Returns the names of files to write in the landed_titles, in order, from a list.'''
     num_kingdoms = empire.continentals
     num_centers = num_kingdoms - 2
@@ -551,41 +551,69 @@ def title_order(empire, src_dir):
 
 
 def make_landed_titles(empires, religions, src_dir, out_dir):
-    '''Create the common/landed_titles/00_landed_titles.txt. Also generates the bname_from_pid dict.'''
+    '''Create the common/landed_titles/00_landed_titles.txt (and map_data/geographical_region). Also generates the bname_from_pid dict.'''
     os.makedirs(os.path.join(out_dir,"common", "landed_titles"), exist_ok=True)
     bname_from_pid = {}
     bname = "ERROR"
     pid=1
-    with open(os.path.join(out_dir,"common", "landed_titles", "00_landed_titles.txt"),'w') as outf:
-        # Initial constants.
-        with open(os.path.join(src_dir, "common", "start", "landed_titles.txt")) as inf:
-            outf.write(inf.read())
-        outf.write('\n')
-        # Go through each religion to write out the special titles.
-        for religion in religions:
-            with open(os.path.join(src_dir, "common", "r_" + religion, "landed_titles.txt")) as inf:
+    with open(os.path.join(out_dir, "map_data", "island_region.txt"), "w") as isl_region_file:
+        # TODO: Make this real.
+        isl_region_file.write("#No islands generated.\n")
+    with open(os.path.join(out_dir, "common", "landed_titles", "00_landed_titles.txt"),'w') as outf:
+        with open(os.path.join(out_dir, "map_data", "geographical_region.txt"), "w") as geo_region_file:
+            # Initial constants.
+            with open(os.path.join(src_dir, "common", "start", "landed_titles.txt")) as inf:
                 outf.write(inf.read())
             outf.write('\n')
-        outf.write('\n')
-        # Go through each empire, and then each kingdom in each empire.
-        for ename, empire in empires.items():
-            with open(os.path.join(src_dir, "common", "e_" + ename, "landed_titles.txt")) as inf:
-                # If you want to edit the empire capital, this is where to do it.
-                outf.write(inf.read())
+            # Go through each religion to write out the special titles.
+            for religion in religions:
+                with open(os.path.join(src_dir, "common", "r_" + religion, "landed_titles.txt")) as inf:
+                    outf.write(inf.read())
+                outf.write('\n')
             outf.write('\n')
-            titles = title_order(empire, src_dir)
-            for title in titles:
-                with open(os.path.join(src_dir, "common", title, "landed_titles.txt")) as inf:
-                    for line in inf.readlines():
-                        if "\t\tb_" in line:
-                            bname = line.split('\t\tb_')[1].split('=')[0].strip()
-                        if "province = P" in line:
-                            line = line.split("= P")[0] + "= " + str(pid) + "\n"
-                            bname_from_pid[pid] = bname
-                            pid += 1
-                        outf.write(line)
-                outf.write('\n\t}\n')
-            outf.write('}\n')
+            # Go through each empire, and then each kingdom in each empire.
+            for ename, empire in empires.items():
+                with open(os.path.join(src_dir, "common", "e_" + ename, "landed_titles.txt")) as inf:
+                    # If you want to edit the empire capital, this is where to do it.
+                    outf.write(inf.read())
+                outf.write('\n')
+                geo_region_duchy_list = []
+                geo_region_kingdom_list = []
+                kingdom_duchy_list = []
+                titles = title_order(empire, src_dir)
+                for title in titles:
+                    if title[0] == 'k':
+                        # For kingdoms, we want to construct a geographical region in the georegion file.
+                        # TODO: This is where we should check for island kingdoms and add them to island_region instead.
+                        region_name = f"world_{ename}_{title}"
+                        geo_region_kingdom_list.append(region_name)
+                    with open(os.path.join(src_dir, "common", title, "landed_titles.txt")) as inf:
+                        for line in inf.readlines():
+                            if line.startswith("\t\td_"):
+                                if title[0] == "k":
+                                    kingdom_duchy_list.append(line.split("=")[0].strip())
+                                else:
+                                    geo_region_duchy_list.append(line.split("=")[0].strip())
+                            if "\t\tb_" in line:
+                                bname = line.split('\t\tb_')[1].split('=')[0].strip()
+                            if "province = P" in line:
+                                line = line.split("= P")[0] + "= " + str(pid) + "\n"
+                                bname_from_pid[pid] = bname
+                                pid += 1
+                            outf.write(line)
+                    outf.write('\n\t}\n')
+                    if title[0] == 'k':
+                        # Write the kingdom's geographical region.
+                        duchies = " ".join(kingdom_duchy_list)
+                        geo_region_file.write(f"{region_name} = {{\n\tduchies = {{\n\t\t{duchies}\t}}\n}}\n")
+                outf.write('}\n')
+                # Write the middle geographical region.
+                middle_region_name = f"world_{ename}_middle"
+                duchies = " ".join(kingdom_duchy_list)
+                geo_region_file.write(f"{middle_region_name} = {{\n\tduchies = {{\n\t\t{duchies}\t}}\n}}\n")
+                # Write the empire's geographical region.
+                regions = " ".join(geo_region_kingdom_list + [middle_region_name])
+                geo_region_file.write(f"world_{ename} = {{\n\tregions = {{\n\t\t{regions}\t}}\n}}\n")
     return bname_from_pid
 
 def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_name='SinglePlayerTest',
@@ -610,6 +638,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     assert len(empires) == 3
     cont_size_list = [v.continentals for v in empires.values()]
     island_size_list = [v.islands for v in empires.values()]
+    assert(len(island_size_list)) == 0, "Haven't implemented all the island stuff yet."
     angles = [v.angle for v in empires.values()]
     #Generate the tile hierarchy.
     world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)
@@ -628,7 +657,9 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     make_province_terrain_txt(cmap.d_cube2terr, pid_from_hex, mod_dir)
     waste_list = [*wastelands]
     name_from_pid = make_landed_titles(empires, religions, data_dir, mod_dir)
-    make_adjacencies(mod_dir)
+    # Make a bunch of map_data files. Maybe this should be split out to a separate function?
+    make_adjacencies(mod_dir, world)
+    make_climate(mod_dir)
     make_definition(mod_dir, rgb_from_pid, name_from_pid)
     cmap.heightmap(land_height, ocean, waste_list, terrain_height, filedir=os.path.join(mod_dir,"map_data"))
     # cmap.terrain(filedir=os.path.join(mod_dir,"map_data"))
@@ -638,11 +669,79 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     return world, cmap, ocean, land_height, waste_list
 
 
-def make_adjacencies(file_dir):
+def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
     with open(os.path.join(file_dir,"map_data", "adjacencies.csv"),'w') as f:
         f.write('From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment\n')
+        # Check for Gibraltar-like adjacencies.
+        for (tile_a, tile_b) in combinations(world.tile_list):
+            strait_pairs, corner_pairs = tile_a.two_step_pairs(tile_b)
+            # Exclude any corner pairs that are next to a strait pair, which should be used instead.
+            corner_pairs = [c for c in corner_pairs if not(any([c[0] in s[0].neighbors() or c[1] in s[1].neighbors() for s in strait_pairs]))]
+            for (hex_a, hex_b) in strait_pairs:
+                # This is a connection between the two vertices of a strait, calculated from two trios of hexes.
+                # TODO: Probably this logic should live in the ck2map class, and just return the x,y pairs?
+                pid_a = pid_from_hex[hex_a]
+                pid_b = pid_from_hex[hex_b]
+                trios = hex_a.foursome(hex_b)
+                x_a, y_a = cmap.find_boundary(trios[0])
+                x_b, y_b = cmap.find_boundary(trios[1])
+                comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
+                # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
+                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n"))
+            for (hex_a, hex_b) in corner_pairs:
+                # This is a connection between the two edges separated by one water hex.
+                pid_a = pid_from_hex[hex_a]
+                pid_b = pid_from_hex[hex_b]
+                middle = hex_a.avg(hex_b)
+                x_a, y_a = cmap.edge_middle(hex_a, middle)
+                x_b, y_b = cmap.edge_middle(hex_b, middle)
+                comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
+                # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
+                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n"))
         # TODO: Add adjacency for island kingdoms.
         f.write('-1;-1;;-1;-1;-1;-1;-1;')
+
+
+def make_climate(file_dir):
+    with open(os.path.join(file_dir,"map_data", "climate.txt"),'w') as f:
+        # TODO: This is currently just a placeholder climate file (borrowed from https://forum.paradoxplaza.com/forum/threads/resource-nearly-blank-map-a-starting-point-for-tcs-v1-2.1414703/page-5#post-27133344 ). 
+        f.write('mild_winter = {\n\t1 2 3 4 5 6 7 8\n}\n')
+
+
+def make_default(file_dir, waste_list, pid_from_hex):
+    with open(os.path.join(file_dir,"map_data", "default.map"),'w') as f:
+        f.write("definitions = \"definition.csv\"\n")
+        f.write("provinces = \"provinces.png\"\n")
+        f.write("rivers = \"rivers.png\"\n")
+        f.write("topology = \"heightmap.heightmap\"\n")
+        f.write("continent = \"continent.txt\"\n")
+        f.write("adjacencies = \"adjacencies.csv\"\n")
+        f.write("island_region = \"island_region.txt\"\n")
+        f.write("geographical_region = \"geographical_region.txt\"\n")
+        f.write("seasons = \"seasons.txt\"\n")
+        f.write("\n#############\n# SEA ZONES\n#############\n\n")
+        # TODO: Add sea zones.
+        # sea_zones = RANGE { 632 641 }
+        # sea_zones = LIST { 977 }
+
+        f.write("\n###############\n# MAJOR RIVERS\n###############\n\n")
+        # TODO: Add major rivers.
+        # river_provinces = RANGE { 628 630 }
+        # river_provinces = LIST { 8612 8702 1317 }
+        
+        f.write("\n########\n# LAKES\n########\n\n")
+        # TODO: Add lakes. We currently don't generate any, but it might be a replacement for some wastelands.
+
+        f.write("\n#####################\n# IMPASSABLE TERRAIN\n#####################\n\n")
+        # Provinces that can be colored by ownership; basically all of the ones that we'll make.
+        for waste in waste_list:
+            # TODO Maybe check to see if it should be a range instead of a list if possible? Like this should be the same order.
+            f.write("impassable_mountains = LIST { " + " ".join([str(pid_from_hex[w]) for w in waste]) + " }\n")
+
+        f.write("\n############\n# WASTELAND\n############\n\n")
+        # Provinces that can't be colored by ownership. Probably won't be used, except for seas.
+        f.write("# IMPASSABLE SEA ZONES\n")
+        f.write('impassable_seas = LIST { 0 }')  # TODO add inner sea if it's not 0
 
 
 def make_definition(file_dir, rgb_from_pid, name_from_pid):

@@ -109,6 +109,37 @@ class Cube:
                 Cube(self.x+1,self.y+1,self.z-2), Cube(self.x-1,self.y-1,self.z+2),
                 Cube(self.x+2,self.y-1,self.z-1), Cube(self.x-2,self.y+1,self.z+1)}
 
+    def foursome(self, other):
+        '''Given another hex (that a strait neighbor), return the two trios to find the closest vertices.'''
+        # Note that the pair included in each trio should be equivalent to:
+        #   [c for c in self.neighbors() if c in other.neighbors()]
+        #   But this implementation is (I hope) faster.
+        try:
+            s_index = self.strait_neighbors().index(other)
+            if s_index == 0:
+                return (self, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)),
+                        other, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)),)
+            elif s_index == 1:
+                return (self, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)),
+                        other, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)))
+            elif s_index == 2:
+                return (self, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)),
+                        other, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)))
+            elif s_index == 3:
+                return (self, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)),
+                        other, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)))
+            elif s_index == 4:
+                return (self, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)),
+                        other, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)))
+            elif s_index == 5:
+                return (self, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)),
+                        other, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)))
+            else:
+                raise NotImplementedError
+        except:
+            raise ValueError(f"{other} is not a strait neighbor for {self}.")
+
+
     def valid(self, other):
         '''Checks to make sure this cube is in the sector (third) defined by other.'''
         if (other.x < 0 and self.x >= 0): return False 

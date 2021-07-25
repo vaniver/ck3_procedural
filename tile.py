@@ -417,6 +417,18 @@ class Tile:
                 break
         return closest
 
+    def two_step_pairs(self, other):
+        ''' Get all hex pairs (one from self, one from other) that are strait pairs, and also those that are 2 distance away. (Used for strait-finding, mostly.)'''
+        strait_pairs = []
+        corner_pairs = []
+        for hex_a, hex_b in product(self.real_hex_list(), other.real_hex_list()):
+            if hex_a.dist(hex_b) == 2:
+                if hex_b in hex_a.strait_neighbors():
+                    strait_pairs.append((hex_a, hex_b))
+                else:
+                    corner_pairs.append((hex_a, hex_b))
+        return strait_pairs, corner_pairs
+
     def doodle(self, color=(255, 255, 255), show=True):
         doodle = Doodler({h: color for h in self.real_hex_list()})
         if show:
