@@ -1,8 +1,7 @@
 from dataclasses import dataclass, field
-from enum import Enum
+from itertools import combinations
 import math
 import os
-import pickle
 import random
 import shutil
 from typing import List
@@ -11,16 +10,9 @@ import numpy as np
 
 from cube import Cube
 from tile import Tile
-from ck2map import CK2Map
+from ck3map import CK3Map, new_rgb, Terrain
 import continent_gen
 
-
-Terrain = Enum('Terrain','plains farmlands hills mountains desert desert_mountains oasis jungle forest taiga wetlands steppe floodplains drylands')
-terrain_height = {Terrain.plains: 18, Terrain.farmlands: 16, Terrain.oasis: 17, Terrain.floodplains: 19,
-                  Terrain.desert: 20, Terrain.taiga: 20, Terrain.wetlands: 20, Terrain.steppe: 20, Terrain.drylands: 20,
-                  Terrain.jungle: 25, Terrain.forest: 25,
-                  Terrain.hills: 30, 
-                  Terrain.mountains: 80,  Terrain.desert_mountains: 80, }
 NUM_KINGDOM_HEXES = sum([sum(x) for x in continent_gen.KINGDOM_SIZE_LIST])
 NUM_CENTER_HEXES = sum(continent_gen.CENTER_SIZE_LIST)
 NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
@@ -417,14 +409,6 @@ def group_seas(ocean, min_sea_size=3, max_sea_size=12):
     return water_groups, sea_groups
 
 
-def new_rgb(dictionary):
-    '''Returns a randomly chosen RGB value that isn't already in the values of dictionary.'''
-    guess = tuple(np.random.randint(0,256,3))
-    if guess in dictionary.values() or guess == (255,255,255) or guess == (0,0,0):
-        return new_rgb(dictionary)
-    else:
-        return guess
-
 def allocate_pids(world, wastelands, shore_groups, sea_groups):
     '''Assigns a pid and RGB to each hex.'''
     pid_from_hex = {}
@@ -451,7 +435,7 @@ def allocate_pids(world, wastelands, shore_groups, sea_groups):
             rgb_from_hex[el] = rgb
             pid_from_hex[el] = last_pid
         last_pid += 1
-    return pid_from_hex, rgb_from_hex, rgb_from_pid
+    return pid_from_hex, rgb_from_hex, rgb_from_pid, last_pid
 
 
 def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire):
@@ -580,7 +564,7 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                 geo_region_duchy_list = []
                 geo_region_kingdom_list = []
                 kingdom_duchy_list = []
-                titles = title_order(empire, src_dir)
+                titles = title_order(empire)
                 for title in titles:
                     if title[0] == 'k':
                         # For kingdoms, we want to construct a geographical region in the georegion file.
@@ -638,7 +622,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     assert len(empires) == 3
     cont_size_list = [v.continentals for v in empires.values()]
     island_size_list = [v.islands for v in empires.values()]
-    assert(len(island_size_list)) == 0, "Haven't implemented all the island stuff yet."
+    assert(sum(island_size_list)) == 0, "Haven't implemented all the island stuff yet."
     angles = [v.angle for v in empires.values()]
     #Generate the tile hierarchy.
     world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)
@@ -648,46 +632,43 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     ocean, wastelands = find_ocean_and_wastelands(world)
     shore_groups, sea_groups = group_seas(ocean)
     #Create hex to province id mapping and hex to RGB mapping.
-    pid_from_hex, rgb_from_hex, rgb_from_pid = allocate_pids(world, wastelands, shore_groups, sea_groups)
-    cmap = CK2Map(max_x, max_y, hex_size = 12, map_size = max_mag + 2, crisp=crisp, default = (255,255,255))
+    pid_from_hex, rgb_from_hex, rgb_from_pid, last_pid = allocate_pids(world, wastelands, shore_groups, sea_groups)
+    cmap = CK3Map(max_x, max_y, hex_size = 12, map_size = max_mag + 2, crisp=crisp, default = (255,255,255))
     cmap.d_cube2rgb = rgb_from_hex
     cmap.provinces(filedir=os.path.join(mod_dir,"map_data"))
     land_height = calc_land_height(world, ocean)
     cmap.d_cube2terr = make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, waste_terrain_from_empire)
     make_province_terrain_txt(cmap.d_cube2terr, pid_from_hex, mod_dir)
     waste_list = [*wastelands]
-    name_from_pid = make_landed_titles(empires, religions, data_dir, mod_dir)
+    bname_from_pid = make_landed_titles(empires, religions, data_dir, mod_dir)
     # Make a bunch of map_data files. Maybe this should be split out to a separate function?
-    make_adjacencies(mod_dir, world)
+    make_adjacencies(mod_dir, world, pid_from_hex, bname_from_pid, cmap)
     make_climate(mod_dir)
-    make_definition(mod_dir, rgb_from_pid, name_from_pid)
-    cmap.heightmap(land_height, ocean, waste_list, terrain_height, filedir=os.path.join(mod_dir,"map_data"))
-    # cmap.terrain(filedir=os.path.join(mod_dir,"map_data"))
-    # rivers = make_rivers()
-    # cmap.trees(self.land_height, self.water_height, waste_list, filedir=os.path.join(self.filedir,"map_data"))
-    # cmap.rivers(self.land_height, filedir=os.path.join(self.filedir,"map_data"))
-    return world, cmap, ocean, land_height, waste_list
+    make_definition(mod_dir, rgb_from_pid, bname_from_pid)
+    cmap.heightmap(land_height, ocean, waste_list, filedir=os.path.join(mod_dir,"map_data"))
+    last_pid = cmap.rivers(land_height, bname_from_pid, num_rivers, last_pid, mod_dir)
+    return world, cmap, ocean, land_height, waste_list, bname_from_pid, last_pid
 
 
 def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
     with open(os.path.join(file_dir,"map_data", "adjacencies.csv"),'w') as f:
         f.write('From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment\n')
         # Check for Gibraltar-like adjacencies.
-        for (tile_a, tile_b) in combinations(world.tile_list):
+        for (tile_a, tile_b) in combinations(world.tile_list, 2):
             strait_pairs, corner_pairs = tile_a.two_step_pairs(tile_b)
             # Exclude any corner pairs that are next to a strait pair, which should be used instead.
             corner_pairs = [c for c in corner_pairs if not(any([c[0] in s[0].neighbors() or c[1] in s[1].neighbors() for s in strait_pairs]))]
             for (hex_a, hex_b) in strait_pairs:
                 # This is a connection between the two vertices of a strait, calculated from two trios of hexes.
-                # TODO: Probably this logic should live in the ck2map class, and just return the x,y pairs?
+                # TODO: Probably this logic should live in the ck3map class, and just return the x,y pairs?
                 pid_a = pid_from_hex[hex_a]
                 pid_b = pid_from_hex[hex_b]
                 trios = hex_a.foursome(hex_b)
-                x_a, y_a = cmap.find_boundary(trios[0])
-                x_b, y_b = cmap.find_boundary(trios[1])
+                x_a, y_a = cmap.find_vertex(trios[0])
+                x_b, y_b = cmap.find_vertex(trios[1])
                 comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
                 # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
-                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n"))
+                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n")
             for (hex_a, hex_b) in corner_pairs:
                 # This is a connection between the two edges separated by one water hex.
                 pid_a = pid_from_hex[hex_a]
@@ -697,7 +678,7 @@ def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
                 x_b, y_b = cmap.edge_middle(hex_b, middle)
                 comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
                 # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
-                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n"))
+                f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n")
         # TODO: Add adjacency for island kingdoms.
         f.write('-1;-1;;-1;-1;-1;-1;-1;')
 

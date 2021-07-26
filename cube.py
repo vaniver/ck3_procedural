@@ -1,4 +1,4 @@
-#execfile('c:\\ckii_procedural\\cube.py')
+from typing import List, Set
 
 class Cube:
     def __init__(self, x=0, y=0, z=0):
@@ -65,6 +65,19 @@ class Cube:
             (self.x,self.y,self.z) = ( self.z,  self.x,  self.y)
         else: #elif num % 6 == 5:
             (self.x,self.y,self.z) = (-self.y, -self.z, -self.x)
+
+    def big(self):
+        '''This returns the largest magnitude element of self.'''
+        if abs(self.x) >= abs(self.y) and abs(self.x) >= abs(self.z):
+            return self.x
+        elif abs(self.y) >= abs(self.x) and abs(self.y) >= abs(self.z):
+            return self.y
+        else:
+            return self.z
+
+    def point(self):
+        '''Whether or not the triangle defined by the trio which created this direction points left.'''
+        return self.big() > 0
             
     def tuple(self):
         return (self.x, self.y, self.z)
@@ -93,18 +106,24 @@ class Cube:
     def __hash__(self):
         return hash(tuple((self.x, self.y, self.z)))
         
-    def neighbors(self):
+    def neighbors(self) -> Set['Cube']:
         return {Cube(self.x+1,self.y,self.z-1), Cube(self.x,self.y+1,self.z-1),
                 Cube(self.x-1,self.y+1,self.z), Cube(self.x-1,self.y,self.z+1),
                 Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)}
         
-    def ordered_neighbors(self):
+    def ordered_neighbors(self) -> List['Cube']:
         """In counterclockwise order, starting with ENE."""
         return [Cube(self.x+1,self.y,self.z-1), Cube(self.x,self.y+1,self.z-1),
                 Cube(self.x-1,self.y+1,self.z), Cube(self.x-1,self.y,self.z+1),
                 Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)]
     
-    def strait_neighbors(self):
+    def ordered_strait_neighbors(self) -> List['Cube']:
+        """In a weird order, flipping before rotating."""
+        return [Cube(self.x+1,self.y-2,self.z+1), Cube(self.x-1,self.y+2,self.z-1),
+                Cube(self.x+1,self.y+1,self.z-2), Cube(self.x-1,self.y-1,self.z+2),
+                Cube(self.x+2,self.y-1,self.z-1), Cube(self.x-2,self.y+1,self.z+1)]
+    
+    def strait_neighbors(self) -> Set['Cube']:
         return {Cube(self.x+1,self.y-2,self.z+1), Cube(self.x-1,self.y+2,self.z-1),
                 Cube(self.x+1,self.y+1,self.z-2), Cube(self.x-1,self.y-1,self.z+2),
                 Cube(self.x+2,self.y-1,self.z-1), Cube(self.x-2,self.y+1,self.z+1)}
@@ -115,32 +134,32 @@ class Cube:
         #   [c for c in self.neighbors() if c in other.neighbors()]
         #   But this implementation is (I hope) faster.
         try:
-            s_index = self.strait_neighbors().index(other)
+            s_index = self.ordered_strait_neighbors().index(other)
             if s_index == 0:
-                return (self, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)),
-                        other, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)),)
+                return ((self, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)),
+                        (other, Cube(self.x,self.y-1,self.z+1), Cube(self.x+1,self.y-1,self.z)))
             elif s_index == 1:
-                return (self, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)),
-                        other, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)))
+                return ((self, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)),
+                        (other, Cube(self.x,self.y+1,self.z-1), Cube(self.x-1,self.y+1,self.z)))
             elif s_index == 2:
-                return (self, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)),
-                        other, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)))
+                return ((self, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)),
+                        (other, Cube(self.x,self.y+1,self.z-1), Cube(self.x+1,self.y,self.z-1)))
             elif s_index == 3:
-                return (self, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)),
-                        other, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)))
+                return ((self, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)),
+                        (other, Cube(self.x,self.y-1,self.z+1), Cube(self.x-1,self.y,self.z+1)))
             elif s_index == 4:
-                return (self, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)),
-                        other, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)))
+                return ((self, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)),
+                        (other, Cube(self.x+1,self.y,self.z-1), Cube(self.x+1,self.y-1,self.z)))
             elif s_index == 5:
-                return (self, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)),
-                        other, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)))
+                return ((self, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)),
+                        (other, Cube(self.x-1,self.y,self.z+1), Cube(self.x-1,self.y+1,self.z)))
             else:
                 raise NotImplementedError
         except:
             raise ValueError(f"{other} is not a strait neighbor for {self}.")
 
 
-    def valid(self, other):
+    def valid(self, other) -> bool:
         '''Checks to make sure this cube is in the sector (third) defined by other.'''
         if (other.x < 0 and self.x >= 0): return False 
         if (other.x > 0 and self.x <= 0): return False 
@@ -150,7 +169,7 @@ class Cube:
         if (other.z > 0 and self.z <= 0): return False 
         return True
         
-    def flip(self, valid_dir):
+    def flip(self, valid_dir) -> 'Cube':
         if valid_dir.x == 0:
             return Cube(-self.x, -self.z, -self.y)
         elif valid_dir.y == 0:
