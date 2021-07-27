@@ -1,0 +1,55 @@
+520 = {
+	prefix = "dynnp_mn"
+	name = "d_sanaa"
+	culture = "yemeni"
+}
+521 = {
+	prefix = "dynnp_mn"
+	name = "d_oman"
+	culture = "yemeni"
+}
+522 = {
+	prefix = "dynnp_mn"
+	name = "c_muscat"
+	culture = "yemeni"
+}
+523 = {
+	prefix = "dynnp_mn"
+	name = "c_taizz"
+	culture = "yemeni"
+}
+524 = {
+	prefix = "dynnp_mn"
+	name = "c_mandab"
+	culture = "yemeni"
+}
+525 = {
+	prefix = "dynnp_mn"
+	name = "c_batina"
+	culture = "yemeni"
+}
+526 = {
+	prefix = "dynnp_mn"
+	name = "c_hadramawt"
+	culture = "yemeni"
+}
+527 = {
+	prefix = "dynnp_mn"
+	name = "c_ahqaf"
+	culture = "yemeni"
+}
+528 = {
+	prefix = "dynnp_mn"
+	name = "c_mahra"
+	culture = "yemeni"
+}
+529 = {
+	prefix = "dynnp_mn"
+	name = "c_dhofar"
+	culture = "yemeni"
+}
+530 = {
+	prefix = "dynnp_mn"
+	name = "c_duqm"
+	culture = "yemeni"
+}

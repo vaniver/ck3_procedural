@@ -1,0 +1,36 @@
+d_bahrain = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_yamama = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_qatif = {
+	990.1.1 = {
+		holder = 200
+	}
+}
+c_samman = {
+	995.1.1 = {
+		holder = 201
+	}
+}
+c_al-hasa = {
+	997.1.1 = {
+		holder = 202
+	}
+}
+c_yamama = {
+	992.1.1 = {
+		holder = 203
+	}
+}
+c_falaj = {
+	991.1.1 = {
+		holder = 204
+	}
+}
+c_uqayr = {
+	997.1.1 = {
+		holder = 205
+	}
+}

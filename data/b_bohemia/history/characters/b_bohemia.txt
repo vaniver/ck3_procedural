@@ -1,0 +1,54 @@
+300 = {
+	name="Petr"
+	dynasty=60
+	religion="catholic"
+	culture="czech"
+	922.7.5 = {
+		birth="922.7.5"
+	}
+}
+301 = {
+	name="Budislav"
+	dynasty=61
+	religion="catholic"
+	culture="czech"
+	977.1.15 = {
+		birth="977.1.15"
+	}
+}
+302 = {
+	name="Markvart"
+	dynasty=62
+	religion="catholic"
+	culture="czech"
+	999.12.8 = {
+		birth="999.12.8"
+	}
+}
+303 = {
+	name="Vznata"
+	dynasty=63
+	religion="catholic"
+	culture="czech"
+	922.7.1 = {
+		birth="922.7.1"
+	}
+}
+304 = {
+	name="SlA_vek"
+	dynasty=64
+	religion="catholic"
+	culture="czech"
+	900.8.21 = {
+		birth="900.8.21"
+	}
+}
+305 = {
+	name="ZA_viS_"
+	dynasty=65
+	religion="catholic"
+	culture="czech"
+	933.6.4 = {
+		birth="933.6.4"
+	}
+}

@@ -1,0 +1,34 @@
+1300 = {
+	name="Jabir"
+	dynasty=260
+	religion="ashari"
+	culture="bedouin"
+	martial=4
+	diplomacy=4
+	intrigue=4
+	stewardship=4
+	learning=4
+	trait="education_martial_4"
+	trait="intellect_good_1"
+	970.10.8 = {
+		birth="970.10.8"
+	}
+}
+1301 = {
+	name="Sami"
+	dynasty=261
+	religion="ashari"
+	culture="bedouin"
+	963.4.24 = {
+		birth="963.4.24"
+	}
+}
+1302 = {
+	name="Aram"
+	dynasty=262
+	religion="ashari"
+	culture="bedouin"
+	973.7.8 = {
+		birth="973.7.8"
+	}
+}

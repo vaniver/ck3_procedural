@@ -1,0 +1,197 @@
+1900 = {
+	name="Gottfried"
+	dynasty=380
+	religion="catholic"
+	culture="bavarian"
+	940.7.25 = {
+		birth="940.7.25"
+	}
+	975.1.1 = {
+		add_spouse = 1
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+1901 = {
+	name="Anna"
+	female = yes
+	religion="catholic"
+	culture="bavarian"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.4.9 = {
+		birth="948.4.9"
+	}
+}
+1902 = {
+	name="Wilhelm"
+	dynasty=380
+	religion="catholic"
+	culture="bavarian"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	mother=1
+	980.4.23 = {
+		birth="980.4.23"
+	}
+}
+1903 = {
+	name="Siegfried"
+	dynasty=380
+	religion="catholic"
+	culture="bavarian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	mother=1
+	982.12.19 = {
+		birth="982.12.19"
+	}
+}
+1904 = {
+	name="Kuno"
+	dynasty=380
+	religion="catholic"
+	culture="bavarian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	mother=1
+	983.5.11 = {
+		birth="983.5.11"
+	}
+}
+1910 = {
+	name="Erich"
+	dynasty=381
+	religion="catholic"
+	culture="bavarian"
+	trait="physique_good_1"
+	trait="shrewd"
+	965.2.10 = {
+		birth="965.2.10"
+	}
+	985.1.1 = {
+		add_spouse = 11
+	}
+}
+1920 = {
+	name="Luther"
+	dynasty=384
+	religion="catholic"
+	culture="bavarian"
+	949.12.6 = {
+		birth="949.12.6"
+	}
+}
+1921 = {
+	name="Hadmar"
+	dynasty=384
+	religion="catholic"
+	culture="bavarian"
+	father=40
+	962.1.26 = {
+		birth="962.1.26"
+	}
+}
+1922 = {
+	name="Beatrix"
+	female = yes
+	dynasty=384
+	religion="catholic"
+	culture="bavarian"
+	father=40
+	960.10.28 = {
+		birth="960.10.28"
+	}
+	985.1.1 = {
+		add_spouse = 10
+	}
+}
+1930 = {
+	name="Liutfrid"
+	dynasty=383
+	religion="catholic"
+	culture="bavarian"
+	975.4.9 = {
+		birth="975.4.9"
+	}
+}
+1935 = {
+	name="Rasso"
+	dynasty=384
+	religion="catholic"
+	culture="bavarian"
+	971.10.19 = {
+		birth="971.10.19"
+	}
+}
+1940 = {
+	name="Rasso"
+	dynasty=385
+	religion="catholic"
+	culture="bavarian"
+	973.3.20 = {
+		birth="973.3.20"
+	}
+}
+1945 = {
+	name="Gundakar"
+	dynasty=386
+	religion="catholic"
+	culture="bavarian"
+	971.7.14 = {
+		birth="971.7.14"
+	}
+}
+1950 = {
+	name="Ludwig"
+	dynasty=387
+	religion="catholic"
+	culture="bavarian"
+	971.9.26 = {
+		birth="971.9.26"
+	}
+}
+1955 = {
+	name="Werigand"
+	dynasty=388
+	religion="catholic"
+	culture="bavarian"
+	972.6.27 = {
+		birth="972.6.27"
+	}
+}
+1960 = {
+	name="Ekbert"
+	dynasty=389
+	religion="catholic"
+	culture="bavarian"
+	975.1.10 = {
+		birth="975.1.10"
+	}
+}
+1965 = {
+	name="Wilhelm"
+	dynasty=390
+	religion="catholic"
+	culture="bavarian"
+	974.2.27 = {
+		birth="974.2.27"
+	}
+}

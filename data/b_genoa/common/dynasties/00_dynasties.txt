@@ -1,0 +1,30 @@
+120 = {
+	prefix = "dynnp_di"
+	name = "c_genoa"
+	culture = "cisalpine"
+}
+121 = {
+	prefix = "dynnp_di"
+	name = "c_modena"
+	culture = "cisalpine"
+}
+122 = {
+	prefix = "dynnp_di"
+	name = "c_mantua"
+	culture = "cisalpine"
+}
+123 = {
+	prefix = "dynnp_di"
+	name = "c_monferrato"
+	culture = "cisalpine"
+}
+124 = {
+	prefix = "dynnp_di"
+	name = "c_turin"
+	culture = "cisalpine"
+}
+125 = {
+	prefix = "dynnp_di"
+	name = "c_novara"
+	culture = "cisalpine"
+}

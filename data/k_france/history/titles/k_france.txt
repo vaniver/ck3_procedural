@@ -1,0 +1,123 @@
+k_france = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_valois = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2200
+	}
+	1000.1.1 = {
+		holder = 2202
+	}
+}
+c_ile_de_france = {
+	980.1.1 = {
+		holder = 2200
+	}
+	1000.1.1 = {
+		holder = 2202
+	}
+}
+c_clermont = {
+	980.1.1 = {
+		holder = 2200
+	}
+	1000.1.1 = {
+		holder = 2202
+	}
+}
+c_valois = {
+	980.1.1 = {
+		holder = 2200
+	}
+	1000.1.1 = {
+		holder = 2202
+	}
+}
+c_amiens = {
+	989.1.1 = {
+		holder = 2230
+	}
+}
+c_beaumont = {
+	988.1.1 = {
+		holder = 2235
+	}
+}
+d_champagne = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2210
+	}
+}
+c_reims = {
+	985.1.1 = {
+		holder = 2210
+	}
+}
+c_troyes = {
+	990.1.1 = {
+		holder = 2210
+	}
+}
+c_chalons = {
+	990.1.1 = {
+		holder = 2221
+	}
+	990.1.2 = {
+		liege = d_champagne
+	}
+}
+c_rethel = {
+	990.1.1 = {
+		holder = 2240
+	}
+	990.1.2 = {
+		liege = d_champagne
+	}
+}
+d_orleans = {
+	900.1.1 = {
+	}
+}
+c_orleans = {
+	985.1.1 = {
+		holder = 2245
+	}
+}
+c_chartres = {
+	985.1.1 = {
+		holder = 2250
+	}
+}
+c_montargis = {
+	985.1.1 = {
+		holder = 2245
+	}
+}
+c_sancerre = {
+	985.1.1 = {
+		holder = 2250
+	}
+}
+d_anjou = {
+	900.1.1 = {
+	}
+}
+c_anjou = {
+	985.1.1 = {
+		holder = 2255
+	}
+}
+c_maine = {
+	985.1.1 = {
+		holder = 2260
+	}
+}
+c_sable = {
+	985.1.1 = {
+		holder = 2265
+	}
+}

@@ -1,0 +1,11 @@
+e_arabia = {
+	color = { 32 150 85 }
+	color2 = { 255 255 255 }
+	
+	k_arabia_middle = {
+		color = { 32 150 85 }
+		color2 = { 255 255 255 }
+		
+		can_create = {
+			always = no
+		}

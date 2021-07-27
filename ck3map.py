@@ -16,21 +16,22 @@ def dist2line(x, y, srcx, srcy, destx, desty):
 
 Terrain = Enum('Terrain','plains farmlands hills mountains desert desert_mountains oasis jungle forest taiga wetlands steppe floodplains drylands')
 
-TERRAIN_HEIGHT = {Terrain.plains: 18, Terrain.farmlands: 16, Terrain.oasis: 17, Terrain.floodplains: 19,
-                  Terrain.desert: 20, Terrain.taiga: 20, Terrain.wetlands: 20, Terrain.steppe: 20, Terrain.drylands: 20,
-                  Terrain.jungle: 25, Terrain.forest: 25,
-                  Terrain.hills: 30, 
-                  Terrain.mountains: 80,  Terrain.desert_mountains: 80, }
+TERRAIN_HEIGHT = {Terrain.farmlands: (0,1), Terrain.plains: (0,2), Terrain.floodplains: (0,2), Terrain.taiga: (0,2),
+                  Terrain.wetlands: (0,2), Terrain.steppe: (0,2), Terrain.drylands: (0,2),
+                  Terrain.oasis: (0,3), Terrain.desert: (0,3),
+                  Terrain.jungle: (1,5), Terrain.forest: (1,5),
+                  Terrain.hills: (5,20), 
+                  Terrain.mountains: (15,55),  Terrain.desert_mountains: (15,55), }
 
 # HEIGHTMAP constants
-WATER_HEIGHT = 4
+WATER_HEIGHT = 96
 
 # PROVINCES constants
 IMPASSABLE = (0, 0, 0)
 
 # RIVERS constants
 MAJOR_RIVER_THRESHOLD = 9
-RIVER_EXTEND = 3
+RIVER_EXTEND = 5
 SOURCE = 0
 MERGE = 1
 SPLIT = 2
@@ -60,7 +61,7 @@ def new_rgb(dictionary):
 
 class CK3Map:
     
-    def __init__(self, max_x=8192, max_y=4096, hex_size=20, map_size=40, crisp=True, default=None):
+    def __init__(self, max_x=8192, max_y=4096, hex_size=40, map_size=40, crisp=True, default=None):
         '''Creates a map of size max_x x max_y, with hexes that have radius hex_size pixels, and at most map_size hexes on an edge. If crisp=True (default), the hexes will all be regular and the same size; if crisp=False, the sizes will vary to make them visually distinct, and will extend to the edge of the image boundary.'''
         self.max_x = max_x
         self.max_y = max_y
@@ -267,7 +268,7 @@ class CK3Map:
 
     def source_river(self, source, land_height) -> bool:
         '''Source is a cube. First find its highest vertex, and then extend it towards water. 
-        Returns True if successful, False if restarting a previously started river.'''
+        Returns True if successful, False if restarting a previously started (or illegal) river.'''
         width = 0
         height = 0
         for rot in range(6):
@@ -279,7 +280,7 @@ class CK3Map:
                 b3cubes = trio
                 height = self.topo[tx,ty]
                 sx, sy = tx, ty
-        if height == 0:
+        if height == 0:  # Couldn't find a vertex that doesn't touch water.
             return False
         start_trio = self.cubes2trio(b3cubes)
         if start_trio in self.d_trio2river:
@@ -312,7 +313,8 @@ class CK3Map:
         source_trio is used to delete 'source' from the first edge if this river merges into another.'''
         if start_trio in self.d_trio2river:
             self.d_trio2river[start_trio].source = False
-            self.join_flow(start_trio, width)
+            # TODO: Get this to not loop infinitely
+            # self.join_flow(start_trio, width)
             return
         start_cubes = [self.valid_cubes[el] for el in start_trio]
         assert away_cube not in start_cubes
@@ -350,10 +352,12 @@ class CK3Map:
             self.extend_river(end_trio, end_xy, away_cube, source_trio, width + 1, land_height)
 
     def join_flow(self, trio, width):
-        self.d_trio2river[trio].width += width
-        next_trio = self.d_trio2river[trio].end_trio
-        if next_trio in self.d_trio2river:
-            self.join_flow(next_trio, width)
+        '''Adds the width of a joining river to all downstream edges.'''
+        cycle_prevention = set()
+        while trio in self.d_trio2river and trio not in cycle_prevention:
+            self.d_trio2river[trio].width += width
+            cycle_prevention.add(trio)
+            trio = self.d_trio2river[trio].end_trio
     
     def provinces(self, filedir=None):
         '''Create provinces.bmp. Uses d_cube2rgb, choosing colors based on position if any are empty.Saves if filedir is passed.'''
@@ -381,25 +385,24 @@ class CK3Map:
         '''Create heightmap.png. 16 is the boundary?'''
         self.topo = np.zeros((self.max_x,self.max_y))
         last_cube = None
+        last_range = (0,0)
         for x in range(self.max_x):
             for y in range(self.max_y):
                 if self.valid_pixel(x,y):
                     c = self.pixel_to_cube(x,y)
                     if c != last_cube:
                         if c in land_height:
-                            dist_height = land_height[c] * 30
+                            last_height = 96 + land_height[c] * 3
                         elif c in water_depth:
-                            dist_height = water_depth[c] * 10
+                            last_height = 94 - water_depth[c] * 10
                         else:
-                            dist_height = 0
-                        # last_cube = c
-                        # if c in self.d_cube2terr:
-                        #     dist_height += TERRAIN_HEIGHT[self.d_cube2terr[c]]
-                        # else:
-                        #     dist_height += 16
-                        last_height = dist_height  # max(0, dist_height)
+                            last_height = 0
+                        if c in self.d_cube2terr:
+                            last_range = TERRAIN_HEIGHT[self.d_cube2terr[c]]
+                        else:
+                            last_range = (0,0)
                         last_cube = c
-                    self.topo[x,y] = last_height
+                    self.topo[x,y] = last_height + random.randint(last_range[0], last_range[1])
                 else:
                     self.topo[x,y] = 0
         # TODO: Gaussian filtering

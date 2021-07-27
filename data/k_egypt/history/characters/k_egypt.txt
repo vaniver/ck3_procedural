@@ -1,0 +1,197 @@
+2100 = {
+	name="Mukhtar"
+	dynasty=420
+	religion="ashari"
+	culture="egyptian"
+	940.9.24 = {
+		birth="940.9.24"
+	}
+	975.1.1 = {
+		add_spouse = 1
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+2101 = {
+	name="Jamila"
+	female = yes
+	religion="ashari"
+	culture="egyptian"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.9.17 = {
+		birth="948.9.17"
+	}
+}
+2102 = {
+	name="Zakariyah"
+	dynasty=420
+	religion="ashari"
+	culture="egyptian"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	mother=1
+	980.4.26 = {
+		birth="980.4.26"
+	}
+}
+2103 = {
+	name="Walid"
+	dynasty=420
+	religion="ashari"
+	culture="egyptian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	mother=1
+	982.6.23 = {
+		birth="982.6.23"
+	}
+}
+2104 = {
+	name="Aaron"
+	dynasty=420
+	religion="ashari"
+	culture="egyptian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	mother=1
+	983.1.14 = {
+		birth="983.1.14"
+	}
+}
+2110 = {
+	name="Ghiyasaddin"
+	dynasty=421
+	religion="ashari"
+	culture="egyptian"
+	trait="physique_good_1"
+	trait="shrewd"
+	965.9.5 = {
+		birth="965.9.5"
+	}
+	985.1.1 = {
+		add_spouse = 11
+	}
+}
+2120 = {
+	name="Abdullah"
+	dynasty=424
+	religion="ashari"
+	culture="egyptian"
+	948.2.13 = {
+		birth="948.2.13"
+	}
+}
+2121 = {
+	name="Nabil"
+	dynasty=424
+	religion="ashari"
+	culture="egyptian"
+	father=40
+	964.12.2 = {
+		birth="964.12.2"
+	}
+}
+2122 = {
+	name="Taweret"
+	female = yes
+	dynasty=424
+	religion="ashari"
+	culture="egyptian"
+	father=40
+	965.11.14 = {
+		birth="965.11.14"
+	}
+	985.1.1 = {
+		add_spouse = 10
+	}
+}
+2130 = {
+	name="Nuraddin"
+	dynasty=423
+	religion="ashari"
+	culture="egyptian"
+	978.3.27 = {
+		birth="978.3.27"
+	}
+}
+2135 = {
+	name="Firuz"
+	dynasty=424
+	religion="ashari"
+	culture="egyptian"
+	976.2.7 = {
+		birth="976.2.7"
+	}
+}
+2140 = {
+	name="Matta"
+	dynasty=425
+	religion="ashari"
+	culture="egyptian"
+	973.5.21 = {
+		birth="973.5.21"
+	}
+}
+2145 = {
+	name="Murad"
+	dynasty=426
+	religion="ashari"
+	culture="egyptian"
+	973.2.26 = {
+		birth="973.2.26"
+	}
+}
+2150 = {
+	name="Mehtar"
+	dynasty=427
+	religion="ashari"
+	culture="egyptian"
+	973.9.23 = {
+		birth="973.9.23"
+	}
+}
+2155 = {
+	name="Nabil"
+	dynasty=428
+	religion="ashari"
+	culture="egyptian"
+	977.8.7 = {
+		birth="977.8.7"
+	}
+}
+2160 = {
+	name="Farhan"
+	dynasty=429
+	religion="ashari"
+	culture="egyptian"
+	973.9.3 = {
+		birth="973.9.3"
+	}
+}
+2165 = {
+	name="Asim"
+	dynasty=430
+	religion="ashari"
+	culture="egyptian"
+	970.6.20 = {
+		birth="970.6.20"
+	}
+}

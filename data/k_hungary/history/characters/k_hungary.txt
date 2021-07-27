@@ -1,0 +1,197 @@
+2300 = {
+	name="MA_rton"
+	dynasty=460
+	religion="catholic"
+	culture="hungarian"
+	940.11.27 = {
+		birth="940.11.27"
+	}
+	975.1.1 = {
+		add_spouse = 1
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+2301 = {
+	name="A_gnes"
+	female = yes
+	religion="catholic"
+	culture="hungarian"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.10.22 = {
+		birth="948.10.22"
+	}
+}
+2302 = {
+	name="Vencel"
+	dynasty=460
+	religion="catholic"
+	culture="hungarian"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	mother=1
+	980.3.14 = {
+		birth="980.3.14"
+	}
+}
+2303 = {
+	name="JO_zsef"
+	dynasty=460
+	religion="catholic"
+	culture="hungarian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	mother=1
+	982.10.13 = {
+		birth="982.10.13"
+	}
+}
+2304 = {
+	name="GyO_rgy"
+	dynasty=460
+	religion="catholic"
+	culture="hungarian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	mother=1
+	983.6.16 = {
+		birth="983.6.16"
+	}
+}
+2310 = {
+	name="KristO_f"
+	dynasty=461
+	religion="catholic"
+	culture="hungarian"
+	trait="physique_good_1"
+	trait="shrewd"
+	965.4.7 = {
+		birth="965.4.7"
+	}
+	985.1.1 = {
+		add_spouse = 11
+	}
+}
+2320 = {
+	name="Vencel"
+	dynasty=464
+	religion="catholic"
+	culture="hungarian"
+	943.12.4 = {
+		birth="943.12.4"
+	}
+}
+2321 = {
+	name="Vilmos"
+	dynasty=464
+	religion="catholic"
+	culture="hungarian"
+	father=40
+	961.3.24 = {
+		birth="961.3.24"
+	}
+}
+2322 = {
+	name="Czenzi"
+	female = yes
+	dynasty=464
+	religion="catholic"
+	culture="hungarian"
+	father=40
+	966.6.15 = {
+		birth="966.6.15"
+	}
+	985.1.1 = {
+		add_spouse = 10
+	}
+}
+2330 = {
+	name="LO_rinc"
+	dynasty=463
+	religion="catholic"
+	culture="hungarian"
+	978.2.20 = {
+		birth="978.2.20"
+	}
+}
+2335 = {
+	name="Attila"
+	dynasty=464
+	religion="catholic"
+	culture="hungarian"
+	978.3.9 = {
+		birth="978.3.9"
+	}
+}
+2340 = {
+	name="KA_roly"
+	dynasty=465
+	religion="catholic"
+	culture="hungarian"
+	971.9.16 = {
+		birth="971.9.16"
+	}
+}
+2345 = {
+	name="Vencel"
+	dynasty=466
+	religion="catholic"
+	culture="hungarian"
+	979.7.21 = {
+		birth="979.7.21"
+	}
+}
+2350 = {
+	name="Csongor"
+	dynasty=467
+	religion="catholic"
+	culture="hungarian"
+	972.5.19 = {
+		birth="972.5.19"
+	}
+}
+2355 = {
+	name="IzsA_k"
+	dynasty=468
+	religion="catholic"
+	culture="hungarian"
+	976.10.25 = {
+		birth="976.10.25"
+	}
+}
+2360 = {
+	name="JA_nos"
+	dynasty=469
+	religion="catholic"
+	culture="hungarian"
+	974.6.4 = {
+		birth="974.6.4"
+	}
+}
+2365 = {
+	name="OszkA_r"
+	dynasty=470
+	religion="catholic"
+	culture="hungarian"
+	975.9.13 = {
+		birth="975.9.13"
+	}
+}

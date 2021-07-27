@@ -1,0 +1,197 @@
+2500 = {
+	name="Ya_qub"
+	dynasty=500
+	religion="ashari"
+	culture="levantine"
+	940.3.13 = {
+		birth="940.3.13"
+	}
+	975.1.1 = {
+		add_spouse = 1
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+2501 = {
+	name="Mina"
+	female = yes
+	religion="ashari"
+	culture="levantine"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.12.14 = {
+		birth="948.12.14"
+	}
+}
+2502 = {
+	name="Nuraddin"
+	dynasty=500
+	religion="ashari"
+	culture="levantine"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	mother=1
+	980.10.5 = {
+		birth="980.10.5"
+	}
+}
+2503 = {
+	name="Umaya"
+	dynasty=500
+	religion="ashari"
+	culture="levantine"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	mother=1
+	982.11.21 = {
+		birth="982.11.21"
+	}
+}
+2504 = {
+	name="Abdul-Hamid"
+	dynasty=500
+	religion="ashari"
+	culture="levantine"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	mother=1
+	983.5.20 = {
+		birth="983.5.20"
+	}
+}
+2510 = {
+	name="Khalid"
+	dynasty=501
+	religion="ashari"
+	culture="levantine"
+	trait="physique_good_1"
+	trait="shrewd"
+	968.8.7 = {
+		birth="968.8.7"
+	}
+	985.1.1 = {
+		add_spouse = 11
+	}
+}
+2520 = {
+	name="Ya_qub"
+	dynasty=504
+	religion="ashari"
+	culture="levantine"
+	941.12.11 = {
+		birth="941.12.11"
+	}
+}
+2521 = {
+	name="Seyfullah"
+	dynasty=504
+	religion="ashari"
+	culture="levantine"
+	father=40
+	965.2.4 = {
+		birth="965.2.4"
+	}
+}
+2522 = {
+	name="Khaterah"
+	female = yes
+	dynasty=504
+	religion="ashari"
+	culture="levantine"
+	father=40
+	962.9.24 = {
+		birth="962.9.24"
+	}
+	985.1.1 = {
+		add_spouse = 10
+	}
+}
+2530 = {
+	name="Mukhtar"
+	dynasty=503
+	religion="ashari"
+	culture="levantine"
+	976.4.25 = {
+		birth="976.4.25"
+	}
+}
+2535 = {
+	name="Ali"
+	dynasty=504
+	religion="ashari"
+	culture="levantine"
+	972.6.13 = {
+		birth="972.6.13"
+	}
+}
+2540 = {
+	name="Murad"
+	dynasty=505
+	religion="ashari"
+	culture="levantine"
+	976.8.12 = {
+		birth="976.8.12"
+	}
+}
+2545 = {
+	name="Majid"
+	dynasty=506
+	religion="ashari"
+	culture="levantine"
+	979.6.18 = {
+		birth="979.6.18"
+	}
+}
+2550 = {
+	name="Abdul-Hamid"
+	dynasty=507
+	religion="ashari"
+	culture="levantine"
+	976.10.7 = {
+		birth="976.10.7"
+	}
+}
+2555 = {
+	name="Aziz"
+	dynasty=508
+	religion="ashari"
+	culture="levantine"
+	978.12.4 = {
+		birth="978.12.4"
+	}
+}
+2560 = {
+	name="Ya_qub"
+	dynasty=509
+	religion="ashari"
+	culture="levantine"
+	978.5.13 = {
+		birth="978.5.13"
+	}
+}
+2565 = {
+	name="Mukhtar"
+	dynasty=510
+	religion="ashari"
+	culture="levantine"
+	979.2.7 = {
+		birth="979.2.7"
+	}
+}

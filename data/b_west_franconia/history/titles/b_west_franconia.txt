@@ -1,0 +1,36 @@
+d_frankfurt = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_erbach = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_frankfurt = {
+	998.1.1 = {
+		holder = 1000
+	}
+}
+c_mainz = {
+	999.1.1 = {
+		holder = 1001
+	}
+}
+c_klingenberg = {
+	997.1.1 = {
+		holder = 1002
+	}
+}
+c_erbach = {
+	995.1.1 = {
+		holder = 1003
+	}
+}
+c_speyer = {
+	993.1.1 = {
+		holder = 1004
+	}
+}
+c_durne = {
+	995.1.1 = {
+		holder = 1005
+	}
+}

@@ -1,0 +1,55 @@
+500 = {
+	prefix = "dynnp_mn"
+	name = "d_aleppo"
+	culture = "levantine"
+}
+501 = {
+	prefix = "dynnp_mn"
+	name = "d_damascus"
+	culture = "levantine"
+}
+502 = {
+	prefix = "dynnp_mn"
+	name = "c_baalbek"
+	culture = "levantine"
+}
+503 = {
+	prefix = "dynnp_mn"
+	name = "c_palmyra"
+	culture = "levantine"
+}
+504 = {
+	prefix = "dynnp_mn"
+	name = "c_sukhna"
+	culture = "levantine"
+}
+505 = {
+	prefix = "dynnp_mn"
+	name = "c_hauran"
+	culture = "levantine"
+}
+506 = {
+	prefix = "dynnp_mn"
+	name = "c_beirut"
+	culture = "levantine"
+}
+507 = {
+	prefix = "dynnp_mn"
+	name = "c_antiocheia"
+	culture = "levantine"
+}
+508 = {
+	prefix = "dynnp_mn"
+	name = "c_edessa"
+	culture = "levantine"
+}
+509 = {
+	prefix = "dynnp_mn"
+	name = "c_aintab"
+	culture = "levantine"
+}
+510 = {
+	prefix = "dynnp_mn"
+	name = "c_marash"
+	culture = "levantine"
+}

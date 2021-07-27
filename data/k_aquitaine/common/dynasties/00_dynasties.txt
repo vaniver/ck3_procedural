@@ -1,0 +1,55 @@
+360 = {
+	prefix = "dynnp_de"
+	name = "d_gascogne"
+	culture = "occitan"
+}
+361 = {
+	prefix = "dynnp_de"
+	name = "d_toulouse"
+	culture = "occitan"
+}
+362 = {
+	prefix = "dynnp_de"
+	name = "c_quercy"
+	culture = "occitan"
+}
+363 = {
+	prefix = "dynnp_de"
+	name = "c_comminges"
+	culture = "occitan"
+}
+364 = {
+	prefix = "dynnp_de"
+	name = "c_armagnac"
+	culture = "occitan"
+}
+365 = {
+	prefix = "dynnp_de"
+	name = "c_gevaudan"
+	culture = "occitan"
+}
+366 = {
+	prefix = "dynnp_de"
+	name = "c_angouleme"
+	culture = "occitan"
+}
+367 = {
+	prefix = "dynnp_de"
+	name = "c_perigord"
+	culture = "occitan"
+}
+368 = {
+	prefix = "dynnp_de"
+	name = "c_albi"
+	culture = "occitan"
+}
+369 = {
+	prefix = "dynnp_de"
+	name = "c_montpellier"
+	culture = "occitan"
+}
+370 = {
+	prefix = "dynnp_de"
+	name = "c_carcassonne"
+	culture = "occitan"
+}

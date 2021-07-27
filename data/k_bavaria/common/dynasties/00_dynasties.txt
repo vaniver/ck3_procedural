@@ -1,0 +1,55 @@
+380 = {
+	prefix = "dynnp_von"
+	name = "d_bavaria"
+	culture = "bavarian"
+}
+381 = {
+	prefix = "dynnp_von"
+	name = "d_osterreich"
+	culture = "bavarian"
+}
+382 = {
+	prefix = "dynnp_von"
+	name = "c_hohenau"
+	culture = "bavarian"
+}
+383 = {
+	prefix = "dynnp_von"
+	name = "c_munchen"
+	culture = "bavarian"
+}
+384 = {
+	prefix = "dynnp_von"
+	name = "c_rothenburg"
+	culture = "bavarian"
+}
+385 = {
+	prefix = "dynnp_von"
+	name = "c_sankt_polten"
+	culture = "bavarian"
+}
+386 = {
+	prefix = "dynnp_von"
+	name = "c_salzburg"
+	culture = "bavarian"
+}
+387 = {
+	prefix = "dynnp_von"
+	name = "c_berchtesgaden"
+	culture = "bavarian"
+}
+388 = {
+	prefix = "dynnp_von"
+	name = "c_augsburg"
+	culture = "bavarian"
+}
+389 = {
+	prefix = "dynnp_von"
+	name = "c_kempten"
+	culture = "bavarian"
+}
+390 = {
+	prefix = "dynnp_von"
+	name = "c_alpsee"
+	culture = "bavarian"
+}

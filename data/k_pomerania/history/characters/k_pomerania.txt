@@ -1,0 +1,197 @@
+2400 = {
+	name="Casimir"
+	dynasty=480
+	religion="catholic"
+	culture="pommeranian"
+	940.8.19 = {
+		birth="940.8.19"
+	}
+	975.1.1 = {
+		add_spouse = 1
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+2401 = {
+	name="Jolanta"
+	female = yes
+	religion="catholic"
+	culture="pommeranian"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.9.20 = {
+		birth="948.9.20"
+	}
+}
+2402 = {
+	name="WL_odzimierz"
+	dynasty=480
+	religion="catholic"
+	culture="pommeranian"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	mother=1
+	980.10.3 = {
+		birth="980.10.3"
+	}
+}
+2403 = {
+	name="Wawrzyniec"
+	dynasty=480
+	religion="catholic"
+	culture="pommeranian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	mother=1
+	982.5.28 = {
+		birth="982.5.28"
+	}
+}
+2404 = {
+	name="Branimir"
+	dynasty=480
+	religion="catholic"
+	culture="pommeranian"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	mother=1
+	983.10.21 = {
+		birth="983.10.21"
+	}
+}
+2410 = {
+	name="Zdislav"
+	dynasty=481
+	religion="catholic"
+	culture="pommeranian"
+	trait="physique_good_1"
+	trait="shrewd"
+	960.4.21 = {
+		birth="960.4.21"
+	}
+	985.1.1 = {
+		add_spouse = 11
+	}
+}
+2420 = {
+	name="Zygmunt"
+	dynasty=484
+	religion="catholic"
+	culture="pommeranian"
+	949.3.19 = {
+		birth="949.3.19"
+	}
+}
+2421 = {
+	name="Tomasz"
+	dynasty=484
+	religion="catholic"
+	culture="pommeranian"
+	father=40
+	960.9.17 = {
+		birth="960.9.17"
+	}
+}
+2422 = {
+	name="Bohuslava"
+	female = yes
+	dynasty=484
+	religion="catholic"
+	culture="pommeranian"
+	father=40
+	963.8.25 = {
+		birth="963.8.25"
+	}
+	985.1.1 = {
+		add_spouse = 10
+	}
+}
+2430 = {
+	name="Bezprzym"
+	dynasty=483
+	religion="catholic"
+	culture="pommeranian"
+	970.12.23 = {
+		birth="970.12.23"
+	}
+}
+2435 = {
+	name="Ryszard"
+	dynasty=484
+	religion="catholic"
+	culture="pommeranian"
+	971.3.11 = {
+		birth="971.3.11"
+	}
+}
+2440 = {
+	name="JE_drzej"
+	dynasty=485
+	religion="catholic"
+	culture="pommeranian"
+	979.9.22 = {
+		birth="979.9.22"
+	}
+}
+2445 = {
+	name="Leszek"
+	dynasty=486
+	religion="catholic"
+	culture="pommeranian"
+	978.1.19 = {
+		birth="978.1.19"
+	}
+}
+2450 = {
+	name="Dytryk"
+	dynasty=487
+	religion="catholic"
+	culture="pommeranian"
+	978.10.19 = {
+		birth="978.10.19"
+	}
+}
+2455 = {
+	name="Lech"
+	dynasty=488
+	religion="catholic"
+	culture="pommeranian"
+	979.10.5 = {
+		birth="979.10.5"
+	}
+}
+2460 = {
+	name="Ryszard"
+	dynasty=489
+	religion="catholic"
+	culture="pommeranian"
+	978.7.20 = {
+		birth="978.7.20"
+	}
+}
+2465 = {
+	name="Jaroslav"
+	dynasty=490
+	religion="catholic"
+	culture="pommeranian"
+	972.12.3 = {
+		birth="972.12.3"
+	}
+}

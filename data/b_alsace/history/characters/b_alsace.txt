@@ -1,0 +1,54 @@
+100 = {
+	name="Thomas"
+	dynasty=20
+	religion="catholic"
+	culture="swabian"
+	933.3.14 = {
+		birth="933.3.14"
+	}
+}
+101 = {
+	name="Philipp"
+	dynasty=21
+	religion="catholic"
+	culture="swabian"
+	955.7.19 = {
+		birth="955.7.19"
+	}
+}
+102 = {
+	name="Dietpold"
+	dynasty=22
+	religion="catholic"
+	culture="swabian"
+	999.10.25 = {
+		birth="999.10.25"
+	}
+}
+103 = {
+	name="Konrad"
+	dynasty=23
+	religion="catholic"
+	culture="swabian"
+	977.7.7 = {
+		birth="977.7.7"
+	}
+}
+104 = {
+	name="Hermann"
+	dynasty=24
+	religion="catholic"
+	culture="swabian"
+	977.5.4 = {
+		birth="977.5.4"
+	}
+}
+105 = {
+	name="Gottschalk"
+	dynasty=25
+	religion="catholic"
+	culture="swabian"
+	933.1.19 = {
+		birth="933.1.19"
+	}
+}

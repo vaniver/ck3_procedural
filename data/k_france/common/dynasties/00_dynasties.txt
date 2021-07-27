@@ -1,0 +1,55 @@
+440 = {
+	prefix = "dynnp_de"
+	name = "d_valois"
+	culture = "french"
+}
+441 = {
+	prefix = "dynnp_de"
+	name = "d_champagne"
+	culture = "french"
+}
+442 = {
+	prefix = "dynnp_de"
+	name = "c_chalons"
+	culture = "french"
+}
+443 = {
+	prefix = "dynnp_de"
+	name = "c_amiens"
+	culture = "french"
+}
+444 = {
+	prefix = "dynnp_de"
+	name = "c_beaumont"
+	culture = "french"
+}
+445 = {
+	prefix = "dynnp_de"
+	name = "c_rethel"
+	culture = "french"
+}
+446 = {
+	prefix = "dynnp_de"
+	name = "c_orleans"
+	culture = "french"
+}
+447 = {
+	prefix = "dynnp_de"
+	name = "c_chartres"
+	culture = "french"
+}
+448 = {
+	prefix = "dynnp_de"
+	name = "c_anjou"
+	culture = "french"
+}
+449 = {
+	prefix = "dynnp_de"
+	name = "c_maine"
+	culture = "french"
+}
+450 = {
+	prefix = "dynnp_de"
+	name = "c_sable"
+	culture = "french"
+}

@@ -25,10 +25,11 @@ def make_dot_mod(file_dir, mod_name, mod_disp_name):
     shared += "supported_version = 1.4.4\n"
     outer = "path = \"mod/{}\"\n".format(mod_name)
     
-    # replace_paths = ["common/landed_titles", "map_data"] #"common/bookmarks", "common/cultures", "common/dynasties", 
-    #                     #"common/offmap_powers", "history/characters", "history/offmap_powers", "history/provinces",
-    #                     #"history/technology", "history/titles", "history/wars"]
-    # outer += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
+    replace_paths = [
+        "common/bookmarks", "common/cultures", "common/dynasties",
+        "history/characters", "history/province_mapping", "history/provinces","history/titles", "history/wars"
+        ]
+    outer += "replace_path = \"" + "\"\nreplace_path = \"".join(replace_paths)+"\""
     os.makedirs(os.path.join(file_dir, mod_name), exist_ok=True)
     with open(os.path.join(file_dir,"{}.mod".format(mod_name)),'w') as f:
         f.write(shared + outer)
@@ -493,7 +494,7 @@ def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, wa
 def make_province_terrain_txt(terrain_from_hex, pid_from_hex, file_dir):
     '''Create the common/00_province_terrain.txt file.'''
     os.makedirs(os.path.join(file_dir,"common", "province_terrain"), exist_ok=True)
-    with open(os.path.join(file_dir,"common", "province_terrain", "00_province_terrain.txt"),'w') as f:
+    with open(os.path.join(file_dir,"common", "province_terrain", "00_province_terrain.txt"),'w', encoding='utf8') as f:
         f.write('default=plains\n')
         buffer = []
         for cube_loc, terrain_type in terrain_from_hex.items():
@@ -540,24 +541,24 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
     bname_from_pid = {}
     bname = "ERROR"
     pid=1
-    with open(os.path.join(out_dir, "map_data", "island_region.txt"), "w") as isl_region_file:
+    with open(os.path.join(out_dir, "map_data", "island_region.txt"), "w", encoding='utf8') as isl_region_file:
         # TODO: Make this real.
         isl_region_file.write("#No islands generated.\n")
-    with open(os.path.join(out_dir, "common", "landed_titles", "00_landed_titles.txt"),'w') as outf:
-        with open(os.path.join(out_dir, "map_data", "geographical_region.txt"), "w") as geo_region_file:
+    with open(os.path.join(out_dir, "common", "landed_titles", "00_landed_titles.txt"),'w', encoding='utf8') as outf:
+        with open(os.path.join(out_dir, "map_data", "geographical_region.txt"), "w", encoding='utf8') as geo_region_file:
             # Initial constants.
-            with open(os.path.join(src_dir, "common", "start", "landed_titles.txt")) as inf:
+            with open(os.path.join(src_dir, "start", "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
                 outf.write(inf.read())
             outf.write('\n')
             # Go through each religion to write out the special titles.
             for religion in religions:
-                with open(os.path.join(src_dir, "common", "r_" + religion, "landed_titles.txt")) as inf:
+                with open(os.path.join(src_dir, "r_" + religion, "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
                     outf.write(inf.read())
                 outf.write('\n')
             outf.write('\n')
             # Go through each empire, and then each kingdom in each empire.
             for ename, empire in empires.items():
-                with open(os.path.join(src_dir, "common", "e_" + ename, "landed_titles.txt")) as inf:
+                with open(os.path.join(src_dir, "e_" + ename, "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
                     # If you want to edit the empire capital, this is where to do it.
                     outf.write(inf.read())
                 outf.write('\n')
@@ -565,13 +566,17 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                 geo_region_kingdom_list = []
                 kingdom_duchy_list = []
                 titles = title_order(empire)
+                # Sadly, the title_order is the order in which the hexes are placed (and thus the pids are calculated),
+                # but it's not the order in which the titles are written, because we need to lump all of the duchies
+                # together under a dummy kingdom. So the duchies go first, and then the kingdoms.
+                kingdom_buffer = ""
                 for title in titles:
                     if title[0] == 'k':
                         # For kingdoms, we want to construct a geographical region in the georegion file.
                         # TODO: This is where we should check for island kingdoms and add them to island_region instead.
                         region_name = f"world_{ename}_{title}"
                         geo_region_kingdom_list.append(region_name)
-                    with open(os.path.join(src_dir, "common", title, "landed_titles.txt")) as inf:
+                    with open(os.path.join(src_dir, title, "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
                         for line in inf.readlines():
                             if line.startswith("\t\td_"):
                                 if title[0] == "k":
@@ -584,12 +589,16 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                                 line = line.split("= P")[0] + "= " + str(pid) + "\n"
                                 bname_from_pid[pid] = bname
                                 pid += 1
-                            outf.write(line)
-                    outf.write('\n\t}\n')
+                            if title[0] == 'k':
+                                kingdom_buffer += line
+                            else:
+                                outf.write(line)
                     if title[0] == 'k':
                         # Write the kingdom's geographical region.
                         duchies = " ".join(kingdom_duchy_list)
                         geo_region_file.write(f"{region_name} = {{\n\tduchies = {{\n\t\t{duchies}\t}}\n}}\n")
+                outf.write("\t}\n") # End the dummy kingdom for all of the duchies.
+                outf.write(kingdom_buffer)
                 outf.write('}\n')
                 # Write the middle geographical region.
                 middle_region_name = f"world_{ename}_middle"
@@ -651,7 +660,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
 
 
 def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
-    with open(os.path.join(file_dir,"map_data", "adjacencies.csv"),'w') as f:
+    with open(os.path.join(file_dir,"map_data", "adjacencies.csv"),'w', encoding='utf8') as f:
         f.write('From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment\n')
         # Check for Gibraltar-like adjacencies.
         for (tile_a, tile_b) in combinations(world.tile_list, 2):
@@ -684,13 +693,13 @@ def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
 
 
 def make_climate(file_dir):
-    with open(os.path.join(file_dir,"map_data", "climate.txt"),'w') as f:
+    with open(os.path.join(file_dir,"map_data", "climate.txt"),'w', encoding='utf8') as f:
         # TODO: This is currently just a placeholder climate file (borrowed from https://forum.paradoxplaza.com/forum/threads/resource-nearly-blank-map-a-starting-point-for-tcs-v1-2.1414703/page-5#post-27133344 ). 
         f.write('mild_winter = {\n\t1 2 3 4 5 6 7 8\n}\n')
 
 
 def make_default(file_dir, waste_list, pid_from_hex):
-    with open(os.path.join(file_dir,"map_data", "default.map"),'w') as f:
+    with open(os.path.join(file_dir,"map_data", "default.map"),'w', encoding='utf8') as f:
         f.write("definitions = \"definition.csv\"\n")
         f.write("provinces = \"provinces.png\"\n")
         f.write("rivers = \"rivers.png\"\n")
@@ -726,7 +735,7 @@ def make_default(file_dir, waste_list, pid_from_hex):
 
 
 def make_definition(file_dir, rgb_from_pid, name_from_pid):
-    with open(os.path.join(file_dir,"map_data", "definition.csv"),'w') as f:
+    with open(os.path.join(file_dir,"map_data", "definition.csv"),'w', encoding='utf8') as f:
         f.write('0;0;0;0;x;x;\n')
         for pid, rgb in rgb_from_pid.items():
             if pid in name_from_pid:
@@ -734,7 +743,21 @@ def make_definition(file_dir, rgb_from_pid, name_from_pid):
             else:
                 name = "Unknown"
             f.write(';'.join([str(pid)] + [str(c) for c in rgb] + [name, 'x', '\n']))
-        f.write(f'{max(rgb_from_pid.keys())};255;255;255;x;x;\n')
+        # f.write(f'{max(rgb_from_pid.keys()) + 1};255;255;255;x;x;\n') # I think I fixed the bug that needed this as a fix.
+
+
+def make_dynasties(empires, src_dir, out_dir):
+    os.makedirs(os.path.join(out_dir,"common", "dynasty_houses"), exist_ok=True)
+    with open(os.path.join(out_dir,"common", "dynasty_houses", "00_dynasty_houses.txt"),'w', encoding='utf8') as outf:
+        outf.write("")
+    os.makedirs(os.path.join(out_dir,"common", "dynasties"), exist_ok=True)
+    with open(os.path.join(out_dir,"common", "dynasties", "00_dynasties.txt"),'w', encoding='utf8') as outf:
+        for ename, empire in empires.items():
+            titles = title_order(empire)
+            for title in titles:
+                with open(os.path.join(src_dir, title, "common", "dynasties", "00_dynasties.txt"), encoding='utf8') as inf:
+                    for line in inf:
+                        outf.write(line)    
 
 
 if __name__ == '__main__':

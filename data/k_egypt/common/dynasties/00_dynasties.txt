@@ -1,0 +1,55 @@
+420 = {
+	prefix = "dynnp_mn"
+	name = "d_cairo"
+	culture = "egyptian"
+}
+421 = {
+	prefix = "dynnp_mn"
+	name = "d_cyrenaica"
+	culture = "egyptian"
+}
+422 = {
+	prefix = "dynnp_mn"
+	name = "c_awjila"
+	culture = "egyptian"
+}
+423 = {
+	prefix = "dynnp_mn"
+	name = "c_giza"
+	culture = "egyptian"
+}
+424 = {
+	prefix = "dynnp_mn"
+	name = "c_al-buhaira"
+	culture = "egyptian"
+}
+425 = {
+	prefix = "dynnp_mn"
+	name = "c_derna"
+	culture = "egyptian"
+}
+426 = {
+	prefix = "dynnp_mn"
+	name = "c_qus"
+	culture = "egyptian"
+}
+427 = {
+	prefix = "dynnp_mn"
+	name = "c_asyut"
+	culture = "egyptian"
+}
+428 = {
+	prefix = "dynnp_mn"
+	name = "c_alexandria"
+	culture = "egyptian"
+}
+429 = {
+	prefix = "dynnp_mn"
+	name = "c_sullum"
+	culture = "egyptian"
+}
+430 = {
+	prefix = "dynnp_mn"
+	name = "c_siwa"
+	culture = "egyptian"
+}

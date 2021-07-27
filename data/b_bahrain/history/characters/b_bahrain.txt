@@ -1,0 +1,54 @@
+200 = {
+	name="Alim"
+	dynasty=40
+	religion="ashari"
+	culture="bedouin"
+	900.1.10 = {
+		birth="900.1.10"
+	}
+}
+201 = {
+	name="Muzaffaraddin"
+	dynasty=41
+	religion="ashari"
+	culture="bedouin"
+	966.3.14 = {
+		birth="966.3.14"
+	}
+}
+202 = {
+	name="Mahmud"
+	dynasty=42
+	religion="ashari"
+	culture="bedouin"
+	988.11.27 = {
+		birth="988.11.27"
+	}
+}
+203 = {
+	name="Abdul-Jaleel"
+	dynasty=43
+	religion="ashari"
+	culture="bedouin"
+	988.6.3 = {
+		birth="988.6.3"
+	}
+}
+204 = {
+	name="Mirza"
+	dynasty=44
+	religion="ashari"
+	culture="bedouin"
+	988.11.10 = {
+		birth="988.11.10"
+	}
+}
+205 = {
+	name="Mubarak"
+	dynasty=45
+	religion="ashari"
+	culture="bedouin"
+	911.6.28 = {
+		birth="911.6.28"
+	}
+}

@@ -1,0 +1,83 @@
+##c_prussia
+###c_malbork
+P0 = {
+	culture = prussian
+	religion = catholic
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	holding = city_holding
+}
+P3 = {
+	holding = castle_holding
+}
+P4 = {
+	holding = church_holding
+}
+P5 = {
+	holding = city_holding
+}
+P6 = {
+	#holding = none
+}
+
+###c_konigsberg
+P7 = {
+	culture = prussian
+	religion = catholic
+	holding = castle_holding
+}
+P8 = {
+	holding = church_holding
+}
+P9 = {
+	holding = city_holding
+}
+P10 = {
+	#holding = none
+}
+P11 = {
+	#holding = none
+}
+
+###c_bartenstein
+P12 = {
+	culture = prussian
+	religion = catholic
+	holding = castle_holding
+}
+P13 = {
+	holding = church_holding
+}
+P14 = {
+	holding = city_holding
+}
+P15 = {
+	#holding = none
+}
+P16 = {
+	#holding = none
+}
+
+###c_torun
+P17 = {
+	culture = prussian
+	religion = catholic
+	holding = castle_holding
+}
+P18 = {
+	holding = church_holding
+}
+P19 = {
+	holding = city_holding
+}
+P20 = {
+	#holding = none
+}
+P21 = {
+	#holding = none
+}
+

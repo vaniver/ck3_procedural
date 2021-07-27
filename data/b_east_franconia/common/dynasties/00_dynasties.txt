@@ -1,0 +1,30 @@
+100 = {
+	prefix = "dynnp_von"
+	name = "c_wurzburg"
+	culture = "franconian"
+}
+101 = {
+	prefix = "dynnp_von"
+	name = "c_wiltberg"
+	culture = "franconian"
+}
+102 = {
+	prefix = "dynnp_von"
+	name = "c_bamberg"
+	culture = "franconian"
+}
+103 = {
+	prefix = "dynnp_von"
+	name = "c_nurnberg"
+	culture = "franconian"
+}
+104 = {
+	prefix = "dynnp_von"
+	name = "c_hohenlohe"
+	culture = "franconian"
+}
+105 = {
+	prefix = "dynnp_von"
+	name = "c_nordlingen"
+	culture = "franconian"
+}

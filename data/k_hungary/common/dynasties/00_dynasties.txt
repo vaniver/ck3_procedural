@@ -1,0 +1,55 @@
+460 = {
+	prefix = "dynnp_a"
+	name = "d_visegrad"
+	culture = "hungarian"
+}
+461 = {
+	prefix = "dynnp_a"
+	name = "d_transylvania"
+	culture = "hungarian"
+}
+462 = {
+	prefix = "dynnp_a"
+	name = "c_szekelyfold"
+	culture = "hungarian"
+}
+463 = {
+	prefix = "dynnp_a"
+	name = "c_gyor"
+	culture = "hungarian"
+}
+464 = {
+	prefix = "dynnp_a"
+	name = "c_sopron"
+	culture = "hungarian"
+}
+465 = {
+	prefix = "dynnp_a"
+	name = "c_beszterce"
+	culture = "hungarian"
+}
+466 = {
+	prefix = "dynnp_a"
+	name = "c_bihar"
+	culture = "hungarian"
+}
+467 = {
+	prefix = "dynnp_a"
+	name = "c_szabolcs"
+	culture = "hungarian"
+}
+468 = {
+	prefix = "dynnp_a"
+	name = "c_ungvar"
+	culture = "hungarian"
+}
+469 = {
+	prefix = "dynnp_a"
+	name = "c_zemplen"
+	culture = "hungarian"
+}
+470 = {
+	prefix = "dynnp_a"
+	name = "c_borsod"
+	culture = "hungarian"
+}

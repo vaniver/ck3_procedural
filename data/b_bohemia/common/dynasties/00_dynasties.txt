@@ -1,0 +1,30 @@
+60 = {
+	prefix = "dynnp_of"
+	name = "c_praha"
+	culture = "czech"
+}
+61 = {
+	prefix = "dynnp_of"
+	name = "c_plzen"
+	culture = "czech"
+}
+62 = {
+	prefix = "dynnp_of"
+	name = "c_zatec"
+	culture = "czech"
+}
+63 = {
+	prefix = "dynnp_of"
+	name = "c_olomouc"
+	culture = "czech"
+}
+64 = {
+	prefix = "dynnp_of"
+	name = "c_prerov"
+	culture = "czech"
+}
+65 = {
+	prefix = "dynnp_of"
+	name = "c_znojmo"
+	culture = "czech"
+}

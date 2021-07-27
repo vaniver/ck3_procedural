@@ -1,0 +1,123 @@
+k_pomerania = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_pommerania = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2400
+	}
+	1000.1.1 = {
+		holder = 2402
+	}
+}
+c_stettin = {
+	980.1.1 = {
+		holder = 2400
+	}
+	1000.1.1 = {
+		holder = 2402
+	}
+}
+c_kolobrzeg = {
+	980.1.1 = {
+		holder = 2400
+	}
+	1000.1.1 = {
+		holder = 2402
+	}
+}
+c_landsberg = {
+	980.1.1 = {
+		holder = 2400
+	}
+	1000.1.1 = {
+		holder = 2402
+	}
+}
+c_cammin = {
+	987.1.1 = {
+		holder = 2430
+	}
+}
+c_pila = {
+	987.1.1 = {
+		holder = 2435
+	}
+}
+d_pomerelia = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2410
+	}
+}
+c_danzig = {
+	985.1.1 = {
+		holder = 2410
+	}
+}
+c_slupsk = {
+	990.1.1 = {
+		holder = 2410
+	}
+}
+c_berent = {
+	990.1.1 = {
+		holder = 2421
+	}
+	990.1.2 = {
+		liege = d_pomerelia
+	}
+}
+c_miastko = {
+	990.1.1 = {
+		holder = 2440
+	}
+	990.1.2 = {
+		liege = d_pomerelia
+	}
+}
+d_ostmark = {
+	900.1.1 = {
+	}
+}
+c_brandenburg = {
+	985.1.1 = {
+		holder = 2445
+	}
+}
+c_prenzlau = {
+	985.1.1 = {
+		holder = 2450
+	}
+}
+c_ruppin = {
+	985.1.1 = {
+		holder = 2445
+	}
+}
+c_berlin = {
+	985.1.1 = {
+		holder = 2450
+	}
+}
+d_nordmark = {
+	900.1.1 = {
+	}
+}
+c_mecklenburg = {
+	985.1.1 = {
+		holder = 2455
+	}
+}
+c_wolgast = {
+	985.1.1 = {
+		holder = 2460
+	}
+}
+c_werle = {
+	985.1.1 = {
+		holder = 2465
+	}
+}

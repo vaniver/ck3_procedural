@@ -1,0 +1,36 @@
+d_wurzburg = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_nurnberg = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_wurzburg = {
+	997.1.1 = {
+		holder = 500
+	}
+}
+c_wiltberg = {
+	993.1.1 = {
+		holder = 501
+	}
+}
+c_bamberg = {
+	995.1.1 = {
+		holder = 502
+	}
+}
+c_nurnberg = {
+	994.1.1 = {
+		holder = 503
+	}
+}
+c_hohenlohe = {
+	998.1.1 = {
+		holder = 504
+	}
+}
+c_nordlingen = {
+	990.1.1 = {
+		holder = 505
+	}
+}

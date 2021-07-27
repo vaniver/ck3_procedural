@@ -1,0 +1,30 @@
+160 = {
+	prefix = "dynnp_mn"
+	name = "c_tabuk"
+	culture = "bedouin"
+}
+161 = {
+	prefix = "dynnp_mn"
+	name = "c_al_aqabah"
+	culture = "bedouin"
+}
+162 = {
+	prefix = "dynnp_mn"
+	name = "c_tayma"
+	culture = "bedouin"
+}
+163 = {
+	prefix = "dynnp_mn"
+	name = "c_balqa"
+	culture = "bedouin"
+}
+164 = {
+	prefix = "dynnp_mn"
+	name = "c_maab"
+	culture = "bedouin"
+}
+165 = {
+	prefix = "dynnp_mn"
+	name = "c_maan"
+	culture = "bedouin"
+}

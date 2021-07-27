@@ -1,0 +1,36 @@
+d_capua = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_apulia = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_capua = {
+	996.1.1 = {
+		holder = 400
+	}
+}
+c_napoli = {
+	996.1.1 = {
+		holder = 401
+	}
+}
+c_salerno = {
+	994.1.1 = {
+		holder = 402
+	}
+}
+c_apulia = {
+	999.1.1 = {
+		holder = 403
+	}
+}
+c_bari = {
+	998.1.1 = {
+		holder = 404
+	}
+}
+c_benevento = {
+	990.1.1 = {
+		holder = 405
+	}
+}

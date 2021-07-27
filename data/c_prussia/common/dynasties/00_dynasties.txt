@@ -1,0 +1,15 @@
+280 = {
+	prefix = "dynnp_is"
+	name = "d_prussia"
+	culture = "prussian"
+}
+281 = {
+	prefix = "dynnp_is"
+	name = "c_bartenstein"
+	culture = "prussian"
+}
+282 = {
+	prefix = "dynnp_is"
+	name = "c_torun"
+	culture = "prussian"
+}

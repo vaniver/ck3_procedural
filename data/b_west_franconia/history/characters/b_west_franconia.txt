@@ -1,0 +1,54 @@
+1000 = {
+	name="Hupold"
+	dynasty=200
+	religion="catholic"
+	culture="franconian"
+	988.4.10 = {
+		birth="988.4.10"
+	}
+}
+1001 = {
+	name="Baldur"
+	dynasty=201
+	religion="catholic"
+	culture="franconian"
+	999.8.25 = {
+		birth="999.8.25"
+	}
+}
+1002 = {
+	name="Andreas"
+	dynasty=202
+	religion="catholic"
+	culture="franconian"
+	922.6.2 = {
+		birth="922.6.2"
+	}
+}
+1003 = {
+	name="Theodorich"
+	dynasty=203
+	religion="catholic"
+	culture="franconian"
+	900.9.26 = {
+		birth="900.9.26"
+	}
+}
+1004 = {
+	name="Sieghard"
+	dynasty=204
+	religion="catholic"
+	culture="franconian"
+	922.2.1 = {
+		birth="922.2.1"
+	}
+}
+1005 = {
+	name="Sieghard"
+	dynasty=205
+	religion="catholic"
+	culture="franconian"
+	911.8.8 = {
+		birth="911.8.8"
+	}
+}

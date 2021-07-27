@@ -1,0 +1,123 @@
+k_egypt = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_cairo = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2100
+	}
+	1000.1.1 = {
+		holder = 2102
+	}
+}
+c_cairo = {
+	980.1.1 = {
+		holder = 2100
+	}
+	1000.1.1 = {
+		holder = 2102
+	}
+}
+c_damietta = {
+	980.1.1 = {
+		holder = 2100
+	}
+	1000.1.1 = {
+		holder = 2102
+	}
+}
+c_al-gharbiya = {
+	980.1.1 = {
+		holder = 2100
+	}
+	1000.1.1 = {
+		holder = 2102
+	}
+}
+c_giza = {
+	983.1.1 = {
+		holder = 2130
+	}
+}
+c_al-buhaira = {
+	988.1.1 = {
+		holder = 2135
+	}
+}
+d_cyrenaica = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2110
+	}
+}
+c_barqa = {
+	985.1.1 = {
+		holder = 2110
+	}
+}
+c_sinai = {
+	990.1.1 = {
+		holder = 2110
+	}
+}
+c_awjila = {
+	990.1.1 = {
+		holder = 2121
+	}
+	990.1.2 = {
+		liege = d_cyrenaica
+	}
+}
+c_derna = {
+	990.1.1 = {
+		holder = 2140
+	}
+	990.1.2 = {
+		liege = d_cyrenaica
+	}
+}
+d_al-said = {
+	900.1.1 = {
+	}
+}
+c_qus = {
+	985.1.1 = {
+		holder = 2145
+	}
+}
+c_asyut = {
+	985.1.1 = {
+		holder = 2150
+	}
+}
+c_bahnasa = {
+	985.1.1 = {
+		holder = 2145
+	}
+}
+c_ushmun = {
+	985.1.1 = {
+		holder = 2150
+	}
+}
+d_alexandria = {
+	900.1.1 = {
+	}
+}
+c_alexandria = {
+	985.1.1 = {
+		holder = 2155
+	}
+}
+c_sullum = {
+	985.1.1 = {
+		holder = 2160
+	}
+}
+c_siwa = {
+	985.1.1 = {
+		holder = 2165
+	}
+}

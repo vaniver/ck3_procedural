@@ -1,0 +1,11 @@
+e_germany = {
+	color = { 190 200 190 }
+	color2 = { 220 220 20 }
+	
+	k_germany_middle = {
+		color = { 190 200 190 }
+		color2 = { 220 220 20 }
+		
+		can_create = {
+			always = no
+		}

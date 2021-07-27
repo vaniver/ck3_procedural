@@ -1,0 +1,123 @@
+k_syria = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_aleppo = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2500
+	}
+	1000.1.1 = {
+		holder = 2502
+	}
+}
+c_aleppo = {
+	980.1.1 = {
+		holder = 2500
+	}
+	1000.1.1 = {
+		holder = 2502
+	}
+}
+c_suriya = {
+	980.1.1 = {
+		holder = 2500
+	}
+	1000.1.1 = {
+		holder = 2502
+	}
+}
+c_qinnasrin = {
+	980.1.1 = {
+		holder = 2500
+	}
+	1000.1.1 = {
+		holder = 2502
+	}
+}
+c_palmyra = {
+	983.1.1 = {
+		holder = 2530
+	}
+}
+c_sukhna = {
+	988.1.1 = {
+		holder = 2535
+	}
+}
+d_damascus = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2510
+	}
+}
+c_damascus = {
+	985.1.1 = {
+		holder = 2510
+	}
+}
+c_juwair = {
+	990.1.1 = {
+		holder = 2510
+	}
+}
+c_baalbek = {
+	990.1.1 = {
+		holder = 2521
+	}
+	990.1.2 = {
+		liege = d_damascus
+	}
+}
+c_hauran = {
+	990.1.1 = {
+		holder = 2540
+	}
+	990.1.2 = {
+		liege = d_damascus
+	}
+}
+d_lebanon = {
+	900.1.1 = {
+	}
+}
+c_beirut = {
+	985.1.1 = {
+		holder = 2545
+	}
+}
+c_antiocheia = {
+	985.1.1 = {
+		holder = 2550
+	}
+}
+c_hama = {
+	985.1.1 = {
+		holder = 2545
+	}
+}
+c_homs = {
+	985.1.1 = {
+		holder = 2550
+	}
+}
+d_edessa = {
+	900.1.1 = {
+	}
+}
+c_edessa = {
+	985.1.1 = {
+		holder = 2555
+	}
+}
+c_aintab = {
+	985.1.1 = {
+		holder = 2560
+	}
+}
+c_marash = {
+	985.1.1 = {
+		holder = 2565
+	}
+}

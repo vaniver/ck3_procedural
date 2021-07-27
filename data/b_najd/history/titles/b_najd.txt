@@ -1,0 +1,36 @@
+d_najd = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_asir = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_sharaf = {
+	991.1.1 = {
+		holder = 700
+	}
+}
+c_hail = {
+	993.1.1 = {
+		holder = 701
+	}
+}
+c_qasim = {
+	997.1.1 = {
+		holder = 702
+	}
+}
+c_aqiq = {
+	998.1.1 = {
+		holder = 703
+	}
+}
+c_subay = {
+	995.1.1 = {
+		holder = 704
+	}
+}
+c_surrah = {
+	995.1.1 = {
+		holder = 705
+	}
+}

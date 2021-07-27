@@ -1,0 +1,123 @@
+k_yemen = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_sanaa = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_sanaa = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_tihamat-al-yamani = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_zabid = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_taizz = {
+	989.1.1 = {
+		holder = 2630
+	}
+}
+c_mandab = {
+	986.1.1 = {
+		holder = 2635
+	}
+}
+d_oman = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2610
+	}
+}
+c_nizwa = {
+	985.1.1 = {
+		holder = 2610
+	}
+}
+c_julfar = {
+	990.1.1 = {
+		holder = 2610
+	}
+}
+c_muscat = {
+	990.1.1 = {
+		holder = 2621
+	}
+	990.1.2 = {
+		liege = d_oman
+	}
+}
+c_batina = {
+	990.1.1 = {
+		holder = 2640
+	}
+	990.1.2 = {
+		liege = d_oman
+	}
+}
+d_hadramawt = {
+	900.1.1 = {
+	}
+}
+c_hadramawt = {
+	985.1.1 = {
+		holder = 2645
+	}
+}
+c_ahqaf = {
+	985.1.1 = {
+		holder = 2650
+	}
+}
+c_jawf-al-yamani = {
+	985.1.1 = {
+		holder = 2645
+	}
+}
+c_wabar = {
+	985.1.1 = {
+		holder = 2650
+	}
+}
+d_mahra = {
+	900.1.1 = {
+	}
+}
+c_mahra = {
+	985.1.1 = {
+		holder = 2655
+	}
+}
+c_dhofar = {
+	985.1.1 = {
+		holder = 2660
+	}
+}
+c_duqm = {
+	985.1.1 = {
+		holder = 2665
+	}
+}

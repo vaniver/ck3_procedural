@@ -1,0 +1,123 @@
+k_bavaria = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_bavaria = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 1900
+	}
+	1000.1.1 = {
+		holder = 1902
+	}
+}
+c_regensburg = {
+	980.1.1 = {
+		holder = 1900
+	}
+	1000.1.1 = {
+		holder = 1902
+	}
+}
+c_frontenhausen = {
+	980.1.1 = {
+		holder = 1900
+	}
+	1000.1.1 = {
+		holder = 1902
+	}
+}
+c_passau = {
+	980.1.1 = {
+		holder = 1900
+	}
+	1000.1.1 = {
+		holder = 1902
+	}
+}
+c_munchen = {
+	983.1.1 = {
+		holder = 1930
+	}
+}
+c_rothenburg = {
+	989.1.1 = {
+		holder = 1935
+	}
+}
+d_osterreich = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 1910
+	}
+}
+c_vienna = {
+	985.1.1 = {
+		holder = 1910
+	}
+}
+c_krems = {
+	990.1.1 = {
+		holder = 1910
+	}
+}
+c_hohenau = {
+	990.1.1 = {
+		holder = 1921
+	}
+	990.1.2 = {
+		liege = d_osterreich
+	}
+}
+c_sankt_polten = {
+	990.1.1 = {
+		holder = 1940
+	}
+	990.1.2 = {
+		liege = d_osterreich
+	}
+}
+d_salzburg = {
+	900.1.1 = {
+	}
+}
+c_salzburg = {
+	985.1.1 = {
+		holder = 1945
+	}
+}
+c_berchtesgaden = {
+	985.1.1 = {
+		holder = 1950
+	}
+}
+c_hallstatt = {
+	985.1.1 = {
+		holder = 1945
+	}
+}
+c_schaumberg = {
+	985.1.1 = {
+		holder = 1950
+	}
+}
+d_augsburg = {
+	900.1.1 = {
+	}
+}
+c_augsburg = {
+	985.1.1 = {
+		holder = 1955
+	}
+}
+c_kempten = {
+	985.1.1 = {
+		holder = 1960
+	}
+}
+c_alpsee = {
+	985.1.1 = {
+		holder = 1965
+	}
+}

@@ -1,0 +1,30 @@
+140 = {
+	prefix = "dynnp_mn"
+	name = "c_sharaf"
+	culture = "bedouin"
+}
+141 = {
+	prefix = "dynnp_mn"
+	name = "c_hail"
+	culture = "bedouin"
+}
+142 = {
+	prefix = "dynnp_mn"
+	name = "c_qasim"
+	culture = "bedouin"
+}
+143 = {
+	prefix = "dynnp_mn"
+	name = "c_aqiq"
+	culture = "bedouin"
+}
+144 = {
+	prefix = "dynnp_mn"
+	name = "c_subay"
+	culture = "bedouin"
+}
+145 = {
+	prefix = "dynnp_mn"
+	name = "c_surrah"
+	culture = "bedouin"
+}

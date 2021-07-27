@@ -1,0 +1,36 @@
+d_bohemia = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_moravia = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_praha = {
+	992.1.1 = {
+		holder = 300
+	}
+}
+c_plzen = {
+	990.1.1 = {
+		holder = 301
+	}
+}
+c_zatec = {
+	995.1.1 = {
+		holder = 302
+	}
+}
+c_olomouc = {
+	994.1.1 = {
+		holder = 303
+	}
+}
+c_prerov = {
+	997.1.1 = {
+		holder = 304
+	}
+}
+c_znojmo = {
+	998.1.1 = {
+		holder = 305
+	}
+}

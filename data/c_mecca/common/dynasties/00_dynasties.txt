@@ -1,0 +1,15 @@
+260 = {
+	prefix = "dynnp_mn"
+	name = "d_mecca"
+	culture = "bedouin"
+}
+261 = {
+	prefix = "dynnp_mn"
+	name = "c_taif"
+	culture = "bedouin"
+}
+262 = {
+	prefix = "dynnp_mn"
+	name = "c_khaybar"
+	culture = "bedouin"
+}

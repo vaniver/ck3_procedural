@@ -1,0 +1,123 @@
+k_burgundy = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_provence = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2000
+	}
+	1000.1.1 = {
+		holder = 2002
+	}
+}
+c_provence = {
+	980.1.1 = {
+		holder = 2000
+	}
+	1000.1.1 = {
+		holder = 2002
+	}
+}
+c_nice = {
+	980.1.1 = {
+		holder = 2000
+	}
+	1000.1.1 = {
+		holder = 2002
+	}
+}
+c_forcalquier = {
+	980.1.1 = {
+		holder = 2000
+	}
+	1000.1.1 = {
+		holder = 2002
+	}
+}
+c_valentinois = {
+	986.1.1 = {
+		holder = 2030
+	}
+}
+c_venaissin = {
+	982.1.1 = {
+		holder = 2035
+	}
+}
+d_burgundy = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2010
+	}
+}
+c_dijon = {
+	985.1.1 = {
+		holder = 2010
+	}
+}
+c_chalon = {
+	990.1.1 = {
+		holder = 2010
+	}
+}
+c_nevers = {
+	990.1.1 = {
+		holder = 2021
+	}
+	990.1.2 = {
+		liege = d_burgundy
+	}
+}
+c_auxerre = {
+	990.1.1 = {
+		holder = 2040
+	}
+	990.1.2 = {
+		liege = d_burgundy
+	}
+}
+d_upper_burgundy = {
+	900.1.1 = {
+	}
+}
+c_besancon = {
+	985.1.1 = {
+		holder = 2045
+	}
+}
+c_dole = {
+	985.1.1 = {
+		holder = 2050
+	}
+}
+c_bresse = {
+	985.1.1 = {
+		holder = 2045
+	}
+}
+c_macon = {
+	985.1.1 = {
+		holder = 2050
+	}
+}
+d_dauphine = {
+	900.1.1 = {
+	}
+}
+c_lyon = {
+	985.1.1 = {
+		holder = 2055
+	}
+}
+c_viennois = {
+	985.1.1 = {
+		holder = 2060
+	}
+}
+c_forez = {
+	985.1.1 = {
+		holder = 2065
+	}
+}

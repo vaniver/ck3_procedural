@@ -1,0 +1,123 @@
+k_aquitaine = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_gascogne = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 1800
+	}
+	1000.1.1 = {
+		holder = 1802
+	}
+}
+c_bordeaux = {
+	980.1.1 = {
+		holder = 1800
+	}
+	1000.1.1 = {
+		holder = 1802
+	}
+}
+c_labourd = {
+	980.1.1 = {
+		holder = 1800
+	}
+	1000.1.1 = {
+		holder = 1802
+	}
+}
+c_albret = {
+	980.1.1 = {
+		holder = 1800
+	}
+	1000.1.1 = {
+		holder = 1802
+	}
+}
+c_comminges = {
+	985.1.1 = {
+		holder = 1830
+	}
+}
+c_armagnac = {
+	980.1.1 = {
+		holder = 1835
+	}
+}
+d_toulouse = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 1810
+	}
+}
+c_toulouse = {
+	985.1.1 = {
+		holder = 1810
+	}
+}
+c_rouergue = {
+	990.1.1 = {
+		holder = 1810
+	}
+}
+c_quercy = {
+	990.1.1 = {
+		holder = 1821
+	}
+	990.1.2 = {
+		liege = d_toulouse
+	}
+}
+c_gevaudan = {
+	990.1.1 = {
+		holder = 1840
+	}
+	990.1.2 = {
+		liege = d_toulouse
+	}
+}
+d_aquitaine = {
+	900.1.1 = {
+	}
+}
+c_angouleme = {
+	985.1.1 = {
+		holder = 1845
+	}
+}
+c_perigord = {
+	985.1.1 = {
+		holder = 1850
+	}
+}
+c_limousin = {
+	985.1.1 = {
+		holder = 1845
+	}
+}
+c_saintonge = {
+	985.1.1 = {
+		holder = 1850
+	}
+}
+d_languedoc = {
+	900.1.1 = {
+	}
+}
+c_albi = {
+	985.1.1 = {
+		holder = 1855
+	}
+}
+c_montpellier = {
+	985.1.1 = {
+		holder = 1860
+	}
+}
+c_carcassonne = {
+	985.1.1 = {
+		holder = 1865
+	}
+}

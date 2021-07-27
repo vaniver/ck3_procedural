@@ -1,0 +1,54 @@
+500 = {
+	name="Ekbert"
+	dynasty=100
+	religion="catholic"
+	culture="franconian"
+	988.1.6 = {
+		birth="988.1.6"
+	}
+}
+501 = {
+	name="Helferich"
+	dynasty=101
+	religion="catholic"
+	culture="franconian"
+	966.11.13 = {
+		birth="966.11.13"
+	}
+}
+502 = {
+	name="Amadeus"
+	dynasty=102
+	religion="catholic"
+	culture="franconian"
+	922.10.27 = {
+		birth="922.10.27"
+	}
+}
+503 = {
+	name="Liudolf"
+	dynasty=103
+	religion="catholic"
+	culture="franconian"
+	988.12.26 = {
+		birth="988.12.26"
+	}
+}
+504 = {
+	name="Ademar"
+	dynasty=104
+	religion="catholic"
+	culture="franconian"
+	977.6.13 = {
+		birth="977.6.13"
+	}
+}
+505 = {
+	name="Giselbert"
+	dynasty=105
+	religion="catholic"
+	culture="franconian"
+	977.2.27 = {
+		birth="977.2.27"
+	}
+}

@@ -1,0 +1,123 @@
+k_hungary = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_visegrad = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2300
+	}
+	1000.1.1 = {
+		holder = 2302
+	}
+}
+c_visegrad = {
+	980.1.1 = {
+		holder = 2300
+	}
+	1000.1.1 = {
+		holder = 2302
+	}
+}
+c_hewes = {
+	980.1.1 = {
+		holder = 2300
+	}
+	1000.1.1 = {
+		holder = 2302
+	}
+}
+c_szekesfehervar = {
+	980.1.1 = {
+		holder = 2300
+	}
+	1000.1.1 = {
+		holder = 2302
+	}
+}
+c_gyor = {
+	980.1.1 = {
+		holder = 2330
+	}
+}
+c_sopron = {
+	987.1.1 = {
+		holder = 2335
+	}
+}
+d_transylvania = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2310
+	}
+}
+c_feher = {
+	985.1.1 = {
+		holder = 2310
+	}
+}
+c_torda = {
+	990.1.1 = {
+		holder = 2310
+	}
+}
+c_szekelyfold = {
+	990.1.1 = {
+		holder = 2321
+	}
+	990.1.2 = {
+		liege = d_transylvania
+	}
+}
+c_beszterce = {
+	990.1.1 = {
+		holder = 2340
+	}
+	990.1.2 = {
+		liege = d_transylvania
+	}
+}
+d_bihar = {
+	900.1.1 = {
+	}
+}
+c_bihar = {
+	985.1.1 = {
+		holder = 2345
+	}
+}
+c_szabolcs = {
+	985.1.1 = {
+		holder = 2350
+	}
+}
+c_zarand = {
+	985.1.1 = {
+		holder = 2345
+	}
+}
+c_bekes = {
+	985.1.1 = {
+		holder = 2350
+	}
+}
+d_ungvar = {
+	900.1.1 = {
+	}
+}
+c_ungvar = {
+	985.1.1 = {
+		holder = 2355
+	}
+}
+c_zemplen = {
+	985.1.1 = {
+		holder = 2360
+	}
+}
+c_borsod = {
+	985.1.1 = {
+		holder = 2365
+	}
+}

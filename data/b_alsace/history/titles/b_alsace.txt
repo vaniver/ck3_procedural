@@ -1,0 +1,36 @@
+d_alsace = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_transjurania = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_strassburg = {
+	995.1.1 = {
+		holder = 100
+	}
+}
+c_breisgau = {
+	994.1.1 = {
+		holder = 101
+	}
+}
+c_sundgau = {
+	996.1.1 = {
+		holder = 102
+	}
+}
+c_bern = {
+	996.1.1 = {
+		holder = 103
+	}
+}
+c_grisons = {
+	999.1.1 = {
+		holder = 104
+	}
+}
+c_zurich = {
+	995.1.1 = {
+		holder = 105
+	}
+}

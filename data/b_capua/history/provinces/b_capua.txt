@@ -1,0 +1,166 @@
+##b_capua
+###c_capua
+P0 = {
+	culture = sicilian
+	religion = catholic
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	#holding = none
+}
+P3 = {
+	#holding = none
+}
+P4 = {
+	holding = castle_holding
+}
+P5 = {
+	#holding = none
+}
+P6 = {
+	holding = city_holding
+}
+
+###c_napoli
+P7 = {
+	culture = sicilian
+	religion = catholic
+	#holding = none
+}
+P8 = {
+	holding = castle_holding
+}
+P9 = {
+	holding = church_holding
+}
+P10 = {
+	#holding = none
+}
+P11 = {
+	#holding = none
+}
+
+###c_salerno
+P12 = {
+	culture = sicilian
+	religion = catholic
+	holding = castle_holding
+}
+P13 = {
+	#holding = none
+}
+P14 = {
+	holding = city_holding
+}
+P15 = {
+	#holding = none
+}
+P16 = {
+	holding = castle_holding
+}
+
+###c_apulia
+P17 = {
+	culture = sicilian
+	religion = catholic
+	holding = church_holding
+}
+P18 = {
+	#holding = none
+}
+P19 = {
+	#holding = none
+}
+P20 = {
+	holding = castle_holding
+}
+P21 = {
+	#holding = none
+}
+
+##b_capua
+###c_capua
+P22 = {
+	culture = sicilian
+	religion = catholic
+	holding = city_holding
+}
+P23 = {
+	#holding = none
+}
+P24 = {
+	#holding = none
+}
+P25 = {
+	#holding = none
+}
+P26 = {
+	#holding = none
+}
+P27 = {
+	#holding = none
+}
+P28 = {
+	#holding = none
+}
+
+###c_napoli
+P29 = {
+	culture = sicilian
+	religion = catholic
+	#holding = none
+}
+P30 = {
+	#holding = none
+}
+P31 = {
+	#holding = none
+}
+P32 = {
+	#holding = none
+}
+P33 = {
+	#holding = none
+}
+
+###c_salerno
+P34 = {
+	culture = sicilian
+	religion = catholic
+	#holding = none
+}
+P35 = {
+	#holding = none
+}
+P36 = {
+	#holding = none
+}
+P37 = {
+	#holding = none
+}
+P38 = {
+	#holding = none
+}
+
+###c_apulia
+P39 = {
+	culture = sicilian
+	religion = catholic
+	#holding = none
+}
+P40 = {
+	#holding = none
+}
+P41 = {
+	#holding = none
+}
+P42 = {
+	#holding = none
+}
+P43 = {
+	#holding = none
+}
+

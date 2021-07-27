@@ -1,0 +1,252 @@
+#k_france
+##d_valois
+###c_ile_de_france
+P0 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	holding = city_holding
+}
+P3 = {
+	#holding = none
+}
+P4 = {
+	#holding = none
+}
+P5 = {
+	#holding = none
+}
+
+###c_clermont
+P6 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P7 = {
+	holding = church_holding
+}
+P8 = {
+	holding = city_holding
+}
+P9 = {
+	#holding = none
+}
+
+###c_valois
+P10 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P11 = {
+	holding = church_holding
+}
+P12 = {
+	holding = city_holding
+}
+P13 = {
+	#holding = none
+}
+
+###c_amiens
+P14 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P15 = {
+	holding = church_holding
+}
+P16 = {
+	holding = city_holding
+}
+P17 = {
+	#holding = none
+}
+
+###c_beaumont
+P18 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P19 = {
+	holding = church_holding
+}
+P20 = {
+	holding = city_holding
+}
+P21 = {
+	#holding = none
+}
+
+##d_champagne
+###c_ile_de_france
+P22 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P23 = {
+	holding = church_holding
+}
+P24 = {
+	holding = city_holding
+}
+P25 = {
+	#holding = none
+}
+
+###c_clermont
+P26 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P27 = {
+	holding = church_holding
+}
+P28 = {
+	holding = city_holding
+}
+P29 = {
+	#holding = none
+}
+
+###c_valois
+P30 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P31 = {
+	holding = church_holding
+}
+P32 = {
+	holding = city_holding
+}
+
+###c_amiens
+P33 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P34 = {
+	holding = church_holding
+}
+P35 = {
+	holding = city_holding
+}
+
+##d_orleans
+###c_ile_de_france
+P36 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P37 = {
+	holding = church_holding
+}
+P38 = {
+	holding = city_holding
+}
+P39 = {
+	#holding = none
+}
+
+###c_clermont
+P40 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P41 = {
+	holding = church_holding
+}
+P42 = {
+	holding = city_holding
+}
+P43 = {
+	#holding = none
+}
+
+###c_valois
+P44 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P45 = {
+	holding = church_holding
+}
+P46 = {
+	holding = city_holding
+}
+
+###c_amiens
+P47 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P48 = {
+	holding = church_holding
+}
+P49 = {
+	holding = city_holding
+}
+
+##d_anjou
+###c_ile_de_france
+P50 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P51 = {
+	holding = church_holding
+}
+P52 = {
+	holding = city_holding
+}
+P53 = {
+	#holding = none
+}
+
+###c_clermont
+P54 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P55 = {
+	holding = church_holding
+}
+P56 = {
+	holding = city_holding
+}
+P57 = {
+	#holding = none
+}
+
+###c_valois
+P58 = {
+	culture = french
+	religion = catholic
+	holding = castle_holding
+}
+P59 = {
+	holding = church_holding
+}
+P60 = {
+	holding = city_holding
+}
+

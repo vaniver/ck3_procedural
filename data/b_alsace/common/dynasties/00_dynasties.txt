@@ -1,0 +1,30 @@
+20 = {
+	prefix = "dynnp_von"
+	name = "c_strassburg"
+	culture = "swabian"
+}
+21 = {
+	prefix = "dynnp_von"
+	name = "c_breisgau"
+	culture = "swabian"
+}
+22 = {
+	prefix = "dynnp_von"
+	name = "c_sundgau"
+	culture = "swabian"
+}
+23 = {
+	prefix = "dynnp_von"
+	name = "c_bern"
+	culture = "swabian"
+}
+24 = {
+	prefix = "dynnp_von"
+	name = "c_grisons"
+	culture = "swabian"
+}
+25 = {
+	prefix = "dynnp_von"
+	name = "c_zurich"
+	culture = "swabian"
+}

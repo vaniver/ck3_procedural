@@ -1,0 +1,54 @@
+400 = {
+	name="Lambertu"
+	dynasty=80
+	religion="catholic"
+	culture="sicilian"
+	955.9.12 = {
+		birth="955.9.12"
+	}
+}
+401 = {
+	name="Petru"
+	dynasty=81
+	religion="catholic"
+	culture="sicilian"
+	900.2.21 = {
+		birth="900.2.21"
+	}
+}
+402 = {
+	name="Massiminu"
+	dynasty=82
+	religion="catholic"
+	culture="sicilian"
+	977.6.12 = {
+		birth="977.6.12"
+	}
+}
+403 = {
+	name="Martinu"
+	dynasty=83
+	religion="catholic"
+	culture="sicilian"
+	955.1.17 = {
+		birth="955.1.17"
+	}
+}
+404 = {
+	name="Ademariu"
+	dynasty=84
+	religion="catholic"
+	culture="sicilian"
+	988.9.17 = {
+		birth="988.9.17"
+	}
+}
+405 = {
+	name="Rainulfu"
+	dynasty=85
+	religion="catholic"
+	culture="sicilian"
+	922.7.14 = {
+		birth="922.7.14"
+	}
+}

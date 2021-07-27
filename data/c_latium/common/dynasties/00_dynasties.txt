@@ -1,0 +1,15 @@
+220 = {
+	prefix = "dynnp_di"
+	name = "d_latium"
+	culture = "italian"
+}
+221 = {
+	prefix = "dynnp_di"
+	name = "c_spoleto"
+	culture = "italian"
+}
+222 = {
+	prefix = "dynnp_di"
+	name = "c_lanciano"
+	culture = "italian"
+}
