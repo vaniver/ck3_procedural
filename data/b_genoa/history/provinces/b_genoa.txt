@@ -1,4 +1,4 @@
-##b_genoa
+##d_genoa
 ###c_genoa
 P0 = {
 	culture = cisalpine
@@ -14,7 +14,11 @@ P2 = {
 P3 = {
 	#holding = none
 }
+
+###c_modena
 P4 = {
+	culture = cisalpine
+	religion = catholic
 	holding = castle_holding
 }
 P5 = {
@@ -23,14 +27,14 @@ P5 = {
 P6 = {
 	holding = city_holding
 }
-
-###c_modena
 P7 = {
-	culture = cisalpine
-	religion = catholic
 	#holding = none
 }
+
+###c_mantua
 P8 = {
+	culture = cisalpine
+	religion = catholic
 	holding = castle_holding
 }
 P9 = {
@@ -43,7 +47,8 @@ P11 = {
 	#holding = none
 }
 
-###c_mantua
+##d_piedmonte
+###c_genoa
 P12 = {
 	culture = cisalpine
 	religion = catholic
@@ -58,14 +63,14 @@ P14 = {
 P15 = {
 	#holding = none
 }
-P16 = {
-	holding = castle_holding
-}
 
-###c_monferrato
-P17 = {
+###c_modena
+P16 = {
 	culture = cisalpine
 	religion = catholic
+	holding = castle_holding
+}
+P17 = {
 	holding = church_holding
 }
 P18 = {
@@ -74,93 +79,20 @@ P18 = {
 P19 = {
 	#holding = none
 }
+
+###c_mantua
 P20 = {
+	culture = cisalpine
+	religion = catholic
 	holding = castle_holding
 }
 P21 = {
 	#holding = none
 }
-
-##b_genoa
-###c_genoa
 P22 = {
-	culture = cisalpine
-	religion = catholic
 	holding = city_holding
 }
 P23 = {
-	#holding = none
-}
-P24 = {
-	#holding = none
-}
-P25 = {
-	#holding = none
-}
-P26 = {
-	#holding = none
-}
-P27 = {
-	#holding = none
-}
-P28 = {
-	#holding = none
-}
-
-###c_modena
-P29 = {
-	culture = cisalpine
-	religion = catholic
-	#holding = none
-}
-P30 = {
-	#holding = none
-}
-P31 = {
-	#holding = none
-}
-P32 = {
-	#holding = none
-}
-P33 = {
-	#holding = none
-}
-
-###c_mantua
-P34 = {
-	culture = cisalpine
-	religion = catholic
-	#holding = none
-}
-P35 = {
-	#holding = none
-}
-P36 = {
-	#holding = none
-}
-P37 = {
-	#holding = none
-}
-P38 = {
-	#holding = none
-}
-
-###c_monferrato
-P39 = {
-	culture = cisalpine
-	religion = catholic
-	#holding = none
-}
-P40 = {
-	#holding = none
-}
-P41 = {
-	#holding = none
-}
-P42 = {
-	#holding = none
-}
-P43 = {
 	#holding = none
 }
 

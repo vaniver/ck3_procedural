@@ -1,0 +1,306 @@
+1 = {
+	name = "Petrus"
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_learning_4
+	3.1.1 = {
+		birth = yes
+	}
+	30.1.1 = {
+		name = "Petrus"
+	}
+	64.10.13 = {
+		trait = saint
+		death = yes
+	}
+}
+
+2 = {
+	name = "Linus"
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	10.1.1 = {
+		birth = "10.1.1"
+	}
+	64.10.13 = {
+		name = "Linus"
+	# AKA: Linos
+	}
+	79.1.1 = {
+		death = "79.1.1"
+	}
+}
+
+3 = {
+	name = "Anacletus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	20.1.1 = {
+		birth = "20.1.1"
+	}
+	79.1.1 = {
+		name = "Anacletus"
+	# AKA: Cletus
+	}
+	92.1.1 = {
+		death = "92.1.1"
+	}
+}
+
+4 = {
+	name = "Clemens"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	20.1.1 = {
+		birth = "20.1.1"
+	}
+	92.1.1 = {
+		name = "Clemens"
+	# AKA: Tertullian
+	}
+	99.1.1 = {
+		death = "99.1.1"
+	}
+}
+
+5 = {
+	name = "Evaristus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	5.1.1 = {
+		birth = "5.1.1"
+	}
+	99.1.1 = {
+		name = "Evaristus"
+	# AKA: Yeshua
+	}
+	107.1.1 = {
+		death = "107.1.1"
+	}
+}
+6 = {
+	name = "Alexander"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	40.1.1 = {
+		birth = "40.1.1"
+	}
+	107.1.1 = {
+		name = "Alexander"
+	# AKA: Hadrian
+	}
+	115.1.1 = {
+		death = "115.1.1"
+	}
+}
+7 = {
+	name = "Xystus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	42.1.1 = {
+		birth = "42.1.1"
+	}
+	115.1.1 = {
+		name = "Sixtus"
+	# AKA: Xystus
+	}
+	125.1.1 = {
+		death = "125.1.1"
+	}
+}
+8 = {
+	name = "Telesphorus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	90.1.1 = {
+		birth = "90.1.1"
+	}
+	125.1.1 = {
+		name = "Telesphorus"
+	# AKA: Antonius
+	}
+	137.1.1 = {
+		death = "137.1.1"
+	}
+}
+9 = {
+	name = "Hyginus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	90.1.1 = {
+		birth = "90.1.1"
+	}
+	137.1.1 = {
+		name = "Hyginus"
+	# AKA: Irenaeus
+	}
+	140.1.1 = {
+		death = "140.1.1"
+	}
+}
+10 = {
+	name = "Pius"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	100.1.1 = {
+		birth = "100.1.1"
+	}
+	140.1.1 = {
+		name = "Pius"
+	# AKA: Hermas
+	}
+	154.1.1 = {
+		death = "154.1.1"
+	}
+}
+11 = {
+	name = "Anicetus"
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	110.1.1 = {
+		birth = "110.1.1"
+	}
+	154.1.1 = {
+		name = "Anicetus"
+	# AKA: Polycarp
+	}
+	167.4.20 = {
+		death = "167.4.20"
+	}
+}
+
+12 = {
+	name = "Soterius"
+	religion = "catholic"
+	culture = "greek"
+	120.1.1 = {
+		birth = "120.1.1"
+	}
+	174.1.1 = {
+		death = "174.1.1"
+	}
+}
+
+13 = {
+	name = "Eleutherius"
+	religion = "catholic"
+	culture = "greek"
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	130.1.1 = {
+		birth = "130.1.1"
+	}
+	174.1.1 = {
+		name = "Eleutherius"
+	# AKA: Hegesippus
+	}
+	189.1.1 = {
+		death = "189.1.1"
+	}
+}
+
+14 = {
+	name = "Gilert"
+	# AKA: Gilbert
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = italian
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	946.1.1 = {
+		birth = "946.1.1"
+	}
+	999.2.18 = {
+		name = "Silvester"
+	# AKA: Gilbert
+	}
+	1003.5.12 = {
+		death = "1003.5.12"
+	}
+}

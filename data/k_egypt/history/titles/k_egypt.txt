@@ -37,12 +37,12 @@ c_al-gharbiya = {
 	}
 }
 c_giza = {
-	983.1.1 = {
+	981.1.1 = {
 		holder = 2130
 	}
 }
 c_al-buhaira = {
-	988.1.1 = {
+	982.1.1 = {
 		holder = 2135
 	}
 }

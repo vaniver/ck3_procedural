@@ -103,25 +103,25 @@
 				color2 = { 255 255 255 }
 		
 				b_nurnberg = {
-					province = P
+					province = P12
 					
 					color = { 240 240 255 }
 					color2 = { 255 255 255 }
 				}
 				b_riedfeld = {
-					province = P
+					province = P13
 					
 					color = { 240 240 255 }
 					color2 = { 255 255 255 }
 				}
 				b_abenberg = {
-					province = P
+					province = P14
 					
 					color = { 240 240 255 }
 					color2 = { 255 255 255 }
 				}
 				b_ansbach = {
-					province = P
+					province = P15
 					
 					color = { 240 240 255 }
 					color2 = { 255 255 255 }
@@ -132,25 +132,25 @@
 				color2 = { 255 255 255 }
 				
 				b_mergentheim = {
-					province = P
+					province = P16
 					
 					color = { 245 245 245 }
 					color2 = { 255 255 255 }
 				}
 				b_weinsberg = {
-					province = P
+					province = P17
 					
 					color = { 245 245 245 }
 					color2 = { 255 255 255 }
 				}
 				b_hall = {
-					province = P
+					province = P18
 					
 					color = { 245 245 245 }
 					color2 = { 255 255 255 }
 				}
 				b_uffenheim = {
-					province = P
+					province = P19
 					
 					color = { 220 220 240 }
 					color2 = { 255 255 255 }
@@ -161,25 +161,25 @@
 				color2 = { 255 255 255 }
 				
 				b_nordlingen = {
-					province = P
+					province = P20
 					
 					color = { 245 255 245 }
 					color2 = { 255 255 255 }
 				}
 				b_dillingen = {
-					province = P
+					province = P21
 					
 					color = { 245 255 245 }
 					color2 = { 255 255 255 }
 				}
 				b_crailsheim = {
-					province = P
+					province = P22
 					
 					color = { 245 255 245 }
 					color2 = { 255 255 255 }
 				}
 				b_trubending = {
-					province = P
+					province = P23
 					
 					color = { 220 220 240 }
 					color2 = { 255 255 255 }

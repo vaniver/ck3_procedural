@@ -1,0 +1,42 @@
+30 = {
+	name = "Muhammad" # The Prophet
+	# dynasty = 7296
+	religion = "ashari"
+	culture = "bedouin"
+	martial = 6
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	learning = 10
+	trait = education_learning_4
+	trait = sayyid
+	trait = zealous
+	trait = calm
+	trait = gregarious
+	trait = ambitious
+	570.4.26 = {
+		birth = "570.4.26"
+	}
+	632.6.8 = {
+		death = "632.6.8"
+	}
+}
+31 = {
+	name = "Al-Qadir"
+	# AKA: Ahmad al
+	# dynasty = 101727
+	religion = "ashari"
+	culture = bedouin
+	martial = 7
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 4
+	trait = deceitful
+	trait = education_learning_2
+	trait = sayyid
+	943.1.1 = {
+		birth = "943.1.1"
+	}
+	1031.1.1 = {
+		death = "1031.1.1"
+	}

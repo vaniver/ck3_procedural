@@ -1,7 +1,7 @@
 800 = {
 	name="Talib"
 	dynasty=160
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	966.5.3 = {
 		birth="966.5.3"
@@ -10,7 +10,7 @@
 801 = {
 	name="Mansur"
 	dynasty=161
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	988.9.13 = {
 		birth="988.9.13"
@@ -19,7 +19,7 @@
 802 = {
 	name="Talib"
 	dynasty=162
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	922.2.19 = {
 		birth="922.2.19"
@@ -28,7 +28,7 @@
 803 = {
 	name="Mahdi"
 	dynasty=163
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	999.12.14 = {
 		birth="999.12.14"
@@ -37,7 +37,7 @@
 804 = {
 	name="Khaireddin"
 	dynasty=164
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	999.5.18 = {
 		birth="999.5.18"
@@ -46,7 +46,7 @@
 805 = {
 	name="Hafiz"
 	dynasty=165
-	religion="catholic"
+	religion="ashari"
 	culture="bedouin"
 	933.9.3 = {
 		birth="933.9.3"

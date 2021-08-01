@@ -1,0 +1,22 @@
+c_al_aqabah = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.47 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_clam.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.1 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.19 0.1 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.79 0.1 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.2 0.38 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.8 0.38 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.27 0.65 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.73 0.65 } scale = { 0.2 0.2 } }
+		instance = { position = { 0.5 0.85 } scale = { 0.2 0.2 } }
+	}
+}

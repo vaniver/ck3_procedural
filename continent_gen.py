@@ -9,6 +9,7 @@ import numpy as np
 from doodle import Doodler
 from tile import Tile
 from cube import Cube
+from chunk_split import split_chunk
 
 CENTER_SIZE_LIST = [7,5,5,5]
 KINGDOM_SIZE_LIST = [[6,4,4,4,4], [4,4,3,3], [4,4,3,3], [4,4,3]]
@@ -490,6 +491,7 @@ def divide_into_counties(tile, size_list):
 
 
 def duchy_from_snake(snake, size_list):
+    '''Given a snake of baronies (where each should only border 1 or 2 neighbors), chop it up into counties of sizes determined by size_list.'''
     duchy = Tile(rgb=d_col(), hex_list=[])
     ind = 0
     for c_size in size_list:
@@ -498,6 +500,15 @@ def duchy_from_snake(snake, size_list):
     #The capital is assumed to come first, but it should be in the middle.
     if len(size_list) > 2:
         duchy.tile_list.insert(0,duchy.tile_list.pop(1))
+    return duchy
+
+
+def duchy_from_chunk(chunk, size_list):
+    '''Given a chunk of baronies (where each could potentially border many others), chop it up into contiguous counties with sizes determined by size_list.'''
+    duchy = Tile(rgb=d_col(), hex_list=[])
+    splits = split_chunk(chunk, size_list)
+    for ind in range(len(size_list)):
+        duchy.add_tile(Tile(rgb=c_col(), hex_list=splits[ind]))
     return duchy
 
 
@@ -528,8 +539,8 @@ def divide_into_duchies(size_list, num_duchies, allowable_chunks, a_dist, b_dist
         if len(chunk) < size:
             continue  # We can't make one, so don't bother trying.
         sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, el.mag()) + a_dist[el] + b_dist[el], el) for el in chunk])]
-        if len(get_chunks(sorted_chunk[:size])) == 1:
-            possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_snake(sorted_chunk[:size], size_list), chunk, allowable_chunks, size)
+        if any([a_dist[el] == 1 for el in sorted_chunk]) and any([b_dist[el] == 1 for el in sorted_chunk]) and len(get_chunks(sorted_chunk[:size])) == 1:  # The closest size hexes are contiguous and border both.
+            possible_tiles, allowable_chunks = salvage_remainder(possible_tiles, duchy_from_chunk(sorted_chunk[:size], size_list), chunk, allowable_chunks, size)
         else:
             sorted_chunk = [pair[1] for pair in sorted([(ranking.get(el, 999), el) for el in chunk])]
             a_adj = [el for el in sorted_chunk if a_dist[el] == 1]
@@ -804,6 +815,23 @@ def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles 
         bounding_hex = BoundingHex(cont)
         cont.origin, cont.rotation = bounding_hex.best_corner(angles[cont_idx])
         world.add_tile(cont)
+    #Check for straits
+    # This will need to be fixed if we allow more than 3 continents.
+    # TODO test more
+    connex = [0] * 3
+    while any([l == 0 for l in connex]):
+        #Inch them closer one at a time until you can't get closer without touching.
+        connex = [0] * 3
+        for (ind_a, ind_b) in combinations(range(len(world.tile_list)), 2):
+            tile_a = world.tile_list[ind_a]
+            tile_b = world.tile_list[ind_b]
+            strait_pairs, corner_pairs = tile_a.two_step_pairs(tile_b)
+            if len(strait_pairs) + len(corner_pairs) >= 0:
+                connex[ind_a] += 1
+                connex[ind_b] += 1
+        if 0 in connex:
+            move_ind = connex.index(0)
+            world.tile_list[move_ind].origin.add_in_place(Cube(0,1,-1).rotate_right(angles[move_ind]))
     #Inner sea
     if False:
         bounding_hex = BoundingHex(world)

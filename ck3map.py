@@ -10,6 +10,7 @@ import random
 from typing import Tuple
 
 import numpy as np
+from scipy.ndimage import gaussian_filter
 
 def dist2line(x, y, srcx, srcy, destx, desty):
     return abs((desty-srcy)*x-(destx-srcx)*y+destx*srcy-desty*srcx)/sqrt((desty-srcy)**2+(destx-srcx)**2)
@@ -24,14 +25,14 @@ TERRAIN_HEIGHT = {Terrain.farmlands: (0,1), Terrain.plains: (0,2), Terrain.flood
                   Terrain.mountains: (15,55),  Terrain.desert_mountains: (15,55), }
 
 # HEIGHTMAP constants
-WATER_HEIGHT = 96
+WATER_HEIGHT = 18
 
 # PROVINCES constants
-IMPASSABLE = (0, 0, 0)
+IMPASSABLE = (0, 0, 255)
 
 # RIVERS constants
 MAJOR_RIVER_THRESHOLD = 9
-RIVER_EXTEND = 5
+RIVER_EXTEND = 3
 SOURCE = 0
 MERGE = 1
 SPLIT = 2
@@ -53,7 +54,7 @@ class RiverEdge:
 def new_rgb(dictionary):
     '''Returns a randomly chosen RGB value that isn't already in the values of dictionary.'''
     guess = tuple(np.random.randint(0,256,3))
-    if guess in dictionary.values() or guess == (255,255,255) or guess == (0,0,0):
+    if guess in dictionary.values() or guess == (255,255,255) or guess == (0,0,0) or guess == IMPASSABLE:
         return new_rgb(dictionary)
     else:
         return guess
@@ -73,7 +74,7 @@ class CK3Map:
         self.map_rad = mr
         self.num_hexes = 3*(self.map_rad*(self.map_rad+1))+1
         self.scale = max(1,64/mr)
-        self.img_provinces = PIL.Image.new('RGB', (max_x,max_y),  "white")
+        self.img_provinces = PIL.Image.new('RGB', (max_x,max_y),  "black")
         self.img_topology = PIL.Image.new('L', (max_x,max_y),  "white")
         self.img_rivers = PIL.Image.new('P', (max_x,max_y),  255)  # 255=white
         with open(os.path.join("data", "rivers_palette.txt"), "r") as f:
@@ -81,7 +82,6 @@ class CK3Map:
         self.d_cube2rgb = {}
         self.d_cube2terr = {}
         self.d_cube2pid = {}
-        self.d_pid2cube = {}
         self.d_trio2vertex = {}
         self.d_trio2river = {}
         self.s3 = sqrt(3)
@@ -379,11 +379,12 @@ class CK3Map:
             self.save_provinces(filedir)
 
     def save_provinces(self, filedir):
-        self.img_provinces.save(os.path.join(filedir, 'provinces.png'))
+        self.img_provinces.save(os.path.join(filedir, 'map_data', 'provinces.png'))
 
-    def heightmap(self, land_height, water_depth, waste_list, filedir=''):
-        '''Create heightmap.png. 16 is the boundary?'''
+    def heightmap(self, land_height, water_depth, waste_list, sigma=2, filedir=''):
+        '''Create heightmap.png. Uses a Gaussian filter with sigma; pass sigma=0 to not smooth.'''
         self.topo = np.zeros((self.max_x,self.max_y))
+        land = np.zeros((self.max_x,self.max_y), dtype=bool)
         last_cube = None
         last_range = (0,0)
         for x in range(self.max_x):
@@ -392,30 +393,42 @@ class CK3Map:
                     c = self.pixel_to_cube(x,y)
                     if c != last_cube:
                         if c in land_height:
-                            last_height = 96 + land_height[c] * 3
+                            last_height = WATER_HEIGHT + 1 + land_height[c] * 3
+                            last_land = True
                         elif c in water_depth:
-                            last_height = 94 - water_depth[c] * 10
+                            last_height = max(WATER_HEIGHT - 1 - water_depth[c] * 3, 0)
+                            last_land = False
                         else:
                             last_height = 0
+                            last_land = False
                         if c in self.d_cube2terr:
                             last_range = TERRAIN_HEIGHT[self.d_cube2terr[c]]
                         else:
                             last_range = (0,0)
                         last_cube = c
                     self.topo[x,y] = last_height + random.randint(last_range[0], last_range[1])
+                    # TODO: Terrain masks? It sounded like we didn't need them :/
+                    land[x,y] = last_land
                 else:
                     self.topo[x,y] = 0
-        # TODO: Gaussian filtering
-        self.img_topology.putdata(self.topo.transpose().flatten())
+        if sigma > 0:
+            self.topo = np.rint(gaussian_filter(self.topo, sigma=sigma))
+            for x in range(self.max_x):
+                for y in range(self.max_y):
+                    if land[x,y]:
+                        self.topo[x,y] = max(self.topo[x,y], WATER_HEIGHT + 1)
+                    else:
+                        self.topo[x,y] = min(self.topo[x,y], WATER_HEIGHT - 1)
+        self.img_topology.putdata(self.topo.transpose().flatten())  # Maybe need to cast it to int first?
         if filedir:
-            with open(os.path.join(filedir, 'heightmap.heightmap'), 'w') as f:
+            with open(os.path.join(filedir, "map_data", 'heightmap.heightmap'), 'w') as f:
                 f.write("heightmap_file=\"map_data/packed_heightmap.png\"\n")
                 f.write("indirection_file=\"map_data/indirection_heightmap.png\"\n")
                 f.write(f"original_heightmap_size={{ {self.max_x} {self.max_y} }}\n")
                 f.write("tile_size=33\n")
                 f.write("should_wrap_x=no\n")
                 f.write("level_offsets={ { 0 0 }{ 0 0 }{ 0 0 }{ 0 0 }{ 0 7 }}\n")
-            self.img_topology.save(os.path.join(filedir, 'heightmap.png'))
+            self.img_topology.save(os.path.join(filedir, "map_data", 'heightmap.png'))
             
     def rivers(self, land_height, bname_from_pid, num_rivers, last_pid, filedir=''):
         '''Create rivers.png.
@@ -428,7 +441,7 @@ class CK3Map:
         # Determine some palette colors.
         # Figure out all the possible river widths:
         widths = sorted({riv.width for riv in self.d_trio2river.values()})
-        if widths[-1] > MAJOR_RIVER_THRESHOLD:
+        if widths[-1] >= MAJOR_RIVER_THRESHOLD:
             p_pixels = self.img_provinces.load()
             print("At least one major river will be made.\n")
         width_mapping = {width: 3 + i if width < MAJOR_RIVER_THRESHOLD else 254 for i, width in enumerate(widths)}
@@ -448,6 +461,8 @@ class CK3Map:
                 else:
                     r_pixels[x,y] = WATER
         # Now we can start making rivers; each edge can be done independently.
+        # TODO: major_rivers just has the pids for each river. But it should group them, so that they can be grouped in default.map.
+        major_rivers = []
         for start_trio, riv in self.d_trio2river.items():
             if riv.width < MAJOR_RIVER_THRESHOLD:
                 self.paint_edge(riv.start_xy, riv.end_xy, width_mapping[riv.width], r_pixels, riv.merge, extend=not(riv.end_trio in self.d_trio2river) or self.d_trio2river[riv.end_trio].width >= MAJOR_RIVER_THRESHOLD)
@@ -455,23 +470,25 @@ class CK3Map:
                     r_pixels[riv.start_xy[0], riv.start_xy[1]] = SOURCE
             else:
                 da, aa = self.paint_major_river(riv, r_pixels, p_pixels, last_pid, bname_from_pid)
+                major_rivers.append(last_pid)
                 def_addenda.append(da)
                 adj_addenda.append(aa)
                 last_pid += 1
-        if len(def_addenda) > 0:
-            with open(os.path.join(filedir, 'map_data', 'definition.csv'), 'a') as f:
-                f.write("".join(def_addenda))
-            with open(os.path.join(filedir, 'map_data', 'adjencies.csv'), 'a') as f:
-                f.write("".join(adj_addenda))
+        def_addenda.append(";".join([str(s) for s in [last_pid, *IMPASSABLE, "Ocean", "x", "\n"]]))
+        with open(os.path.join(filedir, 'map_data', 'definition.csv'), 'a') as f:
+            f.write("".join(def_addenda))
+        with open(os.path.join(filedir, 'map_data', 'adjacencies.csv'), 'a') as f:
+            f.write("".join(adj_addenda))
+            f.write('-1;-1;;-1;-1;-1;-1;-1;')
+        if len(adj_addenda) > 0:
             self.save_provinces(filedir)
         self.img_rivers.save(os.path.join(filedir, 'map_data', 'rivers.png'))
-        return last_pid
+        return major_rivers, last_pid
 
     def paint_edge_crisp(self, start_xy, end_xy, paint, pixels, merge: bool = False, extend=False):
         '''Paint a river segment from start_xy to end_xy. Crisp maps only!
         If extend is true, will continue in the same direction for RIVER_EXTEND pixels.'''
         assert not(merge and extend)  # You should never want to do both.
-        print(start_xy, end_xy)
         if start_xy[1] == end_xy[1]:  # Only horizontal edges are possible.
             extend = RIVER_EXTEND if extend else 0
             # We don't do the last pixel because it would maybe overwrite the next one.
@@ -522,14 +539,22 @@ class CK3Map:
         '''Paint a major river segment defined by riv. Crisp maps only!'''
         rgb = new_rgb(self.d_cube2rgb)
         self.d_cube2rgb[riv.start_trio] = rgb
+        midx = (riv.end_xy[0] + riv.start_xy[0]) // 2
+        midy = (riv.end_xy[1] + riv.start_xy[1]) // 2
         if riv.start_xy[1] == riv.end_xy[1]:  # Only horizontal edges are possible.
-            for x in range(riv.start_xy[0], riv.end_xy[0]):
-                r_pixels[x, riv.start_xy[1] - 1] = WATER
-                r_pixels[x, riv.start_xy[1]] = WATER
-                r_pixels[x, riv.start_xy[1] + 1] = WATER
+            for x in range(riv.start_xy[0], riv.end_xy[0] + 1):
+                if r_pixels[x, riv.start_xy[1] - 1] == LAND:
+                    r_pixels[x, riv.start_xy[1] - 1] = WATER
+                if r_pixels[x, riv.start_xy[1]] == LAND:
+                    r_pixels[x, riv.start_xy[1]] = WATER
+                if r_pixels[x, riv.start_xy[1] + 1] == LAND:
+                    r_pixels[x, riv.start_xy[1] + 1] = WATER
                 p_pixels[x, riv.start_xy[1] - 1] = rgb
                 p_pixels[x, riv.start_xy[1]] = rgb
                 p_pixels[x, riv.start_xy[1] + 1] = rgb
+            # Figure out which cubes border this river.
+            shore1 = (midx, midy + 2)
+            shore2 = (midx, midy - 2)
         else: # We have an angled edge.
             del_x = (1,0) if riv.end_xy[0] - riv.start_xy[0] > 0 else (-1,0)
             del_y = (0,1) if riv.end_xy[1] - riv.start_xy[1] > 0 else (0,-1)
@@ -542,19 +567,21 @@ class CK3Map:
             path = [x[1] for x in heapq.merge(zip(count(0, y_dist), x_path), zip(count(0, x_dist), y_path))]
             cx, cy = riv.start_xy
             for x,y in path:
-                r_pixels[cx, cy] = WATER
-                r_pixels[cx + del_x[0], cy] = WATER
-                r_pixels[cx, cy + del_y[1]] = WATER
+                if r_pixels[cx, cy] == LAND:
+                    r_pixels[cx, cy] = WATER
+                if r_pixels[cx + x, cy] == LAND:
+                    r_pixels[cx + x, cy] = WATER
+                if r_pixels[cx, cy + y] == LAND:
+                    r_pixels[cx, cy + y] = WATER
                 p_pixels[cx, cy] = rgb
-                p_pixels[cx + del_x[0], cy] = rgb
-                p_pixels[cx, cy + del_y[1]] = rgb
+                p_pixels[cx + x, cy] = rgb
+                p_pixels[cx, cy + y] = rgb
                 cx += x
                 cy += y
+            # Figure out which cubes border this river.
+            shore1 = (midx + del_x[0] * 2, midy - del_y[1] * 2)
+            shore2 = (midx - del_x[0] * 2, midy + del_y[1] * 2)
         def_addendum = ";".join([str(s) for s in [pid, *rgb, riv.name, "x", "\n"]])
-        midx = (riv.end_xy[0] + riv.start_xy[0]) // 2
-        midy = (riv.end_xy[1] + riv.start_xy[1]) // 2
-        shore1 = (midx + del_x[0] * 2, midy - del_y[1] * 2)
-        shore2 = (midx - del_x[0] * 2, midy + del_y[1] * 2)
         pid1 = self.d_cube2pid[self.pixel_to_cube(*shore1)]
         pid2 = self.d_cube2pid[self.pixel_to_cube(*shore2)]
         comment = f"{pid1}-{pid2}\n"
@@ -565,3 +592,16 @@ class CK3Map:
     def paint_major_river_non_crisp(self, riv, r_pixels, p_pixels, pid, bname_from_pid):
         '''Paint a major river segment defined by riv.'''
         raise NotImplementedError
+
+    def positions(self, bname_from_pid, filedir):
+        '''Create the positions file.'''
+        o = self.hex_size // 6
+        with open(os.path.join(filedir,"map_data", "positions.txt"), "w") as f:
+            for cube, pid in self.d_cube2pid.items():
+                if pid in bname_from_pid:
+                    x, y = self.c2cx[cube], self.c2cy[cube]
+                    position = " ".join([str(s) for s in [x + o, y, x, y,  x - o, y, x, y + o, x, y - o]])
+                    rotation = " ".join([str(s) for s in [0] * 5])
+                    height = " ".join([str(s) for s in [0, 0, 0, 20, 0]])
+                    f.write(f"#{bname_from_pid[pid]}\n\t{pid}=\n\t{{\n\t\tposition=\n\t\t{{\n{position} }}\n\t\trotation=\n\t\t{{\n{rotation} }}\n\t\theight=\n\t\t{{\n{height} }}\n\t}}\n")
+            f.write("\n")

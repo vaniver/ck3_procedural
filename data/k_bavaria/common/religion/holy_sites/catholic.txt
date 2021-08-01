@@ -1,0 +1,7 @@
+﻿salzburg = {
+	county = c_salzburg
+	
+	character_modifier = {
+		direct_vassal_opinion = 5
+	}
+}

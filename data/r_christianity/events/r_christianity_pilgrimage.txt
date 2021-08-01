@@ -1,0 +1,45 @@
+namespace = pilgrimage
+
+scripted_trigger pilgrimage_is_to = {
+	exists = scope:activity
+	exists = scope:activity.activity_province
+	scope:activity.activity_province.county = title:$DESTINATION$
+}
+
+pilgrimage.5001 = {
+	type = character_event
+	title = pilgrimage.5001.t
+	desc = pilgrimage.5001.desc
+	theme = pilgrimage_activity
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		pilgrimage_is_to = { DESTINATION = c_roma }
+	}
+
+	immediate = {
+		save_holy_site_for_loc_effect = yes
+	}
+	
+	option = {
+		name = pilgrimage.5001.a
+		trigger = { NOT = { has_trait = cynical } }
+		give_pilgrimage_reward_effect = yes
+	}
+	
+	option = {
+		name = pilgrimage.5001.b
+		trigger = { has_trait = cynical }
+		give_pilgrimage_reward_effect = yes
+	}
+
+	after = {
+		trigger_event = {
+			on_action = pilgrimage_return_events
+			days = 30
+		}
+	}
+}

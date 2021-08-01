@@ -1,0 +1,9 @@
+﻿avignon = {
+	county = c_provence
+	barony = b_avignon
+	
+	character_modifier = {
+		monthly_piety_gain_mult = 0.05
+		learning = 1
+	}
+}

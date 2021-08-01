@@ -1,0 +1,8 @@
+﻿stettin = {
+	county = c_stettin
+
+	character_modifier = {
+		diplomacy = 1
+		councillor_opinion = 5
+	}
+}

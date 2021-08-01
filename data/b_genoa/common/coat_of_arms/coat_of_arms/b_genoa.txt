@@ -1,0 +1,127 @@
+d_genoa = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_ordinary_cross_thin.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+}
+c_genoa = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { position = { 0.5 0.45 } scale = { 0.9 0.9 }	}
+	}
+}
+b_monaco = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_checkers_diagonal_6x3.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { position = { 0.5 0.50 } scale = { 1.15 1.0 }  }
+	}
+}
+c_modena = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_eagle.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.52 } scale = { 1.1 1.1 }  }
+	}
+}
+b_canossa = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_hound_rampant.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.48 0.48 } scale = { 0.95 0.95 }  }
+	}
+}
+c_mantua = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_bars_03.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_piedmonte = {
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { position = { 0.5 0.45 } scale = { 0.9 0.9 }	}
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.45 } scale = { 0.9 0.9 }	}
+		mask = { 2 }
+	}
+}
+c_monferrato = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.156 } scale = { 1.0 0.312 }  }
+	}
+}
+c_turin = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_tower.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+b_saluzzo = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { position = { 0.5 0.156 } scale = { 1.0 0.312 }  }
+	}
+}
+c_novara = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_ordinary_cross_thin.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}

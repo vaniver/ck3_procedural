@@ -1,0 +1,9 @@
+﻿sinai = {
+	county = c_sinai
+
+	character_modifier = {
+		name = holy_site_sinai_effect_name
+		desert_mountains_advantage = 5
+		learning = 1
+	}
+}

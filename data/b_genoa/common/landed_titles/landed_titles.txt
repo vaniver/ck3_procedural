@@ -121,7 +121,7 @@
 					color2 = { 255 255 255 }
 				}
 				b_cuneo = {
-					province = P
+					province = P15
 
 					color = { 195 130 145 }
 					color2 = { 255 255 255 }

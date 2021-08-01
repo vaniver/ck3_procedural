@@ -9,43 +9,43 @@
 				color2 = { 220 220 1 }
 				
 				b_roma = {
-					province = P
-
-					color = { 242 233 156 }
-					color2 = { 220 220 1 }
-				}
-				b_ostia = {
-					province = P
+					province = P0
 
 					color = { 242 233 156 }
 					color2 = { 220 220 1 }
 				}
 				b_vaticano = {
-					province = P
+					province = P1
+
+					color = { 242 233 156 }
+					color2 = { 220 220 1 }
+				}
+				b_ostia = {
+					province = P2
 
 					color = { 242 233 156 }
 					color2 = { 220 220 1 }
 				}
 				b_palo = {
-					province = P
+					province = P3
 
 					color = { 242 233 156 }
 					color2 = { 220 220 1 }
 				}
 				b_paterno = {
-					province = P
+					province = P4
 
 					color = { 242 233 156 }
 					color2 = { 220 220 1 }
 				}
 				b_farfa = {
-					province = P
+					province = P5
 
 					color = { 242 233 156 }
 					color2 = { 220 220 1 }
 				}
 				b_viterbo = {
-					province = P
+					province = P6
 
 					color = { 212 203 116 }
 					color2 = { 255 255 255 }
@@ -56,31 +56,31 @@
 				color2 = { 255 255 255 }
 				
 				b_tivoli = {
-					province = P
+					province = P7
 
 					color = { 242 253 136 }
 					color2 = { 255 255 255 }
 				}
 				b_velletri = {
-					province = P
+					province = P8
 
 					color = { 242 253 136 }
 					color2 = { 255 255 255 }
 				}
 				b_segni = {
-					province = P
+					province = P9
 
 					color = { 242 253 136 }
 					color2 = { 255 255 255 }
 				}
 				b_terracina = {
-					province = P
+					province = P10
 
 					color = { 242 253 136 }
 					color2 = { 255 255 255 }
 				}
 				b_sutri = {
-					province = P
+					province = P11
 
 					color = { 212 203 116 }
 					color2 = { 255 255 255 }
@@ -92,31 +92,31 @@
 				color2 = { 255 255 255 }
 				
 				b_spoleto = {
-					province = P
+					province = P12
 
 					color = { 197 162 133 }
 					color2 = { 255 255 255 }
 				}
 				b_assissi = { #Assisi
-					province = P
+					province = P13
 
 					color = { 197 162 133 }
 					color2 = { 255 255 255 }
 				}
 				b_terni = {
-					province = P
+					province = P14
 
 					color = { 197 162 133 }
 					color2 = { 255 255 255 }
 				}
 				b_orvieto = {
-					province = P
+					province = P15
 
 					color = { 197 172 163 }
 					color2 = { 255 255 255 }
 				}
 				b_perugia = {
-					province = P
+					province = P16
 
 					color = { 197 172 163 }
 					color2 = { 255 255 255 }
@@ -127,31 +127,31 @@
 				color2 = { 255 255 255 }
 				
 				b_lanciano = {
-					province = P
+					province = P17
 
 					color = { 167 102 103 }
 					color2 = { 255 255 255 }
 				}
 				b_cluieli = { #Chieti
-					province = P
+					province = P18
 
 					color = { 167 102 103 }
 					color2 = { 255 255 255 }
 				}
 				b_agnone = {
-					province = P
+					province = P19
 
 					color = { 167 102 103 }
 					color2 = { 255 255 255 }
 				}
 				b_teramo = {
-					province = P
+					province = P20
 
 					color = { 227 152 133 }
 					color2 = { 255 255 255 }
 				}
 				b_atri = {
-					province = P
+					province = P21
 
 					color = { 227 152 133 }
 					color2 = { 255 255 255 }

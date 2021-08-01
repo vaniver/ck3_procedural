@@ -1,0 +1,13 @@
+d_sunni = {
+	610.1.1 = {
+		holder_ignore_head_of_faith_requirement = 30
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	632.6.8 = {
+	}
+	991.1.1 = {
+		holder = 1300 # d_mecca
+	}
+}

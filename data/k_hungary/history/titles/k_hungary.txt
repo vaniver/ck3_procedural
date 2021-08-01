@@ -37,12 +37,12 @@ c_szekesfehervar = {
 	}
 }
 c_gyor = {
-	980.1.1 = {
+	981.1.1 = {
 		holder = 2330
 	}
 }
 c_sopron = {
-	987.1.1 = {
+	988.1.1 = {
 		holder = 2335
 	}
 }

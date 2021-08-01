@@ -1,4 +1,4 @@
-##b_alsace
+##d_alsace
 ###c_strassburg
 P0 = {
 	culture = swabian
@@ -14,7 +14,11 @@ P2 = {
 P3 = {
 	#holding = none
 }
+
+###c_breisgau
 P4 = {
+	culture = swabian
+	religion = catholic
 	holding = castle_holding
 }
 P5 = {
@@ -23,14 +27,14 @@ P5 = {
 P6 = {
 	holding = city_holding
 }
-
-###c_breisgau
 P7 = {
-	culture = swabian
-	religion = catholic
 	#holding = none
 }
+
+###c_sundgau
 P8 = {
+	culture = swabian
+	religion = catholic
 	holding = castle_holding
 }
 P9 = {
@@ -43,7 +47,8 @@ P11 = {
 	#holding = none
 }
 
-###c_sundgau
+##d_transjurania
+###c_strassburg
 P12 = {
 	culture = swabian
 	religion = catholic
@@ -58,14 +63,14 @@ P14 = {
 P15 = {
 	#holding = none
 }
-P16 = {
-	holding = castle_holding
-}
 
-###c_bern
-P17 = {
+###c_breisgau
+P16 = {
 	culture = swabian
 	religion = catholic
+	holding = castle_holding
+}
+P17 = {
 	holding = church_holding
 }
 P18 = {
@@ -74,93 +79,20 @@ P18 = {
 P19 = {
 	#holding = none
 }
+
+###c_sundgau
 P20 = {
+	culture = swabian
+	religion = catholic
 	holding = castle_holding
 }
 P21 = {
 	#holding = none
 }
-
-##b_alsace
-###c_strassburg
 P22 = {
-	culture = swabian
-	religion = catholic
 	holding = city_holding
 }
 P23 = {
-	#holding = none
-}
-P24 = {
-	#holding = none
-}
-P25 = {
-	#holding = none
-}
-P26 = {
-	#holding = none
-}
-P27 = {
-	#holding = none
-}
-P28 = {
-	#holding = none
-}
-
-###c_breisgau
-P29 = {
-	culture = swabian
-	religion = catholic
-	#holding = none
-}
-P30 = {
-	#holding = none
-}
-P31 = {
-	#holding = none
-}
-P32 = {
-	#holding = none
-}
-P33 = {
-	#holding = none
-}
-
-###c_sundgau
-P34 = {
-	culture = swabian
-	religion = catholic
-	#holding = none
-}
-P35 = {
-	#holding = none
-}
-P36 = {
-	#holding = none
-}
-P37 = {
-	#holding = none
-}
-P38 = {
-	#holding = none
-}
-
-###c_bern
-P39 = {
-	culture = swabian
-	religion = catholic
-	#holding = none
-}
-P40 = {
-	#holding = none
-}
-P41 = {
-	#holding = none
-}
-P42 = {
-	#holding = none
-}
-P43 = {
 	#holding = none
 }
 

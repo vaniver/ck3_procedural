@@ -1,31 +1,34 @@
 2100 = {
-	name="Mukhtar"
+	name="Hammud"
 	dynasty=420
 	religion="ashari"
 	culture="egyptian"
-	940.9.24 = {
-		birth="940.9.24"
+	940.8.2 = {
+		birth="940.8.2"
 	}
 	975.1.1 = {
-		add_spouse = 1
+		add_spouse = 2101
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
 2101 = {
-	name="Jamila"
+	name="Samira"
 	female = yes
 	religion="ashari"
 	culture="egyptian"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.9.17 = {
-		birth="948.9.17"
+	948.8.26 = {
+		birth="948.8.26"
+	}
+	975.1.1 = {
+		add_spouse = 2100
 	}
 }
 2102 = {
-	name="Zakariyah"
+	name="Tadros"
 	dynasty=420
 	religion="ashari"
 	culture="egyptian"
@@ -37,13 +40,14 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	mother=1
-	980.4.26 = {
-		birth="980.4.26"
+	father=2100
+	mother=2101
+	980.8.1 = {
+		birth="980.8.1"
 	}
 }
 2103 = {
-	name="Walid"
+	name="Is_mail"
 	dynasty=420
 	religion="ashari"
 	culture="egyptian"
@@ -54,13 +58,14 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	mother=1
-	982.6.23 = {
-		birth="982.6.23"
+	father=2100
+	mother=2101
+	982.2.11 = {
+		birth="982.2.11"
 	}
 }
 2104 = {
-	name="Aaron"
+	name="Akbar"
 	dynasty=420
 	religion="ashari"
 	culture="egyptian"
@@ -71,127 +76,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	mother=1
-	983.1.14 = {
-		birth="983.1.14"
+	father=2100
+	mother=2101
+	983.11.11 = {
+		birth="983.11.11"
 	}
 }
 2110 = {
-	name="Ghiyasaddin"
+	name="Ilyas"
 	dynasty=421
 	religion="ashari"
 	culture="egyptian"
 	trait="physique_good_1"
 	trait="shrewd"
-	965.9.5 = {
-		birth="965.9.5"
+	966.1.4 = {
+		birth="966.1.4"
 	}
 	985.1.1 = {
-		add_spouse = 11
+		add_spouse = 2122
 	}
 }
 2120 = {
-	name="Abdullah"
+	name="Ezra"
 	dynasty=424
 	religion="ashari"
 	culture="egyptian"
-	948.2.13 = {
-		birth="948.2.13"
+	945.11.14 = {
+		birth="945.11.14"
+	}
+	990.1.1 = {
+		death="990.1.1"
 	}
 }
 2121 = {
-	name="Nabil"
+	name="Nuraddin"
 	dynasty=424
 	religion="ashari"
 	culture="egyptian"
-	father=40
-	964.12.2 = {
-		birth="964.12.2"
+	father=2120
+	968.3.27 = {
+		birth="968.3.27"
 	}
 }
 2122 = {
-	name="Taweret"
+	name="Zahra"
 	female = yes
 	dynasty=424
 	religion="ashari"
 	culture="egyptian"
-	father=40
-	965.11.14 = {
-		birth="965.11.14"
+	father=2120
+	963.5.3 = {
+		birth="963.5.3"
 	}
 	985.1.1 = {
-		add_spouse = 10
+		add_spouse = 2110
 	}
 }
 2130 = {
-	name="Nuraddin"
+	name="Rafiq"
 	dynasty=423
 	religion="ashari"
 	culture="egyptian"
-	978.3.27 = {
-		birth="978.3.27"
+	971.4.19 = {
+		birth="971.4.19"
 	}
 }
 2135 = {
-	name="Firuz"
+	name="Asim"
 	dynasty=424
 	religion="ashari"
 	culture="egyptian"
-	976.2.7 = {
-		birth="976.2.7"
+	973.9.18 = {
+		birth="973.9.18"
 	}
 }
 2140 = {
-	name="Matta"
-	dynasty=425
-	religion="ashari"
-	culture="egyptian"
-	973.5.21 = {
-		birth="973.5.21"
-	}
-}
-2145 = {
-	name="Murad"
-	dynasty=426
-	religion="ashari"
-	culture="egyptian"
-	973.2.26 = {
-		birth="973.2.26"
-	}
-}
-2150 = {
-	name="Mehtar"
-	dynasty=427
-	religion="ashari"
-	culture="egyptian"
-	973.9.23 = {
-		birth="973.9.23"
-	}
-}
-2155 = {
 	name="Nabil"
-	dynasty=428
+	dynasty=425
 	religion="ashari"
 	culture="egyptian"
 	977.8.7 = {
 		birth="977.8.7"
 	}
 }
-2160 = {
+2145 = {
 	name="Farhan"
-	dynasty=429
+	dynasty=426
 	religion="ashari"
 	culture="egyptian"
 	973.9.3 = {
 		birth="973.9.3"
 	}
 }
-2165 = {
+2150 = {
 	name="Asim"
-	dynasty=430
+	dynasty=427
 	religion="ashari"
 	culture="egyptian"
 	970.6.20 = {
 		birth="970.6.20"
+	}
+}
+2155 = {
+	name="Abianos"
+	dynasty=428
+	religion="ashari"
+	culture="egyptian"
+	970.3.15 = {
+		birth="970.3.15"
+	}
+}
+2160 = {
+	name="Pamin"
+	dynasty=429
+	religion="ashari"
+	culture="egyptian"
+	975.2.27 = {
+		birth="975.2.27"
+	}
+}
+2165 = {
+	name="Milad"
+	dynasty=430
+	religion="ashari"
+	culture="egyptian"
+	973.2.9 = {
+		birth="973.2.9"
 	}
 }

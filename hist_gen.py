@@ -181,7 +181,7 @@ KINGDOM_CHARS = {
         'cid': 10,
         'dynasty': 1,
         'bd': "96Y.M.D",
-        'spouse_id': 11,
+        'spouse_id': 22,
         'spouse_date': "985.1.1",
         'trait_list': ["physique_good_1", "shrewd"],
     },
@@ -189,20 +189,21 @@ KINGDOM_CHARS = {
     'minor1_father': {
         'cid': 20,
         'bd': "94Y.M.D",
+        'dd': "990.1.1",
         'dynasty': 4,
     },
     'minor1': {
         'cid': 21,
         'bd': "96Y.M.D",
         'dynasty': 4,
-        'father': 40,
+        'father': 20,
     },
     'rival_wife': {
         'cid': 22,
         'bd': "96Y.M.D",
         'female': True,
         'dynasty': 4,
-        'father': 40,
+        'father': 20,
         'spouse_id': 10,
         'spouse_date': "985.1.1",
     },
@@ -287,35 +288,37 @@ BORDER_CHARS = {
 }
 
 culrel_map ={
- 'b_alsace': ("swabian","catholic"),
- 'b_bahrain': ("bedouin","ashari"),
- 'b_bohemia': ("czech","catholic"),
- 'b_capua': ("sicilian","catholic"),
- 'b_east_franconia': ("franconian","catholic"),
- 'b_genoa': ("cisalpine","catholic"),
- 'b_najd': ("bedouin","ashari"),
- 'b_shammar': ("bedouin","catholic"),
- 'b_toscana': ("italian","catholic"),
- 'b_west_franconia': ("franconian","catholic"),
- 'c_latium': ("italian","catholic"),
- 'c_lombardia': ("cisalpine","catholic"),
- 'c_mecca': ("bedouin","ashari"),
- 'c_prussia': ("prussian","catholic"),
- 'e_eeurope': ("franconian","catholic"),
- 'e_islam': ("bedouin","ashari"),
- 'e_weurope': ("italian","catholic"),
- 'k_aquitaine': ("occitan","catholic"),
- 'k_bavaria': ("bavarian","catholic"),
- 'k_burgundy': ("french","catholic"),
- 'k_egypt': ("egyptian","ashari"),
- 'k_france': ("french","catholic"),
- 'k_hungary': ("hungarian","catholic"),
- 'k_pomerania': ("pommeranian","catholic"),
- 'k_syria': ("levantine","ashari"),
- 'k_yemen': ("yemeni","ashari"),
- 'r_catholic': ("italian","catholic"),
- 'r_islam': ("bedouin","ashari"),
+ 'b_alsace': ("swabian", "catholic"),
+ 'b_bahrain': ("bedouin", "ashari"),
+ 'b_bohemia': ("czech", "catholic"),
+ 'b_capua': ("sicilian", "catholic"),
+ 'b_east_franconia': ("franconian", "catholic"),
+ 'b_genoa': ("cisalpine", "catholic"),
+ 'b_najd': ("bedouin", "ashari"),
+ 'b_shammar': ("bedouin", "ashari"),
+ 'b_toscana': ("italian", "catholic"),
+ 'b_west_franconia': ("franconian", "catholic"),
+ 'c_latium': ("italian", "catholic"),
+ 'c_lombardia': ("cisalpine", "catholic"),
+ 'c_mecca': ("bedouin", "ashari"),
+ 'c_prussia': ("prussian", "catholic"),
+ 'e_eeurope': ("franconian", "catholic"),
+ 'e_islam': ("bedouin", "ashari"),
+ 'e_weurope': ("italian", "catholic"),
+ 'k_aquitaine': ("occitan", "catholic"),
+ 'k_bavaria': ("bavarian", "catholic"),
+ 'k_burgundy': ("french", "catholic"),
+ 'k_egypt': ("egyptian", "ashari"),
+ 'k_france': ("french", "catholic"),
+ 'k_hungary': ("hungarian", "catholic"),
+ 'k_pomerania': ("pommeranian", "catholic"),
+ 'k_syria': ("levantine", "ashari"),
+ 'k_yemen': ("yemeni", "ashari"),
+ 'r_catholic': ("italian", "catholic"),
+ 'r_islam': ("bedouin", "ashari"),
 }
+
+used_cultures = set()
 
 culture_dict = {}
 for culgroup in os.listdir(os.path.join(SRC_DIR, "culture", "cultures")):
@@ -329,6 +332,7 @@ for culgroup in os.listdir(os.path.join(SRC_DIR, "culture", "cultures")):
         names_mode = False
         names_name = None
         dynasty_names_mode = False
+        used = False
         for line in inf.readlines():
             line = line.split("#")[0]
             if len(line) < 2:
@@ -355,17 +359,19 @@ for culgroup in os.listdir(os.path.join(SRC_DIR, "culture", "cultures")):
                     name_list.append(line.strip())
             if line[1] != "\t" and "{" in line and "=" in line:
                 maybe_name = line.split('=')[0].strip()
+                if maybe_name[0]=='\ufeff':
+                    maybe_name = maybe_name[1:]
                 if maybe_name not in ["graphical_cultures", "mercenary_names"]:
                     if name:
                         culture_dict[name] = cul_info
                         print(name)
                     name = maybe_name
                     cul_info = {}
-            if line.startswith("\t\tmale_names"):
+            if line.startswith("\t\tmale_names") or line.startswith("\t\tmale_Names"):  # fixing a bug with yemeni
                 names_mode = True
                 names_name = "male_names"
                 name_list = []
-            elif line.startswith("\t\tfemale_names"):
+            elif line.startswith("\t\tfemale_names") or line.startswith("\t\tfemale_Names"):
                 names_mode = True
                 names_name = "female_names"
                 name_list = []
@@ -377,7 +383,38 @@ for culgroup in os.listdir(os.path.join(SRC_DIR, "culture", "cultures")):
         culture_dict[name] = cul_info
         print(name)
 
+# Coats of arms
+
+coa_dict = {}
+shortcut_dict = {}
+with open(os.path.join(SRC_DIR, 'coat_of_arms', 'coat_of_arms', '01_landed_titles.txt'),'r', encoding='UTF8') as infile:
+    coa_buffer = ""
+    title_name = ""
+    awake = False
+    for line in infile:
+        if len(line) > 1 and (line[0] == '@' or line[1] == '@'):
+            if line[0] == '\ufeff':
+                line = line[1:]
+            shortcut_name = line[0:line.find(' ')]
+            shortcut_dict[shortcut_name] = line
+        if line[0] != '\t' and "=" in line and "{" in line and awake == False:
+            title_name = line.split("=")[0].strip()
+            coa_buffer = line
+            awake = True
+        elif awake and line[0] == "}":
+            coa_buffer += line
+            coa_dict[title_name] = coa_buffer
+            title_name = ""
+            awake = False
+        elif awake:
+            coa_buffer += line
+
+# TODO: COA for dynasties.
+
+# Process all of the titles in culrel_map.
+
 for index, (title, (culture, religion)) in enumerate(culrel_map.items()):
+    used_cultures.add(culture)
     if title[0] in ['e', 'r']:
         continue
     # Collect our title data.
@@ -442,7 +479,7 @@ for index, (title, (culture, religion)) in enumerate(culrel_map.items()):
     os.makedirs(os.path.join(DATA_DIR, title, "history", "characters"), exist_ok=True)
     with open(os.path.join(DATA_DIR, title, "history","characters", f"{title}.txt"), 'w', encoding='utf8') as outf:
         for char_dict in char_todo.values():
-            others = {k: v for k, v in char_dict.items() if k not in ["cid", "dynasty"]}
+            others = {k: v + coffset if k in ['father', 'mother', 'spouse_id'] else v for k, v in char_dict.items() if k not in ["cid", "dynasty"]}
             cid = char_dict["cid"] + coffset
             dynasty = char_dict["dynasty"] + doffset if "dynasty" in char_dict else None
             try:
@@ -514,8 +551,9 @@ for index, (title, (culture, religion)) in enumerate(culrel_map.items()):
             city_holding = BORDER_BARONIES['city_holding']
             church_holding = BORDER_BARONIES['church_holding']
             for dind in range(2):
-                outf.write(f"##{title}\n")
-                for cind, county in enumerate(CENTER_SIZE_LIST):
+                dname = title_data["d_"+str(dind)]
+                outf.write(f"##{dname}\n")
+                for cind, county in enumerate(BORDER_SIZE_LIST):
                     cname = title_data["c_"+str(cind)]
                     outf.write(f"###{cname}\n")
                     for bind in range(county):
@@ -534,3 +572,50 @@ for index, (title, (culture, religion)) in enumerate(culrel_map.items()):
                         outf.write("}\n")
                         bnum += 1
                     outf.write("\n")
+    with open(os.path.join(DATA_DIR, title, "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
+        buffer = ""
+        for line in inf.readlines():
+            if "=" in line and "{" in line and "_" in line:
+                small_title = line.split("=")[0].strip()
+                if small_title in coa_dict:
+                    buffer += coa_dict[small_title]
+        if len(buffer) > 0:
+            out_dir = os.path.join(DATA_DIR, title, "common", "coat_of_arms", "coat_of_arms")
+            os.makedirs(out_dir, exist_ok=True)
+            with open(os.path.join(out_dir, f"{title}.txt"), 'w', encoding='utf8') as outf:
+                for shortcut, shortcut_text in shortcut_dict.items():
+                    if shortcut in buffer:
+                        outf.write(shortcut_text)
+                outf.write(buffer)
+
+# Culture history (innovations)
+innovations = {
+    "tribal": ["innovation_motte", "innovation_catapult", "innovation_barracks", "innovation_mustering_grounds", "innovation_bannus", "innovation_quilted_armor",
+               "innovation_development_01", "innovation_currency_01", "innovation_gavelkind", "innovation_crop_rotation",
+               "innovation_city_planning", "innovation_casus_belli", "innovation_plenary_assemblies", "innovation_ledger"],
+    "early_medieval": ["innovation_battlements", "innovation_mangonel", "innovation_burhs", "innovation_house_soldiers", "innovation_horseshoes", "innovation_arched_saddle",
+                       "innovation_manorialism", "innovation_development_02", "innovation_currency_02", "innovation_royal_prerogative", "innovation_armilary_sphere"],
+    "guaranteed": ["innovation_chronicle_writing"],
+    "banned": ["innovation_hereditary_rule", "innovation_baliffs"],
+}
+
+# The plan here is that all cultures start out with all tribal innovations, chronicle_writing (which will help unshatter the world),
+# and three other random early medieval innovations.
+os.makedirs(os.path.join(DATA_DIR, "start", "history", "cultures"), exist_ok=True)
+for culture in culture_dict.keys():
+    if culture.endswith("_group"):
+        # Groups only get tribal innovations, so that you don't get multiple rolls.
+        with open(os.path.join(DATA_DIR, "start", "history", "cultures", f"{culture}.txt"), 'w', encoding='utf8') as outf:
+            outf.write(f"#{culture}\n\n900.1.1 = {{\n")
+            outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["tribal"]))
+            outf.write("\n}\n")
+    else:
+        with open(os.path.join(DATA_DIR, "start", "history", "cultures", f"{culture}.txt"), 'w', encoding='utf8') as outf:
+            outf.write(f"#{culture}\n\n900.1.1 = {{\n")
+            outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["tribal"]))
+            outf.write("\n}\n\n1000.1.1 = {\n")
+            random.shuffle(innovations["early_medieval"])
+            outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["guaranteed"]))
+            outf.write("\n")
+            outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["early_medieval"][:3]))
+            outf.write("\n}\n")

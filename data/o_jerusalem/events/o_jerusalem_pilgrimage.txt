@@ -1,0 +1,52 @@
+
+pilgrimage.5011 = {
+	type = character_event
+	title = pilgrimage.5011.t
+	desc = {
+		desc = pilgrimage.5011.desc.beginning
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion = religion:islam_religion }
+				desc = pilgrimage.5011.desc.muslim
+			}
+			triggered_desc = {
+				trigger = { religion = religion:judaism_religion }
+				desc = pilgrimage.5011.desc.jewish
+			}
+			desc = pilgrimage.5011.desc.christian
+		}
+		desc = pilgrimage.5011.desc.end
+	}
+	theme = pilgrimage_activity
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	trigger = {
+		pilgrimage_is_to = { DESTINATION = c_jerusalem }
+	}
+
+	immediate = {
+		save_holy_site_for_loc_effect = yes
+	}
+	
+	option = {
+		name = pilgrimage.5011.a
+		trigger = { NOT = { has_trait = cynical } }
+		give_pilgrimage_reward_effect = yes
+	}
+	
+	option = {
+		name = pilgrimage.5011.b
+		trigger = { has_trait = cynical }
+		give_pilgrimage_reward_effect = yes
+	}
+
+	after = {
+		trigger_event = {
+			on_action = pilgrimage_return_events
+			days = 30
+		}
+	}
+}

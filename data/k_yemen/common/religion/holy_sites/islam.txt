@@ -1,0 +1,8 @@
+﻿sanaa = {
+	county = c_sanaa
+
+	character_modifier = {
+		name = holy_site_nadjaf_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}

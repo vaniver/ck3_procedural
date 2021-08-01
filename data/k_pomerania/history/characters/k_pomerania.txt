@@ -1,31 +1,34 @@
 2400 = {
-	name="Casimir"
+	name="Marek"
 	dynasty=480
 	religion="catholic"
 	culture="pommeranian"
-	940.8.19 = {
-		birth="940.8.19"
+	940.10.3 = {
+		birth="940.10.3"
 	}
 	975.1.1 = {
-		add_spouse = 1
+		add_spouse = 2401
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
 2401 = {
-	name="Jolanta"
+	name="Kenna"
 	female = yes
 	religion="catholic"
 	culture="pommeranian"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.9.20 = {
-		birth="948.9.20"
+	948.11.22 = {
+		birth="948.11.22"
+	}
+	975.1.1 = {
+		add_spouse = 2400
 	}
 }
 2402 = {
-	name="WL_odzimierz"
+	name="Zygmunt"
 	dynasty=480
 	religion="catholic"
 	culture="pommeranian"
@@ -37,13 +40,14 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	mother=1
-	980.10.3 = {
-		birth="980.10.3"
+	father=2400
+	mother=2401
+	980.3.19 = {
+		birth="980.3.19"
 	}
 }
 2403 = {
-	name="Wawrzyniec"
+	name="Tomasz"
 	dynasty=480
 	religion="catholic"
 	culture="pommeranian"
@@ -54,13 +58,14 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	mother=1
-	982.5.28 = {
-		birth="982.5.28"
+	father=2400
+	mother=2401
+	982.9.17 = {
+		birth="982.9.17"
 	}
 }
 2404 = {
-	name="Branimir"
+	name="Bartosz"
 	dynasty=480
 	religion="catholic"
 	culture="pommeranian"
@@ -71,127 +76,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	mother=1
-	983.10.21 = {
-		birth="983.10.21"
+	father=2400
+	mother=2401
+	983.8.25 = {
+		birth="983.8.25"
 	}
 }
 2410 = {
-	name="Zdislav"
+	name="MilosL_aw"
 	dynasty=481
 	religion="catholic"
 	culture="pommeranian"
 	trait="physique_good_1"
 	trait="shrewd"
-	960.4.21 = {
-		birth="960.4.21"
+	966.2.26 = {
+		birth="966.2.26"
 	}
 	985.1.1 = {
-		add_spouse = 11
+		add_spouse = 2422
 	}
 }
 2420 = {
-	name="Zygmunt"
+	name="Ryszard"
 	dynasty=484
 	religion="catholic"
 	culture="pommeranian"
-	949.3.19 = {
-		birth="949.3.19"
+	941.3.11 = {
+		birth="941.3.11"
+	}
+	990.1.1 = {
+		death="990.1.1"
 	}
 }
 2421 = {
-	name="Tomasz"
+	name="Leszek"
 	dynasty=484
 	religion="catholic"
 	culture="pommeranian"
-	father=40
-	960.9.17 = {
-		birth="960.9.17"
+	father=2420
+	968.1.19 = {
+		birth="968.1.19"
 	}
 }
 2422 = {
-	name="Bohuslava"
+	name="Jadwiga"
 	female = yes
 	dynasty=484
 	religion="catholic"
 	culture="pommeranian"
-	father=40
-	963.8.25 = {
-		birth="963.8.25"
+	father=2420
+	968.10.19 = {
+		birth="968.10.19"
 	}
 	985.1.1 = {
-		add_spouse = 10
+		add_spouse = 2410
 	}
 }
 2430 = {
-	name="Bezprzym"
+	name="Ctibor"
 	dynasty=483
 	religion="catholic"
 	culture="pommeranian"
-	970.12.23 = {
-		birth="970.12.23"
+	976.10.21 = {
+		birth="976.10.21"
 	}
 }
 2435 = {
-	name="Ryszard"
+	name="Radomil"
 	dynasty=484
 	religion="catholic"
 	culture="pommeranian"
-	971.3.11 = {
-		birth="971.3.11"
+	971.9.9 = {
+		birth="971.9.9"
 	}
 }
 2440 = {
-	name="JE_drzej"
+	name="VA_clav"
 	dynasty=485
 	religion="catholic"
 	culture="pommeranian"
-	979.9.22 = {
-		birth="979.9.22"
+	975.11.6 = {
+		birth="975.11.6"
 	}
 }
 2445 = {
-	name="Leszek"
+	name="Zygmunt"
 	dynasty=486
 	religion="catholic"
 	culture="pommeranian"
-	978.1.19 = {
-		birth="978.1.19"
+	971.8.13 = {
+		birth="971.8.13"
 	}
 }
 2450 = {
-	name="Dytryk"
+	name="Lucjan"
 	dynasty=487
 	religion="catholic"
 	culture="pommeranian"
-	978.10.19 = {
-		birth="978.10.19"
+	977.3.20 = {
+		birth="977.3.20"
 	}
 }
 2455 = {
-	name="Lech"
+	name="Szymon"
 	dynasty=488
 	religion="catholic"
 	culture="pommeranian"
-	979.10.5 = {
-		birth="979.10.5"
+	976.12.11 = {
+		birth="976.12.11"
 	}
 }
 2460 = {
-	name="Ryszard"
+	name="VA_clav"
 	dynasty=489
 	religion="catholic"
 	culture="pommeranian"
-	978.7.20 = {
-		birth="978.7.20"
+	972.9.11 = {
+		birth="972.9.11"
 	}
 }
 2465 = {
-	name="Jaroslav"
+	name="KreS_imir"
 	dynasty=490
 	religion="catholic"
 	culture="pommeranian"
-	972.12.3 = {
-		birth="972.12.3"
+	976.4.12 = {
+		birth="976.4.12"
 	}
 }

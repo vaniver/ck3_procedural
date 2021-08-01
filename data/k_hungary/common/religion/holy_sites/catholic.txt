@@ -1,0 +1,9 @@
+﻿pest = {
+	county = c_visegrad
+
+	character_modifier = {
+		name = holy_site_pest_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}

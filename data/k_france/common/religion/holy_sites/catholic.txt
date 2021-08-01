@@ -1,0 +1,9 @@
+﻿reims = {
+	county = c_reims
+	
+	character_modifier = {
+		name = holy_site_kent_effect_name
+		religious_vassal_opinion = 5
+		sway_scheme_power_mult = 0.1
+	}
+}

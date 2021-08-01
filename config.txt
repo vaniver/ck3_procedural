@@ -9,9 +9,9 @@ weurope	k_burgundy	catholic	continent
 eeurope	k_bavaria	catholic	continent
 eeurope	k_pomerania	catholic	continent
 eeurope	k_hungary	catholic	continent
-islam	k_syria	sunni	continent
-islam	k_egypt	sunni	continent
-islam	k_yemen	sunni	continent
+islam	k_syria	islam	continent
+islam	k_egypt	islam	continent
+islam	k_yemen	islam	continent
 #empire	base_terrain	waste_terrain
 weurope	forest	mountains
 eeurope	forest	mountains
@@ -29,7 +29,7 @@ eeurope	b_alsace	catholic	continent
 eeurope	b_bohemia	catholic	continent
 eeurope	b_east_franconia	catholic	continent
 eeurope	b_west_franconia	catholic	continent
-islam	c_mecca	sunni	continent
-islam	b_bahrain	sunni	continent
-islam	b_najd	sunni	continent
-islam	b_shammar	sunni	continent
+islam	c_mecca	islam	continent
+islam	b_bahrain	islam	continent
+islam	b_najd	islam	continent
+islam	b_shammar	islam	continent

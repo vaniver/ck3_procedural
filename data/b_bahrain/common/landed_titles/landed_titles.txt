@@ -161,25 +161,25 @@
 				color2 = { 255 255 255 }
 				
 				b_al-uqayr = {
-					province = P
+					province = P20
 					
 					color = { 30 132 37 }
 					color2 = { 255 255 255 }
 				}
 				b_murwab = {
-					province = P
+					province = P21
 					
 					color = { 30 132 37 }
 					color2 = { 255 255 255 }
 				}
 				b_mashqar = {
-					province = P
+					province = P22
 					
 					color = { 30 132 37 }
 					color2 = { 255 255 255 }
 				}
 				b_yabrin = {
-					province = P
+					province = P23
 					
 					color = { 30 120 25 }
 					color2 = { 255 255 255 }

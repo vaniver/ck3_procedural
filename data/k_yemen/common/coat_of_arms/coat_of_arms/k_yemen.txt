@@ -1,0 +1,38 @@
+k_yemen = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.144 } scale = { 1.0 0.03 }  }
+		instance = { position = { 0.5 0.248 } scale = { 1.0 0.03 }  }
+		instance = { position = { 0.5 0.672 } scale = { 1.0 0.03 }  }
+		instance = { position = { 0.5 0.776 } scale = { 1.0 0.03 }  }
+	}
+	colored_emblem = {
+		texture = "ce_arabic_shahada.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.46 } scale = { 0.9 0.9 }  }
+	}
+}
+c_mahra = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	colored_emblem = {
+		texture = "ce_chalice_01.dds"
+		color1 = "red"
+	}
+}
+c_dhofar = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	colored_emblem = {
+		texture = "ce_tower.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = {	position = { 0.5 0.45 }	scale = { 1.0 1.0 }	}
+	}
+}

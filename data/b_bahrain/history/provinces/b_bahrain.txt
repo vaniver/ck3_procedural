@@ -1,4 +1,4 @@
-##b_bahrain
+##d_bahrain
 ###c_qatif
 P0 = {
 	culture = bedouin
@@ -14,7 +14,11 @@ P2 = {
 P3 = {
 	#holding = none
 }
+
+###c_samman
 P4 = {
+	culture = bedouin
+	religion = ashari
 	holding = castle_holding
 }
 P5 = {
@@ -23,14 +27,14 @@ P5 = {
 P6 = {
 	holding = city_holding
 }
-
-###c_samman
 P7 = {
-	culture = bedouin
-	religion = ashari
 	#holding = none
 }
+
+###c_al-hasa
 P8 = {
+	culture = bedouin
+	religion = ashari
 	holding = castle_holding
 }
 P9 = {
@@ -43,7 +47,8 @@ P11 = {
 	#holding = none
 }
 
-###c_al-hasa
+##d_yamama
+###c_qatif
 P12 = {
 	culture = bedouin
 	religion = ashari
@@ -58,14 +63,14 @@ P14 = {
 P15 = {
 	#holding = none
 }
-P16 = {
-	holding = castle_holding
-}
 
-###c_yamama
-P17 = {
+###c_samman
+P16 = {
 	culture = bedouin
 	religion = ashari
+	holding = castle_holding
+}
+P17 = {
 	holding = church_holding
 }
 P18 = {
@@ -74,93 +79,20 @@ P18 = {
 P19 = {
 	#holding = none
 }
+
+###c_al-hasa
 P20 = {
+	culture = bedouin
+	religion = ashari
 	holding = castle_holding
 }
 P21 = {
 	#holding = none
 }
-
-##b_bahrain
-###c_qatif
 P22 = {
-	culture = bedouin
-	religion = ashari
 	holding = city_holding
 }
 P23 = {
-	#holding = none
-}
-P24 = {
-	#holding = none
-}
-P25 = {
-	#holding = none
-}
-P26 = {
-	#holding = none
-}
-P27 = {
-	#holding = none
-}
-P28 = {
-	#holding = none
-}
-
-###c_samman
-P29 = {
-	culture = bedouin
-	religion = ashari
-	#holding = none
-}
-P30 = {
-	#holding = none
-}
-P31 = {
-	#holding = none
-}
-P32 = {
-	#holding = none
-}
-P33 = {
-	#holding = none
-}
-
-###c_al-hasa
-P34 = {
-	culture = bedouin
-	religion = ashari
-	#holding = none
-}
-P35 = {
-	#holding = none
-}
-P36 = {
-	#holding = none
-}
-P37 = {
-	#holding = none
-}
-P38 = {
-	#holding = none
-}
-
-###c_yamama
-P39 = {
-	culture = bedouin
-	religion = ashari
-	#holding = none
-}
-P40 = {
-	#holding = none
-}
-P41 = {
-	#holding = none
-}
-P42 = {
-	#holding = none
-}
-P43 = {
 	#holding = none
 }
 

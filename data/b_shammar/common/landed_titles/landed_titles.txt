@@ -155,6 +155,7 @@
 					color = { 125 255 18 }
 					color2 = { 255 255 255 }
 				}
+			}
 			c_maan = {
 				color = { 127 202 8 }
 				color2 = { 255 255 255 }
@@ -178,7 +179,7 @@
 					color2 = { 255 255 255 }
 				}
 				b_an-nabak = {
-					province = P
+					province = P23
 					
 					color = { 158 253 51 }
 					color2 = { 255 255 255 }

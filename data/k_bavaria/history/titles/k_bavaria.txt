@@ -37,12 +37,12 @@ c_passau = {
 	}
 }
 c_munchen = {
-	983.1.1 = {
+	989.1.1 = {
 		holder = 1930
 	}
 }
 c_rothenburg = {
-	989.1.1 = {
+	982.1.1 = {
 		holder = 1935
 	}
 }

@@ -1,31 +1,34 @@
 2200 = {
-	name="Alain"
+	name="BenoI_t"
 	dynasty=440
 	religion="catholic"
 	culture="french"
-	940.8.4 = {
-		birth="940.8.4"
+	940.7.1 = {
+		birth="940.7.1"
 	}
 	975.1.1 = {
-		add_spouse = 1
+		add_spouse = 2201
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
 2201 = {
-	name="Constance"
+	name="Marie"
 	female = yes
 	religion="catholic"
 	culture="french"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.7.8 = {
-		birth="948.7.8"
+	948.11.26 = {
+		birth="948.11.26"
+	}
+	975.1.1 = {
+		add_spouse = 2200
 	}
 }
 2202 = {
-	name="Hugues"
+	name="Charles"
 	dynasty=440
 	religion="catholic"
 	culture="french"
@@ -37,13 +40,14 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	mother=1
-	980.11.26 = {
-		birth="980.11.26"
+	father=2200
+	mother=2201
+	980.4.9 = {
+		birth="980.4.9"
 	}
 }
 2203 = {
-	name="BE_renger"
+	name="Godefroy"
 	dynasty=440
 	religion="catholic"
 	culture="french"
@@ -54,13 +58,14 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	mother=1
-	982.11.13 = {
-		birth="982.11.13"
+	father=2200
+	mother=2201
+	982.5.28 = {
+		birth="982.5.28"
 	}
 }
 2204 = {
-	name="Bernard"
+	name="Eustache"
 	dynasty=440
 	religion="catholic"
 	culture="french"
@@ -71,127 +76,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	mother=1
-	983.5.14 = {
-		birth="983.5.14"
+	father=2200
+	mother=2201
+	983.10.23 = {
+		birth="983.10.23"
 	}
 }
 2210 = {
-	name="Eudes"
+	name="AndrE_"
 	dynasty=441
 	religion="catholic"
 	culture="french"
 	trait="physique_good_1"
 	trait="shrewd"
-	969.8.10 = {
-		birth="969.8.10"
+	969.9.6 = {
+		birth="969.9.6"
 	}
 	985.1.1 = {
-		add_spouse = 11
+		add_spouse = 2222
 	}
 }
 2220 = {
-	name="Jaspert"
+	name="Jean"
 	dynasty=444
 	religion="catholic"
 	culture="french"
-	949.3.28 = {
-		birth="949.3.28"
+	949.4.20 = {
+		birth="949.4.20"
+	}
+	990.1.1 = {
+		death="990.1.1"
 	}
 }
 2221 = {
-	name="Loup"
+	name="Richard"
 	dynasty=444
 	religion="catholic"
 	culture="french"
-	father=40
-	968.1.9 = {
-		birth="968.1.9"
+	father=2220
+	968.3.16 = {
+		birth="968.3.16"
 	}
 }
 2222 = {
-	name="Bourguigne"
+	name="GisE_le"
 	female = yes
 	dynasty=444
 	religion="catholic"
 	culture="french"
-	father=40
-	969.10.19 = {
-		birth="969.10.19"
+	father=2220
+	961.4.12 = {
+		birth="961.4.12"
 	}
 	985.1.1 = {
-		add_spouse = 10
+		add_spouse = 2210
 	}
 }
 2230 = {
-	name="Henri"
+	name="Baudouin"
 	dynasty=443
 	religion="catholic"
 	culture="french"
-	975.9.27 = {
-		birth="975.9.27"
+	971.11.15 = {
+		birth="971.11.15"
 	}
 }
 2235 = {
-	name="Boson"
+	name="ThiE_baut"
 	dynasty=444
-	religion="catholic"
-	culture="french"
-	976.6.3 = {
-		birth="976.6.3"
-	}
-}
-2240 = {
-	name="Thibault"
-	dynasty=445
-	religion="catholic"
-	culture="french"
-	977.7.7 = {
-		birth="977.7.7"
-	}
-}
-2245 = {
-	name="Ancel"
-	dynasty=446
 	religion="catholic"
 	culture="french"
 	978.12.13 = {
 		birth="978.12.13"
 	}
 }
-2250 = {
+2240 = {
 	name="Amaury"
-	dynasty=447
+	dynasty=445
 	religion="catholic"
 	culture="french"
 	975.6.4 = {
 		birth="975.6.4"
 	}
 }
-2255 = {
+2245 = {
 	name="Arnoul"
-	dynasty=448
+	dynasty=446
 	religion="catholic"
 	culture="french"
 	978.9.21 = {
 		birth="978.9.21"
 	}
 }
-2260 = {
+2250 = {
 	name="Thomas"
-	dynasty=449
+	dynasty=447
 	religion="catholic"
 	culture="french"
 	977.4.5 = {
 		birth="977.4.5"
 	}
 }
-2265 = {
+2255 = {
 	name="Renaud"
-	dynasty=450
+	dynasty=448
 	religion="catholic"
 	culture="french"
 	972.5.19 = {
 		birth="972.5.19"
+	}
+}
+2260 = {
+	name="E_douard"
+	dynasty=449
+	religion="catholic"
+	culture="french"
+	971.9.23 = {
+		birth="971.9.23"
+	}
+}
+2265 = {
+	name="Foulques"
+	dynasty=450
+	religion="catholic"
+	culture="french"
+	975.8.3 = {
+		birth="975.8.3"
 	}
 }

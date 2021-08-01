@@ -37,12 +37,12 @@ c_qinnasrin = {
 	}
 }
 c_palmyra = {
-	983.1.1 = {
+	988.1.1 = {
 		holder = 2530
 	}
 }
 c_sukhna = {
-	988.1.1 = {
+	981.1.1 = {
 		holder = 2535
 	}
 }

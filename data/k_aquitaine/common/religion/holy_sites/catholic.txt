@@ -1,0 +1,7 @@
+﻿bordeaux = {
+	county = c_bordeaux
+	
+	character_modifier = {
+		diplomacy_per_piety_level = 1
+	}
+}

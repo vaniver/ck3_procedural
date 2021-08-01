@@ -7,7 +7,7 @@
 		birth="940.7.25"
 	}
 	975.1.1 = {
-		add_spouse = 1
+		add_spouse = 1901
 	}
 	999.12.31 = {
 		death="999.12.31"
@@ -23,6 +23,9 @@
 	948.4.9 = {
 		birth="948.4.9"
 	}
+	975.1.1 = {
+		add_spouse = 1900
+	}
 }
 1902 = {
 	name="Wilhelm"
@@ -37,7 +40,8 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	mother=1
+	father=1900
+	mother=1901
 	980.4.23 = {
 		birth="980.4.23"
 	}
@@ -54,7 +58,8 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	mother=1
+	father=1900
+	mother=1901
 	982.12.19 = {
 		birth="982.12.19"
 	}
@@ -71,7 +76,8 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	mother=1
+	father=1900
+	mother=1901
 	983.5.11 = {
 		birth="983.5.11"
 	}
@@ -87,7 +93,7 @@
 		birth="965.2.10"
 	}
 	985.1.1 = {
-		add_spouse = 11
+		add_spouse = 1922
 	}
 }
 1920 = {
@@ -98,38 +104,41 @@
 	949.12.6 = {
 		birth="949.12.6"
 	}
+	990.1.1 = {
+		death="990.1.1"
+	}
 }
 1921 = {
-	name="Hadmar"
+	name="Arnold"
 	dynasty=384
 	religion="catholic"
 	culture="bavarian"
-	father=40
-	962.1.26 = {
-		birth="962.1.26"
+	father=1920
+	960.10.28 = {
+		birth="960.10.28"
 	}
 }
 1922 = {
-	name="Beatrix"
+	name="Bertha"
 	female = yes
 	dynasty=384
 	religion="catholic"
 	culture="bavarian"
-	father=40
-	960.10.28 = {
-		birth="960.10.28"
+	father=1920
+	967.3.4 = {
+		birth="967.3.4"
 	}
 	985.1.1 = {
-		add_spouse = 10
+		add_spouse = 1910
 	}
 }
 1930 = {
-	name="Liutfrid"
+	name="Rasso"
 	dynasty=383
 	religion="catholic"
 	culture="bavarian"
-	975.4.9 = {
-		birth="975.4.9"
+	971.10.19 = {
+		birth="971.10.19"
 	}
 }
 1935 = {
@@ -137,61 +146,61 @@
 	dynasty=384
 	religion="catholic"
 	culture="bavarian"
-	971.10.19 = {
-		birth="971.10.19"
-	}
-}
-1940 = {
-	name="Rasso"
-	dynasty=385
-	religion="catholic"
-	culture="bavarian"
 	973.3.20 = {
 		birth="973.3.20"
 	}
 }
-1945 = {
+1940 = {
 	name="Gundakar"
-	dynasty=386
+	dynasty=385
 	religion="catholic"
 	culture="bavarian"
 	971.7.14 = {
 		birth="971.7.14"
 	}
 }
-1950 = {
+1945 = {
 	name="Ludwig"
-	dynasty=387
+	dynasty=386
 	religion="catholic"
 	culture="bavarian"
 	971.9.26 = {
 		birth="971.9.26"
 	}
 }
-1955 = {
+1950 = {
 	name="Werigand"
-	dynasty=388
+	dynasty=387
 	religion="catholic"
 	culture="bavarian"
 	972.6.27 = {
 		birth="972.6.27"
 	}
 }
-1960 = {
+1955 = {
 	name="Ekbert"
-	dynasty=389
+	dynasty=388
 	religion="catholic"
 	culture="bavarian"
 	975.1.10 = {
 		birth="975.1.10"
 	}
 }
-1965 = {
+1960 = {
 	name="Wilhelm"
-	dynasty=390
+	dynasty=389
 	religion="catholic"
 	culture="bavarian"
 	974.2.27 = {
 		birth="974.2.27"
+	}
+}
+1965 = {
+	name="Weichart"
+	dynasty=390
+	religion="catholic"
+	culture="bavarian"
+	979.2.24 = {
+		birth="979.2.24"
 	}
 }
