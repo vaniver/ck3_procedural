@@ -1,0 +1,26 @@
+d_kiev = {
+	1000.1.1 = {	change_development_level = 8 }
+	987.1.1 = {
+		holder = 1900
+	}
+}
+c_kiev = {
+	987.1.1 = {
+		holder = 1900
+	}
+}
+c_zvyahel = {
+	987.1.1 = {
+		holder = 1900
+	}
+}
+c_chornobyl = {
+	987.1.1 = {
+		holder = 1901
+	}
+}
+c_korsun = {
+	995.1.1 = {
+		holder = 1902
+	}
+}

@@ -1,0 +1,54 @@
+200 = {
+	name="Xi"
+	dynasty=40
+	religion="lamaism"
+	culture="tuyuhun"
+	999.6.9 = {
+		birth="999.6.9"
+	}
+}
+201 = {
+	name="Anye"
+	dynasty=41
+	religion="lamaism"
+	culture="tuyuhun"
+	922.2.22 = {
+		birth="922.2.22"
+	}
+}
+202 = {
+	name="Duyihou"
+	dynasty=42
+	religion="lamaism"
+	culture="tuyuhun"
+	955.9.11 = {
+		birth="955.9.11"
+	}
+}
+203 = {
+	name="Tandouba"
+	dynasty=43
+	religion="lamaism"
+	culture="tuyuhun"
+	955.3.16 = {
+		birth="955.3.16"
+	}
+}
+204 = {
+	name="Xin"
+	dynasty=44
+	religion="lamaism"
+	culture="tuyuhun"
+	900.9.17 = {
+		birth="900.9.17"
+	}
+}
+205 = {
+	name="Mo"
+	dynasty=45
+	religion="lamaism"
+	culture="tuyuhun"
+	955.3.24 = {
+		birth="955.3.24"
+	}
+}

@@ -1,29 +1,29 @@
-40 = {
+60 = {
 	prefix = "dynnp_mn"
 	name = "c_qatif"
 	culture = "bedouin"
 }
-41 = {
+61 = {
 	prefix = "dynnp_mn"
 	name = "c_samman"
 	culture = "bedouin"
 }
-42 = {
+62 = {
 	prefix = "dynnp_mn"
 	name = "c_al-hasa"
 	culture = "bedouin"
 }
-43 = {
+63 = {
 	prefix = "dynnp_mn"
 	name = "c_yamama"
 	culture = "bedouin"
 }
-44 = {
+64 = {
 	prefix = "dynnp_mn"
 	name = "c_falaj"
 	culture = "bedouin"
 }
-45 = {
+65 = {
 	prefix = "dynnp_mn"
 	name = "c_uqayr"
 	culture = "bedouin"

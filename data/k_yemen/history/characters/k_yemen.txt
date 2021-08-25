@@ -1,35 +1,35 @@
-2600 = {
-	name="Akin"
-	dynasty=520
+3500 = {
+	name="Sa_daddin"
+	dynasty=700
 	religion="ashari"
 	culture="yemeni"
-	940.1.21 = {
-		birth="940.1.21"
+	940.6.5 = {
+		birth="940.6.5"
 	}
 	975.1.1 = {
-		add_spouse = 2601
+		add_spouse = 3501
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
-2601 = {
-	name="Semeah"
+3501 = {
+	name="Shahzadah"
 	female = yes
 	religion="ashari"
 	culture="yemeni"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.2.12 = {
-		birth="948.2.12"
+	948.12.22 = {
+		birth="948.12.22"
 	}
 	975.1.1 = {
-		add_spouse = 2600
+		add_spouse = 3500
 	}
 }
-2602 = {
-	name="Hussayn"
-	dynasty=520
+3502 = {
+	name="Ya_qub"
+	dynasty=700
 	religion="ashari"
 	culture="yemeni"
 	martial=5
@@ -40,15 +40,15 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	father=2600
-	mother=2601
-	980.9.1 = {
-		birth="980.9.1"
+	father=3500
+	mother=3501
+	980.10.5 = {
+		birth="980.10.5"
 	}
 }
-2603 = {
-	name="Shujah"
-	dynasty=520
+3503 = {
+	name="Fadil"
+	dynasty=700
 	religion="ashari"
 	culture="yemeni"
 	martial=3
@@ -58,15 +58,16 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	father=2600
-	mother=2601
-	982.1.10 = {
-		birth="982.1.10"
+	father=3500
+	mother=3501
+	982.5.6 = {
+		birth="982.5.6"
 	}
 }
-2604 = {
-	name="Yahya"
-	dynasty=520
+3504 = {
+	name="Semeah"
+	female = yes
+	dynasty=700
 	religion="ashari"
 	culture="yemeni"
 	martial=3
@@ -76,131 +77,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	father=2600
-	mother=2601
-	983.12.3 = {
-		birth="983.12.3"
+	father=3500
+	mother=3501
+	983.8.13 = {
+		birth="983.8.13"
 	}
 }
-2610 = {
-	name="Yusuf"
-	dynasty=521
+3510 = {
+	name="Shujah"
+	dynasty=701
 	religion="ashari"
 	culture="yemeni"
 	trait="physique_good_1"
 	trait="shrewd"
-	964.12.22 = {
-		birth="964.12.22"
+	966.6.27 = {
+		birth="966.6.27"
 	}
 	985.1.1 = {
-		add_spouse = 2622
+		add_spouse = 3522
 	}
 }
-2620 = {
-	name="Khaireddin"
-	dynasty=524
+3520 = {
+	name="Aarif"
+	dynasty=704
 	religion="ashari"
 	culture="yemeni"
-	946.7.12 = {
-		birth="946.7.12"
+	949.1.10 = {
+		birth="949.1.10"
 	}
 	990.1.1 = {
 		death="990.1.1"
 	}
 }
-2621 = {
-	name="Najib"
-	dynasty=524
+3521 = {
+	name="Samir"
+	dynasty=704
 	religion="ashari"
 	culture="yemeni"
-	father=2620
-	968.9.17 = {
-		birth="968.9.17"
+	father=3520
+	967.2.20 = {
+		birth="967.2.20"
 	}
 }
-2622 = {
-	name="Kamala"
+3522 = {
+	name="Parween"
 	female = yes
-	dynasty=524
+	dynasty=704
 	religion="ashari"
 	culture="yemeni"
-	father=2620
-	964.5.15 = {
-		birth="964.5.15"
+	father=3520
+	966.12.18 = {
+		birth="966.12.18"
 	}
 	985.1.1 = {
-		add_spouse = 2610
+		add_spouse = 3510
 	}
 }
-2630 = {
-	name="Sadiq"
-	dynasty=523
+3530 = {
+	name="Muhammad"
+	dynasty=703
 	religion="ashari"
 	culture="yemeni"
-	973.12.2 = {
-		birth="973.12.2"
+	972.2.1 = {
+		birth="972.2.1"
 	}
 }
-2635 = {
-	name="Murad"
-	dynasty=524
-	religion="ashari"
-	culture="yemeni"
-	977.10.9 = {
-		birth="977.10.9"
-	}
-}
-2640 = {
-	name="Ya_qub"
-	dynasty=525
-	religion="ashari"
-	culture="yemeni"
-	976.8.2 = {
-		birth="976.8.2"
-	}
-}
-2645 = {
-	name="Uways"
-	dynasty=526
-	religion="ashari"
-	culture="yemeni"
-	979.5.24 = {
-		birth="979.5.24"
-	}
-}
-2650 = {
-	name="Ramadan"
-	dynasty=527
-	religion="ashari"
-	culture="yemeni"
-	977.7.14 = {
-		birth="977.7.14"
-	}
-}
-2655 = {
+3535 = {
 	name="Sa_daddin"
-	dynasty=528
+	dynasty=704
 	religion="ashari"
 	culture="yemeni"
-	979.5.9 = {
-		birth="979.5.9"
+	970.8.1 = {
+		birth="970.8.1"
 	}
 }
-2660 = {
-	name="Mansur"
-	dynasty=529
+3540 = {
+	name="Idris"
+	dynasty=705
 	religion="ashari"
 	culture="yemeni"
-	977.3.14 = {
-		birth="977.3.14"
+	977.1.8 = {
+		birth="977.1.8"
 	}
 }
-2665 = {
-	name="Abdullah"
-	dynasty=530
+3545 = {
+	name="Akin"
+	dynasty=706
 	religion="ashari"
 	culture="yemeni"
-	976.8.1 = {
-		birth="976.8.1"
+	979.2.23 = {
+		birth="979.2.23"
+	}
+}
+3550 = {
+	name="Ali"
+	dynasty=707
+	religion="ashari"
+	culture="yemeni"
+	975.11.7 = {
+		birth="975.11.7"
+	}
+}
+3555 = {
+	name="Jibril"
+	dynasty=708
+	religion="ashari"
+	culture="yemeni"
+	974.2.27 = {
+		birth="974.2.27"
+	}
+}
+3560 = {
+	name="Azam"
+	dynasty=709
+	religion="ashari"
+	culture="yemeni"
+	975.2.25 = {
+		birth="975.2.25"
+	}
+}
+3565 = {
+	name="Sami"
+	dynasty=710
+	religion="ashari"
+	culture="yemeni"
+	974.2.3 = {
+		birth="974.2.3"
 	}
 }

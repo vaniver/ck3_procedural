@@ -5,32 +5,32 @@ d_amman = {
 	1000.1.1 = {	change_development_level = 5 }
 }
 c_tabuk = {
-	999.1.1 = {
-		holder = 800
+	998.1.1 = {
+		holder = 1100
 	}
 }
 c_al_aqabah = {
-	991.1.1 = {
-		holder = 801
+	999.1.1 = {
+		holder = 1101
 	}
 }
 c_tayma = {
-	998.1.1 = {
-		holder = 802
+	997.1.1 = {
+		holder = 1102
 	}
 }
 c_balqa = {
-	996.1.1 = {
-		holder = 803
+	995.1.1 = {
+		holder = 1103
 	}
 }
 c_maab = {
-	996.1.1 = {
-		holder = 804
+	993.1.1 = {
+		holder = 1104
 	}
 }
 c_maan = {
-	992.1.1 = {
-		holder = 805
+	995.1.1 = {
+		holder = 1105
 	}
 }

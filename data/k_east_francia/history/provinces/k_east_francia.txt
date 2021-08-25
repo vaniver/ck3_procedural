@@ -1,0 +1,252 @@
+#k_east_francia
+##d_west_franconia
+###c_frankfurt
+P0 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	holding = city_holding
+}
+P3 = {
+	#holding = none
+}
+P4 = {
+	#holding = none
+}
+P5 = {
+	#holding = none
+}
+
+###c_mainz
+P6 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P7 = {
+	holding = church_holding
+}
+P8 = {
+	holding = city_holding
+}
+P9 = {
+	#holding = none
+}
+
+###c_erbach
+P10 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P11 = {
+	holding = church_holding
+}
+P12 = {
+	holding = city_holding
+}
+P13 = {
+	#holding = none
+}
+
+###c_klingenberg
+P14 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P15 = {
+	holding = church_holding
+}
+P16 = {
+	holding = city_holding
+}
+P17 = {
+	#holding = none
+}
+
+###c_speyer
+P18 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P19 = {
+	holding = church_holding
+}
+P20 = {
+	holding = city_holding
+}
+P21 = {
+	#holding = none
+}
+
+##d_hesse
+###c_frankfurt
+P22 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P23 = {
+	holding = church_holding
+}
+P24 = {
+	holding = city_holding
+}
+P25 = {
+	#holding = none
+}
+
+###c_mainz
+P26 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P27 = {
+	holding = church_holding
+}
+P28 = {
+	holding = city_holding
+}
+P29 = {
+	#holding = none
+}
+
+###c_erbach
+P30 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P31 = {
+	holding = church_holding
+}
+P32 = {
+	holding = city_holding
+}
+
+###c_klingenberg
+P33 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P34 = {
+	holding = church_holding
+}
+P35 = {
+	holding = city_holding
+}
+
+##d_east_franconia
+###c_frankfurt
+P36 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P37 = {
+	holding = church_holding
+}
+P38 = {
+	holding = city_holding
+}
+P39 = {
+	#holding = none
+}
+
+###c_mainz
+P40 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P41 = {
+	holding = church_holding
+}
+P42 = {
+	holding = city_holding
+}
+P43 = {
+	#holding = none
+}
+
+###c_erbach
+P44 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P45 = {
+	holding = church_holding
+}
+P46 = {
+	holding = city_holding
+}
+
+###c_klingenberg
+P47 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P48 = {
+	holding = church_holding
+}
+P49 = {
+	holding = city_holding
+}
+
+##d_kaiserslautern
+###c_frankfurt
+P50 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P51 = {
+	holding = church_holding
+}
+P52 = {
+	holding = city_holding
+}
+P53 = {
+	#holding = none
+}
+
+###c_mainz
+P54 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P55 = {
+	holding = church_holding
+}
+P56 = {
+	holding = city_holding
+}
+P57 = {
+	#holding = none
+}
+
+###c_erbach
+P58 = {
+	culture = franconian
+	religion = catholic
+	holding = castle_holding
+}
+P59 = {
+	holding = church_holding
+}
+P60 = {
+	holding = city_holding
+}
+

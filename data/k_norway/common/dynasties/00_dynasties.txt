@@ -1,0 +1,55 @@
+620 = {
+	prefix = "dynnp_af"
+	name = "d_viken"
+	culture = "norse"
+}
+621 = {
+	prefix = "dynnp_af"
+	name = "d_jamtland"
+	culture = "norse"
+}
+622 = {
+	prefix = "dynnp_af"
+	name = "c_morarna"
+	culture = "norse"
+}
+623 = {
+	prefix = "dynnp_af"
+	name = "c_hedmork"
+	culture = "norse"
+}
+624 = {
+	prefix = "dynnp_af"
+	name = "c_gudbrandsdalir"
+	culture = "norse"
+}
+625 = {
+	prefix = "dynnp_af"
+	name = "c_harjadalen"
+	culture = "norse"
+}
+626 = {
+	prefix = "dynnp_af"
+	name = "c_trandheim"
+	culture = "norse"
+}
+627 = {
+	prefix = "dynnp_af"
+	name = "c_sogn"
+	culture = "norse"
+}
+628 = {
+	prefix = "dynnp_af"
+	name = "c_bothin"
+	culture = "norse"
+}
+629 = {
+	prefix = "dynnp_af"
+	name = "c_namdalfylki"
+	culture = "norse"
+}
+630 = {
+	prefix = "dynnp_af"
+	name = "c_vastvag"
+	culture = "norse"
+}

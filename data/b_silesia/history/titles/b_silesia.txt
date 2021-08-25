@@ -1,0 +1,36 @@
+d_upper_silesia = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_lower_silesia = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_opole = {
+	994.1.1 = {
+		holder = 1200
+	}
+}
+c_brzeg = {
+	995.1.1 = {
+		holder = 1201
+	}
+}
+c_nysa = {
+	995.1.1 = {
+		holder = 1202
+	}
+}
+c_breslau = {
+	990.1.1 = {
+		holder = 1203
+	}
+}
+c_sprottau = {
+	994.1.1 = {
+		holder = 1204
+	}
+}
+c_legnica = {
+	996.1.1 = {
+		holder = 1205
+	}
+}

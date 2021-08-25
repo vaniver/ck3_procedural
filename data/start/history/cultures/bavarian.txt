@@ -15,11 +15,12 @@
 	discover_innovation = innovation_casus_belli
 	discover_innovation = innovation_plenary_assemblies
 	discover_innovation = innovation_ledger
+	join_era = culture_era_early_medieval
 }
 
 1000.1.1 = {
 	discover_innovation = innovation_chronicle_writing
+	discover_innovation = innovation_house_soldiers
 	discover_innovation = innovation_battlements
-	discover_innovation = innovation_currency_02
 	discover_innovation = innovation_arched_saddle
 }

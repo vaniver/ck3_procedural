@@ -1,54 +1,54 @@
-800 = {
-	name="Talib"
-	dynasty=160
+1100 = {
+	name="Mubarak"
+	dynasty=220
 	religion="ashari"
 	culture="bedouin"
-	966.5.3 = {
-		birth="966.5.3"
+	988.4.10 = {
+		birth="988.4.10"
 	}
 }
-801 = {
-	name="Mansur"
-	dynasty=161
+1101 = {
+	name="Alim"
+	dynasty=221
 	religion="ashari"
 	culture="bedouin"
-	988.9.13 = {
-		birth="988.9.13"
+	999.8.25 = {
+		birth="999.8.25"
 	}
 }
-802 = {
-	name="Talib"
-	dynasty=162
+1102 = {
+	name="Abdul"
+	dynasty=222
 	religion="ashari"
 	culture="bedouin"
-	922.2.19 = {
-		birth="922.2.19"
+	922.6.2 = {
+		birth="922.6.2"
 	}
 }
-803 = {
-	name="Mahdi"
-	dynasty=163
+1103 = {
+	name="Ya_qub"
+	dynasty=223
 	religion="ashari"
 	culture="bedouin"
-	999.12.14 = {
-		birth="999.12.14"
+	900.9.26 = {
+		birth="900.9.26"
 	}
 }
-804 = {
-	name="Khaireddin"
-	dynasty=164
+1104 = {
+	name="Ubayd"
+	dynasty=224
 	religion="ashari"
 	culture="bedouin"
-	999.5.18 = {
-		birth="999.5.18"
+	922.2.1 = {
+		birth="922.2.1"
 	}
 }
-805 = {
-	name="Hafiz"
-	dynasty=165
+1105 = {
+	name="Ubayd"
+	dynasty=225
 	religion="ashari"
 	culture="bedouin"
-	933.9.3 = {
-		birth="933.9.3"
+	911.8.8 = {
+		birth="911.8.8"
 	}
 }

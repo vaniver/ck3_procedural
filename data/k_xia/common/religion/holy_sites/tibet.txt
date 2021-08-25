@@ -1,0 +1,8 @@
+﻿xingqing = {
+	county = c_xingqing
+	
+	character_modifier = {
+		name = holy_site_xingqing_effect_name
+		same_faith_opinion = 5
+	}
+}

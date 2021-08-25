@@ -1,54 +1,54 @@
-460 = {
+580 = {
 	prefix = "dynnp_a"
 	name = "d_visegrad"
 	culture = "hungarian"
 }
-461 = {
+581 = {
 	prefix = "dynnp_a"
 	name = "d_transylvania"
 	culture = "hungarian"
 }
-462 = {
+582 = {
 	prefix = "dynnp_a"
 	name = "c_szekelyfold"
 	culture = "hungarian"
 }
-463 = {
+583 = {
 	prefix = "dynnp_a"
 	name = "c_gyor"
 	culture = "hungarian"
 }
-464 = {
+584 = {
 	prefix = "dynnp_a"
 	name = "c_sopron"
 	culture = "hungarian"
 }
-465 = {
+585 = {
 	prefix = "dynnp_a"
 	name = "c_beszterce"
 	culture = "hungarian"
 }
-466 = {
+586 = {
 	prefix = "dynnp_a"
 	name = "c_bihar"
 	culture = "hungarian"
 }
-467 = {
+587 = {
 	prefix = "dynnp_a"
 	name = "c_szabolcs"
 	culture = "hungarian"
 }
-468 = {
+588 = {
 	prefix = "dynnp_a"
 	name = "c_ungvar"
 	culture = "hungarian"
 }
-469 = {
+589 = {
 	prefix = "dynnp_a"
 	name = "c_zemplen"
 	culture = "hungarian"
 }
-470 = {
+590 = {
 	prefix = "dynnp_a"
 	name = "c_borsod"
 	culture = "hungarian"

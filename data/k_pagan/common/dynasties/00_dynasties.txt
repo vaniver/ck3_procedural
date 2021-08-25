@@ -1,0 +1,44 @@
+640 = {
+	name = "d_pagan"
+	culture = "burmese"
+}
+641 = {
+	name = "d_ramannadesa"
+	culture = "burmese"
+}
+642 = {
+	name = "c_pegu"
+	culture = "burmese"
+}
+643 = {
+	name = "c_ava"
+	culture = "burmese"
+}
+644 = {
+	name = "c_sagaing"
+	culture = "burmese"
+}
+645 = {
+	name = "c_kusumi"
+	culture = "burmese"
+}
+646 = {
+	name = "c_takon"
+	culture = "burmese"
+}
+647 = {
+	name = "c_madaya"
+	culture = "burmese"
+}
+648 = {
+	name = "c_sriksetra"
+	culture = "burmese"
+}
+649 = {
+	name = "c_magwe"
+	culture = "burmese"
+}
+650 = {
+	name = "c_toungoo"
+	culture = "burmese"
+}

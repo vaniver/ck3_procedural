@@ -628,7 +628,7 @@
 			color = { 0.8 0.3 0.5 }
 			religious_head = d_patriarchate_in_the_east
 			
-			holy_site = orthodox
+			holy_site = tibet
 			holy_site = jerusalem
 			
 			#Main Group

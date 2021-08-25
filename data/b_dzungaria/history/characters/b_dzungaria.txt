@@ -1,0 +1,54 @@
+600 = {
+	name="Sotan"
+	dynasty=120
+	religion="vajrayana"
+	culture="uyghur"
+	966.6.26 = {
+		birth="966.6.26"
+	}
+}
+601 = {
+	name="Pulad"
+	dynasty=121
+	religion="vajrayana"
+	culture="uyghur"
+	922.11.28 = {
+		birth="922.11.28"
+	}
+}
+602 = {
+	name="Uzluk"
+	dynasty=122
+	religion="vajrayana"
+	culture="uyghur"
+	955.7.12 = {
+		birth="955.7.12"
+	}
+}
+603 = {
+	name="Etrek"
+	dynasty=123
+	religion="vajrayana"
+	culture="uyghur"
+	955.9.18 = {
+		birth="955.9.18"
+	}
+}
+604 = {
+	name="Arslan"
+	dynasty=124
+	religion="vajrayana"
+	culture="uyghur"
+	922.1.25 = {
+		birth="922.1.25"
+	}
+}
+605 = {
+	name="Sotan"
+	dynasty=125
+	religion="vajrayana"
+	culture="uyghur"
+	988.1.6 = {
+		birth="988.1.6"
+	}
+}

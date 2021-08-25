@@ -5,32 +5,32 @@ d_romagna = {
 	1000.1.1 = {	change_development_level = 5 }
 }
 c_firenze = {
-	994.1.1 = {
-		holder = 900
+	996.1.1 = {
+		holder = 1300
 	}
 }
 c_siena = {
-	990.1.1 = {
-		holder = 901
+	994.1.1 = {
+		holder = 1301
 	}
 }
 c_arezzo = {
-	995.1.1 = {
-		holder = 902
+	997.1.1 = {
+		holder = 1302
 	}
 }
 c_ravenna = {
-	996.1.1 = {
-		holder = 903
+	998.1.1 = {
+		holder = 1303
 	}
 }
 c_bologna = {
 	992.1.1 = {
-		holder = 904
+		holder = 1304
 	}
 }
 c_ferrara = {
-	996.1.1 = {
-		holder = 905
+	997.1.1 = {
+		holder = 1305
 	}
 }

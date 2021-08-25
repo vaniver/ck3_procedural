@@ -1,0 +1,15 @@
+400 = {
+	prefix = "dynnp_mn"
+	name = "d_palestine"
+	culture = "butr"
+}
+401 = {
+	prefix = "dynnp_mn"
+	name = "c_negev"
+	culture = "butr"
+}
+402 = {
+	prefix = "dynnp_mn"
+	name = "c_acre"
+	culture = "butr"
+}

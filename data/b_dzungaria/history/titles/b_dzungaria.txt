@@ -1,0 +1,36 @@
+d_kara_khoja = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_altay = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_kara_khoja = {
+	996.1.1 = {
+		holder = 600
+	}
+}
+c_beshbalik = {
+	999.1.1 = {
+		holder = 601
+	}
+}
+c_yangjibaliq = {
+	992.1.1 = {
+		holder = 602
+	}
+}
+c_altay = {
+	998.1.1 = {
+		holder = 603
+	}
+}
+c_qinggil = {
+	996.1.1 = {
+		holder = 604
+	}
+}
+c_agairik = {
+	991.1.1 = {
+		holder = 605
+	}
+}

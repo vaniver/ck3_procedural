@@ -1,0 +1,160 @@
+		d_barcelona = {
+			color = { 166 100 72 }
+			color2 = { 255 255 255 }
+			
+			capital = c_barcelona # Barcelona
+			
+			c_barcelona = {
+				color = { 166 100 72 }
+				color2 = { 255 255 255 }
+				
+				b_barcelona = {
+					province = P0
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_loredo = {
+					province = P1
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_sitges = {
+					province = P2
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_manresa = { #Cardona
+					province = P3
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				
+				b_perpignan = { #Perpinya
+					province = P4
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+				b_girona = {
+					province = P5
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+				b_roses = {
+					province = P6
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_tarragona = {
+				color = { 155 90 55 }
+				color2 = { 255 255 255 }
+				
+				b_tarragona = {
+					province = P7
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+				b_tortosa = {
+					province = P8
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+				b_prades = {
+					province = P9
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+				b_urgell = {
+					province = P10
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+				b_berga = {
+					province = P11
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_puigcerda = {
+				color = { 145 105 90 }
+				color2 = { 255 255 255 }
+				
+				b_puigcerda = {
+					province = P12
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+				b_olot = {
+					province = P13
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+				b_vic = {
+					province = P14
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+				b_vielha = {
+					province = P15
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+				b_andorra = { #Seu d'Urgell
+					province = P16
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_lleida = {
+				color = { 160 80 65 }
+				color2 = { 255 255 255 }
+				
+				b_lleida = {
+					province = P17
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+				b_balaguer = {
+					province = P18
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+				b_maials = {
+					province = P19
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+				b_fraga = {
+					province = P20
+
+					color = { 175 75 15 }
+					color2 = { 255 255 255 }
+				}
+				b_barbastro = {
+					province = P21
+
+					color = { 175 75 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

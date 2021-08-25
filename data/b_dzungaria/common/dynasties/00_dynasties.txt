@@ -1,0 +1,30 @@
+120 = {
+	prefix = "dynnp_of"
+	name = "c_kara_khoja"
+	culture = "uyghur"
+}
+121 = {
+	prefix = "dynnp_of"
+	name = "c_beshbalik"
+	culture = "uyghur"
+}
+122 = {
+	prefix = "dynnp_of"
+	name = "c_yangjibaliq"
+	culture = "uyghur"
+}
+123 = {
+	prefix = "dynnp_of"
+	name = "c_altay"
+	culture = "uyghur"
+}
+124 = {
+	prefix = "dynnp_of"
+	name = "c_qinggil"
+	culture = "uyghur"
+}
+125 = {
+	prefix = "dynnp_of"
+	name = "c_agairik"
+	culture = "uyghur"
+}

@@ -1,0 +1,207 @@
+3200 = {
+	name="Taik"
+	dynasty=640
+	religion="theravada"
+	culture="burmese"
+	940.3.1 = {
+		birth="940.3.1"
+	}
+	975.1.1 = {
+		add_spouse = 3201
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+3201 = {
+	name="Ingyin"
+	female = yes
+	religion="theravada"
+	culture="burmese"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.3.20 = {
+		birth="948.3.20"
+	}
+	975.1.1 = {
+		add_spouse = 3200
+	}
+}
+3202 = {
+	name="Thaun"
+	dynasty=640
+	religion="theravada"
+	culture="burmese"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	father=3200
+	mother=3201
+	980.10.19 = {
+		birth="980.10.19"
+	}
+}
+3203 = {
+	name="Pyusawhti"
+	dynasty=640
+	religion="theravada"
+	culture="burmese"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	father=3200
+	mother=3201
+	982.4.10 = {
+		birth="982.4.10"
+	}
+}
+3204 = {
+	name="Ekari"
+	female = yes
+	dynasty=640
+	religion="theravada"
+	culture="burmese"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	father=3200
+	mother=3201
+	983.6.26 = {
+		birth="983.6.26"
+	}
+}
+3210 = {
+	name="Lin"
+	dynasty=641
+	religion="theravada"
+	culture="burmese"
+	trait="physique_good_1"
+	trait="shrewd"
+	966.12.3 = {
+		birth="966.12.3"
+	}
+	985.1.1 = {
+		add_spouse = 3222
+	}
+}
+3220 = {
+	name="Htilominlo"
+	dynasty=644
+	religion="theravada"
+	culture="burmese"
+	941.4.22 = {
+		birth="941.4.22"
+	}
+	990.1.1 = {
+		death="990.1.1"
+	}
+}
+3221 = {
+	name="Kyit"
+	dynasty=644
+	religion="theravada"
+	culture="burmese"
+	father=3220
+	964.3.10 = {
+		birth="964.3.10"
+	}
+}
+3222 = {
+	name="Hkyac"
+	female = yes
+	dynasty=644
+	religion="theravada"
+	culture="burmese"
+	father=3220
+	963.3.25 = {
+		birth="963.3.25"
+	}
+	985.1.1 = {
+		add_spouse = 3210
+	}
+}
+3230 = {
+	name="Htilominlo"
+	dynasty=643
+	religion="theravada"
+	culture="burmese"
+	974.12.17 = {
+		birth="974.12.17"
+	}
+}
+3235 = {
+	name="Bayinnaung"
+	dynasty=644
+	religion="theravada"
+	culture="burmese"
+	977.1.2 = {
+		birth="977.1.2"
+	}
+}
+3240 = {
+	name="Uzana"
+	dynasty=645
+	religion="theravada"
+	culture="burmese"
+	974.6.13 = {
+		birth="974.6.13"
+	}
+}
+3245 = {
+	name="Thura"
+	dynasty=646
+	religion="theravada"
+	culture="burmese"
+	976.2.15 = {
+		birth="976.2.15"
+	}
+}
+3250 = {
+	name="Kyit"
+	dynasty=647
+	religion="theravada"
+	culture="burmese"
+	975.4.23 = {
+		birth="975.4.23"
+	}
+}
+3255 = {
+	name="Kyit"
+	dynasty=648
+	religion="theravada"
+	culture="burmese"
+	976.1.22 = {
+		birth="976.1.22"
+	}
+}
+3260 = {
+	name="Narapati"
+	dynasty=649
+	religion="theravada"
+	culture="burmese"
+	978.3.7 = {
+		birth="978.3.7"
+	}
+}
+3265 = {
+	name="Pyit"
+	dynasty=650
+	religion="theravada"
+	culture="burmese"
+	972.2.16 = {
+		birth="972.2.16"
+	}
+}

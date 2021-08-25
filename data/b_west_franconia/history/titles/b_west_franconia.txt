@@ -5,32 +5,32 @@ d_erbach = {
 	1000.1.1 = {	change_development_level = 5 }
 }
 c_frankfurt = {
-	998.1.1 = {
-		holder = 1000
+	992.1.1 = {
+		holder = 1400
 	}
 }
 c_mainz = {
-	999.1.1 = {
-		holder = 1001
+	996.1.1 = {
+		holder = 1401
 	}
 }
 c_klingenberg = {
-	997.1.1 = {
-		holder = 1002
+	993.1.1 = {
+		holder = 1402
 	}
 }
 c_erbach = {
-	995.1.1 = {
-		holder = 1003
+	999.1.1 = {
+		holder = 1403
 	}
 }
 c_speyer = {
-	993.1.1 = {
-		holder = 1004
+	994.1.1 = {
+		holder = 1404
 	}
 }
 c_durne = {
-	995.1.1 = {
-		holder = 1005
+	994.1.1 = {
+		holder = 1405
 	}
 }

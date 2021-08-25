@@ -1,54 +1,54 @@
-200 = {
-	name="Alim"
-	dynasty=40
+300 = {
+	name="Talib"
+	dynasty=60
 	religion="ashari"
 	culture="bedouin"
-	900.1.10 = {
-		birth="900.1.10"
+	988.5.3 = {
+		birth="988.5.3"
 	}
 }
-201 = {
-	name="Muzaffaraddin"
-	dynasty=41
+301 = {
+	name="Isa"
+	dynasty=61
 	religion="ashari"
 	culture="bedouin"
-	966.3.14 = {
-		birth="966.3.14"
+	911.12.14 = {
+		birth="911.12.14"
 	}
 }
-202 = {
-	name="Mahmud"
-	dynasty=42
+302 = {
+	name="Qawurd"
+	dynasty=62
 	religion="ashari"
 	culture="bedouin"
-	988.11.27 = {
-		birth="988.11.27"
+	922.9.9 = {
+		birth="922.9.9"
 	}
 }
-203 = {
-	name="Abdul-Jaleel"
-	dynasty=43
+303 = {
+	name="Halil"
+	dynasty=63
 	religion="ashari"
 	culture="bedouin"
-	988.6.3 = {
-		birth="988.6.3"
+	922.6.14 = {
+		birth="922.6.14"
 	}
 }
-204 = {
-	name="Mirza"
-	dynasty=44
+304 = {
+	name="Halil"
+	dynasty=64
 	religion="ashari"
 	culture="bedouin"
-	988.11.10 = {
-		birth="988.11.10"
+	977.2.2 = {
+		birth="977.2.2"
 	}
 }
-205 = {
-	name="Mubarak"
-	dynasty=45
+305 = {
+	name="Talib"
+	dynasty=65
 	religion="ashari"
 	culture="bedouin"
-	911.6.28 = {
-		birth="911.6.28"
+	933.11.9 = {
+		birth="933.11.9"
 	}
 }

@@ -1,26 +1,26 @@
 d_prussia = {
 	1000.1.1 = {	change_development_level = 8 }
 	987.1.1 = {
-		holder = 1400
+		holder = 1800
 	}
 }
 c_malbork = {
 	987.1.1 = {
-		holder = 1400
+		holder = 1800
 	}
 }
 c_konigsberg = {
 	987.1.1 = {
-		holder = 1400
+		holder = 1800
 	}
 }
 c_bartenstein = {
-	984.1.1 = {
-		holder = 1401
+	987.1.1 = {
+		holder = 1801
 	}
 }
 c_torun = {
-	994.1.1 = {
-		holder = 1402
+	991.1.1 = {
+		holder = 1802
 	}
 }

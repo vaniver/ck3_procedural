@@ -1,0 +1,24 @@
+180 = {
+	name = "c_qamdo"
+	culture = "bodpa"
+}
+181 = {
+	name = "c_dengqen"
+	culture = "bodpa"
+}
+182 = {
+	name = "c_sog"
+	culture = "bodpa"
+}
+183 = {
+	name = "c_bome"
+	culture = "bodpa"
+}
+184 = {
+	name = "c_banbar"
+	culture = "bodpa"
+}
+185 = {
+	name = "c_baxoi"
+	culture = "bodpa"
+}

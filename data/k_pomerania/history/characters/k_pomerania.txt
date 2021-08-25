@@ -1,35 +1,35 @@
-2400 = {
-	name="Marek"
-	dynasty=480
+3300 = {
+	name="Zygmunt"
+	dynasty=660
 	religion="catholic"
 	culture="pommeranian"
-	940.10.3 = {
-		birth="940.10.3"
+	940.3.7 = {
+		birth="940.3.7"
 	}
 	975.1.1 = {
-		add_spouse = 2401
+		add_spouse = 3301
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
-2401 = {
-	name="Kenna"
+3301 = {
+	name="AndE_la"
 	female = yes
 	religion="catholic"
 	culture="pommeranian"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.11.22 = {
-		birth="948.11.22"
+	948.5.16 = {
+		birth="948.5.16"
 	}
 	975.1.1 = {
-		add_spouse = 2400
+		add_spouse = 3300
 	}
 }
-2402 = {
-	name="Zygmunt"
-	dynasty=480
+3302 = {
+	name="BogisL_aw"
+	dynasty=660
 	religion="catholic"
 	culture="pommeranian"
 	martial=5
@@ -40,15 +40,15 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	father=2400
-	mother=2401
-	980.3.19 = {
-		birth="980.3.19"
+	father=3300
+	mother=3301
+	980.8.21 = {
+		birth="980.8.21"
 	}
 }
-2403 = {
-	name="Tomasz"
-	dynasty=480
+3303 = {
+	name="Rostislav"
+	dynasty=660
 	religion="catholic"
 	culture="pommeranian"
 	martial=3
@@ -58,15 +58,16 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	father=2400
-	mother=2401
-	982.9.17 = {
-		birth="982.9.17"
+	father=3300
+	mother=3301
+	982.8.19 = {
+		birth="982.8.19"
 	}
 }
-2404 = {
-	name="Bartosz"
-	dynasty=480
+3304 = {
+	name="Danuta"
+	female = yes
+	dynasty=660
 	religion="catholic"
 	culture="pommeranian"
 	martial=3
@@ -76,131 +77,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	father=2400
-	mother=2401
-	983.8.25 = {
-		birth="983.8.25"
+	father=3300
+	mother=3301
+	983.6.12 = {
+		birth="983.6.12"
 	}
 }
-2410 = {
-	name="MilosL_aw"
-	dynasty=481
+3310 = {
+	name="Wawrzyniec"
+	dynasty=661
 	religion="catholic"
 	culture="pommeranian"
 	trait="physique_good_1"
 	trait="shrewd"
-	966.2.26 = {
-		birth="966.2.26"
+	962.7.11 = {
+		birth="962.7.11"
 	}
 	985.1.1 = {
-		add_spouse = 2422
+		add_spouse = 3322
 	}
 }
-2420 = {
-	name="Ryszard"
-	dynasty=484
+3320 = {
+	name="Mateusz"
+	dynasty=664
 	religion="catholic"
 	culture="pommeranian"
-	941.3.11 = {
-		birth="941.3.11"
+	942.7.28 = {
+		birth="942.7.28"
 	}
 	990.1.1 = {
 		death="990.1.1"
 	}
 }
-2421 = {
-	name="Leszek"
-	dynasty=484
+3321 = {
+	name="BogisL_aw"
+	dynasty=664
 	religion="catholic"
 	culture="pommeranian"
-	father=2420
-	968.1.19 = {
-		birth="968.1.19"
+	father=3320
+	967.4.25 = {
+		birth="967.4.25"
 	}
 }
-2422 = {
-	name="Jadwiga"
+3322 = {
+	name="Salomea"
 	female = yes
-	dynasty=484
+	dynasty=664
 	religion="catholic"
 	culture="pommeranian"
-	father=2420
-	968.10.19 = {
-		birth="968.10.19"
+	father=3320
+	964.2.18 = {
+		birth="964.2.18"
 	}
 	985.1.1 = {
-		add_spouse = 2410
+		add_spouse = 3310
 	}
 }
-2430 = {
-	name="Ctibor"
-	dynasty=483
+3330 = {
+	name="Janusz"
+	dynasty=663
 	religion="catholic"
 	culture="pommeranian"
-	976.10.21 = {
-		birth="976.10.21"
+	974.5.11 = {
+		birth="974.5.11"
 	}
 }
-2435 = {
-	name="Radomil"
-	dynasty=484
+3335 = {
+	name="Szczepan"
+	dynasty=664
 	religion="catholic"
 	culture="pommeranian"
-	971.9.9 = {
-		birth="971.9.9"
+	979.3.6 = {
+		birth="979.3.6"
 	}
 }
-2440 = {
-	name="VA_clav"
-	dynasty=485
+3340 = {
+	name="Dobromil"
+	dynasty=665
 	religion="catholic"
 	culture="pommeranian"
-	975.11.6 = {
-		birth="975.11.6"
+	973.8.13 = {
+		birth="973.8.13"
 	}
 }
-2445 = {
-	name="Zygmunt"
-	dynasty=486
+3345 = {
+	name="ZdenE_k"
+	dynasty=666
 	religion="catholic"
 	culture="pommeranian"
-	971.8.13 = {
-		birth="971.8.13"
+	974.11.26 = {
+		birth="974.11.26"
 	}
 }
-2450 = {
-	name="Lucjan"
-	dynasty=487
+3350 = {
+	name="BoZ_ydar"
+	dynasty=667
 	religion="catholic"
 	culture="pommeranian"
-	977.3.20 = {
-		birth="977.3.20"
+	979.6.10 = {
+		birth="979.6.10"
 	}
 }
-2455 = {
-	name="Szymon"
-	dynasty=488
+3355 = {
+	name="BogisL_aw"
+	dynasty=668
 	religion="catholic"
 	culture="pommeranian"
-	976.12.11 = {
-		birth="976.12.11"
+	971.7.24 = {
+		birth="971.7.24"
 	}
 }
-2460 = {
-	name="VA_clav"
-	dynasty=489
+3360 = {
+	name="Mieszko"
+	dynasty=669
 	religion="catholic"
 	culture="pommeranian"
-	972.9.11 = {
-		birth="972.9.11"
+	971.10.25 = {
+		birth="971.10.25"
 	}
 }
-2465 = {
-	name="KreS_imir"
-	dynasty=490
+3365 = {
+	name="Marian"
+	dynasty=670
 	religion="catholic"
 	culture="pommeranian"
-	976.4.12 = {
-		birth="976.4.12"
+	978.10.13 = {
+		birth="978.10.13"
 	}
 }

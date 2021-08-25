@@ -6,65 +6,65 @@ k_yemen = {
 d_sanaa = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2600
+		holder = 3500
 	}
 	1000.1.1 = {
-		holder = 2602
+		holder = 3502
 	}
 }
 c_sanaa = {
 	980.1.1 = {
-		holder = 2600
+		holder = 3500
 	}
 	1000.1.1 = {
-		holder = 2602
+		holder = 3502
 	}
 }
 c_tihamat-al-yamani = {
 	980.1.1 = {
-		holder = 2600
+		holder = 3500
 	}
 	1000.1.1 = {
-		holder = 2602
+		holder = 3502
 	}
 }
 c_zabid = {
 	980.1.1 = {
-		holder = 2600
+		holder = 3500
 	}
 	1000.1.1 = {
-		holder = 2602
+		holder = 3502
 	}
 }
 c_taizz = {
-	988.1.1 = {
-		holder = 2630
+	987.1.1 = {
+		holder = 3530
 	}
 }
 c_mandab = {
-	985.1.1 = {
-		holder = 2635
+	981.1.1 = {
+		holder = 3535
 	}
 }
 d_oman = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2610
+		holder = 3510
 	}
 }
 c_nizwa = {
 	985.1.1 = {
-		holder = 2610
+		holder = 3510
 	}
 }
 c_julfar = {
 	990.1.1 = {
-		holder = 2610
+		holder = 3510
 	}
 }
 c_muscat = {
 	990.1.1 = {
-		holder = 2621
+		holder = 3521
 	}
 	990.1.2 = {
 		liege = d_oman
@@ -72,7 +72,7 @@ c_muscat = {
 }
 c_batina = {
 	990.1.1 = {
-		holder = 2640
+		holder = 3540
 	}
 	990.1.2 = {
 		liege = d_oman
@@ -84,22 +84,22 @@ d_hadramawt = {
 }
 c_hadramawt = {
 	985.1.1 = {
-		holder = 2645
+		holder = 3545
 	}
 }
 c_ahqaf = {
 	985.1.1 = {
-		holder = 2650
+		holder = 3550
 	}
 }
 c_jawf-al-yamani = {
 	985.1.1 = {
-		holder = 2645
+		holder = 3545
 	}
 }
 c_wabar = {
 	985.1.1 = {
-		holder = 2650
+		holder = 3550
 	}
 }
 d_mahra = {
@@ -108,16 +108,16 @@ d_mahra = {
 }
 c_mahra = {
 	985.1.1 = {
-		holder = 2655
+		holder = 3555
 	}
 }
 c_dhofar = {
 	985.1.1 = {
-		holder = 2660
+		holder = 3560
 	}
 }
 c_duqm = {
 	985.1.1 = {
-		holder = 2665
+		holder = 3565
 	}
 }

@@ -1,0 +1,98 @@
+##d_xining
+###c_xining
+P0 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	#holding = none
+}
+P3 = {
+	#holding = none
+}
+
+###c_fuqi
+P4 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P5 = {
+	#holding = none
+}
+P6 = {
+	holding = city_holding
+}
+P7 = {
+	#holding = none
+}
+
+###c_gerqen
+P8 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P9 = {
+	holding = church_holding
+}
+P10 = {
+	#holding = none
+}
+P11 = {
+	#holding = none
+}
+
+##d_nagormo
+###c_xining
+P12 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P13 = {
+	#holding = none
+}
+P14 = {
+	holding = city_holding
+}
+P15 = {
+	#holding = none
+}
+
+###c_fuqi
+P16 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P17 = {
+	holding = church_holding
+}
+P18 = {
+	#holding = none
+}
+P19 = {
+	#holding = none
+}
+
+###c_gerqen
+P20 = {
+	culture = tuyuhun
+	religion = lamaism
+	holding = castle_holding
+}
+P21 = {
+	#holding = none
+}
+P22 = {
+	holding = city_holding
+}
+P23 = {
+	#holding = none
+}
+

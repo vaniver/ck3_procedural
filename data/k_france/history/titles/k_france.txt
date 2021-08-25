@@ -6,65 +6,65 @@ k_france = {
 d_valois = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2200
+		holder = 2800
 	}
 	1000.1.1 = {
-		holder = 2202
+		holder = 2802
 	}
 }
 c_ile_de_france = {
 	980.1.1 = {
-		holder = 2200
+		holder = 2800
 	}
 	1000.1.1 = {
-		holder = 2202
+		holder = 2802
 	}
 }
 c_clermont = {
 	980.1.1 = {
-		holder = 2200
+		holder = 2800
 	}
 	1000.1.1 = {
-		holder = 2202
+		holder = 2802
 	}
 }
 c_valois = {
 	980.1.1 = {
-		holder = 2200
+		holder = 2800
 	}
 	1000.1.1 = {
-		holder = 2202
+		holder = 2802
 	}
 }
 c_amiens = {
-	987.1.1 = {
-		holder = 2230
+	983.1.1 = {
+		holder = 2830
 	}
 }
 c_beaumont = {
 	986.1.1 = {
-		holder = 2235
+		holder = 2835
 	}
 }
 d_champagne = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2210
+		holder = 2810
 	}
 }
 c_reims = {
 	985.1.1 = {
-		holder = 2210
+		holder = 2810
 	}
 }
 c_troyes = {
 	990.1.1 = {
-		holder = 2210
+		holder = 2810
 	}
 }
 c_chalons = {
 	990.1.1 = {
-		holder = 2221
+		holder = 2821
 	}
 	990.1.2 = {
 		liege = d_champagne
@@ -72,7 +72,7 @@ c_chalons = {
 }
 c_rethel = {
 	990.1.1 = {
-		holder = 2240
+		holder = 2840
 	}
 	990.1.2 = {
 		liege = d_champagne
@@ -84,22 +84,22 @@ d_orleans = {
 }
 c_orleans = {
 	985.1.1 = {
-		holder = 2245
+		holder = 2845
 	}
 }
 c_chartres = {
 	985.1.1 = {
-		holder = 2250
+		holder = 2850
 	}
 }
 c_montargis = {
 	985.1.1 = {
-		holder = 2245
+		holder = 2845
 	}
 }
 c_sancerre = {
 	985.1.1 = {
-		holder = 2250
+		holder = 2850
 	}
 }
 d_anjou = {
@@ -108,16 +108,16 @@ d_anjou = {
 }
 c_anjou = {
 	985.1.1 = {
-		holder = 2255
+		holder = 2855
 	}
 }
 c_maine = {
 	985.1.1 = {
-		holder = 2260
+		holder = 2860
 	}
 }
 c_sable = {
 	985.1.1 = {
-		holder = 2265
+		holder = 2865
 	}
 }

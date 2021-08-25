@@ -1,0 +1,55 @@
+520 = {
+	prefix = "dynnp_von"
+	name = "d_west_franconia"
+	culture = "franconian"
+}
+521 = {
+	prefix = "dynnp_von"
+	name = "d_hesse"
+	culture = "franconian"
+}
+522 = {
+	prefix = "dynnp_von"
+	name = "c_fulda"
+	culture = "franconian"
+}
+523 = {
+	prefix = "dynnp_von"
+	name = "c_klingenberg"
+	culture = "franconian"
+}
+524 = {
+	prefix = "dynnp_von"
+	name = "c_speyer"
+	culture = "franconian"
+}
+525 = {
+	prefix = "dynnp_von"
+	name = "c_nassau"
+	culture = "franconian"
+}
+526 = {
+	prefix = "dynnp_von"
+	name = "c_wurzburg"
+	culture = "franconian"
+}
+527 = {
+	prefix = "dynnp_von"
+	name = "c_ansbach"
+	culture = "franconian"
+}
+528 = {
+	prefix = "dynnp_von"
+	name = "c_kaiserslautern"
+	culture = "franconian"
+}
+529 = {
+	prefix = "dynnp_von"
+	name = "c_bamberg"
+	culture = "franconian"
+}
+530 = {
+	prefix = "dynnp_von"
+	name = "c_vaihingen"
+	culture = "franconian"
+}

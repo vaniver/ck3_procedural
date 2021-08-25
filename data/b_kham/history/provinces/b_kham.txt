@@ -1,0 +1,98 @@
+##d_qamdo
+###c_qamdo
+P0 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	#holding = none
+}
+P3 = {
+	#holding = none
+}
+
+###c_dengqen
+P4 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P5 = {
+	#holding = none
+}
+P6 = {
+	holding = city_holding
+}
+P7 = {
+	#holding = none
+}
+
+###c_sog
+P8 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P9 = {
+	holding = church_holding
+}
+P10 = {
+	#holding = none
+}
+P11 = {
+	#holding = none
+}
+
+##d_boyul
+###c_qamdo
+P12 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P13 = {
+	#holding = none
+}
+P14 = {
+	holding = city_holding
+}
+P15 = {
+	#holding = none
+}
+
+###c_dengqen
+P16 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P17 = {
+	holding = church_holding
+}
+P18 = {
+	#holding = none
+}
+P19 = {
+	#holding = none
+}
+
+###c_sog
+P20 = {
+	culture = bodpa
+	religion = lamaism
+	holding = castle_holding
+}
+P21 = {
+	#holding = none
+}
+P22 = {
+	holding = city_holding
+}
+P23 = {
+	#holding = none
+}
+

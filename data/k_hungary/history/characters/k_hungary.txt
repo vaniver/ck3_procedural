@@ -1,35 +1,35 @@
-2300 = {
-	name="MO_ric"
-	dynasty=460
+2900 = {
+	name="OrbA_n"
+	dynasty=580
 	religion="catholic"
 	culture="hungarian"
-	940.12.26 = {
-		birth="940.12.26"
+	940.2.17 = {
+		birth="940.2.17"
 	}
 	975.1.1 = {
-		add_spouse = 2301
+		add_spouse = 2901
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
-2301 = {
-	name="MA_ria"
+2901 = {
+	name="Edit"
 	female = yes
 	religion="catholic"
 	culture="hungarian"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.6.16 = {
-		birth="948.6.16"
+	948.6.3 = {
+		birth="948.6.3"
 	}
 	975.1.1 = {
-		add_spouse = 2300
+		add_spouse = 2900
 	}
 }
-2302 = {
-	name="GyO_rgy"
-	dynasty=460
+2902 = {
+	name="JO_zsef"
+	dynasty=580
 	religion="catholic"
 	culture="hungarian"
 	martial=5
@@ -40,15 +40,15 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	father=2300
-	mother=2301
-	980.7.26 = {
-		birth="980.7.26"
+	father=2900
+	mother=2901
+	980.12.15 = {
+		birth="980.12.15"
 	}
 }
-2303 = {
-	name="Vencel"
-	dynasty=460
+2903 = {
+	name="GellE_rt"
+	dynasty=580
 	religion="catholic"
 	culture="hungarian"
 	martial=3
@@ -58,15 +58,16 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	father=2300
-	mother=2301
-	982.12.4 = {
-		birth="982.12.4"
+	father=2900
+	mother=2901
+	982.11.27 = {
+		birth="982.11.27"
 	}
 }
-2304 = {
-	name="Vilmos"
-	dynasty=460
+2904 = {
+	name="Margit"
+	female = yes
+	dynasty=580
 	religion="catholic"
 	culture="hungarian"
 	martial=3
@@ -76,131 +77,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	father=2300
-	mother=2301
-	983.3.24 = {
-		birth="983.3.24"
+	father=2900
+	mother=2901
+	983.2.9 = {
+		birth="983.2.9"
 	}
 }
-2310 = {
-	name="BE_la"
-	dynasty=461
+2910 = {
+	name="Vencel"
+	dynasty=581
 	religion="catholic"
 	culture="hungarian"
 	trait="physique_good_1"
 	trait="shrewd"
-	966.6.15 = {
-		birth="966.6.15"
+	962.5.16 = {
+		birth="962.5.16"
 	}
 	985.1.1 = {
-		add_spouse = 2322
+		add_spouse = 2922
 	}
 }
-2320 = {
-	name="LO_rinc"
-	dynasty=464
+2920 = {
+	name="Zsigmond"
+	dynasty=584
 	religion="catholic"
 	culture="hungarian"
-	948.2.20 = {
-		birth="948.2.20"
+	940.9.24 = {
+		birth="940.9.24"
 	}
 	990.1.1 = {
 		death="990.1.1"
 	}
 }
-2321 = {
-	name="MO_ric"
-	dynasty=464
+2921 = {
+	name="Benedek"
+	dynasty=584
 	religion="catholic"
 	culture="hungarian"
-	father=2320
-	968.7.26 = {
-		birth="968.7.26"
+	father=2920
+	960.6.12 = {
+		birth="960.6.12"
 	}
 }
-2322 = {
-	name="Terezia"
+2922 = {
+	name="Adelaida"
 	female = yes
-	dynasty=464
+	dynasty=584
 	religion="catholic"
 	culture="hungarian"
-	father=2320
-	966.2.23 = {
-		birth="966.2.23"
+	father=2920
+	969.6.12 = {
+		birth="969.6.12"
 	}
 	985.1.1 = {
-		add_spouse = 2310
+		add_spouse = 2910
 	}
 }
-2330 = {
-	name="GE_za"
-	dynasty=463
+2930 = {
+	name="BE_la"
+	dynasty=583
 	religion="catholic"
 	culture="hungarian"
-	975.10.6 = {
-		birth="975.10.6"
+	976.10.1 = {
+		birth="976.10.1"
 	}
 }
-2335 = {
+2935 = {
+	name="AndrA_s"
+	dynasty=584
+	religion="catholic"
+	culture="hungarian"
+	979.5.22 = {
+		birth="979.5.22"
+	}
+}
+2940 = {
+	name="Zsigmond"
+	dynasty=585
+	religion="catholic"
+	culture="hungarian"
+	972.1.18 = {
+		birth="972.1.18"
+	}
+}
+2945 = {
+	name="JA_kob"
+	dynasty=586
+	religion="catholic"
+	culture="hungarian"
+	973.11.5 = {
+		birth="973.11.5"
+	}
+}
+2950 = {
+	name="LA_szlO_"
+	dynasty=587
+	religion="catholic"
+	culture="hungarian"
+	974.4.17 = {
+		birth="974.4.17"
+	}
+}
+2955 = {
+	name="ZoltA_n"
+	dynasty=588
+	religion="catholic"
+	culture="hungarian"
+	974.11.16 = {
+		birth="974.11.16"
+	}
+}
+2960 = {
+	name="O_dO_n"
+	dynasty=589
+	religion="catholic"
+	culture="hungarian"
+	976.11.21 = {
+		birth="976.11.21"
+	}
+}
+2965 = {
 	name="PA_l"
-	dynasty=464
+	dynasty=590
 	religion="catholic"
 	culture="hungarian"
-	976.11.28 = {
-		birth="976.11.28"
-	}
-}
-2340 = {
-	name="JA_nos"
-	dynasty=465
-	religion="catholic"
-	culture="hungarian"
-	974.6.4 = {
-		birth="974.6.4"
-	}
-}
-2345 = {
-	name="OszkA_r"
-	dynasty=466
-	religion="catholic"
-	culture="hungarian"
-	975.9.13 = {
-		birth="975.9.13"
-	}
-}
-2350 = {
-	name="A_lmos"
-	dynasty=467
-	religion="catholic"
-	culture="hungarian"
-	971.8.13 = {
-		birth="971.8.13"
-	}
-}
-2355 = {
-	name="GA_spA_r"
-	dynasty=468
-	religion="catholic"
-	culture="hungarian"
-	976.5.19 = {
-		birth="976.5.19"
-	}
-}
-2360 = {
-	name="A_bel"
-	dynasty=469
-	religion="catholic"
-	culture="hungarian"
-	979.2.17 = {
-		birth="979.2.17"
-	}
-}
-2365 = {
-	name="Gazsi"
-	dynasty=470
-	religion="catholic"
-	culture="hungarian"
-	970.1.12 = {
-		birth="970.1.12"
+	974.4.18 = {
+		birth="974.4.18"
 	}
 }

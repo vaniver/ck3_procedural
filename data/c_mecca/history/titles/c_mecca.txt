@@ -1,26 +1,26 @@
 d_mecca = {
 	1000.1.1 = {	change_development_level = 8 }
 	987.1.1 = {
-		holder = 1300
+		holder = 1700
 	}
 }
 c_mecca = {
 	987.1.1 = {
-		holder = 1300
+		holder = 1700
 	}
 }
 c_medina = {
 	987.1.1 = {
-		holder = 1300
+		holder = 1700
 	}
 }
 c_taif = {
 	987.1.1 = {
-		holder = 1301
+		holder = 1701
 	}
 }
 c_khaybar = {
 	999.1.1 = {
-		holder = 1302
+		holder = 1702
 	}
 }

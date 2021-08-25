@@ -3,7 +3,7 @@
 ###c_cairo
 P0 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P1 = {
@@ -25,7 +25,7 @@ P5 = {
 ###c_damietta
 P6 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P7 = {
@@ -41,7 +41,7 @@ P9 = {
 ###c_al-gharbiya
 P10 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P11 = {
@@ -57,7 +57,7 @@ P13 = {
 ###c_giza
 P14 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P15 = {
@@ -73,7 +73,7 @@ P17 = {
 ###c_al-buhaira
 P18 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P19 = {
@@ -90,7 +90,7 @@ P21 = {
 ###c_cairo
 P22 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P23 = {
@@ -106,7 +106,7 @@ P25 = {
 ###c_damietta
 P26 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P27 = {
@@ -122,7 +122,7 @@ P29 = {
 ###c_al-gharbiya
 P30 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P31 = {
@@ -135,7 +135,7 @@ P32 = {
 ###c_giza
 P33 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P34 = {
@@ -149,7 +149,7 @@ P35 = {
 ###c_cairo
 P36 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P37 = {
@@ -165,7 +165,7 @@ P39 = {
 ###c_damietta
 P40 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P41 = {
@@ -181,7 +181,7 @@ P43 = {
 ###c_al-gharbiya
 P44 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P45 = {
@@ -194,7 +194,7 @@ P46 = {
 ###c_giza
 P47 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P48 = {
@@ -208,7 +208,7 @@ P49 = {
 ###c_cairo
 P50 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P51 = {
@@ -224,7 +224,7 @@ P53 = {
 ###c_damietta
 P54 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P55 = {
@@ -240,7 +240,7 @@ P57 = {
 ###c_al-gharbiya
 P58 = {
 	culture = egyptian
-	religion = ashari
+	religion = mutazila
 	holding = castle_holding
 }
 P59 = {

@@ -1,0 +1,251 @@
+		d_kara_khoja = {
+			color = { 135 54 95 }
+			color2= { 255 255 255 }
+			
+			capital = c_kara_khoja
+			
+			cultural_names = {
+				uyghur = cn_qocho
+				han = cn_gaochan
+			}
+			
+			c_kara_khoja = {
+				color = { 145 55 100 }
+				color2= { 255 255 255 }
+				
+				cultural_names = {
+					uyghur = cn_qocho
+					han = cn_gaochan
+				}
+				
+				b_kara_khoja = {
+					province = P0
+					
+					color = { 145 55 100 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						uyghur = cn_qocho
+						han = cn_gaochan
+					}
+				}
+				b_yarkhoto = {
+					province = P1
+					
+					color = { 145 55 100 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_jiaohe
+					}
+				}
+				b_turpan = {
+					province = P2
+					
+					color = { 145 55 100 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_tulufan
+					}
+				}
+				b_yidu = {
+					province = P3
+					
+					color = { 145 55 100 }
+					color2= { 255 255 255 }
+				}
+			}
+			c_beshbalik = {
+				color = { 120 45 115 }
+				color2= { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_urumqi
+					han = cn_yizhou
+				}
+				
+				b_beshbalik = {
+					province = P4
+					
+					color = { 120 45 115 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_urumqi
+						han = cn_beiting
+					}
+				}
+				b_fukang = {
+					province = P5
+					
+					color = { 120 45 115 }
+					color2= { 255 255 255 }
+				}
+				b_cheshi = {
+					province = P6
+					
+					color = { 120 45 115 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_tingzhou
+					}
+				}
+				b_jimsar = {
+					province = P7
+					
+					color = { 120 45 115 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_yulishi
+					}
+				}
+			}
+			c_yangjibaliq = {
+				color = { 115 60 80 }
+				color2= { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_changji
+				}
+				
+				b_yangjibalik = {
+					province = P8
+					
+					color = { 115 60 80 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_changji
+					}
+				}
+				b_bugur = {
+					province = P9
+					
+					color = { 115 60 80 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_luntai
+						mongol = cn_bu_gu_r
+					}
+				}
+				b_manas = {
+					province = P10
+					
+					color = { 115 60 80 }
+					color2= { 255 255 255 }
+				}
+				b_wutanzili = {
+					province = P11
+					
+					color = { 115 60 80 }
+					color2= { 255 255 255 }
+				}
+			}
+		}
+		
+		d_altay = {
+			color = { 94 69 150 }
+			color2= { 255 255 255 }
+			
+			capital = c_altay
+			
+			c_altay = {
+				color = { 80 60 125 }
+				color2= { 255 255 255 }
+				
+				b_altay = {
+					province = P12
+					
+					color = { 80 60 125 }
+					color2= { 255 255 255 }
+				}
+				b_kulris = {
+					province = P13
+					
+					color = { 80 60 125 }
+					color2= { 255 255 255 }
+				}
+				b_kran_DZU = {
+					province = P14
+					
+					color = { 80 60 125 }
+					color2= { 255 255 255 }
+				}
+				b_talta = {
+					province = P15
+					
+					color = { 80 60 125 }
+					color2= { 255 255 255 }
+				}
+			}
+			c_qinggil = {
+				color = { 60 60 160 }
+				color2= { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_qinghe
+				}
+				
+				b_qinggil = {
+					province = P16
+					
+					color = { 60 60 160 }
+					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_qinghe
+					}
+				}
+				b_chungul = {
+					province = P17
+					
+					color = { 60 60 160 }
+					color2= { 255 255 255 }
+				}
+				b_zagan-gol = {
+					province = P18
+					
+					color = { 60 60 160 }
+					color2= { 255 255 255 }
+				}
+				b_tengerge = {
+					province = P19
+					
+					color = { 60 60 160 }
+					color2= { 255 255 255 }
+				}
+			}
+			c_agairik = {
+				color = { 65 60 115 }
+				color2= { 255 255 255 }
+			
+				b_agairik = {
+					province = P20
+					
+					color = { 65 60 115 }
+					color2= { 255 255 255 }
+				}
+				b_bostal = {
+					province = P21
+					
+					color = { 65 60 115 }
+					color2= { 255 255 255 }
+				}
+				b_belesek = {
+					province = P22
+					
+					color = { 65 60 115 }
+					color2= { 255 255 255 }
+				}
+				b_kurchum = {
+					province = P23
+					
+					color = { 45 60 110 }
+					color2= { 255 255 255 }
+				}
+			}
+		}

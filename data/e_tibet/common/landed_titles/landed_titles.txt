@@ -1,0 +1,11 @@
+e_tibet = {
+	color = { 250 40 0 }
+	color2 = { 220 220 20 }
+	
+	k_tibet_middle = {
+		color = { 250 40 0 }
+		color2 = { 220 220 20 }
+		
+		can_create = {
+			always = no
+		}

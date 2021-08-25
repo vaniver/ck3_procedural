@@ -1,54 +1,54 @@
-520 = {
+700 = {
 	prefix = "dynnp_mn"
 	name = "d_sanaa"
 	culture = "yemeni"
 }
-521 = {
+701 = {
 	prefix = "dynnp_mn"
 	name = "d_oman"
 	culture = "yemeni"
 }
-522 = {
+702 = {
 	prefix = "dynnp_mn"
 	name = "c_muscat"
 	culture = "yemeni"
 }
-523 = {
+703 = {
 	prefix = "dynnp_mn"
 	name = "c_taizz"
 	culture = "yemeni"
 }
-524 = {
+704 = {
 	prefix = "dynnp_mn"
 	name = "c_mandab"
 	culture = "yemeni"
 }
-525 = {
+705 = {
 	prefix = "dynnp_mn"
 	name = "c_batina"
 	culture = "yemeni"
 }
-526 = {
+706 = {
 	prefix = "dynnp_mn"
 	name = "c_hadramawt"
 	culture = "yemeni"
 }
-527 = {
+707 = {
 	prefix = "dynnp_mn"
 	name = "c_ahqaf"
 	culture = "yemeni"
 }
-528 = {
+708 = {
 	prefix = "dynnp_mn"
 	name = "c_mahra"
 	culture = "yemeni"
 }
-529 = {
+709 = {
 	prefix = "dynnp_mn"
 	name = "c_dhofar"
 	culture = "yemeni"
 }
-530 = {
+710 = {
 	prefix = "dynnp_mn"
 	name = "c_duqm"
 	culture = "yemeni"

@@ -1,0 +1,123 @@
+k_xia = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_xia = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 3600
+	}
+	1000.1.1 = {
+		holder = 3602
+	}
+}
+c_xingqing = {
+	980.1.1 = {
+		holder = 3600
+	}
+	1000.1.1 = {
+		holder = 3602
+	}
+}
+c_zhenfan = {
+	980.1.1 = {
+		holder = 3600
+	}
+	1000.1.1 = {
+		holder = 3602
+	}
+}
+c_tenggeli = {
+	980.1.1 = {
+		holder = 3600
+	}
+	1000.1.1 = {
+		holder = 3602
+	}
+}
+c_shanzhou = {
+	989.1.1 = {
+		holder = 3630
+	}
+}
+c_wuda = {
+	989.1.1 = {
+		holder = 3635
+	}
+}
+d_guiyi = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 3610
+	}
+}
+c_guazhou = {
+	985.1.1 = {
+		holder = 3610
+	}
+}
+c_hongliuyuan = {
+	990.1.1 = {
+		holder = 3610
+	}
+}
+c_yumenguan = {
+	990.1.1 = {
+		holder = 3621
+	}
+	990.1.2 = {
+		liege = d_guiyi
+	}
+}
+c_subei = {
+	990.1.1 = {
+		holder = 3640
+	}
+	990.1.2 = {
+		liege = d_guiyi
+	}
+}
+d_ganzhou = {
+	900.1.1 = {
+	}
+}
+c_ganzhou = {
+	985.1.1 = {
+		holder = 3645
+	}
+}
+c_linze = {
+	985.1.1 = {
+		holder = 3650
+	}
+}
+c_suzhou = {
+	985.1.1 = {
+		holder = 3645
+	}
+}
+c_yumen = {
+	985.1.1 = {
+		holder = 3650
+	}
+}
+d_yijinai = {
+	900.1.1 = {
+	}
+}
+c_yijinai = {
+	985.1.1 = {
+		holder = 3655
+	}
+}
+c_heihe = {
+	985.1.1 = {
+		holder = 3660
+	}
+}
+c_wuluhai = {
+	985.1.1 = {
+		holder = 3665
+	}
+}

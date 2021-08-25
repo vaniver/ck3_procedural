@@ -1,0 +1,399 @@
+		d_upper_silesia = {
+			color = { 180 20 100 }
+			color2 = { 255 255 255 }
+			
+			capital = c_opole # Opole
+
+			c_opole = {
+				color = { 180 20 100 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					franconian = cn_oppeln
+					saxon = cn_oppeln
+					swabian = cn_oppeln
+					bavarian = cn_oppeln
+				}
+				
+				b_opole = {
+					province = P0
+
+					color = { 180 20 100 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_oppeln
+						saxon = cn_oppeln
+						swabian = cn_oppeln
+						bavarian = cn_oppeln
+					}
+				}
+				b_kreuzburg = {
+					province = P1
+
+					color = { 180 20 100 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_kluczbork
+						czech = cn_kluczbork
+						polabian = cn_kluczbork
+						pommeranian = cn_kluczbork
+					}
+				}
+				b_strehlitz = {
+					province = P2
+
+					color = { 180 20 100 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_strzelce
+						polabian = cn_strzelce
+						pommeranian = cn_strzelce
+					}
+				}
+				b_ratibor = {
+					province = P3
+
+					color = { 190 35 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_raciborz
+						polabian = cn_raciborz
+						pommeranian = cn_raciborz
+					}
+				}
+			}
+			
+			c_brzeg = {
+				color = { 169 35 75 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					franconian = cn_brieg
+					saxon = cn_brieg
+					swabian = cn_brieg
+					bavarian = cn_brieg
+				}
+				
+				b_brzeg = {
+					province = P4
+
+					color = { 169 35 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_brieg
+						saxon = cn_brieg
+						swabian = cn_brieg
+						bavarian = cn_brieg
+					}
+				}
+				b_olawa = {
+					province = P5
+
+					color = { 169 35 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_ohlau
+						saxon = cn_ohlau
+						swabian = cn_ohlau
+						bavarian = cn_ohlau
+					}
+				}
+				b_otmunchow = {
+					province = P6
+
+					color = { 169 35 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_ottmachau
+						saxon = cn_ottmachau
+						swabian = cn_ottmachau
+						bavarian = cn_ottmachau
+					}
+				}
+				b_bethen = {
+					province = P7
+
+					color = { 190 5 70 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_bytom
+						czech = cn_bytom
+						polabian = cn_bytom
+						pommeranian = cn_bytom
+					}
+				}
+			}
+		
+			c_nysa = {
+				color = { 175 85 105 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					franconian = cn_neisse
+					saxon = cn_neisse
+					swabian = cn_neisse
+					bavarian = cn_neisse
+				}
+
+				b_nysa = {
+					province = P8
+
+					color = { 175 85 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_neisse
+						saxon = cn_neisse
+						swabian = cn_neisse
+						bavarian = cn_neisse
+					}
+				}
+				b_glogowek = {
+					province = P9
+
+					color = { 175 85 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_oberglogau
+						saxon = cn_oberglogau
+						swabian = cn_oberglogau
+						bavarian = cn_oberglogau
+					}
+				}
+				b_frankenstein = {
+					province = P10
+
+					color = { 175 85 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_zabkowice
+						polabian = cn_zabkowice
+						pommeranian = cn_zabkowice
+					}
+				}
+				b_cieszyn = {
+					province = P11
+
+					color = { 190 20 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_teschen
+						saxon = cn_teschen
+						swabian = cn_teschen
+						bavarian = cn_teschen
+					}
+				}
+			}
+		}
+		d_lower_silesia = {
+			color = { 230 60 20 }
+			color2 = { 255 255 255 }
+			
+			capital = c_breslau # Opole
+		
+			c_breslau = {
+				color = { 218 37 15 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					polish = cn_wroclaw
+					polabian = cn_wroclaw
+					pommeranian = cn_wroclaw
+					czech = cn_vratislav
+				}
+
+				b_breslau = {
+					province = P12
+
+					color = { 218 37 15 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_wroclaw
+						polabian = cn_wroclaw
+						pommeranian = cn_wroclaw
+						czech = cn_vratislav
+					}
+				}
+				b_bardo = {
+					province = P13
+
+					color = { 218 37 15 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_wartha
+						saxon = cn_wartha
+						swabian = cn_wartha
+						bavarian = cn_wartha
+					}
+				}
+				b_miliez = {
+					province = P14
+
+					color = { 225 105 40 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_militsch
+						saxon = cn_militsch
+						swabian = cn_militsch
+						bavarian = cn_militsch
+					}
+				}
+				b_olesnica = {
+					province = P15
+
+					color = { 225 105 40 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_oels
+						saxon = cn_oels
+						swabian = cn_oels
+						bavarian = cn_oels
+					}
+				}
+			}
+			c_sprottau = {
+				color = { 240 115 75 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					polish = cn_szprotawa
+					polabian = cn_szprotawa
+					pommeranian = cn_szprotawa
+				}
+
+				b_sprottau = {
+					province = P16
+
+					color = { 240 115 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_szprotawa
+						polabian = cn_szprotawa
+						pommeranian = cn_szprotawa
+					}
+				}
+				b_zagan = {
+					province = P17
+
+					color = { 240 115 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_sagan
+						saxon = cn_sagan
+						swabian = cn_sagan
+						bavarian = cn_sagan
+					}
+				}
+				b_nowogrodziec = {
+					province = P18
+
+					color = { 240 115 75 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_naumburg
+						saxon = cn_naumburg
+						swabian = cn_naumburg
+						bavarian = cn_naumburg
+						#Yes, it's another Naumburg
+					}
+				}
+				b_przemkow = {
+					province = P19
+
+					color = { 195 75 60 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_primkenau
+						saxon = cn_primkenau
+						swabian = cn_primkenau
+						bavarian = cn_primkenau
+					}
+				}
+			}
+			c_legnica = {
+				color = { 225 80 40 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					czech = cn_lehnice
+					franconian = cn_liegnitz
+					saxon = cn_liegnitz
+					swabian = cn_liegnitz
+					bavarian = cn_liegnitz
+				}
+
+				b_legnica = {
+					province = P20
+
+					color = { 225 80 40 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_lehnice
+						franconian = cn_liegnitz
+						saxon = cn_liegnitz
+						swabian = cn_liegnitz
+						bavarian = cn_liegnitz
+					}
+				}
+				b_glogow = {
+					province = P21
+
+					color = { 225 80 40 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						czech = cn_hlohov
+						franconian = cn_glogau
+						saxon = cn_glogau
+						swabian = cn_glogau
+						bavarian = cn_glogau
+					}
+				}
+				b_sadowel = {
+					province = P22
+
+					color = { 225 80 40 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						franconian = cn_sandelswalde
+						saxon = cn_sandelswalde
+						swabian = cn_sandelswalde
+						bavarian = cn_sandelswalde
+					}
+				}
+				b_schweibus = {
+					province = P23
+
+					color = { 235 45 5 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_swiebodzin
+						czech = cn_swiebodzin
+						polabian = cn_swiebodzin
+						pommeranian = cn_swiebodzin
+					}
+				}
+			}
+		}

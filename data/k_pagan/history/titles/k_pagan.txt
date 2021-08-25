@@ -1,0 +1,123 @@
+k_pagan = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_pagan = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 3200
+	}
+	1000.1.1 = {
+		holder = 3202
+	}
+}
+c_pagan = {
+	980.1.1 = {
+		holder = 3200
+	}
+	1000.1.1 = {
+		holder = 3202
+	}
+}
+c_kyaukse = {
+	980.1.1 = {
+		holder = 3200
+	}
+	1000.1.1 = {
+		holder = 3202
+	}
+}
+c_minbu = {
+	980.1.1 = {
+		holder = 3200
+	}
+	1000.1.1 = {
+		holder = 3202
+	}
+}
+c_ava = {
+	987.1.1 = {
+		holder = 3230
+	}
+}
+c_sagaing = {
+	980.1.1 = {
+		holder = 3235
+	}
+}
+d_ramannadesa = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 3210
+	}
+}
+c_thaton = {
+	985.1.1 = {
+		holder = 3210
+	}
+}
+c_dagon = {
+	990.1.1 = {
+		holder = 3210
+	}
+}
+c_pegu = {
+	990.1.1 = {
+		holder = 3221
+	}
+	990.1.2 = {
+		liege = d_ramannadesa
+	}
+}
+c_kusumi = {
+	990.1.1 = {
+		holder = 3240
+	}
+	990.1.2 = {
+		liege = d_ramannadesa
+	}
+}
+d_tagaung = {
+	900.1.1 = {
+	}
+}
+c_takon = {
+	985.1.1 = {
+		holder = 3245
+	}
+}
+c_madaya = {
+	985.1.1 = {
+		holder = 3250
+	}
+}
+c_hanlan = {
+	985.1.1 = {
+		holder = 3245
+	}
+}
+c_kale = {
+	985.1.1 = {
+		holder = 3250
+	}
+}
+d_sriksetra = {
+	900.1.1 = {
+	}
+}
+c_sriksetra = {
+	985.1.1 = {
+		holder = 3255
+	}
+}
+c_magwe = {
+	985.1.1 = {
+		holder = 3260
+	}
+}
+c_toungoo = {
+	985.1.1 = {
+		holder = 3265
+	}
+}

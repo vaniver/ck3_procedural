@@ -1,0 +1,11 @@
+e_christendom = {
+	color = { 190 200 190 }
+	color2 = { 220 220 20 }
+	
+	k_christendom_middle = {
+		color = { 180 190 180 }
+		color2 = { 255 255 20 }
+		
+		can_create = {
+			always = no
+		}

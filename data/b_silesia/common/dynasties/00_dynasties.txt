@@ -1,0 +1,30 @@
+240 = {
+	prefix = "dynnp_of"
+	name = "c_opole"
+	culture = "polish"
+}
+241 = {
+	prefix = "dynnp_of"
+	name = "c_brzeg"
+	culture = "polish"
+}
+242 = {
+	prefix = "dynnp_of"
+	name = "c_nysa"
+	culture = "polish"
+}
+243 = {
+	prefix = "dynnp_of"
+	name = "c_breslau"
+	culture = "polish"
+}
+244 = {
+	prefix = "dynnp_of"
+	name = "c_sprottau"
+	culture = "polish"
+}
+245 = {
+	prefix = "dynnp_of"
+	name = "c_legnica"
+	culture = "polish"
+}

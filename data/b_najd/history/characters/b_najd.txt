@@ -1,54 +1,54 @@
-700 = {
-	name="Najib"
-	dynasty=140
+1000 = {
+	name="Mahmud"
+	dynasty=200
 	religion="ashari"
 	culture="bedouin"
-	900.11.20 = {
-		birth="900.11.20"
+	911.4.17 = {
+		birth="911.4.17"
 	}
 }
-701 = {
-	name="Abdullah"
-	dynasty=141
+1001 = {
+	name="Shujah"
+	dynasty=201
 	religion="ashari"
 	culture="bedouin"
-	944.2.8 = {
-		birth="944.2.8"
+	966.8.3 = {
+		birth="966.8.3"
 	}
 }
-702 = {
-	name="Sami"
-	dynasty=142
+1002 = {
+	name="Abu-Bakr"
+	dynasty=202
 	religion="ashari"
 	culture="bedouin"
-	955.12.14 = {
-		birth="955.12.14"
+	933.9.28 = {
+		birth="933.9.28"
 	}
 }
-703 = {
-	name="Aghlab"
-	dynasty=143
+1003 = {
+	name="Mahmud"
+	dynasty=203
 	religion="ashari"
 	culture="bedouin"
-	933.9.27 = {
-		birth="933.9.27"
+	977.7.19 = {
+		birth="977.7.19"
 	}
 }
-704 = {
-	name="Ramadan"
-	dynasty=144
+1004 = {
+	name="Sa_daddin"
+	dynasty=204
 	religion="ashari"
 	culture="bedouin"
-	944.12.9 = {
-		birth="944.12.9"
+	988.5.12 = {
+		birth="988.5.12"
 	}
 }
-705 = {
-	name="Sulayman"
-	dynasty=145
+1005 = {
+	name="Alim"
+	dynasty=205
 	religion="ashari"
 	culture="bedouin"
-	966.5.4 = {
-		birth="966.5.4"
+	977.11.13 = {
+		birth="977.11.13"
 	}
 }

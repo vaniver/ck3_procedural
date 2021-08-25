@@ -1,54 +1,54 @@
-500 = {
-	name="Ekbert"
-	dynasty=100
+700 = {
+	name="Baldur"
+	dynasty=140
 	religion="catholic"
 	culture="franconian"
-	988.1.6 = {
-		birth="988.1.6"
+	999.5.19 = {
+		birth="999.5.19"
 	}
 }
-501 = {
-	name="Helferich"
-	dynasty=101
+701 = {
+	name="Viktor"
+	dynasty=141
 	religion="catholic"
 	culture="franconian"
-	966.11.13 = {
-		birth="966.11.13"
+	933.9.8 = {
+		birth="933.9.8"
 	}
 }
-502 = {
-	name="Amadeus"
-	dynasty=102
+702 = {
+	name="Gebhard"
+	dynasty=142
 	religion="catholic"
 	culture="franconian"
-	922.10.27 = {
-		birth="922.10.27"
+	999.12.1 = {
+		birth="999.12.1"
 	}
 }
-503 = {
-	name="Liudolf"
-	dynasty=103
+703 = {
+	name="Gebhard"
+	dynasty=143
 	religion="catholic"
 	culture="franconian"
-	988.12.26 = {
-		birth="988.12.26"
+	911.7.1 = {
+		birth="911.7.1"
 	}
 }
-504 = {
-	name="Ademar"
-	dynasty=104
+704 = {
+	name="Johann"
+	dynasty=144
 	religion="catholic"
 	culture="franconian"
-	977.6.13 = {
-		birth="977.6.13"
+	944.11.19 = {
+		birth="944.11.19"
 	}
 }
-505 = {
-	name="Giselbert"
-	dynasty=105
+705 = {
+	name="Johann"
+	dynasty=145
 	religion="catholic"
 	culture="franconian"
-	977.2.27 = {
-		birth="977.2.27"
+	977.9.21 = {
+		birth="977.9.21"
 	}
 }

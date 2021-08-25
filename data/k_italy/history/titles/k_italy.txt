@@ -1,0 +1,123 @@
+k_italy = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_lombardia = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 3000
+	}
+	1000.1.1 = {
+		holder = 3002
+	}
+}
+c_lombardia = {
+	980.1.1 = {
+		holder = 3000
+	}
+	1000.1.1 = {
+		holder = 3002
+	}
+}
+c_cremona = {
+	980.1.1 = {
+		holder = 3000
+	}
+	1000.1.1 = {
+		holder = 3002
+	}
+}
+c_brescia = {
+	980.1.1 = {
+		holder = 3000
+	}
+	1000.1.1 = {
+		holder = 3002
+	}
+}
+c_parma = {
+	982.1.1 = {
+		holder = 3030
+	}
+}
+c_trent = {
+	989.1.1 = {
+		holder = 3035
+	}
+}
+d_verona = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 3010
+	}
+}
+c_verona = {
+	985.1.1 = {
+		holder = 3010
+	}
+}
+c_padua = {
+	990.1.1 = {
+		holder = 3010
+	}
+}
+c_treviso = {
+	990.1.1 = {
+		holder = 3021
+	}
+	990.1.2 = {
+		liege = d_verona
+	}
+}
+c_friuli = {
+	990.1.1 = {
+		holder = 3040
+	}
+	990.1.2 = {
+		liege = d_verona
+	}
+}
+d_piedmonte = {
+	900.1.1 = {
+	}
+}
+c_monferrato = {
+	985.1.1 = {
+		holder = 3045
+	}
+}
+c_turin = {
+	985.1.1 = {
+		holder = 3050
+	}
+}
+c_novara = {
+	985.1.1 = {
+		holder = 3045
+	}
+}
+c_cuneo = {
+	985.1.1 = {
+		holder = 3050
+	}
+}
+d_genoa = {
+	900.1.1 = {
+	}
+}
+c_genoa = {
+	985.1.1 = {
+		holder = 3055
+	}
+}
+c_modena = {
+	985.1.1 = {
+		holder = 3060
+	}
+}
+c_mantua = {
+	985.1.1 = {
+		holder = 3065
+	}
+}

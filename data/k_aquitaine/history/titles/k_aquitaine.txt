@@ -6,65 +6,65 @@ k_aquitaine = {
 d_gascogne = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 1800
+		holder = 2300
 	}
 	1000.1.1 = {
-		holder = 1802
+		holder = 2302
 	}
 }
 c_bordeaux = {
 	980.1.1 = {
-		holder = 1800
+		holder = 2300
 	}
 	1000.1.1 = {
-		holder = 1802
+		holder = 2302
 	}
 }
 c_labourd = {
 	980.1.1 = {
-		holder = 1800
+		holder = 2300
 	}
 	1000.1.1 = {
-		holder = 1802
+		holder = 2302
 	}
 }
 c_albret = {
 	980.1.1 = {
-		holder = 1800
+		holder = 2300
 	}
 	1000.1.1 = {
-		holder = 1802
+		holder = 2302
 	}
 }
 c_comminges = {
-	985.1.1 = {
-		holder = 1830
+	988.1.1 = {
+		holder = 2330
 	}
 }
 c_armagnac = {
-	980.1.1 = {
-		holder = 1835
+	988.1.1 = {
+		holder = 2335
 	}
 }
 d_toulouse = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 1810
+		holder = 2310
 	}
 }
 c_toulouse = {
 	985.1.1 = {
-		holder = 1810
+		holder = 2310
 	}
 }
 c_rouergue = {
 	990.1.1 = {
-		holder = 1810
+		holder = 2310
 	}
 }
 c_quercy = {
 	990.1.1 = {
-		holder = 1821
+		holder = 2321
 	}
 	990.1.2 = {
 		liege = d_toulouse
@@ -72,7 +72,7 @@ c_quercy = {
 }
 c_gevaudan = {
 	990.1.1 = {
-		holder = 1840
+		holder = 2340
 	}
 	990.1.2 = {
 		liege = d_toulouse
@@ -84,22 +84,22 @@ d_aquitaine = {
 }
 c_angouleme = {
 	985.1.1 = {
-		holder = 1845
+		holder = 2345
 	}
 }
 c_perigord = {
 	985.1.1 = {
-		holder = 1850
+		holder = 2350
 	}
 }
 c_limousin = {
 	985.1.1 = {
-		holder = 1845
+		holder = 2345
 	}
 }
 c_saintonge = {
 	985.1.1 = {
-		holder = 1850
+		holder = 2350
 	}
 }
 d_languedoc = {
@@ -108,16 +108,16 @@ d_languedoc = {
 }
 c_albi = {
 	985.1.1 = {
-		holder = 1855
+		holder = 2355
 	}
 }
 c_montpellier = {
 	985.1.1 = {
-		holder = 1860
+		holder = 2360
 	}
 }
 c_carcassonne = {
 	985.1.1 = {
-		holder = 1865
+		holder = 2365
 	}
 }

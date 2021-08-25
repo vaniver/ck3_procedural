@@ -170,6 +170,7 @@ KINGDOM_CHARS = {
     'player_sister': {
         'cid': 4,
         'dynasty': 0,
+        'female': True,
         'bd': "983.M.D",
         'father': 0,
         'mother': 1,
@@ -287,33 +288,44 @@ BORDER_CHARS = {
     } for i in range(6)
 }
 
-culrel_map ={
+culrel_map = {
  'b_alsace': ("swabian", "catholic"),
+ 'b_amdo': ("tuyuhun", "lamaism"),
  'b_bahrain': ("bedouin", "ashari"),
  'b_bohemia': ("czech", "catholic"),
  'b_capua': ("sicilian", "catholic"),
+ 'b_dzungaria': ("uyghur", "vajrayana"),
  'b_east_franconia': ("franconian", "catholic"),
  'b_genoa': ("cisalpine", "catholic"),
+ 'b_kham': ("bodpa", "lamaism"),
  'b_najd': ("bedouin", "ashari"),
  'b_shammar': ("bedouin", "ashari"),
+ 'b_silesia': ("polish", "catholic"),
  'b_toscana': ("italian", "catholic"),
  'b_west_franconia': ("franconian", "catholic"),
  'c_latium': ("italian", "catholic"),
  'c_lombardia': ("cisalpine", "catholic"),
  'c_mecca': ("bedouin", "ashari"),
  'c_prussia': ("prussian", "catholic"),
+ 'c_kiev': ("russian", "nestorian"),
+#  'c_jerusalem': ("butr", "ismaili"),
  'e_eeurope': ("franconian", "catholic"),
  'e_islam': ("bedouin", "ashari"),
- 'e_weurope': ("italian", "catholic"),
+ 'e_europe': ("italian", "catholic"),
  'k_aquitaine': ("occitan", "catholic"),
  'k_bavaria': ("bavarian", "catholic"),
  'k_burgundy': ("french", "catholic"),
- 'k_egypt': ("egyptian", "ashari"),
+ 'k_east_francia': ("franconian", "catholic"),
+ 'k_egypt': ("egyptian", "mutazila"),
  'k_france': ("french", "catholic"),
  'k_hungary': ("hungarian", "catholic"),
+ 'k_italy': ("cisalpine", "catholic"),
+ 'k_norway': ("norse", "norse_pagan"),
+ 'k_pagan': ("burmese", "theravada"),
  'k_pomerania': ("pommeranian", "catholic"),
  'k_syria': ("levantine", "ashari"),
  'k_yemen': ("yemeni", "ashari"),
+ 'k_xia': ("han", "mahayana"),
  'r_catholic': ("italian", "catholic"),
  'r_islam': ("bedouin", "ashari"),
 }
@@ -466,7 +478,10 @@ for index, (title, (culture, religion)) in enumerate(culrel_map.items()):
                         prefix = None
                         name = dyn_name.strip()
             else:
-                prefix = culture_dict[culture]["dynasty_of_location_prefix"]
+                if "dynasty_of_location_prefix" in culture_dict[culture]:
+                    prefix = culture_dict[culture]["dynasty_of_location_prefix"]
+                else:
+                    prefix = None
                 if dyn in title_data:
                     name = title_data[dyn]
                 else:
@@ -608,12 +623,12 @@ for culture in culture_dict.keys():
         with open(os.path.join(DATA_DIR, "start", "history", "cultures", f"{culture}.txt"), 'w', encoding='utf8') as outf:
             outf.write(f"#{culture}\n\n900.1.1 = {{\n")
             outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["tribal"]))
-            outf.write("\n}\n")
+            outf.write("\n\tjoin_era = culture_era_early_medieval\n}\n")
     else:
         with open(os.path.join(DATA_DIR, "start", "history", "cultures", f"{culture}.txt"), 'w', encoding='utf8') as outf:
             outf.write(f"#{culture}\n\n900.1.1 = {{\n")
             outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["tribal"]))
-            outf.write("\n}\n\n1000.1.1 = {\n")
+            outf.write("\n\tjoin_era = culture_era_early_medieval\n}\n\n1000.1.1 = {\n")
             random.shuffle(innovations["early_medieval"])
             outf.write("\n".join(f"\tdiscover_innovation = {i}" for i in innovations["guaranteed"]))
             outf.write("\n")

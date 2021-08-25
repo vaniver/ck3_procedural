@@ -1,0 +1,123 @@
+k_east_francia = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_west_franconia = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_frankfurt = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_mainz = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_erbach = {
+	980.1.1 = {
+		holder = 2600
+	}
+	1000.1.1 = {
+		holder = 2602
+	}
+}
+c_klingenberg = {
+	986.1.1 = {
+		holder = 2630
+	}
+}
+c_speyer = {
+	981.1.1 = {
+		holder = 2635
+	}
+}
+d_hesse = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 2610
+	}
+}
+c_kassel = {
+	985.1.1 = {
+		holder = 2610
+	}
+}
+c_marburg = {
+	990.1.1 = {
+		holder = 2610
+	}
+}
+c_fulda = {
+	990.1.1 = {
+		holder = 2621
+	}
+	990.1.2 = {
+		liege = d_hesse
+	}
+}
+c_nassau = {
+	990.1.1 = {
+		holder = 2640
+	}
+	990.1.2 = {
+		liege = d_hesse
+	}
+}
+d_east_franconia = {
+	900.1.1 = {
+	}
+}
+c_wurzburg = {
+	985.1.1 = {
+		holder = 2645
+	}
+}
+c_ansbach = {
+	985.1.1 = {
+		holder = 2650
+	}
+}
+c_hohenlohe = {
+	985.1.1 = {
+		holder = 2645
+	}
+}
+c_nurnberg = {
+	985.1.1 = {
+		holder = 2650
+	}
+}
+d_kaiserslautern = {
+	900.1.1 = {
+	}
+}
+c_kaiserslautern = {
+	985.1.1 = {
+		holder = 2655
+	}
+}
+c_bamberg = {
+	985.1.1 = {
+		holder = 2660
+	}
+}
+c_vaihingen = {
+	985.1.1 = {
+		holder = 2665
+	}
+}

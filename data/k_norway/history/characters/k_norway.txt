@@ -1,0 +1,207 @@
+3100 = {
+	name="Kolbeinn"
+	dynasty=620
+	religion="norse_pagan"
+	culture="norse"
+	940.7.28 = {
+		birth="940.7.28"
+	}
+	975.1.1 = {
+		add_spouse = 3101
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+3101 = {
+	name="A_slaug"
+	female = yes
+	religion="norse_pagan"
+	culture="norse"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.7.21 = {
+		birth="948.7.21"
+	}
+	975.1.1 = {
+		add_spouse = 3100
+	}
+}
+3102 = {
+	name="Oddr"
+	dynasty=620
+	religion="norse_pagan"
+	culture="norse"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	father=3100
+	mother=3101
+	980.10.17 = {
+		birth="980.10.17"
+	}
+}
+3103 = {
+	name="FriT_rI_kr"
+	dynasty=620
+	religion="norse_pagan"
+	culture="norse"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	father=3100
+	mother=3101
+	982.9.9 = {
+		birth="982.9.9"
+	}
+}
+3104 = {
+	name="Unnr"
+	female = yes
+	dynasty=620
+	religion="norse_pagan"
+	culture="norse"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	father=3100
+	mother=3101
+	983.5.12 = {
+		birth="983.5.12"
+	}
+}
+3110 = {
+	name="T_O_rO_lfr"
+	dynasty=621
+	religion="norse_pagan"
+	culture="norse"
+	trait="physique_good_1"
+	trait="shrewd"
+	961.5.28 = {
+		birth="961.5.28"
+	}
+	985.1.1 = {
+		add_spouse = 3122
+	}
+}
+3120 = {
+	name="ArnbjO_rn"
+	dynasty=624
+	religion="norse_pagan"
+	culture="norse"
+	948.12.2 = {
+		birth="948.12.2"
+	}
+	990.1.1 = {
+		death="990.1.1"
+	}
+}
+3121 = {
+	name="SigurT_r"
+	dynasty=624
+	religion="norse_pagan"
+	culture="norse"
+	father=3120
+	968.9.20 = {
+		birth="968.9.20"
+	}
+}
+3122 = {
+	name="GyrI_D_r"
+	female = yes
+	dynasty=624
+	religion="norse_pagan"
+	culture="norse"
+	father=3120
+	967.8.18 = {
+		birth="967.8.18"
+	}
+	985.1.1 = {
+		add_spouse = 3110
+	}
+}
+3130 = {
+	name="Haraldr"
+	dynasty=623
+	religion="norse_pagan"
+	culture="norse"
+	976.9.24 = {
+		birth="976.9.24"
+	}
+}
+3135 = {
+	name="A_lfgeir"
+	dynasty=624
+	religion="norse_pagan"
+	culture="norse"
+	979.2.5 = {
+		birth="979.2.5"
+	}
+}
+3140 = {
+	name="KnU_tr"
+	dynasty=625
+	religion="norse_pagan"
+	culture="norse"
+	976.9.17 = {
+		birth="976.9.17"
+	}
+}
+3145 = {
+	name="BjO_rn"
+	dynasty=626
+	religion="norse_pagan"
+	culture="norse"
+	970.11.25 = {
+		birth="970.11.25"
+	}
+}
+3150 = {
+	name="Oddr"
+	dynasty=627
+	religion="norse_pagan"
+	culture="norse"
+	971.4.16 = {
+		birth="971.4.16"
+	}
+}
+3155 = {
+	name="Bersi"
+	dynasty=628
+	religion="norse_pagan"
+	culture="norse"
+	975.2.10 = {
+		birth="975.2.10"
+	}
+}
+3160 = {
+	name="Eysteinn"
+	dynasty=629
+	religion="norse_pagan"
+	culture="norse"
+	977.1.24 = {
+		birth="977.1.24"
+	}
+}
+3165 = {
+	name="Vagn"
+	dynasty=630
+	religion="norse_pagan"
+	culture="norse"
+	977.11.12 = {
+		birth="977.11.12"
+	}
+}

@@ -1,0 +1,54 @@
+1200 = {
+	name="Henryk"
+	dynasty=240
+	religion="catholic"
+	culture="polish"
+	977.11.20 = {
+		birth="977.11.20"
+	}
+}
+1201 = {
+	name="Domawuj"
+	dynasty=241
+	religion="catholic"
+	culture="polish"
+	977.4.9 = {
+		birth="977.4.9"
+	}
+}
+1202 = {
+	name="Sambor"
+	dynasty=242
+	religion="catholic"
+	culture="polish"
+	977.8.8 = {
+		birth="977.8.8"
+	}
+}
+1203 = {
+	name="Dytryk"
+	dynasty=243
+	religion="catholic"
+	culture="polish"
+	933.5.27 = {
+		birth="933.5.27"
+	}
+}
+1204 = {
+	name="Wawrzyniec"
+	dynasty=244
+	religion="catholic"
+	culture="polish"
+	900.3.10 = {
+		birth="900.3.10"
+	}
+}
+1205 = {
+	name="SzczE_sny"
+	dynasty=245
+	religion="catholic"
+	culture="polish"
+	911.11.1 = {
+		birth="911.11.1"
+	}
+}

@@ -1,6 +1,6 @@
-1300 = {
-	name="Jabir"
-	dynasty=260
+1700 = {
+	name="Ya_qub"
+	dynasty=340
 	religion="ashari"
 	culture="bedouin"
 	martial=4
@@ -10,25 +10,25 @@
 	learning=4
 	trait="education_martial_4"
 	trait="intellect_good_1"
-	970.10.8 = {
-		birth="970.10.8"
+	970.2.14 = {
+		birth="970.2.14"
 	}
 }
-1301 = {
-	name="Sami"
-	dynasty=261
+1701 = {
+	name="Bahir"
+	dynasty=341
 	religion="ashari"
 	culture="bedouin"
-	963.4.24 = {
-		birth="963.4.24"
+	960.8.5 = {
+		birth="960.8.5"
 	}
 }
-1302 = {
-	name="Aram"
-	dynasty=262
+1702 = {
+	name="Abdul-Wahab"
+	dynasty=342
 	religion="ashari"
 	culture="bedouin"
-	973.7.8 = {
-		birth="973.7.8"
+	975.7.19 = {
+		birth="975.7.19"
 	}
 }

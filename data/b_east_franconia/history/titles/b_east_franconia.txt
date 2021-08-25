@@ -6,31 +6,31 @@ d_nurnberg = {
 }
 c_wurzburg = {
 	997.1.1 = {
-		holder = 500
+		holder = 700
 	}
 }
 c_wiltberg = {
 	993.1.1 = {
-		holder = 501
+		holder = 701
 	}
 }
 c_bamberg = {
-	995.1.1 = {
-		holder = 502
+	999.1.1 = {
+		holder = 702
 	}
 }
 c_nurnberg = {
-	994.1.1 = {
-		holder = 503
+	990.1.1 = {
+		holder = 703
 	}
 }
 c_hohenlohe = {
-	998.1.1 = {
-		holder = 504
+	996.1.1 = {
+		holder = 704
 	}
 }
 c_nordlingen = {
-	990.1.1 = {
-		holder = 505
+	993.1.1 = {
+		holder = 705
 	}
 }

@@ -1,0 +1,15 @@
+380 = {
+	prefix = "dynnp_of"
+	name = "d_kiev"
+	culture = "russian"
+}
+381 = {
+	prefix = "dynnp_of"
+	name = "c_chornobyl"
+	culture = "russian"
+}
+382 = {
+	prefix = "dynnp_of"
+	name = "c_korsun"
+	culture = "russian"
+}

@@ -45,6 +45,12 @@ k_papal_state = {
 	}
 }
 
+d_patriarchate_in_the_east = {
+	990.1.1 = {
+		holder = 15
+	}
+}
+
 d_knights_templar = {
 	900.1.1 = {
 	}

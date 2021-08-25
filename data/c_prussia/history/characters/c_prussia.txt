@@ -1,6 +1,6 @@
-1400 = {
-	name="Milzas"
-	dynasty=280
+1800 = {
+	name="Galindas"
+	dynasty=360
 	religion="catholic"
 	culture="prussian"
 	martial=4
@@ -10,25 +10,25 @@
 	learning=4
 	trait="education_martial_4"
 	trait="intellect_good_1"
-	970.12.3 = {
-		birth="970.12.3"
+	970.1.23 = {
+		birth="970.1.23"
 	}
 }
-1401 = {
-	name="Dagonis"
-	dynasty=281
+1801 = {
+	name="Karatas"
+	dynasty=361
 	religion="catholic"
 	culture="prussian"
-	966.8.21 = {
-		birth="966.8.21"
+	965.12.6 = {
+		birth="965.12.6"
 	}
 }
-1402 = {
-	name="Kugis"
-	dynasty=282
+1802 = {
+	name="Gauronas"
+	dynasty=362
 	religion="catholic"
 	culture="prussian"
-	979.4.6 = {
-		birth="979.4.6"
+	977.2.3 = {
+		birth="977.2.3"
 	}
 }

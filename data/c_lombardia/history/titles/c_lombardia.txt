@@ -1,26 +1,26 @@
 d_lombardia = {
 	1000.1.1 = {	change_development_level = 8 }
 	987.1.1 = {
-		holder = 1200
+		holder = 1600
 	}
 }
 c_lombardia = {
 	987.1.1 = {
-		holder = 1200
+		holder = 1600
 	}
 }
 c_pavia = {
 	987.1.1 = {
-		holder = 1200
+		holder = 1600
 	}
 }
 c_parma = {
-	982.1.1 = {
-		holder = 1201
+	984.1.1 = {
+		holder = 1601
 	}
 }
 c_trent = {
-	997.1.1 = {
-		holder = 1202
+	998.1.1 = {
+		holder = 1602
 	}
 }

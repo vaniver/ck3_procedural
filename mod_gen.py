@@ -18,7 +18,7 @@ NUM_KINGDOM_HEXES = sum([sum(x) for x in continent_gen.KINGDOM_SIZE_LIST])
 NUM_CENTER_HEXES = sum(continent_gen.CENTER_SIZE_LIST)
 NUM_BORDER_HEXES = sum(continent_gen.BORDER_SIZE_LIST)
 
-RELIGION_DICT = {'catholic': 'christianity', 'orthodox': 'christianity', 'islam': 'islam'}
+RELIGION_DICT = {'catholic': 'christianity', 'orthodox': 'christianity', 'islam': 'islam', 'tibet': 'buddhism'}
 
 # Maybe should parse this out of the base game file instead? That'd make it update more easily.
 HOLY_SITE_LIST = [
@@ -100,6 +100,8 @@ class Empire:
         if len(self.titles) > 0:
             return self.titles
         num_kingdoms = self.continentals
+        if num_kingdoms == 0:  # special case for solo island continent
+            return self.island_names()
         num_centers = num_kingdoms - 2
         num_borders = 2 * num_kingdoms - 3
         assert len(self.centers) >= num_centers, 'Not enough centers for {}'.format(self.name)
@@ -112,8 +114,10 @@ class Empire:
         borders = borders[:num_borders]
         kingdoms = [k for k in self.continental_names()]
         island_kingdoms = [k for k in self.island_names()]
+        minor_islands = [m.name for m in self.minor_islands]
         random.shuffle(kingdoms)
         random.shuffle(island_kingdoms)
+        random.shuffle(minor_islands)
         titles = []
         titles.append(centers[0])
         titles.extend(kingdoms[:3])
@@ -131,6 +135,7 @@ class Empire:
         titles.append(kingdoms[4])
         titles.extend(borders[5:])
         titles.extend(island_kingdoms)
+        titles.extend(minor_islands)
         return titles
 
     def add_kingdom(self, kingdom):
@@ -155,8 +160,8 @@ def read_config_file(config_filepath):
     empires = {}
     base_terrain_from_empire = {}
     waste_terrain_from_empire = {}
-    kingdoms_from_religion = {}
-    others_from_religion = {}
+    # kingdoms_from_religion = {}
+    # others_from_religion = {}
     for line in config_file:
         split_line = [el.lower() for el in line.rstrip().split('#')[0].split('\t')]
         if len(split_line) == 2: #angle info
@@ -174,32 +179,32 @@ def read_config_file(config_filepath):
             if kname[0] == 'k':
                 kingdom = Kingdom(kname, geo_type == 'island', religion)
                 empires[empire].add_kingdom(kingdom)
-                if religion in kingdoms_from_religion:
-                    kingdoms_from_religion[religion].append(kingdom.name)
-                else:
-                    kingdoms_from_religion[religion] = [kingdom.name]
+                # if religion in kingdoms_from_religion:
+                #     kingdoms_from_religion[religion].append(kingdom.name)
+                # else:
+                #     kingdoms_from_religion[religion] = [kingdom.name]
             elif kname[0] == 'c':
                 center = Center(kname, religion)
                 empires[empire].centers.append(center)
-                if religion in others_from_religion:
-                    others_from_religion[religion].append(center.name)
-                else:
-                    others_from_religion[religion] = [center.name]
+                # if religion in others_from_religion:
+                #     others_from_religion[religion].append(center.name)
+                # else:
+                #     others_from_religion[religion] = [center.name]
             elif kname[0] == 'b':
                 border = Border(kname, religion)
                 empires[empire].borders.append(border)
-                if religion in others_from_religion:
-                    others_from_religion[religion].append(border.name)
-                else:
-                    others_from_religion[religion] = [border.name]
+                # if religion in others_from_religion:
+                #     others_from_religion[religion].append(border.name)
+                # else:
+                #     others_from_religion[religion] = [border.name]
             elif kname[0] == 'm':
                 minor_island = MinorIsland(kname, religion)
                 empires[empire].minor_islands.append(minor_island)
-                if religion in others_from_religion:
-                    others_from_religion[religion].append(minor_island.name)
-                else:
-                    others_from_religion[religion] = [minor_island.name]
-    return (empires, kingdoms_from_religion, others_from_religion, base_terrain_from_empire, waste_terrain_from_empire)
+                # if religion in others_from_religion:
+                #     others_from_religion[religion].append(minor_island.name)
+                # else:
+                #     others_from_religion[religion] = [minor_island.name]
+    return (empires, base_terrain_from_empire, waste_terrain_from_empire)
 
 
 def find_ocean_and_wastelands(world):
@@ -219,10 +224,10 @@ def find_ocean_and_wastelands(world):
 
 def calc_land_height(world, ocean):
     land_height = {}
-    boundary = world.boundary()
+    # boundary = world.boundary()  # This doesn't work because boundary counts water hexes.
     height = 0
     next_set = set()
-    for el in boundary:
+    for el in world.real_hex_list():
         if any([nel in ocean for nel in el.neighbors()]):
             land_height[el] = height
             next_set.update([nel for nel in el.neighbors() if nel not in ocean])
@@ -508,7 +513,7 @@ def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, wa
         mountains: rare, present everywhere
         hills: uncommon, present everywhere
 
-    There are four regional variants for wasteland terrain:
+    There are four regional variants for base terrain:
         forest (western Europe)
         steppe (eastern Europe)
         jungle (india)
@@ -522,24 +527,25 @@ def make_terrain(world, wastelands, ocean, empires, base_terrain_from_empire, wa
         for tile in world.tile_list[emp_idx].tile_list:
             tile_hexes = tile.real_hex_list()
             if len(tile_hexes) == NUM_KINGDOM_HEXES:
-                # There are 16 counties: 1 capital farmland, 8 plains, 4 hills, and 3 mountains.
+                # There are 16 counties: 1 capital farmland, 6 plains, 4 hills, 3 mountains, and 2 base.
                 terrain_list = [Terrain.plains] * 6 + [Terrain.hills] * 4 + [Terrain.mountains] * 3 + [base_terrain] * 2
                 random.shuffle(terrain_list)
                 terrain_list.insert(0, Terrain.farmlands)
                 terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, flattened_kingdom_hexes)]
             elif len(tile_hexes) == NUM_CENTER_HEXES:
-                # There are 4 counties: farmland capital, 2 plains, and 1 hills.
-                terrain_list = [Terrain.plains] * 2 + [Terrain.hills] * 1
+                # There are 4 counties: farmland capital, 1 plains, 1 hills, and 1 base.
+                terrain_list = [Terrain.plains] * 1 + [Terrain.hills] * 1 + [base_terrain] * 1
                 random.shuffle(terrain_list)
                 terrain_list.insert(0, Terrain.farmlands)
                 terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, continent_gen.CENTER_SIZE_LIST)]
             elif len(tile_hexes) == NUM_BORDER_HEXES:
-                # There are 3 counties: 1 plains, 1 hills, and 1 mountains.
-                terrain_list = [Terrain.plains] * 1 + [Terrain.hills] * 1 + [Terrain.mountains] * 1
+                # There are 3 counties: 1 base, 1 hills, and 1 mountains.
+                terrain_list = [base_terrain] * 1 + [Terrain.hills] * 1 + [Terrain.mountains] * 1
                 random.shuffle(terrain_list)
                 terrain_list = [[terrain_type] * num_hexes for terrain_type, num_hexes in zip(terrain_list, continent_gen.BORDER_SIZE_LIST)]
             else:
-                raise ValueError('Don\'t know how to handle terrain for this tile: {}'.format(tile))
+                terrain_list = [[base_terrain]] * len(tile_hexes)
+                # raise ValueError('Don\'t know how to handle terrain for this tile: {} {}'.format(emp_idx, tile))
             # This was a list of lists, where each barony in a county just shares the same terrain, and we want it to be a flattened list to match the real_hex_list.
             terrain_list = [item for sublist in terrain_list for item in sublist]
             for el in tile_hexes:
@@ -604,6 +610,7 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                 kingdom_buffer = ""
                 for title in titles:
                     barony_mapping = {}
+                    flip_rival = 0
                     if title[0] == 'k':
                         # For kingdoms, we want to construct a geographical region in the georegion file.
                         # TODO: This is where we should check for island kingdoms and add them to island_region instead.
@@ -613,6 +620,7 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                     with open(os.path.join(src_dir, title, "common", "landed_titles", "landed_titles.txt"), encoding='utf8') as inf:
                         for line in inf.readlines():
                             if line.startswith("\t\td_"):
+                                flip_rival += 1
                                 if title[0] == "k":
                                     kingdom_duchy_list.append(line.split("=")[0].strip())
                                 else:
@@ -621,9 +629,18 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                                 bname = line.split('\t\tb_')[1].split('=')[0].strip()
                             if "province = P" in line:
                                 front, back = line.split("= P")
-                                barony_mapping["P" + back.split()[0]] = str(pid)
-                                line = front + "= " + str(pid) + "\n"
-                                bname_from_pid[pid] = bname
+                                if title[0] == "k" and flip_rival == 2:
+                                    barony_mapping["P" + back.split()[0]] = str(pid + 14)
+                                    line = front + "= " + str(pid + 14) + "\n"
+                                    bname_from_pid[pid + 14] = bname
+                                elif title[0] == "k" and flip_rival == 3:
+                                    barony_mapping["P" + back.split()[0]] = str(pid - 14)
+                                    line = front + "= " + str(pid - 14) + "\n"
+                                    bname_from_pid[pid - 14] = bname
+                                else:
+                                    barony_mapping["P" + back.split()[0]] = str(pid)
+                                    line = front + "= " + str(pid) + "\n"
+                                    bname_from_pid[pid] = bname
                                 pid += 1
                             if title[0] == 'k':
                                 kingdom_buffer += line
@@ -632,7 +649,7 @@ def make_landed_titles(empires, religions, src_dir, out_dir):
                     if title[0] == 'k':
                         # Write the kingdom's geographical region.
                         duchies = " ".join(kingdom_duchy_list)
-                        geo_region_file.write(f"{region_name} = {{\n\tduchies = {{\n\t\t{duchies}\t}}\n}}\n")
+                        geo_region_file.write(f"{region_name} = {{\n\tduchies = {{\n\t\t{duchies}\n\t}}\n}}\n")
                         kingdom_buffer += "\n"
                     else:
                         outf.write("\n")
@@ -676,7 +693,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     if seed:
         random.seed(seed)
     #Read in the configuration files.
-    empires, kingdoms_from_religion, others_from_religion, base_terrain_from_empire, waste_terrain_from_empire = read_config_file(config_filepath)
+    empires, base_terrain_from_empire, waste_terrain_from_empire = read_config_file(config_filepath)
     e_titles = {k: v.title_order() for k, v in empires.items()}
     religions = make_religions(e_titles, "c_roma", data_dir, mod_dir)  # TODO: update the default hs_county to be read from the list of real counties.
     assert len(empires) == 3
@@ -685,7 +702,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     assert(sum(island_size_list)) == 0, "Haven't implemented all the island stuff yet."
     angles = [v.angle for v in empires.values()]
     #Generate the tile hierarchy.
-    world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)
+    world = continent_gen.make_world(cont_size_list=cont_size_list, island_size_list=island_size_list, angles=angles)  # , inner_sea=continent_gen.CENTER_SIZE_LIST)
     world.rectify()
     max_mag = max([el.mag() for el in world.real_hex_list()])
     #Fill in wastelands and group together the seas.
@@ -693,7 +710,7 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     shore_groups, sea_groups = group_seas(ocean)
     #Create hex to province id mapping and hex to RGB mapping.
     pid_from_hex, rgb_from_hex, rgb_from_pid, last_pid = allocate_pids(world, wastelands, shore_groups, sea_groups)
-    cmap = CK3Map(max_x, max_y, hex_size = 12, map_size = max_mag + 2, crisp=crisp, default = IMPASSABLE)
+    cmap = CK3Map(max_x, max_y, hex_size = 24, map_size = max_mag + 2, crisp=crisp, default = IMPASSABLE)
     cmap.d_cube2rgb = rgb_from_hex
     cmap.d_cube2pid = pid_from_hex
     cmap.provinces(filedir=mod_dir)
@@ -708,13 +725,13 @@ def make(file_dir = 'C:\\ck3_procedural\\', mod_name='testing_modgen', mod_disp_
     make_definition(mod_dir, rgb_from_pid, bname_from_pid)
     cmap.heightmap(land_height, ocean, waste_list, filedir=mod_dir)
     major_rivers, last_pid = cmap.rivers(land_height, bname_from_pid, num_rivers, last_pid, mod_dir)
-    cmap.positions(bname_from_pid, filedir=mod_dir)
+    for category in [["events"]] + [[os.path.join("gfx","map","map_object_data")]] + [[os.path.join("history", "cultures")]] + [["common", x] for x in ["casus_belli_types", "decisions", "flavorization", "on_action", "story_cycles"]]:
+        copy_over(os.path.join(data_dir, "start"), mod_dir, so_far=category)
+    cmap.positions(bname_from_pid, ocean, filedir=mod_dir)
     make_dynasties(e_titles, religions, data_dir, mod_dir)
     make_default(mod_dir, waste_list, pid_from_hex, major_rivers, last_pid)
     make_bookmark(data_dir, mod_dir)
     make_innovations(data_dir, mod_dir)
-    for category in [["events"]] + [["common", x] for x in ["casus_belli_types", "decisions", "flavorization", "on_action", "story_cycles"]]:
-        copy_over(os.path.join(data_dir, "start"), mod_dir, so_far=category)
     return world, cmap, ocean, land_height, waste_list, bname_from_pid, last_pid
 
 
@@ -734,8 +751,9 @@ def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
                 trios = hex_a.foursome(hex_b)
                 x_a, y_a = cmap.find_vertex(trios[0])
                 x_b, y_b = cmap.find_vertex(trios[1])
-                comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
+                comment = f"{bname_from_pid.get(pid_a)}-{bname_from_pid.get(pid_b)}"
                 # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
+                # TODO: Add through pid!
                 f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n")
             for (hex_a, hex_b) in corner_pairs:
                 # This is a connection between the two edges separated by one water hex.
@@ -744,7 +762,7 @@ def make_adjacencies(file_dir, world, pid_from_hex, bname_from_pid, cmap):
                 middle = hex_a.avg(hex_b)
                 x_a, y_a = cmap.edge_middle(hex_a, middle)
                 x_b, y_b = cmap.edge_middle(hex_b, middle)
-                comment = f"{bname_from_pid[pid_a]}-{bname_from_pid[pid_b]}"
+                comment = f"{bname_from_pid.get(pid_a)}-{bname_from_pid.get(pid_b)}"
                 # From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
                 f.write(";".join([str(s) for s in [pid_a, pid_b, "sea", x_a, y_a, x_b, y_b, comment]]) + "\n")
         # TODO: Add adjacency for island kingdoms.
@@ -838,7 +856,7 @@ def make_definition(file_dir, rgb_from_pid, name_from_pid):
             if pid in name_from_pid:
                 name = name_from_pid[pid]
             else:
-                name = "Unknown"
+                name = str(pid)
             f.write(';'.join([str(pid)] + [str(c) for c in rgb] + [name, 'x', '\n']))
         # f.write(f'{max(rgb_from_pid.keys()) + 1};255;255;255;x;x;\n') # I think I fixed the bug that needed this as a fix.
 

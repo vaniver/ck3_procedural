@@ -1,0 +1,54 @@
+900 = {
+	name="Lotsen"
+	dynasty=180
+	religion="lamaism"
+	culture="bodpa"
+	933.12.27 = {
+		birth="933.12.27"
+	}
+}
+901 = {
+	name="Jangbu"
+	dynasty=181
+	religion="lamaism"
+	culture="bodpa"
+	999.1.28 = {
+		birth="999.1.28"
+	}
+}
+902 = {
+	name="Shangnang"
+	dynasty=182
+	religion="lamaism"
+	culture="bodpa"
+	933.9.14 = {
+		birth="933.9.14"
+	}
+}
+903 = {
+	name="Zangtsa"
+	dynasty=183
+	religion="lamaism"
+	culture="bodpa"
+	988.8.19 = {
+		birth="988.8.19"
+	}
+}
+904 = {
+	name="ZindE_"
+	dynasty=184
+	religion="lamaism"
+	culture="bodpa"
+	966.4.6 = {
+		birth="966.4.6"
+	}
+}
+905 = {
+	name="Gawa"
+	dynasty=185
+	religion="lamaism"
+	culture="bodpa"
+	922.10.18 = {
+		birth="922.10.18"
+	}
+}

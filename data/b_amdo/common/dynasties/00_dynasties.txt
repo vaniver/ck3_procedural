@@ -1,0 +1,30 @@
+40 = {
+	prefix = "dynnp_of"
+	name = "c_xining"
+	culture = "tuyuhun"
+}
+41 = {
+	prefix = "dynnp_of"
+	name = "c_fuqi"
+	culture = "tuyuhun"
+}
+42 = {
+	prefix = "dynnp_of"
+	name = "c_gerqen"
+	culture = "tuyuhun"
+}
+43 = {
+	prefix = "dynnp_of"
+	name = "c_nagormo"
+	culture = "tuyuhun"
+}
+44 = {
+	prefix = "dynnp_of"
+	name = "c_xigortang"
+	culture = "tuyuhun"
+}
+45 = {
+	prefix = "dynnp_of"
+	name = "c_ulam"
+	culture = "tuyuhun"
+}

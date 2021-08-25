@@ -5,32 +5,32 @@ d_moravia = {
 	1000.1.1 = {	change_development_level = 5 }
 }
 c_praha = {
-	992.1.1 = {
-		holder = 300
+	999.1.1 = {
+		holder = 400
 	}
 }
 c_plzen = {
-	990.1.1 = {
-		holder = 301
+	992.1.1 = {
+		holder = 401
 	}
 }
 c_zatec = {
-	995.1.1 = {
-		holder = 302
+	999.1.1 = {
+		holder = 402
 	}
 }
 c_olomouc = {
-	994.1.1 = {
-		holder = 303
+	990.1.1 = {
+		holder = 403
 	}
 }
 c_prerov = {
-	997.1.1 = {
-		holder = 304
+	995.1.1 = {
+		holder = 404
 	}
 }
 c_znojmo = {
-	998.1.1 = {
-		holder = 305
+	995.1.1 = {
+		holder = 405
 	}
 }

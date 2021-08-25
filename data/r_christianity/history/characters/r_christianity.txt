@@ -304,3 +304,13 @@
 		death = "1003.5.12"
 	}
 }
+
+15 = {
+	name = "Sabrisho"
+	culture = "russian"
+	religion = "nestorian"
+	learning = 6
+	956.1.1 = {
+		birth = "956.1.1"
+	}
+}

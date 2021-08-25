@@ -1,0 +1,319 @@
+	k_aragon = {
+		color = { 166 98 22 }
+		color2 = { 230 0 0 }
+		
+		capital = c_zaragoza # Zaragoza
+		
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				faith = { religion_tag = christianity_religion }
+			}
+		}
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture_group = culture_group:iberian_group
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+		
+		# Creation/usurpation trigger
+		
+		d_aragon = {
+			color = { 160 90 20 }
+			color2 = { 255 255 255 }
+			
+			capital = c_zaragoza # Zaragoza
+
+			c_zaragoza = {
+				color = { 160 90 20 }
+				color2 = { 255 255 255 }
+				
+				b_zaragoza = {
+					province = P
+
+					color = { 160 90 20 }
+					color2 = { 255 255 255 }
+				}
+				b_ejea = {
+					province = P
+
+					color = { 160 90 20 }
+					color2 = { 255 255 255 }
+				}
+				b_zuera = {
+					province = P
+
+					color = { 160 90 20 }
+					color2 = { 255 255 255 }
+				}
+				b_sarinena = {
+					province = P
+
+					color = { 160 90 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_albarracin = {
+				color = { 135 70 20 }
+				color2 = { 255 255 255 }
+				
+				b_albarracin = {
+					province = P
+
+					color = { 135 70 20 }
+					color2 = { 255 255 255 }
+				}
+				b_sierradesanjust = { #Utrillas
+					province = P
+
+					color = { 135 70 20 }
+					color2 = { 255 255 255 }
+				}
+				b_belchite = {
+					province = P
+
+					color = { 135 70 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_alto_aragon = {
+				color = { 110 65 20 }
+				color2 = { 255 255 255 }
+
+				b_alto_aragon = {
+					province = P
+
+					color = { 110 65 20 }
+					color2 = { 255 255 255 }
+				}
+				b_huesca = {
+					province = P
+
+					color = { 110 65 20 }
+					color2 = { 255 255 255 }
+				}
+				b_ainsa = { #Sobrarbe
+					province = P
+
+					color = { 110 65 20 }
+					color2 = { 255 255 255 }
+				}
+				b_jaca = {
+					province = P
+
+					color = { 110 65 20 }
+					color2 = { 255 255 255 }
+				}
+				b_ribagorza = {
+					province = P
+
+					color = { 110 65 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_calatayud = {
+				color = { 125 85 5 }
+				color2 = { 255 255 255 }
+				
+				b_calatayud = {
+					province = P
+
+					color = { 125 85 5 }
+					color2 = { 255 255 255 }
+				}
+				b_daroca = {
+					province = P
+
+					color = { 125 85 5 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_alcaniz = {
+				color = { 155 115 50 }
+				color2 = { 255 255 255 }
+				
+				b_alcaniz = {
+					province = P
+
+					color = { 155 115 50 }
+					color2 = { 255 255 255 }
+				}
+				b_caspe = {
+					province = P
+
+					color = { 155 115 50 }
+					color2 = { 255 255 255 }
+				}
+				b_calaceite = {
+					province = P
+
+					color = { 155 115 50 }
+					color2 = { 255 255 255 }
+				}
+
+			}
+		}
+		d_barcelona = {
+			color = { 166 100 72 }
+			color2 = { 255 255 255 }
+			
+			capital = c_barcelona # Barcelona
+			
+			c_barcelona = {
+				color = { 166 100 72 }
+				color2 = { 255 255 255 }
+				
+				b_barcelona = {
+					province = P
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_loredo = {
+					province = P
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_sitges = {
+					province = P
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+				b_manresa = { #Cardona
+					province = P
+
+					color = { 166 100 72 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_urgell = {
+				color = { 170 97 92 }
+				color2 = { 255 255 255 }
+				
+				b_urgell = {
+					province = P
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+				b_berga = {
+					province = P
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+				b_vielha = {
+					province = P
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+				b_andorra = { #Seu d'Urgell
+					province = P
+
+					color = { 170 97 92 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_puigcerda = {
+				color = { 145 105 90 }
+				color2 = { 255 255 255 }
+				
+				b_puigcerda = {
+					province = P
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+				b_olot = {
+					province = P
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+				b_vic = {
+					province = P
+
+					color = { 145 105 90 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_girona = {
+				color = { 170 115 110 }
+				color2 = { 255 255 255 }
+				
+				b_perpignan = { #Perpinya
+					province = P
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+				b_girona = {
+					province = P
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+				b_roses = {
+					province = P
+
+					color = { 170 115 110 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_lleida = {
+				color = { 160 80 65 }
+				color2 = { 255 255 255 }
+				
+				b_lleida = {
+					province = P
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+				b_balaguer = {
+					province = P
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+				b_maials = {
+					province = P
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_tarragona = {
+				color = { 155 90 55 }
+				color2 = { 255 255 255 }
+				
+				b_tarragona = {
+					province = P
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+				b_tortosa = {
+					province = P
+
+					color = { 155 90 55 }
+					color2 = { 255 255 255 }
+				}
+				b_prades = {
+					province = P
+
+					color = { 160 80 65 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

@@ -1,0 +1,666 @@
+world_europe_west_britannia = {
+	duchies = { }
+}
+world_europe_west_germania = {
+	duchies = { }
+}
+world_europe_west_francia = {
+	duchies = { }
+}
+world_europe_west_iberia = {
+	duchies = { }
+}
+world_europe_west = {
+	duchies = { }
+}
+world_europe_north = {
+	duchies = { }
+}
+world_europe_south_east = { 
+	duchies = { }
+}
+world_europe_south_italy = { 
+	duchies = { }
+}
+world_europe_south = {
+	duchies = { }
+}
+world_europe_east = {
+	duchies = { }
+}
+world_asia_minor = {
+	duchies = { }
+}
+world_middle_east_jerusalem = {
+	duchies = { }
+}
+world_middle_east_arabia = {
+	duchies = { }
+}
+world_middle_east_persia = { 
+	duchies = { }
+}
+world_india_deccan = {
+	duchies = { }
+}
+world_india_bengal = {
+	duchies = { }
+}
+world_india_rajastan = {
+	duchies = { }
+}
+world_africa_north_west = {
+	duchies = { }
+}
+world_africa_north_east = {
+	duchies = { }
+}
+world_africa_sahara = {
+	duchies = { }
+}
+world_africa_north = {
+	duchies = { }
+}
+world_africa_west = {
+	duchies = { }
+}
+world_africa_east = {
+	duchies = { }
+}
+world_africa = {
+	duchies = { }
+}
+world_steppe_tarim = {
+	duchies = { }
+}
+world_steppe_west = {
+	duchies = { }
+}
+world_steppe_east = {
+	duchies = { }
+}
+world_tibet = {
+	duchies = { }
+}
+world_burma = {
+	duchies = { }
+}
+world_steppe = {
+	duchies = { }
+}
+world_europe = {
+	duchies = { }
+}
+world_middle_east = {
+	duchies = { }
+}
+world_india = {
+	duchies = { }
+}
+world_persian_empire = { 
+	duchies = { }
+}
+custom_eastern_baltic = {
+	duchies = { }
+}
+custom_frisia = {
+	duchies = { }
+}
+custom_lotharingia = {
+	duchies = { }
+}
+custom_bavaria = {
+	duchies = { }
+}
+custom_germany = {
+	duchies = { }
+}
+custom_northern_italy = {
+	duchies = { }
+}
+custom_netherlands = {
+	duchies = { }
+}
+custom_england = {
+	duchies = { }
+}
+custom_wales = {
+	duchies = { }
+}
+custom_castilian = {
+	duchies = { }
+}
+custom_asturleonese = {
+	duchies = { }
+}
+custom_aragonese = {
+	duchies = { }
+}
+custom_navarra = {
+	duchies = { }
+}
+custom_catalan = {
+	duchies = { }
+}
+custom_portuguese = {
+	duchies = { }
+}
+custom_occitan = {
+	duchies = { }
+}
+custom_andalusian = {
+	duchies = { }
+}
+custom_swedish = {
+	duchies = { }
+}
+custom_danish = {
+	duchies = { }
+}
+custom_norwegian = {
+	duchies = { }
+}
+custom_scotland = {
+	duchies = { }
+}
+custom_burgundy = { #Expanded dejure.
+	duchies = { }
+}
+custom_roman_empire = { #Only the provinces needed to restore the Empire, not the full borders.
+	duchies = { }
+}
+custom_roman_syria_palestina = {
+	duchies = { }
+}
+custom_roman_aegyptus = {
+	duchies = { }
+}
+custom_roman_cyrenaica = {
+	duchies = { }
+}
+custom_roman_africa = {
+	duchies = { }
+}
+custom_roman_illyricum = {
+	duchies = { }
+}
+custom_roman_hispania = {
+	duchies = { }
+}
+custom_roman_mauretania = {
+	duchies = { }
+}
+custom_roman_mesopotamia = {
+	duchies = { }
+}
+custom_roman_caledonia = {
+	duchies = { }
+}
+custom_roman_hibernia = {
+	duchies = { }
+}
+custom_roman_full_borders = {
+	duchies = { }
+}
+custom_outremer = {
+	duchies = { }
+}
+custom_sicily = { 
+	duchies = { }
+}
+custom_hungary = { 
+	duchies = { }
+}
+custom_carpathia = { 
+	duchies = { }
+}
+custom_europe_western_germany = {
+	duchies = { }
+}
+custom_europe_eastern_germany = {
+	duchies = { }
+}
+custom_ganges_plain = {
+	duchies = { }
+}
+custom_bactria = {
+	duchies = { }
+}
+custom_south_francia = {
+	duchies = { }
+}
+custom_southern_england = {
+	duchies = { }
+}
+custom_northern_england = {
+	duchies = { }
+}
+custom_slavia = {
+	duchies = { }
+}
+custom_west_slavia = {
+	duchies = { }
+}
+custom_south_slavia = {
+	duchies = { }
+}
+custom_greater_armenia = {
+	duchies = { }
+}
+custom_normandy_and_adjacent = {
+	duchies = { }
+}
+custom_ireland = {
+	duchies = { }
+}
+custom_k_epirus = {
+	duchies = { }
+}
+custom_k_thessalonika = {
+	duchies = { }
+}
+custom_k_hellas = {
+	duchies = { }
+}
+custom_sahara_proper = {
+	duchies = { }
+}
+custom_sahel_proper = {
+	duchies = { }
+}
+custom_sub_saharan_africa_immediate = {
+	duchies = { }
+}
+custom_carolingian_francia = {
+	duchies = { }
+}
+custom_carolingian_iberia = {
+	duchies = { }
+}
+custom_carolingian_germany = {
+	duchies = { }
+}
+custom_core_switzerland = {
+	duchies = { }
+}
+custom_core_austria = {
+	duchies = { }
+}
+custom_stretch_austria = {
+	duchies = { }
+}
+custom_fennoscandia = {
+	duchies = { }
+}
+#graphical_western = {
+	duchies = { }
+}
+graphical_mena = {
+	duchies = { }
+}
+graphical_india = {
+	duchies = { }
+}
+graphical_mediterranean = {
+	duchies = { }
+}
+world_innovation_elephants = {
+	duchies = { }
+}
+world_innovation_camels = {
+	duchies = { }
+}
+world_persia = { #k_persia
+	duchies = { }
+}
+world_khorasan = { #k_khorasan
+	duchies = { }
+}
+world_daylam = { #k_daylam
+	duchies = { }
+}
+world_transoxiana = { #k_transoxiana
+	duchies = { }
+}
+world_makran = { #k_makran
+	duchies = { }
+}
+world_kabulistan = { #k_kabulistan
+	duchies = { }
+}
+#world_khiva = { #k_khiva
+	duchies = { }
+}
+world_mesopotamia = { #k_mesopotamia
+	duchies = { }
+}
+world_jazira = { #k_jazira
+	duchies = { }
+}
+special_mongol_empire_start_region = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_prio_1 = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_prio_2 = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_prio_3 = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_prio_4 = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_prio_5 = {
+	duchies = { }
+}
+special_mongol_empire_conquest_region_cleanup = {
+	duchies = { }
+}
+special_mongol_empire_conquest_all_regions = {
+	duchies = { }
+}
+special_mongol_empire_ilkhanate_region = {
+	duchies = { }
+}
+special_mongol_empire_chagatai_region = {
+	duchies = { }
+}
+special_mongol_empire_golden_horde_region = {
+	duchies = { }
+}
+special_mongol_empire_black_horde_region = {
+	duchies = { }
+}
+special_mongol_empire_white_horde_region = {
+	duchies = { }
+}
+special_mongol_empire_aarlud_khanate_region = {
+	duchies = { }
+}
+special_mongol_empire_togskol_khanate_region = {
+	duchies = { }
+}
+special_mongol_empire_baruun_khanate_region = {
+	duchies = { }
+}
+special_sicilian_culture_region = {
+	duchies = { }
+}
+special_cagot_region = {
+	duchies = { }
+}
+ghw_region_northern_italy = { 
+	duchies = { }
+}
+ghw_region_thessalonika = {
+	duchies = { }
+}
+ghw_region_france = {
+	duchies = { }
+}
+ghw_region_germany = {
+	duchies = { }
+}
+ghw_region_greece = {
+	duchies = { }
+}
+ghw_region_england = {
+	duchies = { }
+}
+ghw_region_caucasus = {
+	duchies = { }
+}
+ghw_region_anatolia = {
+	duchies = { }
+}
+ghw_region_near_east = {
+	duchies = { }
+}
+ghw_region_mediterranean = {
+	duchies = { }
+}
+ghw_region_balkans = {
+	duchies = { }
+}
+ghw_region_holy_land = {
+	duchies = { }
+}
+ghw_region_iberia = {
+	duchies = { }
+}
+ghw_region_celtic = {
+	duchies = { }
+}
+ghw_region_germanic = {
+	duchies = { }
+}
+ghw_region_central_european = {
+	duchies = { }
+}
+ghw_region_baltic = {
+	duchies = { }
+}
+ghw_region_arabia = {
+	duchies = { }
+}
+ghw_region_egypt = {
+	duchies = { }
+}
+ghw_region_egypt_et_al = {
+	duchies = { }
+}
+ghw_region_persia = {
+	duchies = { }
+}
+ghw_region_kurdistan = {
+	duchies = { }
+}
+ghw_region_southern_middle_east = {
+	duchies = { }
+}
+ghw_region_eastern_middle_east = {
+	duchies = { }
+}
+ghw_region_caspian_steppe = {
+	duchies = { }
+}
+ghw_region_north_africa = {
+	duchies = { }
+}
+ghw_region_sicily = {
+	duchies = { }
+}
+ghw_region_afghanistan = {
+	duchies = { }
+}
+ghw_region_ethiopia = {
+	duchies = { }
+}
+ghw_region_horn_of_africa = {
+	duchies = { }
+}
+ghw_region_the_sahel = {
+	duchies = { }
+}
+ghw_region_north_african_interior = {
+	duchies = { }
+}
+ghw_region_subsahelian_africa = {
+	duchies = { }
+}
+ghw_region_western_sahara = {
+	duchies = { }
+}
+ghw_region_eastern_sahara = {
+	duchies = { }
+}
+ghw_region_western_india = {
+	duchies = { }
+}
+ghw_region_southern_france = {
+	duchies = { }
+}
+ghw_region_mongolia = {
+	duchies = { }
+}
+ghw_region_scandinavia = {
+	duchies = { }
+}
+ghw_region_britannia = {
+	duchies = { }
+}
+ghw_region_saxony = {
+	duchies = { }
+}
+ghw_region_russia = {
+	duchies = { }
+}
+ghw_region_poland = {
+	duchies = { }
+}
+ghw_region_steppe = {
+	duchies = { }
+}
+ghw_region_hungary = {
+	duchies = { }
+}
+ghw_region_wendish_lands = {
+	duchies = { }
+}
+ghw_region_mainland_greece = {
+	duchies = { }
+}
+ghw_region_italy = {
+	duchies = { }
+}
+ghw_region_finland_&_estonia = {
+	duchies = { }
+}
+ghw_region_northern_russia = {
+	duchies = { }
+}
+ghw_region_southern_russia = {
+	duchies = { }
+}
+ghw_region_siberia = {
+	duchies = { }
+}
+ghw_region_transoxiana = {
+	duchies = { }
+}
+ghw_region_tibet = {
+	duchies = { }
+}
+ghw_region_crimea = {
+	duchies = { }
+}
+ghw_region_poland_bohemia_bavaria = {
+	duchies = { }
+}
+ghw_region_northern_india = {
+	duchies = { }
+}
+ghw_region_khotan = {
+	duchies = { }
+}
+ghw_region_southern_india = {
+	duchies = { }
+}
+ghw_region_southwestern_india = {
+	duchies = { }
+}
+ghw_region_the_ganges = {
+	duchies = { }
+}
+ghw_region_non_ganges_india = {
+	duchies = { }
+}
+ghw_region_gujarat_&_rajputana = {
+	duchies = { }
+}
+ghw_region_non_gujarat_or_rajputana_india = {
+	duchies = { }
+}
+ghw_region_lanka_&_bengal = {
+	duchies = { }
+}
+ghw_region_middle_india = {
+	duchies = { }
+}
+ghw_region_north_eastern_india = {
+	duchies = { }
+}
+dlc_fp1_region_core_north_sea = {
+	duchies = { }
+}
+dlc_fp1_region_mysterious_stranger_locations = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_iceland_isles = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_scotland_isles = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_ireland = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_northern_england = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_northern_france_brittany = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_pomerania_prussia = {
+	duchies = { }
+}
+dlc_fp1_region_western_adventure_targets_frisia = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_novgorod = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_white_rus = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_vladimir = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_ruthenia = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_estonia = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_adventure_targets_zaporizhia = {
+	duchies = { }
+}
+dlc_fp1_region_western_scandinavia_pool = {
+	duchies = { }
+}
+dlc_fp1_region_eastern_scandinavia_pool = {
+	duchies = { }
+}
+dlc_fp1_region_russian_steppe = {
+	duchies = { }
+}
+dlc_fp1_region_core_mainland_scandinavia = {
+	duchies = { }
+}
+dlc_fp1_region_non_scandinavian_southern_baltic = {
+	duchies = { }
+}
+dlc_fp1_region_colonial_eastern_europe = {
+	duchies = { }
+}
+dlc_fp1_achievement_far_from_home = {
+	duchies = { }
+}
+dlc_fp1_achievement_king_of_all_the_isles = {
+	duchies = { }
+}
+dlc_fp1_achievement_vladimirs_second_choice = {
+	duchies = { }
+}

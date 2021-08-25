@@ -6,65 +6,65 @@ k_syria = {
 d_aleppo = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2500
+		holder = 3400
 	}
 	1000.1.1 = {
-		holder = 2502
+		holder = 3402
 	}
 }
 c_aleppo = {
 	980.1.1 = {
-		holder = 2500
+		holder = 3400
 	}
 	1000.1.1 = {
-		holder = 2502
+		holder = 3402
 	}
 }
 c_suriya = {
 	980.1.1 = {
-		holder = 2500
+		holder = 3400
 	}
 	1000.1.1 = {
-		holder = 2502
+		holder = 3402
 	}
 }
 c_qinnasrin = {
 	980.1.1 = {
-		holder = 2500
+		holder = 3400
 	}
 	1000.1.1 = {
-		holder = 2502
+		holder = 3402
 	}
 }
 c_palmyra = {
-	988.1.1 = {
-		holder = 2530
+	983.1.1 = {
+		holder = 3430
 	}
 }
 c_sukhna = {
-	981.1.1 = {
-		holder = 2535
+	989.1.1 = {
+		holder = 3435
 	}
 }
 d_damascus = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2510
+		holder = 3410
 	}
 }
 c_damascus = {
 	985.1.1 = {
-		holder = 2510
+		holder = 3410
 	}
 }
 c_juwair = {
 	990.1.1 = {
-		holder = 2510
+		holder = 3410
 	}
 }
 c_baalbek = {
 	990.1.1 = {
-		holder = 2521
+		holder = 3421
 	}
 	990.1.2 = {
 		liege = d_damascus
@@ -72,7 +72,7 @@ c_baalbek = {
 }
 c_hauran = {
 	990.1.1 = {
-		holder = 2540
+		holder = 3440
 	}
 	990.1.2 = {
 		liege = d_damascus
@@ -84,22 +84,22 @@ d_lebanon = {
 }
 c_beirut = {
 	985.1.1 = {
-		holder = 2545
+		holder = 3445
 	}
 }
 c_antiocheia = {
 	985.1.1 = {
-		holder = 2550
+		holder = 3450
 	}
 }
 c_hama = {
 	985.1.1 = {
-		holder = 2545
+		holder = 3445
 	}
 }
 c_homs = {
 	985.1.1 = {
-		holder = 2550
+		holder = 3450
 	}
 }
 d_edessa = {
@@ -108,16 +108,16 @@ d_edessa = {
 }
 c_edessa = {
 	985.1.1 = {
-		holder = 2555
+		holder = 3455
 	}
 }
 c_aintab = {
 	985.1.1 = {
-		holder = 2560
+		holder = 3460
 	}
 }
 c_marash = {
 	985.1.1 = {
-		holder = 2565
+		holder = 3465
 	}
 }

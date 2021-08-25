@@ -1,0 +1,489 @@
+	k_italy = {
+		color = { 244 227 160 }
+		color2 = { 255 255 255 }
+		
+		capital = c_lombardia # Pavia
+		
+		d_lombardia = {
+			color = { 180 115 200 }
+			color2 = { 255 255 255 }
+			
+			capital = c_lombardia # Lombardia
+			
+			c_lombardia = {
+				color = { 185 120 205 }
+				color2 = { 255 255 255 }
+				
+				b_milano = {
+					province = P0
+
+					color = { 185 120 205 }
+					color2 = { 255 255 255 }
+				}
+				b_monza = {
+					province = P1
+
+					color = { 185 120 205 }
+					color2 = { 255 255 255 }
+				}
+				b_gallarate = {
+					province = P2
+
+					color = { 185 120 205 }
+					color2 = { 255 255 255 }
+				}
+				b_varese = {
+					province = P3
+
+					color = { 185 120 205 }
+					color2 = { 255 255 255 }
+				}
+				b_pavia = {
+					province = P4
+
+					color = { 200 155 255 }
+					color2 = { 255 255 255 }
+				}
+				b_vigevano = {
+					province = P5
+
+					color = { 200 155 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_cremona = {
+				color = { 220 160 210 }
+				color2 = { 255 255 255 }
+				
+				b_cremona = {
+					province = P6
+
+					color = { 220 160 210 }
+					color2 = { 255 255 255 }
+				}
+				b_roncaglia = {
+					province = P7
+
+					color = { 220 160 210 }
+					color2 = { 255 255 255 }
+				}
+				b_crema = {
+					province = P8
+
+					color = { 220 160 210 }
+					color2 = { 255 255 255 }
+				}
+				b_lodi = {
+					province = P9
+
+					color = { 200 155 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_brescia = {
+				color = { 170 150 190 }
+				color2 = { 255 255 255 }
+			
+				b_brescia = {
+					province = P10
+
+					color = { 170 150 190 }
+					color2 = { 255 255 255 }
+				}
+				b_bergamo = {
+					province = P11
+
+					color = { 170 150 190 }
+					color2 = { 255 255 255 }
+				}
+				b_chiari = {
+					province = P12
+
+					color = { 170 150 190 }
+					color2 = { 255 255 255 }
+				}
+				b_como = {
+					province = P13
+
+					color = { 240 175 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_parma = {
+				color = { 255 160 195 }
+				color2 = { 255 255 255 }
+				
+
+				b_parma = {
+					province = P14
+
+					color = { 255 160 195 }
+					color2 = { 255 255 255 }
+				}
+				b_florentiola = {
+					province = P15
+
+					color = { 255 160 195 }
+					color2 = { 255 255 255 }
+				}
+				b_piacenza = {
+					province = P16
+
+					color = { 255 160 195 }
+					color2 = { 255 255 255 }
+				}
+				b_bellinzona = {
+					province = P17
+
+					color = { 240 175 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_trent = {
+				color = { 250 150 220 }
+				color2 = { 255 255 255 }
+	
+				b_trento = {
+					province = P18
+
+					color = { 250 150 220 }
+					color2 = { 255 255 255 }
+				}
+				b_bolzano = {
+					province = P19
+
+					color = { 250 150 220 }
+					color2 = { 255 255 255 }
+				}
+				b_val_camonica = {	#Riva AKA Riva del Garda
+					province = P20
+
+					color = { 250 150 220 }
+					color2 = { 255 255 255 }
+				}
+				b_tirano = {
+					province = P21
+
+					color = { 250 150 220 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_verona = {
+			color = { 145 240 205 }
+			color2 = { 255 255 255 }
+			
+			capital = c_verona # Verona
+			
+			c_verona = {
+				color = { 150 245 210 }
+				color2 = { 255 255 255 }
+				
+				b_verona = {
+					province = P22
+
+					color = { 150 245 210 }
+					color2 = { 255 255 255 }
+				}
+				b_lessinia = {
+					province = P23
+
+					color = { 150 245 210 }
+					color2 = { 255 255 255 }
+				}
+				b_garda = {
+					province = P24
+
+					color = { 150 245 210 }
+					color2 = { 255 255 255 }
+				}
+				b_rovigo = {
+					province = P25
+
+					color = { 145 230 225 }
+					color2 = { 255 255 255 }
+				}
+			}
+			
+			c_padua = {
+				color = { 130 215 190 }
+				color2 = { 255 255 255 }
+				
+				b_padua = {
+					province = P26
+
+					color = { 130 215 190 }
+					color2 = { 255 255 255 }
+				}
+				b_lonigo = {
+					province = P27
+
+					color = { 130 215 190 }
+					color2 = { 255 255 255 }
+				}			
+				b_montagnana = {
+					province = P28
+
+					color = { 130 215 190 }
+					color2 = { 255 255 255 }
+				}
+				b_este = {
+					province = P29
+
+					color = { 130 215 190 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_treviso = {
+				color = { 160 225 210 }
+				color2 = { 255 255 255 }
+				
+				b_treviso = {
+					province = P30
+
+					color = { 160 225 210 }
+					color2 = { 255 255 255 }
+				}
+				b_ceneta = {
+					province = P31
+
+					color = { 160 225 210 }
+					color2 = { 255 255 255 }
+				}
+				b_vicenza = {
+					province = P32
+
+					color = { 160 225 210 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_friuli = {
+				color = { 155 255 175 }
+				color2 = { 255 255 255 }
+				
+				b_caorle = {
+					province = P33
+
+					color = { 155 255 175 }
+					color2 = { 255 255 255 }
+				}
+				b_pordenone = {
+					province = P34
+
+					color = { 155 255 175 }
+					color2 = { 255 255 255 }
+				}
+				b_portogruaro = {
+					province = P35
+
+					color = { 155 255 175 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		
+		d_piedmonte = {
+			color = { 191 158 158 }
+			color2 = { 255 255 255 }
+			
+			capital = c_monferrato #Asti
+
+			c_monferrato = {
+				color = { 195 160 160 }
+				color2 = { 255 255 255 }
+				
+				b_asti = {
+					province = P36
+
+					color = { 195 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_alba_di_monferrato = {
+					province = P37
+
+					color = { 195 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_acqui = {
+					province = P38
+
+					color = { 195 160 160 }
+					color2 = { 255 255 255 }
+				}
+				b_tortona = {
+					province = P39
+
+					color = { 170 105 195 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_turin = {
+				color = { 195 115 135 }
+				color2 = { 255 255 255 }
+				
+				b_turin = {
+					province = P40
+
+					color = { 195 115 135 }
+					color2 = { 255 255 255 }
+				}
+				b_chieri = {
+					province = P41
+
+					color = { 195 115 135 }
+					color2 = { 255 255 255 }
+				}
+				b_santhia = {
+					province = P42
+
+					color = { 195 115 135 }
+					color2 = { 255 255 255 }
+				}
+				b_voghera = {
+					province = P43
+
+					color = { 170 105 195 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_novara = {
+				color = { 195 140 130 }
+				color2 = { 255 255 255 }
+				
+				b_novara = {
+					province = P44
+
+					color = { 195 140 130 }
+					color2 = { 255 255 255 }
+				}
+				b_biella = {
+					province = P45
+
+					color = { 195 140 130 }
+					color2 = { 255 255 255 }
+				}
+				b_vercelli = {
+					province = P46
+
+					color = { 195 140 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_cuneo = {
+				color = { 195 130 145 }
+				color2 = { 255 255 255 }
+				
+				b_cuneo = {
+					province = P47
+
+					color = { 195 130 145 }
+					color2 = { 255 255 255 }
+				}
+				b_saluzzo = {
+					province = P48
+
+					color = { 195 130 145 }
+					color2 = { 255 255 255 }
+				}
+				b_mondovi = {
+					province = P49
+
+					color = { 195 130 145 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		
+
+		d_genoa = {
+			color = { 244 141 120 }
+			color2 = { 255 255 255 }
+			
+			capital = c_genoa # Genoa
+			
+			c_genoa = {
+				color = { 244 141 120 }
+				color2 = { 255 255 255 }
+				
+				b_genoa = {
+					province = P50
+
+					color = { 244 141 120 }
+					color2 = { 255 255 255 }
+				}
+				b_monaco = {
+					province = P51
+
+					color = { 244 141 120 }
+					color2 = { 255 255 255 }
+				}
+				b_savona = {
+					province = P52
+
+					color = { 244 141 120 }
+					color2 = { 255 255 255 }
+				}
+				b_luni = {
+					province = P53
+
+					color = { 215 120 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_modena = {
+				color = { 230 185 185 }
+				color2 = { 255 255 255 }
+				
+				b_modena = {
+					province = P54
+
+					color = { 230 185 185 }
+					color2 = { 255 255 255 }
+				}
+				b_canossa = {
+					province = P55
+
+					color = { 230 185 185 }
+					color2 = { 255 255 255 }
+				}
+				b_reggio_emilia = {
+					province = P56
+
+					color = { 230 185 185 }
+					color2 = { 255 255 255 }
+				}
+				b_cento = {
+					province = P57
+
+					color = { 230 185 185 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_mantua = {
+				color = { 215 175 205 }
+				color2 = { 255 255 255 }
+				
+				b_mantua = {
+					province = P58
+
+					color = { 215 175 205 }
+					color2 = { 255 255 255 }
+				}
+				b_guastalla = {
+					province = P59
+
+					color = { 215 175 205 }
+					color2 = { 255 255 255 }
+				}
+				b_brescello = {
+					province = P60
+
+					color = { 215 175 205 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+	}

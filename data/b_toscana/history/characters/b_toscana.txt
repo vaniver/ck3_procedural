@@ -1,54 +1,54 @@
-900 = {
-	name="Nestore"
-	dynasty=180
+1300 = {
+	name="Ugolino"
+	dynasty=260
 	religion="catholic"
 	culture="italian"
-	900.2.14 = {
-		birth="900.2.14"
+	933.7.8 = {
+		birth="933.7.8"
 	}
 }
-901 = {
-	name="Agostino"
-	dynasty=181
+1301 = {
+	name="Beltrano"
+	dynasty=261
 	religion="catholic"
 	culture="italian"
-	988.3.12 = {
-		birth="988.3.12"
+	933.10.15 = {
+		birth="933.10.15"
 	}
 }
-902 = {
-	name="Taddeo"
-	dynasty=182
+1302 = {
+	name="Vincentello"
+	dynasty=262
 	religion="catholic"
 	culture="italian"
-	977.2.11 = {
-		birth="977.2.11"
+	911.11.20 = {
+		birth="911.11.20"
 	}
 }
-903 = {
-	name="Pandolfo"
-	dynasty=183
+1303 = {
+	name="Manfredo"
+	dynasty=263
 	religion="catholic"
 	culture="italian"
-	955.5.3 = {
-		birth="955.5.3"
+	955.11.9 = {
+		birth="955.11.9"
 	}
 }
-904 = {
-	name="Costante"
-	dynasty=184
+1304 = {
+	name="Ascanio"
+	dynasty=264
 	religion="catholic"
 	culture="italian"
-	900.10.6 = {
-		birth="900.10.6"
+	911.11.15 = {
+		birth="911.11.15"
 	}
 }
-905 = {
-	name="Tiziano"
-	dynasty=185
+1305 = {
+	name="Abbondanzio"
+	dynasty=265
 	religion="catholic"
 	culture="italian"
-	911.2.5 = {
-		birth="911.2.5"
+	999.2.22 = {
+		birth="999.2.22"
 	}
 }

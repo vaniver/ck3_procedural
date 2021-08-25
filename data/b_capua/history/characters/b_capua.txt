@@ -1,54 +1,54 @@
-400 = {
-	name="Lambertu"
-	dynasty=80
+500 = {
+	name="Liuni"
+	dynasty=100
 	religion="catholic"
 	culture="sicilian"
-	955.9.12 = {
-		birth="955.9.12"
+	955.12.27 = {
+		birth="955.12.27"
 	}
 }
-401 = {
-	name="Petru"
-	dynasty=81
+501 = {
+	name="Sanciu"
+	dynasty=101
 	religion="catholic"
 	culture="sicilian"
-	900.2.21 = {
-		birth="900.2.21"
+	933.6.28 = {
+		birth="933.6.28"
 	}
 }
-402 = {
-	name="Massiminu"
-	dynasty=82
+502 = {
+	name="Ruffredu"
+	dynasty=102
 	religion="catholic"
 	culture="sicilian"
-	977.6.12 = {
-		birth="977.6.12"
+	922.3.9 = {
+		birth="922.3.9"
 	}
 }
-403 = {
-	name="Martinu"
-	dynasty=83
+503 = {
+	name="Valirianu"
+	dynasty=103
 	religion="catholic"
 	culture="sicilian"
-	955.1.17 = {
-		birth="955.1.17"
+	944.8.26 = {
+		birth="944.8.26"
 	}
 }
-404 = {
-	name="Ademariu"
-	dynasty=84
+504 = {
+	name="Girvasiu"
+	dynasty=104
 	religion="catholic"
 	culture="sicilian"
-	988.9.17 = {
-		birth="988.9.17"
+	911.4.27 = {
+		birth="911.4.27"
 	}
 }
-405 = {
-	name="Rainulfu"
-	dynasty=85
+505 = {
+	name="Rubbertu"
+	dynasty=105
 	religion="catholic"
 	culture="sicilian"
-	922.7.14 = {
-		birth="922.7.14"
+	922.2.26 = {
+		birth="922.2.26"
 	}
 }

@@ -1,0 +1,26 @@
+d_palestine = {
+	1000.1.1 = {	change_development_level = 8 }
+	987.1.1 = {
+		holder = 2000
+	}
+}
+c_jerusalem = {
+	987.1.1 = {
+		holder = 2000
+	}
+}
+c_jaffa = {
+	987.1.1 = {
+		holder = 2000
+	}
+}
+c_negev = {
+	984.1.1 = {
+		holder = 2001
+	}
+}
+c_acre = {
+	992.1.1 = {
+		holder = 2002
+	}
+}

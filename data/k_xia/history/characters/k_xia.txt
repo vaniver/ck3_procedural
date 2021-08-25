@@ -1,0 +1,207 @@
+3600 = {
+	name="Yan"
+	dynasty=720
+	religion="mahayana"
+	culture="han"
+	940.7.22 = {
+		birth="940.7.22"
+	}
+	975.1.1 = {
+		add_spouse = 3601
+	}
+	999.12.31 = {
+		death="999.12.31"
+	}
+}
+3601 = {
+	name="Fujin"
+	female = yes
+	religion="mahayana"
+	culture="han"
+	intrigue=6
+	trait="education_intrigue_3"
+	948.6.14 = {
+		birth="948.6.14"
+	}
+	975.1.1 = {
+		add_spouse = 3600
+	}
+}
+3602 = {
+	name="Hun"
+	dynasty=720
+	religion="mahayana"
+	culture="han"
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait="education_martial_4"
+	trait="ambitious"
+	trait="blademaster_1"
+	father=3600
+	mother=3601
+	980.10.20 = {
+		birth="980.10.20"
+	}
+}
+3603 = {
+	name="Youyi"
+	dynasty=720
+	religion="mahayana"
+	culture="han"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_stewardship_3"
+	trait="content"
+	father=3600
+	mother=3601
+	982.5.9 = {
+		birth="982.5.9"
+	}
+}
+3604 = {
+	name="Nanxian"
+	female = yes
+	dynasty=720
+	religion="mahayana"
+	culture="han"
+	martial=3
+	diplomacy=3
+	intrigue=3
+	stewardship=3
+	learning=3
+	trait="education_diplomacy_3"
+	trait="gregarious"
+	father=3600
+	mother=3601
+	983.3.19 = {
+		birth="983.3.19"
+	}
+}
+3610 = {
+	name="Hongwu"
+	dynasty=721
+	religion="mahayana"
+	culture="han"
+	trait="physique_good_1"
+	trait="shrewd"
+	968.6.23 = {
+		birth="968.6.23"
+	}
+	985.1.1 = {
+		add_spouse = 3622
+	}
+}
+3620 = {
+	name="Yuqing"
+	dynasty=724
+	religion="mahayana"
+	culture="han"
+	947.2.17 = {
+		birth="947.2.17"
+	}
+	990.1.1 = {
+		death="990.1.1"
+	}
+}
+3621 = {
+	name="Xiaojie"
+	dynasty=724
+	religion="mahayana"
+	culture="han"
+	father=3620
+	963.4.3 = {
+		birth="963.4.3"
+	}
+}
+3622 = {
+	name="Diaochan"
+	female = yes
+	dynasty=724
+	religion="mahayana"
+	culture="han"
+	father=3620
+	960.9.7 = {
+		birth="960.9.7"
+	}
+	985.1.1 = {
+		add_spouse = 3610
+	}
+}
+3630 = {
+	name="Shenquan"
+	dynasty=723
+	religion="mahayana"
+	culture="han"
+	978.6.26 = {
+		birth="978.6.26"
+	}
+}
+3635 = {
+	name="Huaishen"
+	dynasty=724
+	religion="mahayana"
+	culture="han"
+	970.12.26 = {
+		birth="970.12.26"
+	}
+}
+3640 = {
+	name="Zheng"
+	dynasty=725
+	religion="mahayana"
+	culture="han"
+	971.11.3 = {
+		birth="971.11.3"
+	}
+}
+3645 = {
+	name="Zhizhong"
+	dynasty=726
+	religion="mahayana"
+	culture="han"
+	973.4.25 = {
+		birth="973.4.25"
+	}
+}
+3650 = {
+	name="Shenyou"
+	dynasty=727
+	religion="mahayana"
+	culture="han"
+	975.6.15 = {
+		birth="975.6.15"
+	}
+}
+3655 = {
+	name="Chuna"
+	dynasty=728
+	religion="mahayana"
+	culture="han"
+	976.11.1 = {
+		birth="976.11.1"
+	}
+}
+3660 = {
+	name="Wei"
+	dynasty=729
+	religion="mahayana"
+	culture="han"
+	972.8.14 = {
+		birth="972.8.14"
+	}
+}
+3665 = {
+	name="Yin"
+	dynasty=730
+	religion="mahayana"
+	culture="han"
+	973.1.4 = {
+		birth="973.1.4"
+	}
+}

@@ -293,8 +293,8 @@ def inner_add_triangle(continent, kingdoms, c_idx):
                 continent.tile_list.pop() #Remove the central duchy that we added but couldn't find a good kingdom for.
     return False
 
-def make_island_kingdom(water_height, origin=None, size_list = [6, 4, 4, 3], banned = [], weighted=True, min_mag=6, min_capital_coast=3, min_coast=2, max_tries = 1000, strait_prob = 0.5, center_bias = 0.5, coast_bias = 0.125):
-    '''Given a dictionary from cubes to distance from shore, return a tile with duchies whose size are from duchy_size_list,
+def make_island_kingdom(water_height, origin=None, size_list = KINGDOM_SIZE_LIST, banned = [], weighted=True, min_mag=6, min_capital_coast=3, min_coast=2, max_tries = 1000, strait_prob = 0.5, center_bias = 0.5, coast_bias = 0.125):
+    '''Given a dictionary from cubes to distance from shore, return a tile with duchies whose size are from size_list,
     and which are connected either directly or by straits (with probability strait_prob), and doesn't have any hexes in banned.
     The probability that a hex is selected as the origin is proportional to np.exp(-el.mag() * center_bias) * np.exp(water_height[el] * coast_bias),
     so high values of center_bias will make it closer to the center and high values of coast_bias will make it further from the shore.
@@ -313,7 +313,7 @@ def make_island_kingdom(water_height, origin=None, size_list = [6, 4, 4, 3], ban
         allowable = [k for k, v in water_height.items() if v >= min_coast and k not in banned]
         if any([el not in allowable for el in island.real_hex_list()]):
             break
-        for size in size_list[1:]:
+        for d_size_list in size_list[1:]:
             allocated = island.real_total_list()
             land_nbrs = island.neighbors()
             allowable = [el for el in allowable if el not in allocated]
@@ -802,15 +802,18 @@ class BoundingHex:
         return dists
 
 
-def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles = [2, 4, 0]):
+def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles = [2, 4, 0], inner_sea = False):
     '''Create three continents, with number of continental kingdoms determined by cont_size_list, and arrange them around an inner sea.
     angles determines where the continents go; 2,4,0 is northwest, northeast, south; 3,5,1 is north, southeast, southwest.''' 
-    assert len(cont_size_list) == 3
+    # assert len(cont_size_list) == 3
     assert len(cont_size_list) == len(angles)
     assert len(cont_size_list) == len(island_size_list)
     world = Tile(hex_list=[])
     #Continents
     for cont_idx, cont_size in enumerate(cont_size_list):
+        if cont_size == 0:
+            world.add_tile(Tile(hex_list=[]))
+            continue
         cont = new_continent_gen(num_kingdoms = cont_size)
         bounding_hex = BoundingHex(cont)
         cont.origin, cont.rotation = bounding_hex.best_corner(angles[cont_idx])
@@ -818,36 +821,38 @@ def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles 
     #Check for straits
     # This will need to be fixed if we allow more than 3 continents.
     # TODO test more
-    connex = [0] * 3
-    while any([l == 0 for l in connex]):
-        #Inch them closer one at a time until you can't get closer without touching.
-        connex = [0] * 3
-        for (ind_a, ind_b) in combinations(range(len(world.tile_list)), 2):
-            tile_a = world.tile_list[ind_a]
-            tile_b = world.tile_list[ind_b]
-            strait_pairs, corner_pairs = tile_a.two_step_pairs(tile_b)
-            if len(strait_pairs) + len(corner_pairs) >= 0:
-                connex[ind_a] += 1
-                connex[ind_b] += 1
-        if 0 in connex:
-            move_ind = connex.index(0)
-            world.tile_list[move_ind].origin.add_in_place(Cube(0,1,-1).rotate_right(angles[move_ind]))
-    #Inner sea
-    if False:
+    world.tile_list[-1].origin.add_in_place(Cube(0,1,-1))
+    # connex = [0] * 3
+    # while any([l == 0 for l in connex]):
+    #     # Inch them closer one at a time until you can't get closer without touching.
+    #     connex = [0] * 3
+    #     for (ind_a, ind_b) in combinations(range(len(world.tile_list)), 2):
+    #         tile_a = world.tile_list[ind_a]
+    #         tile_b = world.tile_list[ind_b]
+    #         strait_pairs, corner_pairs = tile_a.two_step_pairs(tile_b)
+    #         if len(strait_pairs) + len(corner_pairs) >= 0:
+    #             connex[ind_a] += 1
+    #             connex[ind_b] += 1
+    #     if 0 in connex:
+    #         move_ind = connex.index(0)
+    #         world.tile_list[move_ind].origin.add_in_place(Cube(0,1,-1).rotate_right(angles[move_ind]))
+    #         world.tile_list[move_ind].rectify()
+    # Inner sea
+    if inner_sea:
         bounding_hex = BoundingHex(world)
         inner_sea = set()
-        to_search = set(Cube())
+        to_search = set([Cube()])
         while len(to_search) > 0:
             curr = to_search.pop()
             inner_sea.add(curr)
             to_search.update([el for el in curr.neighbors() if el in bounding_hex and bounding_hex.dist(el) >= 2 and el not in inner_sea])
-        if len(inner_sea) > 20:
-            #We have enough to make a kingdom here
+        if len(inner_sea) > 22:
+            #We have enough to make a duchy here
             water_height = {el: bounding_hex.dist(el) for el in inner_sea}
-            inner_kingdom = make_island_kingdom(water_height)
-            if inner_kingdom:
-                world.add_tile(inner_kingdom)
-                inner_sea -= set(inner_kingdom.inclusive_neighbors())
+            inner_duchy = make_island_duchy(water_height)
+            if inner_duchy:
+                world.tile_list[-1].add_tile(inner_duchy)
+                # inner_sea -= set(inner_duchy.inclusive_neighbors())
         #We should just drop some sicily-esque islands.
     #Outer islands
     for cont_idx, island_size in enumerate(island_size_list):
@@ -866,6 +871,16 @@ def make_world(cont_size_list = [3, 3, 3], island_size_list = [1, 1, 1], angles 
     return world
 
 
+def make_island_duchy(water_height, size_list = CENTER_SIZE_LIST, rgb_tuple = None):
+    '''Make a duchy with sizes according to size_list in the region defined by water_height.'''
+    origin = max(water_height, key=water_height.get)
+    rgb_tuple = rgb_tuple or random_rgb_tuple(size_list)
+    capital_county = make_capital_county(c_size=size_list[0], coastal=False, rgb=rgb_tuple[1][0])
+    duchy = Tile(origin=origin, tile_list=[capital_county],
+                 hex_list=[], rgb=rgb_tuple[0])
+    for idx, c_size in enumerate(size_list[1:]):
+        duchy.add_bordering_tile(c_size, rgb=rgb_tuple[1][idx + 1], only=water_height)
+    return duchy
 
 
 if __name__ == '__main__':                

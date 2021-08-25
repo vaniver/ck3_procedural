@@ -1,0 +1,98 @@
+##d_kara_khoja
+###c_kara_khoja
+P0 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P1 = {
+	holding = church_holding
+}
+P2 = {
+	#holding = none
+}
+P3 = {
+	#holding = none
+}
+
+###c_beshbalik
+P4 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P5 = {
+	#holding = none
+}
+P6 = {
+	holding = city_holding
+}
+P7 = {
+	#holding = none
+}
+
+###c_yangjibaliq
+P8 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P9 = {
+	holding = church_holding
+}
+P10 = {
+	#holding = none
+}
+P11 = {
+	#holding = none
+}
+
+##d_altay
+###c_kara_khoja
+P12 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P13 = {
+	#holding = none
+}
+P14 = {
+	holding = city_holding
+}
+P15 = {
+	#holding = none
+}
+
+###c_beshbalik
+P16 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P17 = {
+	holding = church_holding
+}
+P18 = {
+	#holding = none
+}
+P19 = {
+	#holding = none
+}
+
+###c_yangjibaliq
+P20 = {
+	culture = uyghur
+	religion = vajrayana
+	holding = castle_holding
+}
+P21 = {
+	#holding = none
+}
+P22 = {
+	holding = city_holding
+}
+P23 = {
+	#holding = none
+}
+

@@ -6,65 +6,65 @@ k_hungary = {
 d_visegrad = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2300
+		holder = 2900
 	}
 	1000.1.1 = {
-		holder = 2302
+		holder = 2902
 	}
 }
 c_visegrad = {
 	980.1.1 = {
-		holder = 2300
+		holder = 2900
 	}
 	1000.1.1 = {
-		holder = 2302
+		holder = 2902
 	}
 }
 c_hewes = {
 	980.1.1 = {
-		holder = 2300
+		holder = 2900
 	}
 	1000.1.1 = {
-		holder = 2302
+		holder = 2902
 	}
 }
 c_szekesfehervar = {
 	980.1.1 = {
-		holder = 2300
+		holder = 2900
 	}
 	1000.1.1 = {
-		holder = 2302
+		holder = 2902
 	}
 }
 c_gyor = {
 	981.1.1 = {
-		holder = 2330
+		holder = 2930
 	}
 }
 c_sopron = {
-	988.1.1 = {
-		holder = 2335
+	980.1.1 = {
+		holder = 2935
 	}
 }
 d_transylvania = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2310
+		holder = 2910
 	}
 }
 c_feher = {
 	985.1.1 = {
-		holder = 2310
+		holder = 2910
 	}
 }
 c_torda = {
 	990.1.1 = {
-		holder = 2310
+		holder = 2910
 	}
 }
 c_szekelyfold = {
 	990.1.1 = {
-		holder = 2321
+		holder = 2921
 	}
 	990.1.2 = {
 		liege = d_transylvania
@@ -72,7 +72,7 @@ c_szekelyfold = {
 }
 c_beszterce = {
 	990.1.1 = {
-		holder = 2340
+		holder = 2940
 	}
 	990.1.2 = {
 		liege = d_transylvania
@@ -84,22 +84,22 @@ d_bihar = {
 }
 c_bihar = {
 	985.1.1 = {
-		holder = 2345
+		holder = 2945
 	}
 }
 c_szabolcs = {
 	985.1.1 = {
-		holder = 2350
+		holder = 2950
 	}
 }
 c_zarand = {
 	985.1.1 = {
-		holder = 2345
+		holder = 2945
 	}
 }
 c_bekes = {
 	985.1.1 = {
-		holder = 2350
+		holder = 2950
 	}
 }
 d_ungvar = {
@@ -108,16 +108,16 @@ d_ungvar = {
 }
 c_ungvar = {
 	985.1.1 = {
-		holder = 2355
+		holder = 2955
 	}
 }
 c_zemplen = {
 	985.1.1 = {
-		holder = 2360
+		holder = 2960
 	}
 }
 c_borsod = {
 	985.1.1 = {
-		holder = 2365
+		holder = 2965
 	}
 }

@@ -5,32 +5,32 @@ d_piedmonte = {
 	1000.1.1 = {	change_development_level = 5 }
 }
 c_genoa = {
-	992.1.1 = {
-		holder = 600
+	997.1.1 = {
+		holder = 800
 	}
 }
 c_modena = {
-	996.1.1 = {
-		holder = 601
+	999.1.1 = {
+		holder = 801
 	}
 }
 c_mantua = {
-	993.1.1 = {
-		holder = 602
+	992.1.1 = {
+		holder = 802
 	}
 }
 c_monferrato = {
-	991.1.1 = {
-		holder = 603
+	995.1.1 = {
+		holder = 803
 	}
 }
 c_turin = {
-	998.1.1 = {
-		holder = 604
+	991.1.1 = {
+		holder = 804
 	}
 }
 c_novara = {
-	995.1.1 = {
-		holder = 605
+	999.1.1 = {
+		holder = 805
 	}
 }

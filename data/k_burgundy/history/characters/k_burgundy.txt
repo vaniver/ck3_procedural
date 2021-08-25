@@ -1,35 +1,35 @@
-2000 = {
-	name="Thibault"
-	dynasty=400
+2500 = {
+	name="Gaucelin"
+	dynasty=500
 	religion="catholic"
 	culture="french"
-	940.9.8 = {
-		birth="940.9.8"
+	940.6.24 = {
+		birth="940.6.24"
 	}
 	975.1.1 = {
-		add_spouse = 2001
+		add_spouse = 2501
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
-2001 = {
-	name="HE_loise"
+2501 = {
+	name="Yolande"
 	female = yes
 	religion="catholic"
 	culture="french"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.4.15 = {
-		birth="948.4.15"
+	948.8.25 = {
+		birth="948.8.25"
 	}
 	975.1.1 = {
-		add_spouse = 2000
+		add_spouse = 2500
 	}
 }
-2002 = {
-	name="GE_raud"
-	dynasty=400
+2502 = {
+	name="Aimery"
+	dynasty=500
 	religion="catholic"
 	culture="french"
 	martial=5
@@ -40,15 +40,15 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	father=2000
-	mother=2001
-	980.12.2 = {
-		birth="980.12.2"
+	father=2500
+	mother=2501
+	980.1.18 = {
+		birth="980.1.18"
 	}
 }
-2003 = {
-	name="Nicolas"
-	dynasty=400
+2503 = {
+	name="Raoul"
+	dynasty=500
 	religion="catholic"
 	culture="french"
 	martial=3
@@ -58,15 +58,16 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	father=2000
-	mother=2001
-	982.8.17 = {
-		birth="982.8.17"
+	father=2500
+	mother=2501
+	982.8.12 = {
+		birth="982.8.12"
 	}
 }
-2004 = {
-	name="Guichard"
-	dynasty=400
+2504 = {
+	name="Raymonde"
+	female = yes
+	dynasty=500
 	religion="catholic"
 	culture="french"
 	martial=3
@@ -76,131 +77,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	father=2000
-	mother=2001
-	983.11.5 = {
-		birth="983.11.5"
+	father=2500
+	mother=2501
+	983.9.2 = {
+		birth="983.9.2"
 	}
 }
-2010 = {
-	name="Raimbaut"
-	dynasty=401
+2510 = {
+	name="Simon"
+	dynasty=501
 	religion="catholic"
 	culture="french"
 	trait="physique_good_1"
 	trait="shrewd"
-	969.2.5 = {
-		birth="969.2.5"
+	966.9.4 = {
+		birth="966.9.4"
 	}
 	985.1.1 = {
-		add_spouse = 2022
+		add_spouse = 2522
 	}
 }
-2020 = {
-	name="Hamelin"
-	dynasty=404
+2520 = {
+	name="Orson"
+	dynasty=504
 	religion="catholic"
 	culture="french"
-	949.6.3 = {
-		birth="949.6.3"
+	945.11.11 = {
+		birth="945.11.11"
 	}
 	990.1.1 = {
 		death="990.1.1"
 	}
 }
-2021 = {
-	name="Jean"
-	dynasty=404
+2521 = {
+	name="Hamelin"
+	dynasty=504
 	religion="catholic"
 	culture="french"
-	father=2020
-	967.5.9 = {
-		birth="967.5.9"
+	father=2520
+	969.9.26 = {
+		birth="969.9.26"
 	}
 }
-2022 = {
-	name="Tiburge"
+2522 = {
+	name="Adelaide"
 	female = yes
-	dynasty=404
+	dynasty=504
 	religion="catholic"
 	culture="french"
-	father=2020
-	960.1.11 = {
-		birth="960.1.11"
+	father=2520
+	966.9.17 = {
+		birth="966.9.17"
 	}
 	985.1.1 = {
-		add_spouse = 2010
+		add_spouse = 2510
 	}
 }
-2030 = {
-	name="Adalbert"
-	dynasty=403
-	religion="catholic"
-	culture="french"
-	979.3.20 = {
-		birth="979.3.20"
-	}
-}
-2035 = {
-	name="Guichard"
-	dynasty=404
-	religion="catholic"
-	culture="french"
-	977.12.24 = {
-		birth="977.12.24"
-	}
-}
-2040 = {
-	name="Rorgon"
-	dynasty=405
-	religion="catholic"
-	culture="french"
-	973.2.18 = {
-		birth="973.2.18"
-	}
-}
-2045 = {
-	name="Roubaud"
-	dynasty=406
-	religion="catholic"
-	culture="french"
-	975.5.4 = {
-		birth="975.5.4"
-	}
-}
-2050 = {
-	name="Yves"
-	dynasty=407
-	religion="catholic"
-	culture="french"
-	970.8.1 = {
-		birth="970.8.1"
-	}
-}
-2055 = {
-	name="Louis"
-	dynasty=408
-	religion="catholic"
-	culture="french"
-	971.12.2 = {
-		birth="971.12.2"
-	}
-}
-2060 = {
-	name="Alain"
-	dynasty=409
-	religion="catholic"
-	culture="french"
-	978.9.14 = {
-		birth="978.9.14"
-	}
-}
-2065 = {
+2530 = {
 	name="E_douard"
-	dynasty=410
+	dynasty=503
 	religion="catholic"
 	culture="french"
-	979.5.26 = {
-		birth="979.5.26"
+	979.11.17 = {
+		birth="979.11.17"
+	}
+}
+2535 = {
+	name="Jacques"
+	dynasty=504
+	religion="catholic"
+	culture="french"
+	976.6.22 = {
+		birth="976.6.22"
+	}
+}
+2540 = {
+	name="Richard"
+	dynasty=505
+	religion="catholic"
+	culture="french"
+	970.2.6 = {
+		birth="970.2.6"
+	}
+}
+2545 = {
+	name="Guilhem"
+	dynasty=506
+	religion="catholic"
+	culture="french"
+	973.3.26 = {
+		birth="973.3.26"
+	}
+}
+2550 = {
+	name="Amaury"
+	dynasty=507
+	religion="catholic"
+	culture="french"
+	973.12.27 = {
+		birth="973.12.27"
+	}
+}
+2555 = {
+	name="Renaud"
+	dynasty=508
+	religion="catholic"
+	culture="french"
+	979.5.4 = {
+		birth="979.5.4"
+	}
+}
+2560 = {
+	name="BarthE_lE_mi"
+	dynasty=509
+	religion="catholic"
+	culture="french"
+	973.1.25 = {
+		birth="973.1.25"
+	}
+}
+2565 = {
+	name="Richard"
+	dynasty=510
+	religion="catholic"
+	culture="french"
+	979.4.5 = {
+		birth="979.4.5"
 	}
 }

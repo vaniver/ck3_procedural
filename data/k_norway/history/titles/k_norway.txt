@@ -1,0 +1,123 @@
+k_norway = {
+	1000.1.1 = {	change_development_level = 6 }
+	900.1.1 = {
+	}
+}
+d_viken = {
+	1000.1.1 = {	change_development_level = 7 }
+	980.1.1 = {
+		holder = 3100
+	}
+	1000.1.1 = {
+		holder = 3102
+	}
+}
+c_vingulmork = {
+	980.1.1 = {
+		holder = 3100
+	}
+	1000.1.1 = {
+		holder = 3102
+	}
+}
+c_vestfold = {
+	980.1.1 = {
+		holder = 3100
+	}
+	1000.1.1 = {
+		holder = 3102
+	}
+}
+c_telemark = {
+	980.1.1 = {
+		holder = 3100
+	}
+	1000.1.1 = {
+		holder = 3102
+	}
+}
+c_hedmork = {
+	989.1.1 = {
+		holder = 3130
+	}
+}
+c_gudbrandsdalir = {
+	989.1.1 = {
+		holder = 3135
+	}
+}
+d_jamtland = {
+	1000.1.1 = {	change_development_level = 7 }
+	985.1.1 = {
+		holder = 3110
+	}
+}
+c_jamtfir = {
+	985.1.1 = {
+		holder = 3110
+	}
+}
+c_helgum = {
+	990.1.1 = {
+		holder = 3110
+	}
+}
+c_morarna = {
+	990.1.1 = {
+		holder = 3121
+	}
+	990.1.2 = {
+		liege = d_jamtland
+	}
+}
+c_harjadalen = {
+	990.1.1 = {
+		holder = 3140
+	}
+	990.1.2 = {
+		liege = d_jamtland
+	}
+}
+d_trandalog = {
+	900.1.1 = {
+	}
+}
+c_trandheim = {
+	985.1.1 = {
+		holder = 3145
+	}
+}
+c_sogn = {
+	985.1.1 = {
+		holder = 3150
+	}
+}
+c_norwegian_more = {
+	985.1.1 = {
+		holder = 3145
+	}
+}
+c_rogalandi = {
+	985.1.1 = {
+		holder = 3150
+	}
+}
+d_halogaland = {
+	900.1.1 = {
+	}
+}
+c_bothin = {
+	985.1.1 = {
+		holder = 3155
+	}
+}
+c_namdalfylki = {
+	985.1.1 = {
+		holder = 3160
+	}
+}
+c_vastvag = {
+	985.1.1 = {
+		holder = 3165
+	}
+}

@@ -1,35 +1,35 @@
-2500 = {
-	name="Abdul-Lateef"
-	dynasty=500
+3400 = {
+	name="Seyfullah"
+	dynasty=680
 	religion="ashari"
 	culture="levantine"
-	940.2.17 = {
-		birth="940.2.17"
+	940.3.10 = {
+		birth="940.3.10"
 	}
 	975.1.1 = {
-		add_spouse = 2501
+		add_spouse = 3401
 	}
 	999.12.31 = {
 		death="999.12.31"
 	}
 }
-2501 = {
-	name="Aziza"
+3401 = {
+	name="Noushin"
 	female = yes
 	religion="ashari"
 	culture="levantine"
 	intrigue=6
 	trait="education_intrigue_3"
-	948.5.20 = {
-		birth="948.5.20"
+	948.3.1 = {
+		birth="948.3.1"
 	}
 	975.1.1 = {
-		add_spouse = 2500
+		add_spouse = 3400
 	}
 }
-2502 = {
-	name="Khudayar"
-	dynasty=500
+3402 = {
+	name="Majid"
+	dynasty=680
 	religion="ashari"
 	culture="levantine"
 	martial=5
@@ -40,15 +40,15 @@
 	trait="education_martial_4"
 	trait="ambitious"
 	trait="blademaster_1"
-	father=2500
-	mother=2501
-	980.4.17 = {
-		birth="980.4.17"
+	father=3400
+	mother=3401
+	980.4.7 = {
+		birth="980.4.7"
 	}
 }
-2503 = {
-	name="Ya_qub"
-	dynasty=500
+3403 = {
+	name="Ibrahim"
+	dynasty=680
 	religion="ashari"
 	culture="levantine"
 	martial=3
@@ -58,15 +58,16 @@
 	learning=3
 	trait="education_stewardship_3"
 	trait="content"
-	father=2500
-	mother=2501
-	982.12.11 = {
-		birth="982.12.11"
+	father=3400
+	mother=3401
+	982.3.7 = {
+		birth="982.3.7"
 	}
 }
-2504 = {
-	name="Seyfullah"
-	dynasty=500
+3404 = {
+	name="Hasti"
+	female = yes
+	dynasty=680
 	religion="ashari"
 	culture="levantine"
 	martial=3
@@ -76,131 +77,131 @@
 	learning=3
 	trait="education_diplomacy_3"
 	trait="gregarious"
-	father=2500
-	mother=2501
-	983.2.4 = {
-		birth="983.2.4"
+	father=3400
+	mother=3401
+	983.1.21 = {
+		birth="983.1.21"
 	}
 }
-2510 = {
-	name="Da_ud"
-	dynasty=501
+3410 = {
+	name="Abdul-Azeem"
+	dynasty=681
 	religion="ashari"
 	culture="levantine"
 	trait="physique_good_1"
 	trait="shrewd"
-	962.9.24 = {
-		birth="962.9.24"
+	963.7.15 = {
+		birth="963.7.15"
 	}
 	985.1.1 = {
-		add_spouse = 2522
+		add_spouse = 3422
 	}
 }
-2520 = {
-	name="Mukhtar"
-	dynasty=504
+3420 = {
+	name="Abdul-Wahad"
+	dynasty=684
 	religion="ashari"
 	culture="levantine"
-	946.4.25 = {
-		birth="946.4.25"
+	947.9.23 = {
+		birth="947.9.23"
 	}
 	990.1.1 = {
 		death="990.1.1"
 	}
 }
-2521 = {
-	name="Ali"
-	dynasty=504
+3421 = {
+	name="Abdullah"
+	dynasty=684
 	religion="ashari"
 	culture="levantine"
-	father=2520
-	965.11.15 = {
-		birth="965.11.15"
+	father=3420
+	962.2.15 = {
+		birth="962.2.15"
 	}
 }
-2522 = {
-	name="Mastana"
+3422 = {
+	name="Mahwash"
 	female = yes
-	dynasty=504
+	dynasty=684
 	religion="ashari"
 	culture="levantine"
-	father=2520
-	968.9.11 = {
-		birth="968.9.11"
+	father=3420
+	960.2.5 = {
+		birth="960.2.5"
 	}
 	985.1.1 = {
-		add_spouse = 2510
+		add_spouse = 3410
 	}
 }
-2530 = {
-	name="Ashraf"
-	dynasty=503
+3430 = {
+	name="Adil"
+	dynasty=683
 	religion="ashari"
 	culture="levantine"
-	973.12.14 = {
-		birth="973.12.14"
+	974.1.11 = {
+		birth="974.1.11"
 	}
 }
-2535 = {
-	name="Nuri"
-	dynasty=504
+3435 = {
+	name="Hakam"
+	dynasty=684
 	religion="ashari"
 	culture="levantine"
-	974.2.17 = {
-		birth="974.2.17"
+	971.5.4 = {
+		birth="971.5.4"
 	}
 }
-2540 = {
-	name="Imamaddin"
-	dynasty=505
+3440 = {
+	name="Youkhanna"
+	dynasty=685
 	religion="ashari"
 	culture="levantine"
-	971.9.20 = {
-		birth="971.9.20"
+	979.2.13 = {
+		birth="979.2.13"
 	}
 }
-2545 = {
-	name="Ashraf"
-	dynasty=506
+3445 = {
+	name="Sirhan"
+	dynasty=686
 	religion="ashari"
 	culture="levantine"
-	975.10.1 = {
-		birth="975.10.1"
+	979.11.22 = {
+		birth="979.11.22"
 	}
 }
-2550 = {
-	name="Abdul-Lateef"
-	dynasty=507
+3450 = {
+	name="Hamdan"
+	dynasty=687
 	religion="ashari"
 	culture="levantine"
-	978.10.25 = {
-		birth="978.10.25"
+	977.3.20 = {
+		birth="977.3.20"
 	}
 }
-2555 = {
-	name="Abdul-Azeem"
-	dynasty=508
+3455 = {
+	name="Ali"
+	dynasty=688
 	religion="ashari"
 	culture="levantine"
-	975.5.15 = {
-		birth="975.5.15"
+	970.10.26 = {
+		birth="970.10.26"
 	}
 }
-2560 = {
-	name="Ismat"
-	dynasty=509
+3460 = {
+	name="Khudayar"
+	dynasty=689
 	religion="ashari"
 	culture="levantine"
-	977.1.18 = {
-		birth="977.1.18"
+	971.5.13 = {
+		birth="971.5.13"
 	}
 }
-2565 = {
-	name="Muhammad"
-	dynasty=510
+3465 = {
+	name="Hussayn"
+	dynasty=690
 	religion="ashari"
 	culture="levantine"
-	972.2.19 = {
-		birth="972.2.19"
+	970.6.16 = {
+		birth="970.6.16"
 	}
 }

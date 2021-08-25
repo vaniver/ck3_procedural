@@ -1,26 +1,26 @@
 d_latium = {
 	1000.1.1 = {	change_development_level = 8 }
 	987.1.1 = {
-		holder = 1100
+		holder = 1500
 	}
 }
 c_roma = {
 	987.1.1 = {
-		holder = 1100
+		holder = 1500
 	}
 }
 c_tivoli = {
 	987.1.1 = {
-		holder = 1100
+		holder = 1500
 	}
 }
 c_spoleto = {
-	984.1.1 = {
-		holder = 1101
+	980.1.1 = {
+		holder = 1501
 	}
 }
 c_lanciano = {
-	995.1.1 = {
-		holder = 1102
+	991.1.1 = {
+		holder = 1502
 	}
 }

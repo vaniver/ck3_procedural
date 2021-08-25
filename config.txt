@@ -1,35 +1,40 @@
 #empire angle
-weurope	2
-eeurope	4
+europe	2
+tibet	4
 islam	0
+
 #empire	kingdom	religion	geo_type
-weurope	k_france	catholic	continent
-weurope	k_aquitaine	catholic	continent
-weurope	k_burgundy	catholic	continent
-eeurope	k_bavaria	catholic	continent
-eeurope	k_pomerania	catholic	continent
-eeurope	k_hungary	catholic	continent
-islam	k_syria	islam	continent
-islam	k_egypt	islam	continent
-islam	k_yemen	islam	continent
+europe	k_france	forest	continent
+europe	k_east_francia	forest	continent
+europe	k_italy	hills	continent
+europe	k_bavaria	hills	continent
+islam	k_syria	desert	continent
+islam	k_egypt	desert	continent
+islam	k_yemen	desert	continent
+tibet	k_pagan	jungle	continent
+tibet	k_norway	mountain	continent
+tibet	k_xia	steppe	continent
+
 #empire	base_terrain	waste_terrain
-weurope	forest	mountains
-eeurope	forest	mountains
+europe	forest	mountains
 islam	desert	desert
+tibet	jungle	mountains
 
 #Now the centers and borders
 #empire	kingdom	religion	geo_type
-weurope	c_latium	catholic	continent
-#weurope	c_lombardia	catholic	continent
-weurope	b_capua	catholic	continent
-weurope	b_genoa	catholic	continent
-weurope	b_toscana	catholic	continent
-eeurope	c_prussia	catholic	continent
-eeurope	b_alsace	catholic	continent
-eeurope	b_bohemia	catholic	continent
-eeurope	b_east_franconia	catholic	continent
-eeurope	b_west_franconia	catholic	continent
+europe	c_latium	catholic	continent
+europe	c_prussia	catholic	continent
+europe	b_capua	catholic	continent
+europe	b_toscana	catholic	continent
+europe	b_bohemia	catholic	continent
+europe	b_alsace	catholic	continent
+europe	b_silesia	catholic	continent
 islam	c_mecca	islam	continent
 islam	b_bahrain	islam	continent
 islam	b_najd	islam	continent
 islam	b_shammar	islam	continent
+tibet	c_kiev	orthodox	continent
+tibet	b_amdo	test	continent
+tibet	b_dzungaria	test	continent
+tibet	b_kham	test	continent
+islam	m_jerusalem	test	continent

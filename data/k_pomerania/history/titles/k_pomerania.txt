@@ -6,65 +6,65 @@ k_pomerania = {
 d_pommerania = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2400
+		holder = 3300
 	}
 	1000.1.1 = {
-		holder = 2402
+		holder = 3302
 	}
 }
 c_stettin = {
 	980.1.1 = {
-		holder = 2400
+		holder = 3300
 	}
 	1000.1.1 = {
-		holder = 2402
+		holder = 3302
 	}
 }
 c_kolobrzeg = {
 	980.1.1 = {
-		holder = 2400
+		holder = 3300
 	}
 	1000.1.1 = {
-		holder = 2402
+		holder = 3302
 	}
 }
 c_landsberg = {
 	980.1.1 = {
-		holder = 2400
+		holder = 3300
 	}
 	1000.1.1 = {
-		holder = 2402
+		holder = 3302
 	}
 }
 c_cammin = {
-	985.1.1 = {
-		holder = 2430
+	982.1.1 = {
+		holder = 3330
 	}
 }
 c_pila = {
-	986.1.1 = {
-		holder = 2435
+	985.1.1 = {
+		holder = 3335
 	}
 }
 d_pomerelia = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2410
+		holder = 3310
 	}
 }
 c_danzig = {
 	985.1.1 = {
-		holder = 2410
+		holder = 3310
 	}
 }
 c_slupsk = {
 	990.1.1 = {
-		holder = 2410
+		holder = 3310
 	}
 }
 c_berent = {
 	990.1.1 = {
-		holder = 2421
+		holder = 3321
 	}
 	990.1.2 = {
 		liege = d_pomerelia
@@ -72,7 +72,7 @@ c_berent = {
 }
 c_miastko = {
 	990.1.1 = {
-		holder = 2440
+		holder = 3340
 	}
 	990.1.2 = {
 		liege = d_pomerelia
@@ -84,22 +84,22 @@ d_ostmark = {
 }
 c_brandenburg = {
 	985.1.1 = {
-		holder = 2445
+		holder = 3345
 	}
 }
 c_prenzlau = {
 	985.1.1 = {
-		holder = 2450
+		holder = 3350
 	}
 }
 c_ruppin = {
 	985.1.1 = {
-		holder = 2445
+		holder = 3345
 	}
 }
 c_berlin = {
 	985.1.1 = {
-		holder = 2450
+		holder = 3350
 	}
 }
 d_nordmark = {
@@ -108,16 +108,16 @@ d_nordmark = {
 }
 c_mecklenburg = {
 	985.1.1 = {
-		holder = 2455
+		holder = 3355
 	}
 }
 c_wolgast = {
 	985.1.1 = {
-		holder = 2460
+		holder = 3360
 	}
 }
 c_werle = {
 	985.1.1 = {
-		holder = 2465
+		holder = 3365
 	}
 }

@@ -1,54 +1,54 @@
-480 = {
+660 = {
 	prefix = "dynnp_of"
 	name = "d_pommerania"
 	culture = "pommeranian"
 }
-481 = {
+661 = {
 	prefix = "dynnp_of"
 	name = "d_pomerelia"
 	culture = "pommeranian"
 }
-482 = {
+662 = {
 	prefix = "dynnp_of"
 	name = "c_berent"
 	culture = "pommeranian"
 }
-483 = {
+663 = {
 	prefix = "dynnp_of"
 	name = "c_cammin"
 	culture = "pommeranian"
 }
-484 = {
+664 = {
 	prefix = "dynnp_of"
 	name = "c_pila"
 	culture = "pommeranian"
 }
-485 = {
+665 = {
 	prefix = "dynnp_of"
 	name = "c_miastko"
 	culture = "pommeranian"
 }
-486 = {
+666 = {
 	prefix = "dynnp_of"
 	name = "c_brandenburg"
 	culture = "pommeranian"
 }
-487 = {
+667 = {
 	prefix = "dynnp_of"
 	name = "c_prenzlau"
 	culture = "pommeranian"
 }
-488 = {
+668 = {
 	prefix = "dynnp_of"
 	name = "c_mecklenburg"
 	culture = "pommeranian"
 }
-489 = {
+669 = {
 	prefix = "dynnp_of"
 	name = "c_wolgast"
 	culture = "pommeranian"
 }
-490 = {
+670 = {
 	prefix = "dynnp_of"
 	name = "c_werle"
 	culture = "pommeranian"

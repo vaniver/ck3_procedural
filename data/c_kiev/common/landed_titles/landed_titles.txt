@@ -1,0 +1,219 @@
+		d_kiev = {
+			color = { 52 120 69 }
+			color2 = { 255 255 255 }
+			
+			capital = c_kiev # Kiev
+			
+			cultural_names = {
+				norse = cn_konugardr_NORSE
+				swedish = cn_konugard_SWE
+				norwegian = cn_konugard_NORDAN
+				danish = cn_konugard_NORDAN
+				polish = cn_kijow
+				lithuanian = cn_kijevas
+			}
+
+			c_kiev = {
+				color = { 53 105 66 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					norse = cn_konugardr_NORSE
+					swedish = cn_konugard_SWE
+					norwegian = cn_konugard_NORDAN
+					danish = cn_konugard_NORDAN
+					polish = cn_kijow
+					lithuanian = cn_kijevas
+				}
+				
+				b_kiev = {
+					province = P0
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						norse = cn_konugardr_NORSE
+						swedish = cn_konugard_SWE
+						norwegian = cn_konugard_NORDAN
+						danish = cn_konugard_NORDAN
+						polish = cn_kijow
+						lithuanian = cn_kijevas
+					}
+				}
+				b_vyshgorod = {
+					province = P1
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+				}
+				b_bilhorod = {
+					province = P2
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+				}
+				b_yuriev = {
+					province = P3
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+				}
+				b_kaniv = {
+					province = P4
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+				}
+				b_zdvyzhen = {
+					province = P5
+
+					color = { 70 150 90 }
+					color2 = { 255 255 255 }
+				}
+				b_zhytomyr = {
+					province = P6
+
+					color = { 120 190 130 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_zytomierz
+					}
+				}
+			}
+			c_zvyahel = {
+				color = { 70 183 89 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					polish = cn_zwiahel
+				}
+			
+				b_zvyahel = {
+					province = P7
+
+					color = { 70 183 89 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_zytomierz
+					}
+				}
+				b_kolodiazhen = {
+					province = P8
+
+					color = { 70 183 89 }
+					color2 = { 255 255 255 }
+				}
+				b_chortolisy = {
+					province = P9
+
+					color = { 70 183 89 }
+					color2 = { 255 255 255 }
+				}
+				b_horodnytsia = {
+					province = P10
+
+					color = { 70 183 89 }
+					color2 = { 255 255 255 }
+				}			
+				b_mezhybozhe = {
+					province = P11
+
+					color = { 120 190 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_chornobyl = {
+				color = { 52 156 80 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					polish = cn_czarnobyl
+				}
+			
+				b_chornobyl = {
+					province = P12
+
+					color = { 52 156 80 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_czarnobyl
+					}
+				}
+				b_ivankiv = {
+					province = P13
+
+					color = { 52 156 80 }
+					color2 = { 255 255 255 }
+				}
+				b_radynka = {
+					province = P14
+
+					color = { 52 156 80 }
+					color2 = { 255 255 255 }
+				}
+				b_ushytsia = {
+					province = P15
+
+					color = { 163 201 106 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_uszyca
+						 vlach = cn_usita
+					}
+				}
+				b_vinnytsia = {
+					province = P16
+
+					color = { 163 201 106 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_korsun = {
+				color = { 125 201 106 }
+				color2 = { 255 255 255}
+				
+				cultural_names = {
+					polish = cn_korsun
+				}
+			
+				b_korsun = {
+					province = P17
+
+					color = { 125 201 106 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						polish = cn_korsun
+					}
+				}
+				b_malaia_skvirka = {
+					province = P18
+
+					color = { 125 201 106 }
+					color2 = { 255 255 255 }
+				}
+				b_haisyn = {
+					province = P19
+
+					color = { 125 201 106 }
+					color2 = { 255 255 255 }
+				}
+				b_yampil = {
+					province = P20
+
+					color = { 163 201 106 }
+					color2 = { 255 255 255 }
+				}
+				b_rastovets = {
+					province = P21
+
+					color = { 120 190 130 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

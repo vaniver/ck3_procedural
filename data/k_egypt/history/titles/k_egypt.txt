@@ -6,65 +6,65 @@ k_egypt = {
 d_cairo = {
 	1000.1.1 = {	change_development_level = 7 }
 	980.1.1 = {
-		holder = 2100
+		holder = 2700
 	}
 	1000.1.1 = {
-		holder = 2102
+		holder = 2702
 	}
 }
 c_cairo = {
 	980.1.1 = {
-		holder = 2100
+		holder = 2700
 	}
 	1000.1.1 = {
-		holder = 2102
+		holder = 2702
 	}
 }
 c_damietta = {
 	980.1.1 = {
-		holder = 2100
+		holder = 2700
 	}
 	1000.1.1 = {
-		holder = 2102
+		holder = 2702
 	}
 }
 c_al-gharbiya = {
 	980.1.1 = {
-		holder = 2100
+		holder = 2700
 	}
 	1000.1.1 = {
-		holder = 2102
+		holder = 2702
 	}
 }
 c_giza = {
-	981.1.1 = {
-		holder = 2130
+	985.1.1 = {
+		holder = 2730
 	}
 }
 c_al-buhaira = {
-	982.1.1 = {
-		holder = 2135
+	988.1.1 = {
+		holder = 2735
 	}
 }
 d_cyrenaica = {
 	1000.1.1 = {	change_development_level = 7 }
 	985.1.1 = {
-		holder = 2110
+		holder = 2710
 	}
 }
 c_barqa = {
 	985.1.1 = {
-		holder = 2110
+		holder = 2710
 	}
 }
 c_sinai = {
 	990.1.1 = {
-		holder = 2110
+		holder = 2710
 	}
 }
 c_awjila = {
 	990.1.1 = {
-		holder = 2121
+		holder = 2721
 	}
 	990.1.2 = {
 		liege = d_cyrenaica
@@ -72,7 +72,7 @@ c_awjila = {
 }
 c_derna = {
 	990.1.1 = {
-		holder = 2140
+		holder = 2740
 	}
 	990.1.2 = {
 		liege = d_cyrenaica
@@ -84,22 +84,22 @@ d_al-said = {
 }
 c_qus = {
 	985.1.1 = {
-		holder = 2145
+		holder = 2745
 	}
 }
 c_asyut = {
 	985.1.1 = {
-		holder = 2150
+		holder = 2750
 	}
 }
 c_bahnasa = {
 	985.1.1 = {
-		holder = 2145
+		holder = 2745
 	}
 }
 c_ushmun = {
 	985.1.1 = {
-		holder = 2150
+		holder = 2750
 	}
 }
 d_alexandria = {
@@ -108,16 +108,16 @@ d_alexandria = {
 }
 c_alexandria = {
 	985.1.1 = {
-		holder = 2155
+		holder = 2755
 	}
 }
 c_sullum = {
 	985.1.1 = {
-		holder = 2160
+		holder = 2760
 	}
 }
 c_siwa = {
 	985.1.1 = {
-		holder = 2165
+		holder = 2765
 	}
 }

@@ -1,54 +1,54 @@
-600 = {
-	name="Lorenzo"
-	dynasty=120
+800 = {
+	name="Antonio"
+	dynasty=160
 	religion="catholic"
 	culture="cisalpine"
-	977.11.26 = {
-		birth="977.11.26"
+	966.11.26 = {
+		birth="966.11.26"
 	}
 }
-601 = {
-	name="Carlo"
-	dynasty=121
+801 = {
+	name="Lamberto"
+	dynasty=161
 	religion="catholic"
 	culture="cisalpine"
-	911.5.16 = {
-		birth="911.5.16"
+	999.7.4 = {
+		birth="999.7.4"
 	}
 }
-602 = {
-	name="Martino"
-	dynasty=122
+802 = {
+	name="Sigifredo"
+	dynasty=162
 	religion="catholic"
 	culture="cisalpine"
-	933.12.28 = {
-		birth="933.12.28"
+	933.4.9 = {
+		birth="933.4.9"
 	}
 }
-603 = {
-	name="Raniero-Ioannes"
-	dynasty=123
+803 = {
+	name="Rodolfo"
+	dynasty=163
 	religion="catholic"
 	culture="cisalpine"
-	999.7.2 = {
-		birth="999.7.2"
+	944.12.16 = {
+		birth="944.12.16"
 	}
 }
-604 = {
-	name="Bernardo"
-	dynasty=124
+804 = {
+	name="Giacomo"
+	dynasty=164
 	religion="catholic"
 	culture="cisalpine"
-	966.1.12 = {
-		birth="966.1.12"
+	955.9.3 = {
+		birth="955.9.3"
 	}
 }
-605 = {
-	name="Ugo"
-	dynasty=125
+805 = {
+	name="Everardo"
+	dynasty=165
 	religion="catholic"
 	culture="cisalpine"
-	933.10.19 = {
-		birth="933.10.19"
+	955.1.11 = {
+		birth="955.1.11"
 	}
 }

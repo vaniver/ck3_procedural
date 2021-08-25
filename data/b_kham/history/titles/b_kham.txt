@@ -1,0 +1,36 @@
+d_qamdo = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_boyul = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_qamdo = {
+	991.1.1 = {
+		holder = 900
+	}
+}
+c_dengqen = {
+	998.1.1 = {
+		holder = 901
+	}
+}
+c_sog = {
+	999.1.1 = {
+		holder = 902
+	}
+}
+c_bome = {
+	993.1.1 = {
+		holder = 903
+	}
+}
+c_banbar = {
+	999.1.1 = {
+		holder = 904
+	}
+}
+c_baxoi = {
+	996.1.1 = {
+		holder = 905
+	}
+}

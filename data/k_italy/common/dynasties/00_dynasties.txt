@@ -1,0 +1,55 @@
+600 = {
+	prefix = "dynnp_di"
+	name = "d_lombardia"
+	culture = "cisalpine"
+}
+601 = {
+	prefix = "dynnp_di"
+	name = "d_verona"
+	culture = "cisalpine"
+}
+602 = {
+	prefix = "dynnp_di"
+	name = "c_treviso"
+	culture = "cisalpine"
+}
+603 = {
+	prefix = "dynnp_di"
+	name = "c_parma"
+	culture = "cisalpine"
+}
+604 = {
+	prefix = "dynnp_di"
+	name = "c_trent"
+	culture = "cisalpine"
+}
+605 = {
+	prefix = "dynnp_di"
+	name = "c_friuli"
+	culture = "cisalpine"
+}
+606 = {
+	prefix = "dynnp_di"
+	name = "c_monferrato"
+	culture = "cisalpine"
+}
+607 = {
+	prefix = "dynnp_di"
+	name = "c_turin"
+	culture = "cisalpine"
+}
+608 = {
+	prefix = "dynnp_di"
+	name = "c_genoa"
+	culture = "cisalpine"
+}
+609 = {
+	prefix = "dynnp_di"
+	name = "c_modena"
+	culture = "cisalpine"
+}
+610 = {
+	prefix = "dynnp_di"
+	name = "c_mantua"
+	culture = "cisalpine"
+}

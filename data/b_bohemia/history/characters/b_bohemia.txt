@@ -1,54 +1,54 @@
-300 = {
-	name="Petr"
-	dynasty=60
+400 = {
+	name="KunrA_t"
+	dynasty=80
 	religion="catholic"
 	culture="czech"
-	922.7.5 = {
-		birth="922.7.5"
+	911.10.15 = {
+		birth="911.10.15"
 	}
 }
-301 = {
-	name="Budislav"
-	dynasty=61
+401 = {
+	name="Prech"
+	dynasty=81
 	religion="catholic"
 	culture="czech"
-	977.1.15 = {
-		birth="977.1.15"
+	922.1.8 = {
+		birth="922.1.8"
 	}
 }
-302 = {
-	name="Markvart"
-	dynasty=62
+402 = {
+	name="Bohuslav"
+	dynasty=82
 	religion="catholic"
 	culture="czech"
-	999.12.8 = {
-		birth="999.12.8"
+	977.4.28 = {
+		birth="977.4.28"
 	}
 }
-303 = {
-	name="Vznata"
-	dynasty=63
+403 = {
+	name="Zbyslav"
+	dynasty=83
 	religion="catholic"
 	culture="czech"
-	922.7.1 = {
-		birth="922.7.1"
+	933.4.7 = {
+		birth="933.4.7"
 	}
 }
-304 = {
-	name="SlA_vek"
-	dynasty=64
+404 = {
+	name="Dobromil"
+	dynasty=84
 	religion="catholic"
 	culture="czech"
-	900.8.21 = {
-		birth="900.8.21"
+	900.2.22 = {
+		birth="900.2.22"
 	}
 }
-305 = {
-	name="ZA_viS_"
-	dynasty=65
+405 = {
+	name="Zbyslav"
+	dynasty=85
 	religion="catholic"
 	culture="czech"
-	933.6.4 = {
-		birth="933.6.4"
+	911.6.14 = {
+		birth="911.6.14"
 	}
 }

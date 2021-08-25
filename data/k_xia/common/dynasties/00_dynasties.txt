@@ -1,0 +1,44 @@
+720 = {
+	name = "d_xia"
+	culture = "han"
+}
+721 = {
+	name = "d_guiyi"
+	culture = "han"
+}
+722 = {
+	name = "c_yumenguan"
+	culture = "han"
+}
+723 = {
+	name = "c_shanzhou"
+	culture = "han"
+}
+724 = {
+	name = "c_wuda"
+	culture = "han"
+}
+725 = {
+	name = "c_subei"
+	culture = "han"
+}
+726 = {
+	name = "c_ganzhou"
+	culture = "han"
+}
+727 = {
+	name = "c_linze"
+	culture = "han"
+}
+728 = {
+	name = "c_yijinai"
+	culture = "han"
+}
+729 = {
+	name = "c_heihe"
+	culture = "han"
+}
+730 = {
+	name = "c_wuluhai"
+	culture = "han"
+}

@@ -1,6 +1,6 @@
-1200 = {
-	name="Odalrico"
-	dynasty=240
+1600 = {
+	name="Napoleone"
+	dynasty=320
 	religion="catholic"
 	culture="cisalpine"
 	martial=4
@@ -10,25 +10,25 @@
 	learning=4
 	trait="education_martial_4"
 	trait="intellect_good_1"
-	970.2.1 = {
-		birth="970.2.1"
+	970.11.14 = {
+		birth="970.11.14"
 	}
 }
-1201 = {
-	name="Odoardo"
-	dynasty=241
+1601 = {
+	name="Antonio"
+	dynasty=321
 	religion="catholic"
 	culture="cisalpine"
-	969.11.26 = {
-		birth="969.11.26"
+	963.2.22 = {
+		birth="963.2.22"
 	}
 }
-1202 = {
-	name="Bonconte"
-	dynasty=242
+1602 = {
+	name="Alberto"
+	dynasty=322
 	religion="catholic"
 	culture="cisalpine"
-	978.3.13 = {
-		birth="978.3.13"
+	974.7.15 = {
+		birth="974.7.15"
 	}
 }

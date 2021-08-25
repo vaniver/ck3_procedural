@@ -1,0 +1,753 @@
+	k_xia = { # Minya/Minyak
+		color = { 110 90 230 }
+		color2 = { 255 255 255 }
+		
+		capital = c_xingqing
+		
+		cultural_names = {
+			tangut = cn_mjinjaa
+			qiang = cn_miniah
+			han = cn_xixia
+			#mongolic_group = cn_tangyud
+			mongol = cn_tangyud
+			buryat = cn_tangyud
+			oirat = cn_tangyud
+			naiman = cn_tangyud
+			kerait = cn_tangyud
+			khitan = cn_tangyud
+			tuyuhun = cn_tangyud
+			jurchen = cn_tangyud
+			kirghiz = cn_tangyud
+			uyghur = cn_tangyud			
+			bodpa = cn_minyak
+			zhangzhung = cn_minyak
+			sumpa = cn_minyak
+			tsangpa = cn_minyak
+			lhomon = cn_minyak
+		}
+		
+		d_xia = {
+			color = { 96 79 201 }
+			color2 = { 255 255 255 }
+			
+			capital = c_xingqing
+			
+			c_xingqing = {
+				color = { 84 69 176 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = iryai
+					mongol = cn_iryai
+					buryat = cn_iryai
+					oirat = cn_iryai
+					naiman = cn_iryai
+					kerait = cn_iryai
+					khitan = cn_iryai
+					tuyuhun = cn_iryai
+					jurchen = cn_iryai
+				}
+				
+				b_xingqing = { #Yinchuan/Iryai
+					province = P0
+					
+					color = { 84 69 176 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = iryai
+						mongol = cn_iryai
+						buryat = cn_iryai
+						oirat = cn_iryai
+						naiman = cn_iryai
+						kerait = cn_iryai
+						khitan = cn_iryai
+						tuyuhun = cn_iryai
+						jurchen = cn_iryai
+					}
+				}
+				b_dingzhou = { #Helan
+					province = P1
+					
+					color = { 84 69 176 }
+					color2 = { 255 255 255 }
+				}
+				b_shizuizi = { #Shizuishan
+					province = P2
+					
+					color = { 84 69 176 }
+					color2 = { 255 255 255 }
+				}
+				b_shunzhou = { #Qingtongxia
+					province = P3
+					
+					color = { 110 105 215 }
+					color2 = { 255 255 255 }
+				}
+				b_shapotou = {
+					province = P4
+					
+					color = { 110 105 215 }
+					color2 = { 255 255 255 }
+				}
+				b_xiping = {
+					province = P5
+					
+					color = { 110 105 215 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_zhenfan = { #Minqin/Sogo Khoto
+				color = { 70 70 199 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = sogo_khoto
+					mongol = cn_sogo_khoto
+					buryat = cn_sogo_khoto
+					oirat = cn_sogo_khoto
+					naiman = cn_sogo_khoto
+					kerait = cn_sogo_khoto
+					khitan = cn_sogo_khoto
+					tuyuhun = cn_sogo_khoto
+					jurchen = cn_sogo_khoto
+					kirghiz = cn_sogo_khoto
+					uyghur = cn_sogo_khoto			
+				}
+				
+				b_zhenfan = { #Minqin/Sogo Khoto
+					province = P6
+					
+					color = { 70 70 199 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = sogo_khoto
+						mongol = cn_sogo_khoto
+						buryat = cn_sogo_khoto
+						oirat = cn_sogo_khoto
+						naiman = cn_sogo_khoto
+						kerait = cn_sogo_khoto
+						khitan = cn_sogo_khoto
+						tuyuhun = cn_sogo_khoto
+						jurchen = cn_sogo_khoto
+						kirghiz = cn_sogo_khoto
+						uyghur = cn_sogo_khoto			
+					}
+				}
+				
+				b_alxa = {
+					province = P7
+					
+					color = { 120 100 250 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_alashan
+					}
+				}
+				b_yabulai = {
+					province = P8
+					
+					color = { 120 100 250 }
+					color2 = { 255 255 255 }
+				}
+				b_tamusubulage = {
+					province = P9
+					
+					color = { 120 100 250 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_tenggeli = { #Tengger
+				color = { 115 115 255 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = tengger
+					mongol = cn_tengger
+					buryat = cn_tengger
+					oirat = cn_tengger
+					naiman = cn_tengger
+					kerait = cn_tengger
+					khitan = cn_tengger
+					tuyuhun = cn_tengger
+					jurchen = cn_tengger
+					kirghiz = cn_tengger
+					uyghur = cn_tengger			
+				}
+				
+				b_nanhu = {
+					province = P10
+					
+					color = { 115 115 255 }
+					color2 = { 255 255 255 }
+				}
+				b_chaganbulage = {
+					province = P11
+					
+					color = { 115 115 255 }
+					color2 = { 255 255 255 }
+				}
+				b_chaogetuhure = {
+					province = P12
+					
+					color = { 115 115 255 }
+					color2 = { 255 255 255 }
+				}
+				b_jiahe = {
+					province = P13
+					
+					color = { 70 70 199 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_shanzhou = {
+				color = { 117 77 219 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					bodpa = cn_tsongkha
+					tsangpa = cn_tsongkha
+					lhomon = cn_tsongkha
+					sumpa = cn_tsongkha
+					zhangzhung = cn_tsongkha
+				}
+				
+				b_shanzhou = { #Ping'an
+					province = P14
+					
+					color = { 117 77 219 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						bodpa = cn_zongge
+						tsangpa = cn_zongge
+						lhomon = cn_zongge
+						sumpa = cn_zongge
+						zhangzhung = cn_zongge
+					}
+				}
+				b_chuankou = { #Minhe
+					province = P15
+					
+					color = { 117 77 219 }
+					color2 = { 255 255 255 }
+				}
+				b_ledu = {
+					province = P16
+					
+					color = { 117 77 219 }
+					color2 = { 255 255 255 }
+				}
+				b_gonglung = { #Huzhu
+					province = P17
+					
+					color = { 117 77 219 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_huzhu
+						#mongolic_group = huzhu
+						mongol = cn_huzhu
+						buryat = cn_huzhu
+						oirat = cn_huzhu
+						naiman = cn_huzhu
+						kerait = cn_huzhu
+						khitan = cn_huzhu
+						tuyuhun = cn_huzhu
+						jurchen = cn_huzhu
+					}
+				}
+			}
+			c_wuda = {
+				color = { 90 125 215 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = ud
+					mongol = cn_ud
+					buryat = cn_ud
+					oirat = cn_ud
+					naiman = cn_ud
+					kerait = cn_ud
+					khitan = cn_ud
+					tuyuhun = cn_ud
+					jurchen = cn_ud
+					kirghiz = cn_ud
+					uyghur = cn_ud			
+				}
+				b_wuda = { #Ud
+					province = P18
+					
+					color = { 90 125 215 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = ud
+						mongol = cn_ud
+						buryat = cn_ud
+						oirat = cn_ud
+						naiman = cn_ud
+						kerait = cn_ud
+						khitan = cn_ud
+						tuyuhun = cn_ud
+						jurchen = cn_ud
+						kirghiz = cn_ud
+						uyghur = cn_ud			
+					}
+				}
+				b_zhongcun = {
+					province = P19
+					
+					color = { 90 125 215 }
+					color2 = { 255 255 255 }
+				}
+				b_wuliji = {
+					province = P20
+					
+					color = { 90 125 215 }
+					color2 = { 255 255 255 }
+				}
+				b_kuozhou = { #Hualong
+					province = P21
+					
+					color = { 140 75 255 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_guiyi = { #Guazhou
+			color = { 90 70 175 }
+			color2 = { 255 255 255 }
+			
+			capital = c_guazhou
+			
+			c_guazhou = {
+				color = { 72 55 145 }
+				color2 = { 255 255 255 }
+				
+				b_anxi = { #Guazhou
+					province = P22
+					
+					color = { 72 55 145 }
+					color2 = { 255 255 255 }
+				}
+				b_guazhou = { #Suoyang
+					province = P23
+					
+					color = { 72 55 145 }
+					color2 = { 255 255 255 }
+				}
+				b_yulin = {
+					province = P24
+					
+					color = { 72 55 145 }
+					color2 = { 255 255 255 }
+				}
+				b_changma = {
+					province = P25
+					
+					color = { 110 65 175 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_hongliuyuan = {
+				color = { 120 75 165 }
+				color2 = { 255 255 255 }
+				
+				b_hongliuyuan = {
+					province = P26
+					
+					color = { 120 75 165 }
+					color2 = { 255 255 255 }
+				}
+				b_qidun = {
+					province = P27
+					
+					color = { 120 75 165 }
+					color2 = { 255 255 255 }
+				}
+				b_xihu = {
+					province = P28
+					
+					color = { 120 75 165 }
+					color2 = { 255 255 255 }
+				}
+				b_hedong = {
+					province = P29
+					
+					color = { 110 65 175 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_yumenguan = {
+				color = { 75 55 135 }
+				color2 = { 255 255 255 }
+				
+				b_yumenguan = {
+					province = P30
+					
+					color = { 75 55 135 }
+					color2 = { 255 255 255 }
+				}
+				b_yangguan = {
+					province = P31
+					
+					color = { 75 55 135 }
+					color2 = { 255 255 255 }
+				}
+				b_akeqi = {
+					province = P32
+					
+					color = { 75 55 135 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						kirghiz = cn_akqi
+						uyghur = cn_akqi			
+						#mongolic_group = akqi
+						mongol = cn_akqi
+						buryat = cn_akqi
+						oirat = cn_akqi
+						naiman = cn_akqi
+						kerait = cn_akqi
+						khitan = cn_akqi
+						tuyuhun = cn_akqi
+						jurchen = cn_akqi
+					}
+				}
+			}
+			c_subei = {
+				color = { 70 55 110 }
+				color2 = { 255 255 255 }
+				
+				b_subei = {
+					province = P33
+					
+					color = { 70 55 110 }
+					color2 = { 255 255 255 }
+				}
+				b_yanchiwan = {
+					province = P34
+					
+					color = { 70 55 110 }
+					color2 = { 255 255 255 }
+				}
+				
+				b_shazhou = { #Dunhuang/Dukhan
+					province = P35
+					
+					color = { 90 60 145 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						kirghiz = cn_dukhan
+						uyghur = cn_dukhan
+			
+					}
+				}
+			}
+		}
+		
+		d_ganzhou = {
+			color = { 170 100 210 }
+			color2 = { 255 255 255 }
+			
+			capital = c_ganzhou
+			
+			c_ganzhou = {
+				color = { 144 80 181 }
+				color2 = { 255 255 255 }
+				
+				b_ganzhou = { #Zhangye
+					province = P36
+					
+					color = { 144 80 181 }
+					color2 = { 255 255 255 }
+				}
+				b_shandan = {
+					province = P37
+					
+					color = { 144 80 181 }
+					color2 = { 255 255 255 }
+				}
+				b_minle = {
+					province = P38
+					
+					color = { 144 80 181 }
+					color2 = { 255 255 255 }
+				}
+				b_gaotai = {
+					province = P39
+					
+					color = { 200 100 220 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_linze = {
+				color = { 185 120 220 }
+				color2 = { 255 255 255 }
+				
+				b_linze = {
+					province = P40
+					
+					color = { 185 120 220 }
+					color2 = { 255 255 255 }
+				}
+				b_ganjun = {
+					province = P41
+					
+					color = { 185 120 220 }
+					color2 = { 255 255 255 }
+				}
+				b_pingchuan = {
+					province = P42
+					
+					color = { 185 120 220 }
+					color2 = { 255 255 255 }
+				}
+				b_sunan = {
+					province = P43
+					
+					color = { 200 100 220 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_suzhou = {
+				color = { 220 140 210 }
+				color2 = { 255 255 255 }
+				
+				b_jiayuguan = {
+					province = P44
+					
+					color = { 220 140 210 }
+					color2 = { 255 255 255 }
+				}
+				b_suzhou = { #Jiuquan
+					province = P45
+					
+					color = { 220 140 210 }
+					color2 = { 255 255 255 }
+				}
+				b_qingshui = {
+					province = P46
+					
+					color = { 220 140 210 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_yumen = {
+				color = { 195 120 215 }
+				color2 = { 255 255 255 }
+				
+				b_chijin = {
+					province = P47
+					
+					color = { 195 120 215 }
+					color2 = { 255 255 255 }
+				}
+				b_yumen = {
+					province = P48
+					
+					color = { 195 120 215 }
+					color2 = { 255 255 255 }
+				}
+				b_huahai = {
+					province = P49
+					
+					color = { 195 120 215 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_yijinai = {
+			color = { 100 70 140 }
+			color2 = { 255 255 255 }
+			
+			capital = c_yijinai
+			
+			cultural_names = {
+				#mongolic_group = khara_khoto
+				mongol = cn_khara_khoto
+				buryat = cn_khara_khoto
+				oirat = cn_khara_khoto
+				naiman = cn_khara_khoto
+				kerait = cn_khara_khoto
+				khitan = cn_khara_khoto
+				tuyuhun = cn_khara_khoto
+				jurchen = cn_khara_khoto
+				kirghiz = cn_ecina
+				uyghur = cn_ecina
+				han = cn_heicheng
+			}
+			
+			c_yijinai = {
+				color = { 72 47 105 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = khara_khoto
+					mongol = cn_khara_khoto
+					buryat = cn_khara_khoto
+					oirat = cn_khara_khoto
+					naiman = cn_khara_khoto
+					kerait = cn_khara_khoto
+					khitan = cn_khara_khoto
+					tuyuhun = cn_khara_khoto
+					jurchen = cn_khara_khoto
+					kirghiz = cn_ecina
+					uyghur = cn_ecina
+					han = cn_heicheng
+				}
+				
+				b_yijinai = { #Khara Khoto/Heicheng
+					province = P50
+					
+					color = { 72 47 105 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = khara_khoto
+						mongol = cn_khara_khoto
+						buryat = cn_khara_khoto
+						oirat = cn_khara_khoto
+						naiman = cn_khara_khoto
+						kerait = cn_khara_khoto
+						khitan = cn_khara_khoto
+						tuyuhun = cn_khara_khoto
+						jurchen = cn_khara_khoto
+						kirghiz = cn_ecina
+						uyghur = cn_ecina			
+						han = cn_heicheng
+					}
+				}
+				b_juyan = { #Sogo
+					province = P51
+					
+					color = { 72 47 105 }
+					color2 = { 255 255 255 }
+				}
+				b_wentugaole = {
+					province = P52
+					
+					color = { 150 114 171 }
+					color2 = { 255 255 255 }
+				}
+				b_gurinai = {
+					province = P53
+					
+					color = { 150 114 171 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_heihe = {
+				color = { 130 60 165 }
+				color2 = { 255 255 255 }
+				
+				b_hangtian = {
+					province = P54
+					
+					color = { 130 60 165 }
+					color2 = { 255 255 255 }
+				}
+				b_heihe = {
+					province = P55
+					
+					color = { 130 60 165 }
+					color2 = { 255 255 255 }
+				}
+				b_mazongshan = {
+					province = P56
+					
+					color = { 120 70 150 }
+					color2 = { 255 255 255 }
+				}
+				b_saihantaolai = {
+					province = P57
+					
+					color = { 120 70 150 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_wuluhai = {
+				color = { 73 96 173 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					#mongolic_group = bayannayur
+					mongol = cn_bayannayur
+					buryat = cn_bayannayur
+					oirat = cn_bayannayur
+					naiman = cn_bayannayur
+					kerait = cn_bayannayur
+					khitan = cn_bayannayur
+					tuyuhun = cn_bayannayur
+					jurchen = cn_bayannayur
+					kirghiz = cn_uraqai
+					uyghur = cn_uraqai			
+				}
+				
+				b_wuluhai = {
+					province = P58
+					
+					color = { 73 96 173 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = uraqai
+						mongol = cn_uraqai
+						buryat = cn_uraqai
+						oirat = cn_uraqai
+						naiman = cn_uraqai
+						kerait = cn_uraqai
+						khitan = cn_uraqai
+						tuyuhun = cn_uraqai
+						jurchen = cn_uraqai
+						kirghiz = cn_uraqai
+						uyghur = cn_uraqai			
+					}
+				}
+				b_wuyuan = {
+					province = P59
+					
+					color = { 73 96 173 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = uyuvan
+						mongol = cn_uyuvan
+						buryat = cn_uyuvan
+						oirat = cn_uyuvan
+						naiman = cn_uyuvan
+						kerait = cn_uyuvan
+						khitan = cn_uyuvan
+						tuyuhun = cn_uyuvan
+						jurchen = cn_uyuvan
+						kirghiz = cn_uyuvan
+						uyghur = cn_uyuvan			
+					}
+				}
+				b_dengkou = {
+					province = P60
+					
+					color = { 73 96 173 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						#mongolic_group = denkeu
+						mongol = cn_denkeu
+						buryat = cn_denkeu
+						oirat = cn_denkeu
+						naiman = cn_denkeu
+						kerait = cn_denkeu
+						khitan = cn_denkeu
+						tuyuhun = cn_denkeu
+						jurchen = cn_denkeu
+						kirghiz = cn_denkeu
+						uyghur = cn_denkeu			
+					}
+				}
+			}
+		}
+	}

@@ -1,0 +1,36 @@
+d_xining = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+d_nagormo = {
+	1000.1.1 = {	change_development_level = 5 }
+}
+c_xining = {
+	990.1.1 = {
+		holder = 200
+	}
+}
+c_fuqi = {
+	991.1.1 = {
+		holder = 201
+	}
+}
+c_gerqen = {
+	990.1.1 = {
+		holder = 202
+	}
+}
+c_nagormo = {
+	999.1.1 = {
+		holder = 203
+	}
+}
+c_xigortang = {
+	996.1.1 = {
+		holder = 204
+	}
+}
+c_ulam = {
+	998.1.1 = {
+		holder = 205
+	}
+}

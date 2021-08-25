@@ -1,0 +1,261 @@
+		d_xining = {
+			color = { 52 31 77 }
+			color2 = { 255 255 255 }
+			
+			capital = c_xining
+			
+			cultural_names = {
+				bodpa = cn_qingtang
+				tsangpa = cn_qingtang
+				lhomon = cn_qingtang
+				sumpa = cn_qingtang
+				zhangzhung = cn_qingtang
+			}
+			
+			c_xining = {
+				color = { 36 22 54 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					bodpa = cn_qingtang
+					tsangpa = cn_qingtang
+					lhomon = cn_qingtang
+					sumpa = cn_qingtang
+					zhangzhung = cn_qingtang
+				}
+				
+				b_rusar_huangzhong = { #Huangzhong
+					province = P0
+					
+					color = { 36 22 54 }
+					color2 = { 255 255 255 }
+				}
+				b_xining = {
+					province = P1
+					
+					color = { 36 22 54 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						bodpa = cn_qingtang
+						tsangpa = cn_qingtang
+						lhomon = cn_qingtang
+						sumpa = cn_qingtang
+						zhangzhung = cn_qingtang
+					}
+				}
+				b_tongkor = { #Chengguan
+					province = P2
+					
+					color = { 36 22 54 }
+					color2 = { 255 255 255 }
+				}
+				
+				b_datong = {
+					province = P3
+					
+					color = { 70 47 99 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						bodpa = cn_drotsang
+						tsangpa = cn_drotsang
+						lhomon = cn_drotsang
+						sumpa = cn_drotsang
+						zhangzhung = cn_drotsang
+					}
+				}
+			}
+			c_fuqi = {
+				color = { 65 12 133 }
+				color2 = { 255 255 255 }
+				
+				b_fuqi = {
+					province = P4
+					
+					color = { 65 12 133 }
+					color2 = { 255 255 255 }
+				}
+				b_temqen = { #Tianjun
+					province = P5
+					
+					color = { 65 12 133 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_tianjun
+					}
+				}
+				b_yagkeng = { #Yangkang
+					province = P6
+					
+					color = { 65 12 133 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_yangkang
+					}
+				}
+				b_gangca = { #Gangcha
+					province = P7
+					
+					color = { 65 12 133 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_gangcha
+					}
+				}
+			}
+			c_gerqen = { #Gonghe/Gêrqên
+				color = { 79 0 181 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_gonghe
+				}
+				
+				b_qabqa = { #Qiabuqia
+					province = P8
+					
+					color = { 79 0 181 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_qiabuqia
+					}
+				}
+				b_changzhi = { #Jiangxigou
+					province = P9
+					
+					color = { 79 0 181 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_jiangxigou
+					}
+				}
+				b_haeyan = { #Haiyan
+					province = P10
+					
+					color = { 79 0 181 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_haiyan
+					}
+				}
+				b_serkok = { #Chengguan
+					province = P11
+					
+					color = { 70 47 99 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		
+		d_nagormo = { #Golmud/Ge'ermu
+			color = { 97 31 237 }
+			color2 = { 255 255 255 }
+			
+			capital = c_nagormo
+			
+			c_nagormo = { #Golmud/Ge'ermu
+				color = { 88 30 212 }
+				color2 = { 255 255 255 }
+				
+				b_nagormo = { #Golmud/Ge'ermu
+					province = P12
+					
+					color = { 88 30 212 }
+					color2 = { 255 255 255 }
+				}
+				b_dagelhe = { #Dagele
+					province = P13
+					
+					color = { 88 30 212 }
+					color2 = { 255 255 255 }
+				}
+				b_zhiteu = { #Xitieshan
+					province = P14
+					
+					color = { 88 30 212 }
+					color2 = { 255 255 255 }
+				}
+				b_xigortang = { #Heyuan
+					province = P15
+					
+					color = { 110 54 181 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_heyuan
+					}
+				}
+			}
+			c_xigortang = { #Xinghai
+				color = { 110 54 181 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_xinghai
+				}
+				b_namtang = { #Hekou
+					province = P16
+					
+					color = { 110 54 181 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_hekou
+					}
+				}
+				b_derlenka = { #Delingha/Delhihot
+					province = P17
+					
+					color = { 68 18 176 }
+					color2 = { 255 255 255 }
+				}
+				b_conak = { #Halahu
+					province = P18
+					
+					color = { 68 18 176 }
+					color2 = { 255 255 255 }
+				}
+				b_ngor = { #Suli
+					province = P19
+					
+					color = { 68 18 176 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_ulam = { #Ulan
+				color = { 54 18 130 }
+				color2 = { 255 255 255 }
+				
+				b_ulam = { #Ulan
+					province = P20
+					
+					color = { 54 18 130 }
+					color2 = { 255 255 255 }
+				}
+				b_cakha = { #Chaka
+					province = P21
+					
+					color = { 54 18 130 }
+					color2 = { 255 255 255 }
+				}
+				b_tuulain = { #Dulan
+					province = P22
+					
+					color = { 79 35 173 }
+					color2 = { 255 255 255 }
+				}
+				b_balung_dulan = { #Balong
+					province = P23
+					
+					color = { 79 35 173 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}

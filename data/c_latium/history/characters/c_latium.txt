@@ -1,6 +1,6 @@
-1100 = {
-	name="Ennio"
-	dynasty=220
+1500 = {
+	name="Innocenzo"
+	dynasty=300
 	religion="catholic"
 	culture="italian"
 	martial=4
@@ -10,25 +10,25 @@
 	learning=4
 	trait="education_martial_4"
 	trait="intellect_good_1"
-	970.11.20 = {
-		birth="970.11.20"
+	970.5.23 = {
+		birth="970.5.23"
 	}
 }
-1101 = {
-	name="Candido"
-	dynasty=221
+1501 = {
+	name="Galasso"
+	dynasty=301
 	religion="catholic"
 	culture="italian"
-	967.4.9 = {
-		birth="967.4.9"
+	966.2.28 = {
+		birth="966.2.28"
 	}
 }
-1102 = {
-	name="Tiziano"
-	dynasty=222
+1502 = {
+	name="Buoso"
+	dynasty=302
 	religion="catholic"
 	culture="italian"
-	977.8.8 = {
-		birth="977.8.8"
+	970.2.5 = {
+		birth="970.2.5"
 	}
 }
