@@ -162,6 +162,8 @@ class CK3Map:
     
     def __init__(self, max_x=8192, max_y=4096, hex_size=40, map_size=40, crisp=True, default=None):
         '''Creates a map of size max_x x max_y, with hexes that have radius hex_size pixels, and at most map_size hexes on an edge. If crisp=True (default), the hexes will all be regular and the same size; if crisp=False, the sizes will vary to make them visually distinct, and will extend to the edge of the image boundary.'''
+        assert max_x % 1024 == 0
+        assert max_y % 1024 == 0
         self.max_x = max_x
         self.max_y = max_y
         self.mid_x = max_x/2
